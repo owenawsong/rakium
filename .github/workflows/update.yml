@@ -1,56 +1,59 @@
-name: Update Rakium Data
+name: Update AI Benchmark Aggregator
 
-# ── When to run ──────────────────────────────────────────────────
 on:
   schedule:
-    # Every 6 hours: midnight, 6am, noon, 6pm UTC
-    - cron: "0 */6 * * *"
-
-  # Also run when you push code (so the site builds immediately on first deploy)
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Manual trigger from GitHub UI
   push:
-    branches: [main]
+    branches:
+      - main
 
-  # Allow manual trigger from GitHub UI
-  workflow_dispatch:
-
-# ── Permissions ──────────────────────────────────────────────────
-permissions:
-  contents: write          # needed to commit updated data back to repo
-
-# ── Jobs ─────────────────────────────────────────────────────────
 jobs:
-  update-and-deploy:
+  update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      # 1. Check out the repo
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-      # 2. Set up Python
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.12'
+          cache: 'pip'
 
-      # 3. Install dependencies
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
-      # 4. Run the scraper
-      - name: Scrape data
+      - name: Install Playwright browsers
+        run: |
+          playwright install chromium --with-deps
+
+      - name: Run scraper
         run: python scripts/scraper.py
 
-      # 5. Generate the HTML
-      - name: Generate HTML
+      - name: Run generator
         run: python scripts/generator.py
 
-      # 6. Commit updated data + HTML back to the repo
-      - name: Commit changes
+      - name: Commit and push changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ output/
-          git diff --staged --quiet || git commit -m "Auto-update: $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git add -A
+          git diff --quiet && echo "no_changes=true" >> $GITHUB_OUTPUT || {
+            git commit -m "Update: $(date -u '+%Y-%m-%d %H:%M UTC')" && \
+            git push origin main
+          }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Show result
+        if: steps.commit.outputs.no_changes != 'true'
+        run: |
+          echo "Changes committed and pushed successfully!"
+          echo "Cloudflare Pages will auto-deploy the updated site."
