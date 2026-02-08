@@ -1,0 +1,26 @@
+{
+  "source": "yupp.ai",
+  "scraped_at": "2026-02-08T04:33:22.805357",
+  "categories": {
+    "overall": {
+      "url": "https://yupp.ai/leaderboard",
+      "html_size": 1246236
+    },
+    "text": {
+      "url": "https://yupp.ai/leaderboard/text",
+      "html_size": 1064399
+    },
+    "image": {
+      "url": "https://yupp.ai/leaderboard/image",
+      "html_size": 1051693
+    },
+    "search": {
+      "url": "https://yupp.ai/leaderboard/search",
+      "html_size": 1061204
+    },
+    "coding": {
+      "url": "https://yupp.ai/leaderboard/coding",
+      "html_size": 1082491
+    }
+  }
+}

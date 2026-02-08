@@ -1,0 +1,40 @@
+{
+  "source": "arena.ai (formerly lmarena.ai)",
+  "scraped_at": "2026-02-08T04:31:30.409262",
+  "categories": {
+    "overall": {
+      "url": "https://arena.ai/leaderboard",
+      "html_size": 3624692,
+      "note": "Could not extract models, raw HTML saved"
+    },
+    "text": {
+      "url": "https://arena.ai/leaderboard/text",
+      "html_size": 2162961,
+      "note": "Could not extract models, raw HTML saved"
+    },
+    "vision": {
+      "url": "https://arena.ai/leaderboard/vision",
+      "html_size": 1210042,
+      "note": "Could not extract models, raw HTML saved"
+    },
+    "image": {
+      "url": "https://arena.ai/leaderboard/image",
+      "html_size": 255445,
+      "note": "Could not extract models, raw HTML saved"
+    },
+    "video": {
+      "url": "https://arena.ai/leaderboard/video",
+      "html_size": 3624775,
+      "note": "Could not extract models, raw HTML saved"
+    },
+    "coding": {
+      "url": "https://arena.ai/leaderboard/coding",
+      "html_size": 202930,
+      "note": "Could not extract models, raw HTML saved"
+    },
+    "search": {
+      "url": "https://arena.ai/leaderboard/search",
+      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://arena.ai/leaderboard/search\", waiting until \"networkidle\"\n"
+    }
+  }
+}
