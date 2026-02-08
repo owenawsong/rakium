@@ -1,0 +1,4266 @@
+{
+  "benchmarks": {
+    "intelligence_index": {
+      "label": "Intelligence Index",
+      "pct": false,
+      "models": [
+        {
+          "rank": 1,
+          "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+          "score": 53.03,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 2,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 51.24,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 3,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 49.69,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 4,
+          "name": "GPT-5.2 Codex (xhigh)",
+          "score": 48.98,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 5,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 48.44,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 6,
+          "name": "GPT-5.1 (high)",
+          "score": 47.56,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 7,
+          "name": "Kimi K2.5 (Reasoning)",
+          "score": 46.73,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 8,
+          "name": "GPT-5.2 (medium)",
+          "score": 46.58,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 9,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 46.4,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 10,
+          "name": "Claude Opus 4.6 (Non-reasoning)",
+          "score": 46.39,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 11,
+          "name": "GPT-5 (high)",
+          "score": 44.57,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 12,
+          "name": "GPT-5 Codex (high)",
+          "score": 44.52,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 13,
+          "name": "Claude Opus 4.5 (Non-reasoning)",
+          "score": 43.05,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 14,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 42.92,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 15,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 42.19,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 16,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 42.05,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 17,
+          "name": "GPT-5 (medium)",
+          "score": 41.84,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 18,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 41.61,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 19,
+          "name": "Grok 4",
+          "score": 41.43,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 20,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 41.09,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 21,
+          "name": "GPT-5 mini (high)",
+          "score": 41.03,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 22,
+          "name": "Kimi K2 Thinking",
+          "score": 40.7,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 23,
+          "name": "Qwen3 Max Thinking",
+          "score": 39.67,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 24,
+          "name": "MiniMax-M2.1",
+          "score": 39.55,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 25,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 39.24,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 26,
+          "name": "GPT-5 (low)",
+          "score": 39.03,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 27,
+          "name": "GPT-5 mini (medium)",
+          "score": 38.81,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 28,
+          "name": "Claude 4 Sonnet (Reasoning)",
+          "score": 38.56,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 29,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 38.54,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 30,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 38.54,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 31,
+          "name": "Kimi K2.5 (Non-reasoning)",
+          "score": 37.18,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 32,
+          "name": "Claude 4.5 Sonnet (Non-reasoning)",
+          "score": 37.06,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 33,
+          "name": "Claude 4.5 Haiku (Reasoning)",
+          "score": 37.02,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 34,
+          "name": "KAT-Coder-Pro V1",
+          "score": 36.11,
+          "creator": "KwaiKAT",
+          "context_window": 256000
+        },
+        {
+          "rank": 35,
+          "name": "MiniMax-M2",
+          "score": 35.98,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 36,
+          "name": "Nova 2.0 Pro Preview (medium)",
+          "score": 35.62,
+          "creator": "Amazon",
+          "context_window": 256000
+        },
+        {
+          "rank": 37,
+          "name": "Gemini 3 Flash Preview (Non-reasoning)",
+          "score": 35.1,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 38,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 34.93,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 39,
+          "name": "Claude 3.7 Sonnet (Reasoning)",
+          "score": 34.6,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 40,
+          "name": "Gemini 2.5 Pro",
+          "score": 34.45,
+          "creator": "Google",
+          "context_window": 1000000
+        }
+      ]
+    },
+    "agentic_index": {
+      "label": "Agentic Index",
+      "pct": false,
+      "models": [
+        {
+          "rank": 1,
+          "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+          "score": 68.07,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 2,
+          "name": "Claude Opus 4.6 (Non-reasoning)",
+          "score": 64.22,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 3,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 60.2,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 4,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 59.64,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 5,
+          "name": "Claude Opus 4.5 (Non-reasoning)",
+          "score": 59.22,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 6,
+          "name": "Kimi K2.5 (Reasoning)",
+          "score": 58.94,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 7,
+          "name": "GPT-5.2 Codex (xhigh)",
+          "score": 56.52,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 8,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 55.01,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 9,
+          "name": "GPT-5.2 (medium)",
+          "score": 54.93,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 10,
+          "name": "GPT-5 (high)",
+          "score": 54.65,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 11,
+          "name": "GLM-4.7 (Non-reasoning)",
+          "score": 54.34,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 12,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 52.92,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 13,
+          "name": "Kimi K2.5 (Non-reasoning)",
+          "score": 52.84,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 14,
+          "name": "GPT-5 Codex (high)",
+          "score": 52.71,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 15,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 52.1,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 16,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 51.98,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 17,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 51.72,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 18,
+          "name": "GPT-5.1 (high)",
+          "score": 51.26,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 19,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 50.68,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 20,
+          "name": "Claude 4.5 Sonnet (Non-reasoning)",
+          "score": 50.64,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 21,
+          "name": "Qwen3 Max Thinking",
+          "score": 50.13,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 22,
+          "name": "GPT-5 (low)",
+          "score": 49.69,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 23,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 49.66,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 24,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 49.31,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 25,
+          "name": "Kimi K2 Thinking",
+          "score": 47.9,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 26,
+          "name": "MiniMax-M2",
+          "score": 47.55,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 27,
+          "name": "MiniMax-M2.1",
+          "score": 47.4,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 28,
+          "name": "MiMo-V2-Flash (Non-reasoning)",
+          "score": 47.34,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 29,
+          "name": "Nova 2.0 Pro Preview (medium)",
+          "score": 46.95,
+          "creator": "Amazon",
+          "context_window": 256000
+        },
+        {
+          "rank": 30,
+          "name": "GLM-4.7-Flash (Reasoning)",
+          "score": 45.98,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 31,
+          "name": "GPT-5 (medium)",
+          "score": 45.83,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 32,
+          "name": "GPT-5 mini (high)",
+          "score": 45.48,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 33,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 45.05,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 34,
+          "name": "Qwen3 Max Thinking (Preview)",
+          "score": 43.03,
+          "creator": "Alibaba",
+          "context_window": 262144
+        },
+        {
+          "rank": 35,
+          "name": "Claude 4 Sonnet (Reasoning)",
+          "score": 43.02,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 36,
+          "name": "Qwen3 Max",
+          "score": 43.01,
+          "creator": "Alibaba",
+          "context_window": 262144
+        },
+        {
+          "rank": 37,
+          "name": "GLM-4.6 (Non-reasoning)",
+          "score": 42.89,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 38,
+          "name": "Qwen3-Coder-Next",
+          "score": 42.1,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 39,
+          "name": "KAT-Coder-Pro V1",
+          "score": 41.74,
+          "creator": "KwaiKAT",
+          "context_window": 256000
+        },
+        {
+          "rank": 40,
+          "name": "GLM-4.6 (Reasoning)",
+          "score": 41.61,
+          "creator": "Z AI",
+          "context_window": 200000
+        }
+      ]
+    },
+    "coding_index": {
+      "label": "Coding Index",
+      "pct": false,
+      "models": [
+        {
+          "rank": 1,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 48.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 2,
+          "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+          "score": 48.09,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 3,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 47.83,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 4,
+          "name": "Claude Opus 4.6 (Non-reasoning)",
+          "score": 47.56,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 5,
+          "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+          "score": 46.7292835,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 6,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 46.49,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 7,
+          "name": "GPT-5.1 (high)",
+          "score": 44.73,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 8,
+          "name": "GPT-5.2 (medium)",
+          "score": 44.18,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 9,
+          "name": "GPT-5.2 Codex (xhigh)",
+          "score": 42.96,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 10,
+          "name": "Claude Opus 4.5 (Non-reasoning)",
+          "score": 42.94,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 11,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 42.62,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 12,
+          "name": "Grok 4",
+          "score": 40.49,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 13,
+          "name": "Kimi K2.5 (Reasoning)",
+          "score": 39.55,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 14,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 39.36,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 15,
+          "name": "GPT-5 (medium)",
+          "score": 38.95,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 16,
+          "name": "GPT-5 Codex (high)",
+          "score": 38.87,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 17,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 38.63,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 18,
+          "name": "o3",
+          "score": 38.4,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 19,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 37.89,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 20,
+          "name": "Gemini 3 Flash Preview (Non-reasoning)",
+          "score": 37.84,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 21,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 36.7,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 22,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 36.62,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 23,
+          "name": "Claude 4.1 Opus (Reasoning)",
+          "score": 36.52,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 24,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 36.42,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 25,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 36.26,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 26,
+          "name": "GPT-5 (high)",
+          "score": 36.03,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 27,
+          "name": "GPT-5 mini (high)",
+          "score": 35.3,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 28,
+          "name": "Kimi K2 Thinking",
+          "score": 34.83,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 29,
+          "name": "GPT-5.2 (Non-reasoning)",
+          "score": 34.68,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 30,
+          "name": "DeepSeek V3.2 (Non-reasoning)",
+          "score": 34.6,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 31,
+          "name": "Claude 4 Sonnet (Reasoning)",
+          "score": 34.06,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 32,
+          "name": "o1-preview",
+          "score": 34.045327,
+          "creator": "OpenAI",
+          "context_window": 128000
+        },
+        {
+          "rank": 33,
+          "name": "Claude 4 Opus (Reasoning)",
+          "score": 33.98,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 34,
+          "name": "DeepSeek V3.1 Terminus (Reasoning)",
+          "score": 33.74,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 35,
+          "name": "Claude 4.5 Sonnet (Non-reasoning)",
+          "score": 33.47,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 36,
+          "name": "DeepSeek V3.2 Exp (Reasoning)",
+          "score": 33.28,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 37,
+          "name": "GPT-5 mini (medium)",
+          "score": 32.85,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 38,
+          "name": "MiniMax-M2.1",
+          "score": 32.77,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 39,
+          "name": "Claude 4.5 Haiku (Reasoning)",
+          "score": 32.61,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 40,
+          "name": "GLM-4.7 (Non-reasoning)",
+          "score": 32.01,
+          "creator": "Z AI",
+          "context_window": 200000
+        }
+      ]
+    },
+    "math_index": {
+      "label": "Math Index",
+      "pct": false,
+      "models": [
+        {
+          "rank": 1,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 99,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 2,
+          "name": "GPT-5 Codex (high)",
+          "score": 98.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 3,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 97,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 4,
+          "name": "GPT-5.2 (medium)",
+          "score": 96.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 5,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 96.67,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 6,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 96.33,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 7,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 95.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 8,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 95.67,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 9,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 95,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 10,
+          "name": "Kimi K2 Thinking",
+          "score": 94.67,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 11,
+          "name": "KAT-Coder-Pro V1",
+          "score": 94.67,
+          "creator": "KwaiKAT",
+          "context_window": 256000
+        },
+        {
+          "rank": 12,
+          "name": "GPT-5 (high)",
+          "score": 94.33,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 13,
+          "name": "GPT-5.1 (high)",
+          "score": 94,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 14,
+          "name": "gpt-oss-120B (high)",
+          "score": 93.44,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 15,
+          "name": "Grok 4",
+          "score": 92.67,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 16,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 92,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 17,
+          "name": "GPT-5 (medium)",
+          "score": 91.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 18,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 91.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 19,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 91.33,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 20,
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "score": 91,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 21,
+          "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasonin",
+          "score": 91,
+          "creator": "NVIDIA",
+          "context_window": 1000000
+        },
+        {
+          "rank": 22,
+          "name": "GPT-5 mini (high)",
+          "score": 90.67,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 23,
+          "name": "o4-mini (high)",
+          "score": 90.67,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 24,
+          "name": "K-EXAONE (Reasoning)",
+          "score": 90.33,
+          "creator": "LG AI Research",
+          "context_window": 256000
+        },
+        {
+          "rank": 25,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 89.67,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 26,
+          "name": "Nova 2.0 Omni (medium)",
+          "score": 89.67,
+          "creator": "Amazon",
+          "context_window": 1000000
+        },
+        {
+          "rank": 27,
+          "name": "DeepSeek V3.1 (Reasoning)",
+          "score": 89.67,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 28,
+          "name": "DeepSeek V3.1 Terminus (Reasoning)",
+          "score": 89.67,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 29,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 89.33,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 30,
+          "name": "gpt-oss-20B (high)",
+          "score": 89.33,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 31,
+          "name": "Ring-1T",
+          "score": 89.33,
+          "creator": "InclusionAI",
+          "context_window": 128000
+        },
+        {
+          "rank": 32,
+          "name": "Nova 2.0 Pro Preview (medium)",
+          "score": 89,
+          "creator": "Amazon",
+          "context_window": 256000
+        },
+        {
+          "rank": 33,
+          "name": "Nova 2.0 Lite (medium)",
+          "score": 88.67,
+          "creator": "Amazon",
+          "context_window": 1000000
+        },
+        {
+          "rank": 34,
+          "name": "Qwen3 VL 235B A22B (Reasoning)",
+          "score": 88.33,
+          "creator": "Alibaba",
+          "context_window": 262144
+        },
+        {
+          "rank": 35,
+          "name": "o3",
+          "score": 88.33,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 36,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 88,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 37,
+          "name": "Apriel-v1.6-15B-Thinker",
+          "score": 88,
+          "creator": "ServiceNow",
+          "context_window": 128000
+        },
+        {
+          "rank": 38,
+          "name": "INTELLECT-3",
+          "score": 88,
+          "creator": "Prime Intellect",
+          "context_window": 131100
+        },
+        {
+          "rank": 39,
+          "name": "DeepSeek V3.2 Exp (Reasoning)",
+          "score": 87.67,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 40,
+          "name": "Gemini 2.5 Pro",
+          "score": 87.67,
+          "creator": "Google",
+          "context_window": 1000000
+        }
+      ]
+    },
+    "aime25": {
+      "label": "AIME 2025",
+      "pct": true,
+      "models": [
+        {
+          "rank": 1,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 0.99,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 2,
+          "name": "GPT-5 Codex (high)",
+          "score": 0.987,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 3,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 0.97,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 4,
+          "name": "GPT-5.2 (medium)",
+          "score": 0.967,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 5,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 0.967,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 6,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 0.963,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 7,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 0.957,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 8,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 0.957,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 9,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 0.95,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 10,
+          "name": "Kimi K2 Thinking",
+          "score": 0.947,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 11,
+          "name": "KAT-Coder-Pro V1",
+          "score": 0.947,
+          "creator": "KwaiKAT",
+          "context_window": 256000
+        },
+        {
+          "rank": 12,
+          "name": "GPT-5 (high)",
+          "score": 0.943,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 13,
+          "name": "GPT-5.1 (high)",
+          "score": 0.94,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 14,
+          "name": "gpt-oss-120B (high)",
+          "score": 0.934,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 15,
+          "name": "Grok 4",
+          "score": 0.927,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 16,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 0.92,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 17,
+          "name": "GPT-5 (medium)",
+          "score": 0.917,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 18,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 0.917,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 19,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 0.913,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 20,
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "score": 0.91,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 21,
+          "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasonin",
+          "score": 0.91,
+          "creator": "NVIDIA",
+          "context_window": 1000000
+        },
+        {
+          "rank": 22,
+          "name": "GPT-5 mini (high)",
+          "score": 0.907,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 23,
+          "name": "o4-mini (high)",
+          "score": 0.907,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 24,
+          "name": "K-EXAONE (Reasoning)",
+          "score": 0.903,
+          "creator": "LG AI Research",
+          "context_window": 256000
+        },
+        {
+          "rank": 25,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 0.897,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 26,
+          "name": "Nova 2.0 Omni (medium)",
+          "score": 0.897,
+          "creator": "Amazon",
+          "context_window": 1000000
+        },
+        {
+          "rank": 27,
+          "name": "DeepSeek V3.1 (Reasoning)",
+          "score": 0.897,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 28,
+          "name": "DeepSeek V3.1 Terminus (Reasoning)",
+          "score": 0.897,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 29,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 0.893,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 30,
+          "name": "gpt-oss-20B (high)",
+          "score": 0.893,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 31,
+          "name": "Ring-1T",
+          "score": 0.893,
+          "creator": "InclusionAI",
+          "context_window": 128000
+        },
+        {
+          "rank": 32,
+          "name": "Nova 2.0 Pro Preview (medium)",
+          "score": 0.89,
+          "creator": "Amazon",
+          "context_window": 256000
+        },
+        {
+          "rank": 33,
+          "name": "Nova 2.0 Lite (medium)",
+          "score": 0.887,
+          "creator": "Amazon",
+          "context_window": 1000000
+        },
+        {
+          "rank": 34,
+          "name": "Qwen3 VL 235B A22B (Reasoning)",
+          "score": 0.883,
+          "creator": "Alibaba",
+          "context_window": 262144
+        },
+        {
+          "rank": 35,
+          "name": "o3",
+          "score": 0.883,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 36,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 0.88,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 37,
+          "name": "Apriel-v1.6-15B-Thinker",
+          "score": 0.88,
+          "creator": "ServiceNow",
+          "context_window": 128000
+        },
+        {
+          "rank": 38,
+          "name": "INTELLECT-3",
+          "score": 0.88,
+          "creator": "Prime Intellect",
+          "context_window": 131100
+        },
+        {
+          "rank": 39,
+          "name": "DeepSeek V3.2 Exp (Reasoning)",
+          "score": 0.877,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 40,
+          "name": "Gemini 2.5 Pro",
+          "score": 0.877,
+          "creator": "Google",
+          "context_window": 1000000
+        }
+      ]
+    },
+    "gpqa": {
+      "label": "GPQA Diamond",
+      "pct": true,
+      "models": [
+        {
+          "rank": 1,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 0.908,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 2,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 0.903,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 3,
+          "name": "GPT-5.2 Codex (xhigh)",
+          "score": 0.899,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 4,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 0.898,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 5,
+          "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+          "score": 0.896,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 6,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 0.887,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 7,
+          "name": "Kimi K2.5 (Reasoning)",
+          "score": 0.879,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 8,
+          "name": "Grok 4",
+          "score": 0.877,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 9,
+          "name": "GPT-5.1 (high)",
+          "score": 0.873,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 10,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 0.871,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 11,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 0.866,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 12,
+          "name": "GPT-5.2 (medium)",
+          "score": 0.864,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 13,
+          "name": "Qwen3 Max Thinking",
+          "score": 0.861,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 14,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 0.86,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 15,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 0.859,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 16,
+          "name": "GPT-5 (high)",
+          "score": 0.854,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 17,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 0.853,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 18,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 0.847,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 19,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 0.846,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 20,
+          "name": "o3-pro",
+          "score": 0.845,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 21,
+          "name": "Gemini 2.5 Pro",
+          "score": 0.844,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 22,
+          "name": "GPT-5 (medium)",
+          "score": 0.842,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 23,
+          "name": "Claude Opus 4.6 (Non-reasoning)",
+          "score": 0.84,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 24,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 0.84,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 25,
+          "name": "Kimi K2 Thinking",
+          "score": 0.838,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 26,
+          "name": "GPT-5 Codex (high)",
+          "score": 0.837,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 27,
+          "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+          "score": 0.836,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 28,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 0.834,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 29,
+          "name": "MiniMax-M2.1",
+          "score": 0.83,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 30,
+          "name": "GPT-5 mini (high)",
+          "score": 0.828,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 31,
+          "name": "o3",
+          "score": 0.827,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 32,
+          "name": "Gemini 2.5 Pro Preview (May' 25)",
+          "score": 0.822,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 33,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 0.813,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 34,
+          "name": "DeepSeek R1 0528 (May '25)",
+          "score": 0.813,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 35,
+          "name": "Gemini 3 Flash Preview (Non-reasoning)",
+          "score": 0.812,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 36,
+          "name": "ERNIE 4.5 300B A47B",
+          "score": 0.811,
+          "creator": "Baidu",
+          "context_window": 131072
+        },
+        {
+          "rank": 37,
+          "name": "Claude Opus 4.5 (Non-reasoning)",
+          "score": 0.81,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 38,
+          "name": "Claude 4.1 Opus (Reasoning)",
+          "score": 0.809,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 39,
+          "name": "GPT-5 (low)",
+          "score": 0.808,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 40,
+          "name": "GPT-5 mini (medium)",
+          "score": 0.803,
+          "creator": "OpenAI",
+          "context_window": 400000
+        }
+      ]
+    },
+    "hle": {
+      "label": "HLE",
+      "pct": true,
+      "models": [
+        {
+          "rank": 1,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 0.372,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 2,
+          "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+          "score": 0.367,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 3,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 0.354,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 4,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 0.347,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 5,
+          "name": "GPT-5.2 Codex (xhigh)",
+          "score": 0.335,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 6,
+          "name": "KAT-Coder-Pro V1",
+          "score": 0.334,
+          "creator": "KwaiKAT",
+          "context_window": 256000
+        },
+        {
+          "rank": 7,
+          "name": "Kimi K2.5 (Reasoning)",
+          "score": 0.294,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 8,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 0.284,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 9,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 0.276,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 10,
+          "name": "GPT-5 (high)",
+          "score": 0.265,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 11,
+          "name": "GPT-5.1 (high)",
+          "score": 0.265,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 12,
+          "name": "Qwen3 Max Thinking",
+          "score": 0.262,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 13,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 0.261,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 14,
+          "name": "GPT-5 Codex (high)",
+          "score": 0.256,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 15,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 0.251,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 16,
+          "name": "GPT-5.2 (medium)",
+          "score": 0.249,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 17,
+          "name": "Grok 4",
+          "score": 0.239,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 18,
+          "name": "GPT-5 (medium)",
+          "score": 0.235,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 19,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 0.234,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 20,
+          "name": "Kimi K2 Thinking",
+          "score": 0.223,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 21,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 0.222,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 22,
+          "name": "MiniMax-M2.1",
+          "score": 0.222,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 23,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 0.211,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 24,
+          "name": "Gemini 2.5 Pro",
+          "score": 0.211,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 25,
+          "name": "o3",
+          "score": 0.2,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 26,
+          "name": "GPT-5 mini (high)",
+          "score": 0.197,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 27,
+          "name": "Claude Opus 4.6 (Non-reasoning)",
+          "score": 0.186,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 28,
+          "name": "gpt-oss-120B (high)",
+          "score": 0.185,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 29,
+          "name": "GPT-5 (low)",
+          "score": 0.184,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 30,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 0.176,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 31,
+          "name": "o4-mini (high)",
+          "score": 0.175,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 32,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 0.173,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 33,
+          "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+          "score": 0.171,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 34,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 0.17,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 35,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 0.169,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 36,
+          "name": "Gemini 2.5 Pro Preview (May' 25)",
+          "score": 0.154,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 37,
+          "name": "DeepSeek V3.1 Terminus (Reasoning)",
+          "score": 0.152,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 38,
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "score": 0.15,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 39,
+          "name": "DeepSeek R1 0528 (May '25)",
+          "score": 0.149,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 40,
+          "name": "GPT-5 mini (medium)",
+          "score": 0.146,
+          "creator": "OpenAI",
+          "context_window": 400000
+        }
+      ]
+    },
+    "mmlu_pro": {
+      "label": "MMLU Pro",
+      "pct": true,
+      "models": [
+        {
+          "rank": 1,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 0.898,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 2,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 0.895,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 3,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 0.895,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 4,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 0.89,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 5,
+          "name": "Claude Opus 4.5 (Non-reasoning)",
+          "score": 0.889,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 6,
+          "name": "Gemini 3 Flash Preview (Non-reasoning)",
+          "score": 0.882,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 7,
+          "name": "Claude 4.1 Opus (Reasoning)",
+          "score": 0.88,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 8,
+          "name": "Claude 4.5 Sonnet (Reasoning)",
+          "score": 0.875,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 9,
+          "name": "MiniMax-M2.1",
+          "score": 0.875,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 10,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 0.874,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 11,
+          "name": "Claude 4 Opus (Reasoning)",
+          "score": 0.873,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 12,
+          "name": "GPT-5 (high)",
+          "score": 0.871,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 13,
+          "name": "GPT-5.1 (high)",
+          "score": 0.87,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 14,
+          "name": "GPT-5 (medium)",
+          "score": 0.867,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 15,
+          "name": "Grok 4",
+          "score": 0.866,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 16,
+          "name": "GPT-5 Codex (high)",
+          "score": 0.865,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 17,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 0.863,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 18,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 0.862,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 19,
+          "name": "Gemini 2.5 Pro",
+          "score": 0.862,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 20,
+          "name": "Claude 4 Opus (Non-reasoning)",
+          "score": 0.86,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 21,
+          "name": "Claude 4.5 Sonnet (Non-reasoning)",
+          "score": 0.86,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 22,
+          "name": "GPT-5 (low)",
+          "score": 0.86,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 23,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 0.86,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 24,
+          "name": "GPT-5.2 (medium)",
+          "score": 0.859,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 25,
+          "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+          "score": 0.858,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 26,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 0.856,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 27,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 0.854,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 28,
+          "name": "Doubao Seed Code",
+          "score": 0.854,
+          "creator": "ByteDance Seed",
+          "context_window": 256000
+        },
+        {
+          "rank": 29,
+          "name": "o3",
+          "score": 0.853,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 30,
+          "name": "DeepSeek V3.1 (Reasoning)",
+          "score": 0.851,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 31,
+          "name": "DeepSeek V3.1 Terminus (Reasoning)",
+          "score": 0.851,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 32,
+          "name": "DeepSeek V3.2 Exp (Reasoning)",
+          "score": 0.85,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 33,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 0.85,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 34,
+          "name": "DeepSeek R1 0528 (May '25)",
+          "score": 0.849,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 35,
+          "name": "Cogito v2.1 (Reasoning)",
+          "score": 0.849,
+          "creator": "Deep Cogito",
+          "context_window": 128000
+        },
+        {
+          "rank": 36,
+          "name": "Kimi K2 Thinking",
+          "score": 0.848,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 37,
+          "name": "DeepSeek R1 (Jan '25)",
+          "score": 0.844,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 38,
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "score": 0.843,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 39,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 0.843,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 40,
+          "name": "Claude 4 Sonnet (Reasoning)",
+          "score": 0.842,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        }
+      ]
+    },
+    "humaneval": {
+      "label": "HumanEval",
+      "pct": true,
+      "models": [
+        {
+          "rank": 1,
+          "name": "o3",
+          "score": 0.991,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 2,
+          "name": "o4-mini (high)",
+          "score": 0.99,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 3,
+          "name": "GPT-5 (high)",
+          "score": 0.989,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 4,
+          "name": "Gemini 2.5 Pro Preview (May' 25)",
+          "score": 0.989,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 5,
+          "name": "GPT-5 (low)",
+          "score": 0.987,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 6,
+          "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+          "score": 0.985,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 7,
+          "name": "GPT-5 (medium)",
+          "score": 0.984,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 8,
+          "name": "GLM-4.5 (Reasoning)",
+          "score": 0.982,
+          "creator": "Z AI",
+          "context_window": 128000
+        },
+        {
+          "rank": 9,
+          "name": "Claude 3.7 Sonnet (Reasoning)",
+          "score": 0.978,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 10,
+          "name": "Grok 3 mini Reasoning (high)",
+          "score": 0.978,
+          "creator": "xAI",
+          "context_window": 1000000
+        },
+        {
+          "rank": 11,
+          "name": "Grok 4",
+          "score": 0.977,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 12,
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "score": 0.977,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 13,
+          "name": "DeepSeek R1 (Jan '25)",
+          "score": 0.977,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 14,
+          "name": "QwQ 32B",
+          "score": 0.976,
+          "creator": "Alibaba",
+          "context_window": 131072
+        },
+        {
+          "rank": 15,
+          "name": "o1",
+          "score": 0.974,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 16,
+          "name": "Claude 4 Sonnet (Non-reasoning)",
+          "score": 0.973,
+          "creator": "Anthropic",
+          "context_window": 1000000
+        },
+        {
+          "rank": 17,
+          "name": "o1-mini",
+          "score": 0.972,
+          "creator": "OpenAI",
+          "context_window": 128000
+        },
+        {
+          "rank": 18,
+          "name": "DeepSeek R1 Distill Llama 70B",
+          "score": 0.972,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 19,
+          "name": "o3-mini",
+          "score": 0.972,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 20,
+          "name": "Gemini 2.5 Flash-Lite (Reasoning)",
+          "score": 0.971,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 21,
+          "name": "Claude 4 Opus (Non-reasoning)",
+          "score": 0.97,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 22,
+          "name": "EXAONE 4.0 32B (Reasoning)",
+          "score": 0.97,
+          "creator": "LG AI Research",
+          "context_window": 131000
+        },
+        {
+          "rank": 23,
+          "name": "DeepSeek R1 0528 (May '25)",
+          "score": 0.97,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 24,
+          "name": "Solar Pro 2 (Reasoning)",
+          "score": 0.968,
+          "creator": "Upstage",
+          "context_window": 65536
+        },
+        {
+          "rank": 25,
+          "name": "Qwen3 Coder 480B A35B Instruct",
+          "score": 0.965,
+          "creator": "Alibaba",
+          "context_window": 262144
+        },
+        {
+          "rank": 26,
+          "name": "Qwen3 14B (Reasoning)",
+          "score": 0.963,
+          "creator": "Alibaba",
+          "context_window": 32768
+        },
+        {
+          "rank": 27,
+          "name": "Magistral Small 1",
+          "score": 0.963,
+          "creator": "Mistral",
+          "context_window": 40000
+        },
+        {
+          "rank": 28,
+          "name": "Gemini 2.5 Flash (Reasoning)",
+          "score": 0.962,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 29,
+          "name": "GPT-4o (March 2025, chatgpt-4o-latest)",
+          "score": 0.96,
+          "creator": "OpenAI",
+          "context_window": 128000
+        },
+        {
+          "rank": 30,
+          "name": "Llama 3.3 Nemotron Super 49B v1 (Reasoni",
+          "score": 0.959,
+          "creator": "NVIDIA",
+          "context_window": 128000
+        },
+        {
+          "rank": 31,
+          "name": "Qwen3 235B A22B 2507 Instruct",
+          "score": 0.957,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 32,
+          "name": "o1-preview",
+          "score": 0.956,
+          "creator": "OpenAI",
+          "context_window": 128000
+        },
+        {
+          "rank": 33,
+          "name": "GPT-4.1",
+          "score": 0.956,
+          "creator": "OpenAI",
+          "context_window": 1000000
+        },
+        {
+          "rank": 34,
+          "name": "Llama Nemotron Super 49B v1.5 (Reasoning",
+          "score": 0.952,
+          "creator": "NVIDIA",
+          "context_window": 128000
+        },
+        {
+          "rank": 35,
+          "name": "GPT-5 (minimal)",
+          "score": 0.951,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 36,
+          "name": "Gemini 2.5 Flash (Non-reasoning)",
+          "score": 0.951,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 37,
+          "name": "Gemini 2.0 Pro Experimental (Feb '25)",
+          "score": 0.951,
+          "creator": "Google",
+          "context_window": 2000000
+        },
+        {
+          "rank": 38,
+          "name": "GPT-4.1 mini",
+          "score": 0.95,
+          "creator": "OpenAI",
+          "context_window": 1000000
+        },
+        {
+          "rank": 39,
+          "name": "Reka Flash 3",
+          "score": 0.95,
+          "creator": "Reka AI",
+          "context_window": 128000
+        },
+        {
+          "rank": 40,
+          "name": "Claude 3.7 Sonnet (Non-reasoning)",
+          "score": 0.949,
+          "creator": "Anthropic",
+          "context_window": 200000
+        }
+      ]
+    },
+    "livecodebench": {
+      "label": "LiveCodeBench",
+      "pct": true,
+      "models": [
+        {
+          "rank": 1,
+          "name": "Gemini 3 Pro Preview (high)",
+          "score": 0.917,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 2,
+          "name": "Gemini 3 Flash Preview (Reasoning)",
+          "score": 0.908,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 3,
+          "name": "DeepSeek V3.2 Speciale",
+          "score": 0.896,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 4,
+          "name": "GPT-5.2 (medium)",
+          "score": 0.894,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 5,
+          "name": "GLM-4.7 (Reasoning)",
+          "score": 0.894,
+          "creator": "Z AI",
+          "context_window": 200000
+        },
+        {
+          "rank": 6,
+          "name": "GPT-5.2 (xhigh)",
+          "score": 0.889,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 7,
+          "name": "gpt-oss-120B (high)",
+          "score": 0.878,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 8,
+          "name": "Claude Opus 4.5 (Reasoning)",
+          "score": 0.871,
+          "creator": "Anthropic",
+          "context_window": 200000
+        },
+        {
+          "rank": 9,
+          "name": "GPT-5.1 (high)",
+          "score": 0.868,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 10,
+          "name": "MiMo-V2-Flash (Reasoning)",
+          "score": 0.868,
+          "creator": "Xiaomi",
+          "context_window": 256000
+        },
+        {
+          "rank": 11,
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "score": 0.862,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 12,
+          "name": "o4-mini (high)",
+          "score": 0.859,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 13,
+          "name": "Gemini 3 Pro Preview (low)",
+          "score": 0.857,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 14,
+          "name": "Kimi K2 Thinking",
+          "score": 0.853,
+          "creator": "Kimi",
+          "context_window": 256000
+        },
+        {
+          "rank": 15,
+          "name": "GPT-5.1 Codex (high)",
+          "score": 0.849,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 16,
+          "name": "GPT-5 (high)",
+          "score": 0.846,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 17,
+          "name": "GPT-5 Codex (high)",
+          "score": 0.84,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 18,
+          "name": "GPT-5 mini (high)",
+          "score": 0.838,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 19,
+          "name": "GPT-5.1 Codex mini (high)",
+          "score": 0.836,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 20,
+          "name": "Grok 4 Fast (Reasoning)",
+          "score": 0.832,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 21,
+          "name": "MiniMax-M2",
+          "score": 0.826,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 22,
+          "name": "Grok 4.1 Fast (Reasoning)",
+          "score": 0.822,
+          "creator": "xAI",
+          "context_window": 2000000
+        },
+        {
+          "rank": 23,
+          "name": "Grok 4",
+          "score": 0.819,
+          "creator": "xAI",
+          "context_window": 256000
+        },
+        {
+          "rank": 24,
+          "name": "ERNIE 5.0 Thinking Preview",
+          "score": 0.812,
+          "creator": "Baidu",
+          "context_window": 128000
+        },
+        {
+          "rank": 25,
+          "name": "MiniMax-M2.1",
+          "score": 0.81,
+          "creator": "MiniMax",
+          "context_window": 204800
+        },
+        {
+          "rank": 26,
+          "name": "o3",
+          "score": 0.808,
+          "creator": "OpenAI",
+          "context_window": 200000
+        },
+        {
+          "rank": 27,
+          "name": "Apriel-v1.6-15B-Thinker",
+          "score": 0.807,
+          "creator": "ServiceNow",
+          "context_window": 128000
+        },
+        {
+          "rank": 28,
+          "name": "Gemini 2.5 Pro",
+          "score": 0.801,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 29,
+          "name": "DeepSeek V3.1 Terminus (Reasoning)",
+          "score": 0.798,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 30,
+          "name": "Gemini 3 Flash Preview (Non-reasoning)",
+          "score": 0.797,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 31,
+          "name": "GPT-5 nano (high)",
+          "score": 0.789,
+          "creator": "OpenAI",
+          "context_window": 400000
+        },
+        {
+          "rank": 32,
+          "name": "DeepSeek V3.2 Exp (Reasoning)",
+          "score": 0.789,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 33,
+          "name": "Qwen3 235B A22B 2507 (Reasoning)",
+          "score": 0.788,
+          "creator": "Alibaba",
+          "context_window": 256000
+        },
+        {
+          "rank": 34,
+          "name": "Qwen3 Next 80B A3B (Reasoning)",
+          "score": 0.784,
+          "creator": "Alibaba",
+          "context_window": 262144
+        },
+        {
+          "rank": 35,
+          "name": "DeepSeek V3.1 (Reasoning)",
+          "score": 0.784,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        },
+        {
+          "rank": 36,
+          "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+          "score": 0.778,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 37,
+          "name": "gpt-oss-20B (high)",
+          "score": 0.777,
+          "creator": "OpenAI",
+          "context_window": 131072
+        },
+        {
+          "rank": 38,
+          "name": "INTELLECT-3",
+          "score": 0.777,
+          "creator": "Prime Intellect",
+          "context_window": 131100
+        },
+        {
+          "rank": 39,
+          "name": "Gemini 2.5 Pro Preview (May' 25)",
+          "score": 0.77,
+          "creator": "Google",
+          "context_window": 1000000
+        },
+        {
+          "rank": 40,
+          "name": "DeepSeek R1 0528 (May '25)",
+          "score": 0.77,
+          "creator": "DeepSeek",
+          "context_window": 128000
+        }
+      ]
+    }
+  },
+  "models": [
+    {
+      "name": "Claude 4 Opus (Non-reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": null,
+      "math_index": 36.33,
+      "aime25": 0.363,
+      "gpqa": 0.701,
+      "hle": 0.059,
+      "mmlu_pro": 0.86,
+      "humaneval": 0.97,
+      "livecodebench": 0.542
+    },
+    {
+      "name": "Claude 4 Opus (Reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": 33.98,
+      "math_index": 73.33,
+      "aime25": 0.733,
+      "gpqa": 0.796,
+      "hle": 0.117,
+      "mmlu_pro": 0.873,
+      "humaneval": null,
+      "livecodebench": 0.636
+    },
+    {
+      "name": "Claude 4 Sonnet (Non-reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 32.96,
+      "agentic_index": 39.21,
+      "coding_index": 30.6,
+      "math_index": 38,
+      "aime25": 0.38,
+      "gpqa": 0.683,
+      "hle": 0.04,
+      "mmlu_pro": 0.837,
+      "humaneval": 0.973,
+      "livecodebench": 0.449
+    },
+    {
+      "name": "Claude 4 Sonnet (Reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 38.56,
+      "agentic_index": 43.02,
+      "coding_index": 34.06,
+      "math_index": 74.33,
+      "aime25": 0.743,
+      "gpqa": 0.777,
+      "hle": 0.096,
+      "mmlu_pro": 0.842,
+      "humaneval": null,
+      "livecodebench": 0.655
+    },
+    {
+      "name": "Claude 4.5 Haiku (Non-reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 31.03,
+      "agentic_index": 32.59,
+      "coding_index": 29.64,
+      "math_index": 39,
+      "aime25": 0.39,
+      "gpqa": 0.646,
+      "hle": 0.043,
+      "mmlu_pro": 0.8,
+      "humaneval": null,
+      "livecodebench": 0.511
+    },
+    {
+      "name": "Claude 4.5 Haiku (Reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 37.02,
+      "agentic_index": 40.16,
+      "coding_index": 32.61,
+      "math_index": 83.67,
+      "aime25": 0.837,
+      "gpqa": 0.672,
+      "hle": 0.097,
+      "mmlu_pro": 0.76,
+      "humaneval": null,
+      "livecodebench": 0.615
+    },
+    {
+      "name": "Claude 4.5 Sonnet (Non-reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 37.06,
+      "agentic_index": 50.64,
+      "coding_index": 33.47,
+      "math_index": 37,
+      "aime25": 0.37,
+      "gpqa": 0.727,
+      "hle": 0.071,
+      "mmlu_pro": 0.86,
+      "humaneval": null,
+      "livecodebench": 0.59
+    },
+    {
+      "name": "Claude 4.5 Sonnet (Reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 42.92,
+      "agentic_index": 51.72,
+      "coding_index": 38.63,
+      "math_index": 88,
+      "aime25": 0.88,
+      "gpqa": 0.834,
+      "hle": 0.173,
+      "mmlu_pro": 0.875,
+      "humaneval": null,
+      "livecodebench": 0.714
+    },
+    {
+      "name": "Claude Opus 4.5 (Non-reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 43.05,
+      "agentic_index": 59.22,
+      "coding_index": 42.94,
+      "math_index": 62.67,
+      "aime25": 0.627,
+      "gpqa": 0.81,
+      "hle": 0.129,
+      "mmlu_pro": 0.889,
+      "humaneval": null,
+      "livecodebench": 0.738
+    },
+    {
+      "name": "Claude Opus 4.5 (Reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 49.69,
+      "agentic_index": 59.64,
+      "coding_index": 47.83,
+      "math_index": 91.33,
+      "aime25": 0.913,
+      "gpqa": 0.866,
+      "hle": 0.284,
+      "mmlu_pro": 0.895,
+      "humaneval": null,
+      "livecodebench": 0.871
+    },
+    {
+      "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 53.03,
+      "agentic_index": 68.07,
+      "coding_index": 48.09,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.896,
+      "hle": 0.367,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "Claude Opus 4.6 (Non-reasoning)",
+      "creator": "Anthropic",
+      "intelligence_index": 46.39,
+      "agentic_index": 64.22,
+      "coding_index": 47.56,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.84,
+      "hle": 0.186,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "GPT-5 (ChatGPT)",
+      "creator": "OpenAI",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": 21.2,
+      "math_index": 48.33,
+      "aime25": 0.483,
+      "gpqa": 0.686,
+      "hle": 0.058,
+      "mmlu_pro": 0.82,
+      "humaneval": null,
+      "livecodebench": 0.543
+    },
+    {
+      "name": "GPT-5 (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 44.57,
+      "agentic_index": 54.65,
+      "coding_index": 36.03,
+      "math_index": 94.33,
+      "aime25": 0.943,
+      "gpqa": 0.854,
+      "hle": 0.265,
+      "mmlu_pro": 0.871,
+      "humaneval": 0.989,
+      "livecodebench": 0.846
+    },
+    {
+      "name": "GPT-5 (low)",
+      "creator": "OpenAI",
+      "intelligence_index": 39.03,
+      "agentic_index": 49.69,
+      "coding_index": 30.72,
+      "math_index": 83,
+      "aime25": 0.83,
+      "gpqa": 0.808,
+      "hle": 0.184,
+      "mmlu_pro": 0.86,
+      "humaneval": 0.987,
+      "livecodebench": 0.763
+    },
+    {
+      "name": "GPT-5 (medium)",
+      "creator": "OpenAI",
+      "intelligence_index": 41.84,
+      "agentic_index": 45.83,
+      "coding_index": 38.95,
+      "math_index": 91.67,
+      "aime25": 0.917,
+      "gpqa": 0.842,
+      "hle": 0.235,
+      "mmlu_pro": 0.867,
+      "humaneval": 0.984,
+      "livecodebench": 0.703
+    },
+    {
+      "name": "GPT-5 (minimal)",
+      "creator": "OpenAI",
+      "intelligence_index": 23.74,
+      "agentic_index": 22.86,
+      "coding_index": 25.05,
+      "math_index": 31.67,
+      "aime25": 0.317,
+      "gpqa": 0.673,
+      "hle": 0.054,
+      "mmlu_pro": 0.806,
+      "humaneval": 0.951,
+      "livecodebench": 0.558
+    },
+    {
+      "name": "GPT-5 Codex (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 44.52,
+      "agentic_index": 52.71,
+      "coding_index": 38.87,
+      "math_index": 98.67,
+      "aime25": 0.987,
+      "gpqa": 0.837,
+      "hle": 0.256,
+      "mmlu_pro": 0.865,
+      "humaneval": null,
+      "livecodebench": 0.84
+    },
+    {
+      "name": "GPT-5 mini (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 41.03,
+      "agentic_index": 45.48,
+      "coding_index": 35.3,
+      "math_index": 90.67,
+      "aime25": 0.907,
+      "gpqa": 0.828,
+      "hle": 0.197,
+      "mmlu_pro": 0.837,
+      "humaneval": null,
+      "livecodebench": 0.838
+    },
+    {
+      "name": "GPT-5 mini (medium)",
+      "creator": "OpenAI",
+      "intelligence_index": 38.81,
+      "agentic_index": 40.92,
+      "coding_index": 32.85,
+      "math_index": 85,
+      "aime25": 0.85,
+      "gpqa": 0.803,
+      "hle": 0.146,
+      "mmlu_pro": 0.828,
+      "humaneval": null,
+      "livecodebench": 0.692
+    },
+    {
+      "name": "GPT-5 mini (minimal)",
+      "creator": "OpenAI",
+      "intelligence_index": 20.66,
+      "agentic_index": 13.41,
+      "coding_index": 21.9,
+      "math_index": 46.67,
+      "aime25": 0.467,
+      "gpqa": 0.687,
+      "hle": 0.05,
+      "mmlu_pro": 0.775,
+      "humaneval": null,
+      "livecodebench": 0.545
+    },
+    {
+      "name": "GPT-5 nano (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 26.69,
+      "agentic_index": 23.25,
+      "coding_index": 20.27,
+      "math_index": 83.67,
+      "aime25": 0.837,
+      "gpqa": 0.676,
+      "hle": 0.082,
+      "mmlu_pro": 0.78,
+      "humaneval": null,
+      "livecodebench": 0.789
+    },
+    {
+      "name": "GPT-5 nano (medium)",
+      "creator": "OpenAI",
+      "intelligence_index": 25.68,
+      "agentic_index": 16.78,
+      "coding_index": 22.88,
+      "math_index": 78.33,
+      "aime25": 0.783,
+      "gpqa": 0.67,
+      "hle": 0.076,
+      "mmlu_pro": 0.772,
+      "humaneval": null,
+      "livecodebench": 0.763
+    },
+    {
+      "name": "GPT-5 nano (minimal)",
+      "creator": "OpenAI",
+      "intelligence_index": 13.65,
+      "agentic_index": 8.58,
+      "coding_index": 14.23,
+      "math_index": 27.33,
+      "aime25": 0.273,
+      "gpqa": 0.428,
+      "hle": 0.041,
+      "mmlu_pro": 0.556,
+      "humaneval": null,
+      "livecodebench": 0.47
+    },
+    {
+      "name": "GPT-5.1 (Non-reasoning)",
+      "creator": "OpenAI",
+      "intelligence_index": 27.41,
+      "agentic_index": 32.16,
+      "coding_index": 27.3,
+      "math_index": 38,
+      "aime25": 0.38,
+      "gpqa": 0.643,
+      "hle": 0.052,
+      "mmlu_pro": 0.801,
+      "humaneval": null,
+      "livecodebench": 0.494
+    },
+    {
+      "name": "GPT-5.1 (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 47.56,
+      "agentic_index": 51.26,
+      "coding_index": 44.73,
+      "math_index": 94,
+      "aime25": 0.94,
+      "gpqa": 0.873,
+      "hle": 0.265,
+      "mmlu_pro": 0.87,
+      "humaneval": null,
+      "livecodebench": 0.868
+    },
+    {
+      "name": "GPT-5.1 Codex (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 42.19,
+      "agentic_index": 50.68,
+      "coding_index": 36.62,
+      "math_index": 95.67,
+      "aime25": 0.957,
+      "gpqa": 0.86,
+      "hle": 0.234,
+      "mmlu_pro": 0.86,
+      "humaneval": null,
+      "livecodebench": 0.849
+    },
+    {
+      "name": "GPT-5.1 Codex mini (high)",
+      "creator": "OpenAI",
+      "intelligence_index": 38.54,
+      "agentic_index": 38.67,
+      "coding_index": 36.42,
+      "math_index": 91.67,
+      "aime25": 0.917,
+      "gpqa": 0.813,
+      "hle": 0.169,
+      "mmlu_pro": 0.82,
+      "humaneval": null,
+      "livecodebench": 0.836
+    },
+    {
+      "name": "GPT-5.2 (Non-reasoning)",
+      "creator": "OpenAI",
+      "intelligence_index": 33.53,
+      "agentic_index": 39.53,
+      "coding_index": 34.68,
+      "math_index": 51,
+      "aime25": 0.51,
+      "gpqa": 0.712,
+      "hle": 0.073,
+      "mmlu_pro": 0.814,
+      "humaneval": null,
+      "livecodebench": 0.669
+    },
+    {
+      "name": "GPT-5.2 (medium)",
+      "creator": "OpenAI",
+      "intelligence_index": 46.58,
+      "agentic_index": 54.93,
+      "coding_index": 44.18,
+      "math_index": 96.67,
+      "aime25": 0.967,
+      "gpqa": 0.864,
+      "hle": 0.249,
+      "mmlu_pro": 0.859,
+      "humaneval": null,
+      "livecodebench": 0.894
+    },
+    {
+      "name": "GPT-5.2 (xhigh)",
+      "creator": "OpenAI",
+      "intelligence_index": 51.24,
+      "agentic_index": 60.2,
+      "coding_index": 48.67,
+      "math_index": 99,
+      "aime25": 0.99,
+      "gpqa": 0.903,
+      "hle": 0.354,
+      "mmlu_pro": 0.874,
+      "humaneval": null,
+      "livecodebench": 0.889
+    },
+    {
+      "name": "GPT-5.2 Codex (xhigh)",
+      "creator": "OpenAI",
+      "intelligence_index": 48.98,
+      "agentic_index": 56.52,
+      "coding_index": 42.96,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.899,
+      "hle": 0.335,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "Gemini 3 Flash Preview (Non-reasoning)",
+      "creator": "Google",
+      "intelligence_index": 35.1,
+      "agentic_index": 35.01,
+      "coding_index": 37.84,
+      "math_index": 55.67,
+      "aime25": 0.557,
+      "gpqa": 0.812,
+      "hle": 0.141,
+      "mmlu_pro": 0.882,
+      "humaneval": null,
+      "livecodebench": 0.797
+    },
+    {
+      "name": "Gemini 3 Flash Preview (Reasoning)",
+      "creator": "Google",
+      "intelligence_index": 46.4,
+      "agentic_index": 49.66,
+      "coding_index": 42.62,
+      "math_index": 97,
+      "aime25": 0.97,
+      "gpqa": 0.898,
+      "hle": 0.347,
+      "mmlu_pro": 0.89,
+      "humaneval": null,
+      "livecodebench": 0.908
+    },
+    {
+      "name": "Gemini 3 Pro Preview (high)",
+      "creator": "Google",
+      "intelligence_index": 48.44,
+      "agentic_index": 51.98,
+      "coding_index": 46.49,
+      "math_index": 95.67,
+      "aime25": 0.957,
+      "gpqa": 0.908,
+      "hle": 0.372,
+      "mmlu_pro": 0.898,
+      "humaneval": null,
+      "livecodebench": 0.917
+    },
+    {
+      "name": "Gemini 3 Pro Preview (low)",
+      "creator": "Google",
+      "intelligence_index": 41.09,
+      "agentic_index": 45.05,
+      "coding_index": 39.36,
+      "math_index": 86.67,
+      "aime25": 0.867,
+      "gpqa": 0.887,
+      "hle": 0.276,
+      "mmlu_pro": 0.895,
+      "humaneval": null,
+      "livecodebench": 0.857
+    },
+    {
+      "name": "Kimi K2",
+      "creator": "Kimi",
+      "intelligence_index": 26.19,
+      "agentic_index": 24.27,
+      "coding_index": 22.1,
+      "math_index": 57,
+      "aime25": 0.57,
+      "gpqa": 0.766,
+      "hle": 0.07,
+      "mmlu_pro": 0.824,
+      "humaneval": 0.926,
+      "livecodebench": 0.556
+    },
+    {
+      "name": "Kimi K2 0905",
+      "creator": "Kimi",
+      "intelligence_index": 30.81,
+      "agentic_index": 37.73,
+      "coding_index": 25.88,
+      "math_index": 57.33,
+      "aime25": 0.573,
+      "gpqa": 0.767,
+      "hle": 0.063,
+      "mmlu_pro": 0.819,
+      "humaneval": null,
+      "livecodebench": 0.61
+    },
+    {
+      "name": "Kimi K2 Thinking",
+      "creator": "Kimi",
+      "intelligence_index": 40.7,
+      "agentic_index": 47.9,
+      "coding_index": 34.83,
+      "math_index": 94.67,
+      "aime25": 0.947,
+      "gpqa": 0.838,
+      "hle": 0.223,
+      "mmlu_pro": 0.848,
+      "humaneval": null,
+      "livecodebench": 0.853
+    },
+    {
+      "name": "Kimi K2.5 (Non-reasoning)",
+      "creator": "Kimi",
+      "intelligence_index": 37.18,
+      "agentic_index": 52.84,
+      "coding_index": 25.82,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.789,
+      "hle": 0.123,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "Kimi K2.5 (Reasoning)",
+      "creator": "Kimi",
+      "intelligence_index": 46.73,
+      "agentic_index": 58.94,
+      "coding_index": 39.55,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.879,
+      "hle": 0.294,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "GLM-4.6 (Non-reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 30.15,
+      "agentic_index": 42.89,
+      "coding_index": 30.23,
+      "math_index": 44.33,
+      "aime25": 0.443,
+      "gpqa": 0.632,
+      "hle": 0.052,
+      "mmlu_pro": 0.784,
+      "humaneval": null,
+      "livecodebench": 0.561
+    },
+    {
+      "name": "GLM-4.6 (Reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 32.52,
+      "agentic_index": 41.61,
+      "coding_index": 29.48,
+      "math_index": 86,
+      "aime25": 0.86,
+      "gpqa": 0.78,
+      "hle": 0.133,
+      "mmlu_pro": 0.829,
+      "humaneval": null,
+      "livecodebench": 0.695
+    },
+    {
+      "name": "GLM-4.6V (Non-reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 17.09,
+      "agentic_index": 18.69,
+      "coding_index": 11.09,
+      "math_index": 26.33,
+      "aime25": 0.263,
+      "gpqa": 0.566,
+      "hle": 0.037,
+      "mmlu_pro": 0.752,
+      "humaneval": null,
+      "livecodebench": 0.411
+    },
+    {
+      "name": "GLM-4.6V (Reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 23.46,
+      "agentic_index": 17.51,
+      "coding_index": 19.74,
+      "math_index": 85.33,
+      "aime25": 0.853,
+      "gpqa": 0.719,
+      "hle": 0.089,
+      "mmlu_pro": 0.799,
+      "humaneval": null,
+      "livecodebench": 0.16
+    },
+    {
+      "name": "GLM-4.7 (Non-reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 34.1,
+      "agentic_index": 54.34,
+      "coding_index": 32.01,
+      "math_index": 48,
+      "aime25": 0.48,
+      "gpqa": 0.664,
+      "hle": 0.061,
+      "mmlu_pro": 0.794,
+      "humaneval": null,
+      "livecodebench": 0.562
+    },
+    {
+      "name": "GLM-4.7 (Reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 42.05,
+      "agentic_index": 55.01,
+      "coding_index": 36.26,
+      "math_index": 95,
+      "aime25": 0.95,
+      "gpqa": 0.859,
+      "hle": 0.251,
+      "mmlu_pro": 0.856,
+      "humaneval": null,
+      "livecodebench": 0.894
+    },
+    {
+      "name": "GLM-4.7-Flash (Non-reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 21.47,
+      "agentic_index": 41.4,
+      "coding_index": 11.01,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.452,
+      "hle": 0.049,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "GLM-4.7-Flash (Reasoning)",
+      "creator": "Z AI",
+      "intelligence_index": 30.12,
+      "agentic_index": 45.98,
+      "coding_index": 25.87,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.581,
+      "hle": 0.071,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "DeepSeek V3 (Dec '24)",
+      "creator": "DeepSeek",
+      "intelligence_index": 16.39,
+      "agentic_index": 8.83,
+      "coding_index": 16.35,
+      "math_index": 26,
+      "aime25": 0.26,
+      "gpqa": 0.557,
+      "hle": 0.036,
+      "mmlu_pro": 0.752,
+      "humaneval": 0.906,
+      "livecodebench": 0.359
+    },
+    {
+      "name": "DeepSeek V3 0324",
+      "creator": "DeepSeek",
+      "intelligence_index": 21.81,
+      "agentic_index": 16.26,
+      "coding_index": 22.02,
+      "math_index": 41,
+      "aime25": 0.41,
+      "gpqa": 0.655,
+      "hle": 0.052,
+      "mmlu_pro": 0.819,
+      "humaneval": 0.922,
+      "livecodebench": 0.405
+    },
+    {
+      "name": "DeepSeek V3.2 (Non-reasoning)",
+      "creator": "DeepSeek",
+      "intelligence_index": 32.06,
+      "agentic_index": 39.82,
+      "coding_index": 34.6,
+      "math_index": 59,
+      "aime25": 0.59,
+      "gpqa": 0.751,
+      "hle": 0.105,
+      "mmlu_pro": 0.837,
+      "humaneval": null,
+      "livecodebench": 0.593
+    },
+    {
+      "name": "DeepSeek V3.2 (Reasoning)",
+      "creator": "DeepSeek",
+      "intelligence_index": 41.61,
+      "agentic_index": 52.92,
+      "coding_index": 36.7,
+      "math_index": 92,
+      "aime25": 0.92,
+      "gpqa": 0.84,
+      "hle": 0.222,
+      "mmlu_pro": 0.862,
+      "humaneval": null,
+      "livecodebench": 0.862
+    },
+    {
+      "name": "DeepSeek V3.2 Exp (Non-reasoning)",
+      "creator": "DeepSeek",
+      "intelligence_index": 28.33,
+      "agentic_index": 31.03,
+      "coding_index": 29.98,
+      "math_index": 57.67,
+      "aime25": 0.577,
+      "gpqa": 0.738,
+      "hle": 0.086,
+      "mmlu_pro": 0.836,
+      "humaneval": null,
+      "livecodebench": 0.554
+    },
+    {
+      "name": "DeepSeek V3.2 Exp (Reasoning)",
+      "creator": "DeepSeek",
+      "intelligence_index": 32.9,
+      "agentic_index": 28.73,
+      "coding_index": 33.28,
+      "math_index": 87.67,
+      "aime25": 0.877,
+      "gpqa": 0.797,
+      "hle": 0.138,
+      "mmlu_pro": 0.85,
+      "humaneval": null,
+      "livecodebench": 0.789
+    },
+    {
+      "name": "DeepSeek V3.2 Speciale",
+      "creator": "DeepSeek",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": 37.89,
+      "math_index": 96.67,
+      "aime25": 0.967,
+      "gpqa": 0.871,
+      "hle": 0.261,
+      "mmlu_pro": 0.863,
+      "humaneval": null,
+      "livecodebench": 0.896
+    },
+    {
+      "name": "Grok 4",
+      "creator": "xAI",
+      "intelligence_index": 41.43,
+      "agentic_index": 41.5,
+      "coding_index": 40.49,
+      "math_index": 92.67,
+      "aime25": 0.927,
+      "gpqa": 0.877,
+      "hle": 0.239,
+      "mmlu_pro": 0.866,
+      "humaneval": 0.977,
+      "livecodebench": 0.819
+    },
+    {
+      "name": "Grok 4 Fast (Non-reasoning)",
+      "creator": "xAI",
+      "intelligence_index": 22.64,
+      "agentic_index": 31.95,
+      "coding_index": 19.04,
+      "math_index": 41.33,
+      "aime25": 0.413,
+      "gpqa": 0.606,
+      "hle": 0.05,
+      "mmlu_pro": 0.73,
+      "humaneval": null,
+      "livecodebench": 0.401
+    },
+    {
+      "name": "Grok 4 Fast (Reasoning)",
+      "creator": "xAI",
+      "intelligence_index": 34.93,
+      "agentic_index": 39.51,
+      "coding_index": 27.36,
+      "math_index": 89.67,
+      "aime25": 0.897,
+      "gpqa": 0.847,
+      "hle": 0.17,
+      "mmlu_pro": 0.85,
+      "humaneval": null,
+      "livecodebench": 0.832
+    },
+    {
+      "name": "Grok 4.1 Fast (Non-reasoning)",
+      "creator": "xAI",
+      "intelligence_index": 23.54,
+      "agentic_index": 32.95,
+      "coding_index": 19.47,
+      "math_index": 34.33,
+      "aime25": 0.343,
+      "gpqa": 0.637,
+      "hle": 0.05,
+      "mmlu_pro": 0.743,
+      "humaneval": null,
+      "livecodebench": 0.399
+    },
+    {
+      "name": "Grok 4.1 Fast (Reasoning)",
+      "creator": "xAI",
+      "intelligence_index": 38.54,
+      "agentic_index": 49.31,
+      "coding_index": 30.9,
+      "math_index": 89.33,
+      "aime25": 0.893,
+      "gpqa": 0.853,
+      "hle": 0.176,
+      "mmlu_pro": 0.854,
+      "humaneval": null,
+      "livecodebench": 0.822
+    },
+    {
+      "name": "Qwen3 0.6B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 5.59,
+      "agentic_index": 4.87,
+      "coding_index": 1.35,
+      "math_index": 10.33,
+      "aime25": 0.103,
+      "gpqa": 0.231,
+      "hle": 0.052,
+      "mmlu_pro": 0.231,
+      "humaneval": 0.338,
+      "livecodebench": 0.073
+    },
+    {
+      "name": "Qwen3 0.6B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 6.43,
+      "agentic_index": 7.02,
+      "coding_index": 0.93,
+      "math_index": 18,
+      "aime25": 0.18,
+      "gpqa": 0.239,
+      "hle": 0.057,
+      "mmlu_pro": 0.347,
+      "humaneval": 0.49,
+      "livecodebench": 0.121
+    },
+    {
+      "name": "Qwen3 1.7B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 6.78,
+      "agentic_index": 7.21,
+      "coding_index": 2.31,
+      "math_index": 7.33,
+      "aime25": 0.073,
+      "gpqa": 0.283,
+      "hle": 0.052,
+      "mmlu_pro": 0.411,
+      "humaneval": null,
+      "livecodebench": 0.126
+    },
+    {
+      "name": "Qwen3 1.7B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 7.88,
+      "agentic_index": 8.67,
+      "coding_index": 1.43,
+      "math_index": 38.67,
+      "aime25": 0.387,
+      "gpqa": 0.356,
+      "hle": 0.048,
+      "mmlu_pro": 0.57,
+      "humaneval": 0.854,
+      "livecodebench": 0.308
+    },
+    {
+      "name": "Qwen3 14B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 12.72,
+      "agentic_index": 13.6,
+      "coding_index": 12.37,
+      "math_index": 58,
+      "aime25": 0.58,
+      "gpqa": 0.47,
+      "hle": 0.042,
+      "mmlu_pro": 0.675,
+      "humaneval": null,
+      "livecodebench": 0.28
+    },
+    {
+      "name": "Qwen3 14B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 16.16,
+      "agentic_index": 14.43,
+      "coding_index": 13.06,
+      "math_index": 55.67,
+      "aime25": 0.557,
+      "gpqa": 0.604,
+      "hle": 0.043,
+      "mmlu_pro": 0.774,
+      "humaneval": 0.963,
+      "livecodebench": 0.523
+    },
+    {
+      "name": "Qwen3 235B A22B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 16.93,
+      "agentic_index": 19.23,
+      "coding_index": 13.99,
+      "math_index": 23.67,
+      "aime25": 0.237,
+      "gpqa": 0.613,
+      "hle": 0.047,
+      "mmlu_pro": 0.762,
+      "humaneval": null,
+      "livecodebench": 0.343
+    },
+    {
+      "name": "Qwen3 235B A22B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 19.77,
+      "agentic_index": 18.45,
+      "coding_index": 17.35,
+      "math_index": 82,
+      "aime25": 0.82,
+      "gpqa": 0.7,
+      "hle": 0.117,
+      "mmlu_pro": 0.828,
+      "humaneval": null,
+      "livecodebench": 0.622
+    },
+    {
+      "name": "Qwen3 235B A22B 2507 (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 29.46,
+      "agentic_index": 29.69,
+      "coding_index": 23.21,
+      "math_index": 91,
+      "aime25": 0.91,
+      "gpqa": 0.79,
+      "hle": 0.15,
+      "mmlu_pro": 0.843,
+      "humaneval": 0.977,
+      "livecodebench": 0.788
+    },
+    {
+      "name": "Qwen3 235B A22B 2507 Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 24.66,
+      "agentic_index": 22.83,
+      "coding_index": 22.1,
+      "math_index": 71.67,
+      "aime25": 0.717,
+      "gpqa": 0.753,
+      "hle": 0.106,
+      "mmlu_pro": 0.828,
+      "humaneval": 0.957,
+      "livecodebench": 0.524
+    },
+    {
+      "name": "Qwen3 30B A3B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 12.36,
+      "agentic_index": 7.41,
+      "coding_index": 13.34,
+      "math_index": 21.67,
+      "aime25": 0.217,
+      "gpqa": 0.515,
+      "hle": 0.046,
+      "mmlu_pro": 0.71,
+      "humaneval": null,
+      "livecodebench": 0.322
+    },
+    {
+      "name": "Qwen3 30B A3B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 15.25,
+      "agentic_index": 12.08,
+      "coding_index": 11.01,
+      "math_index": 72.33,
+      "aime25": 0.723,
+      "gpqa": 0.616,
+      "hle": 0.066,
+      "mmlu_pro": 0.777,
+      "humaneval": null,
+      "livecodebench": 0.506
+    },
+    {
+      "name": "Qwen3 30B A3B 2507 (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 22.43,
+      "agentic_index": 17.71,
+      "coding_index": 14.65,
+      "math_index": 56.33,
+      "aime25": 0.563,
+      "gpqa": 0.707,
+      "hle": 0.098,
+      "mmlu_pro": 0.805,
+      "humaneval": null,
+      "livecodebench": 0.707
+    },
+    {
+      "name": "Qwen3 30B A3B 2507 Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 15,
+      "agentic_index": 7.1,
+      "coding_index": 14.19,
+      "math_index": 66.33,
+      "aime25": 0.663,
+      "gpqa": 0.659,
+      "hle": 0.068,
+      "mmlu_pro": 0.777,
+      "humaneval": 0.943,
+      "livecodebench": 0.515
+    },
+    {
+      "name": "Qwen3 32B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": null,
+      "math_index": 19.67,
+      "aime25": 0.197,
+      "gpqa": 0.535,
+      "hle": 0.043,
+      "mmlu_pro": 0.727,
+      "humaneval": 0.896,
+      "livecodebench": 0.288
+    },
+    {
+      "name": "Qwen3 32B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 16.51,
+      "agentic_index": 13.45,
+      "coding_index": 13.83,
+      "math_index": 73,
+      "aime25": 0.73,
+      "gpqa": 0.668,
+      "hle": 0.083,
+      "mmlu_pro": 0.798,
+      "humaneval": null,
+      "livecodebench": 0.546
+    },
+    {
+      "name": "Qwen3 4B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": null,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.398,
+      "hle": 0.037,
+      "mmlu_pro": 0.586,
+      "humaneval": null,
+      "livecodebench": 0.233
+    },
+    {
+      "name": "Qwen3 4B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": null,
+      "math_index": 22.33,
+      "aime25": 0.223,
+      "gpqa": 0.522,
+      "hle": 0.051,
+      "mmlu_pro": 0.696,
+      "humaneval": 0.909,
+      "livecodebench": 0.465
+    },
+    {
+      "name": "Qwen3 4B 2507 (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 18.6,
+      "agentic_index": 14.56,
+      "coding_index": 9.54,
+      "math_index": 82.67,
+      "aime25": 0.827,
+      "gpqa": 0.667,
+      "hle": 0.059,
+      "mmlu_pro": 0.743,
+      "humaneval": null,
+      "livecodebench": 0.641
+    },
+    {
+      "name": "Qwen3 4B 2507 Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 13.19,
+      "agentic_index": 8.87,
+      "coding_index": 9.05,
+      "math_index": 52.33,
+      "aime25": 0.523,
+      "gpqa": 0.517,
+      "hle": 0.047,
+      "mmlu_pro": 0.672,
+      "humaneval": null,
+      "livecodebench": 0.377
+    },
+    {
+      "name": "Qwen3 8B (Non-reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 10.55,
+      "agentic_index": 11.56,
+      "coding_index": 7.11,
+      "math_index": 24.33,
+      "aime25": 0.243,
+      "gpqa": 0.452,
+      "hle": 0.028,
+      "mmlu_pro": 0.643,
+      "humaneval": null,
+      "livecodebench": 0.202
+    },
+    {
+      "name": "Qwen3 8B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 13.1,
+      "agentic_index": 12.61,
+      "coding_index": 9.04,
+      "math_index": 19,
+      "aime25": 0.19,
+      "gpqa": 0.589,
+      "hle": 0.042,
+      "mmlu_pro": 0.743,
+      "humaneval": null,
+      "livecodebench": 0.406
+    },
+    {
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 19.96,
+      "agentic_index": 21.09,
+      "coding_index": 19.36,
+      "math_index": 29,
+      "aime25": 0.29,
+      "gpqa": 0.516,
+      "hle": 0.04,
+      "mmlu_pro": 0.706,
+      "humaneval": 0.915,
+      "livecodebench": 0.403
+    },
+    {
+      "name": "Qwen3 Coder 480B A35B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 24.65,
+      "agentic_index": 18.31,
+      "coding_index": 24.59,
+      "math_index": 39.33,
+      "aime25": 0.393,
+      "gpqa": 0.618,
+      "hle": 0.044,
+      "mmlu_pro": 0.788,
+      "humaneval": 0.965,
+      "livecodebench": 0.585
+    },
+    {
+      "name": "Qwen3 Max",
+      "creator": "Alibaba",
+      "intelligence_index": 31.33,
+      "agentic_index": 43.01,
+      "coding_index": 26.41,
+      "math_index": 80.67,
+      "aime25": 0.807,
+      "gpqa": 0.764,
+      "hle": 0.111,
+      "mmlu_pro": 0.841,
+      "humaneval": null,
+      "livecodebench": 0.767
+    },
+    {
+      "name": "Qwen3 Max (Preview)",
+      "creator": "Alibaba",
+      "intelligence_index": null,
+      "agentic_index": null,
+      "coding_index": 25.48,
+      "math_index": 75,
+      "aime25": 0.75,
+      "gpqa": 0.764,
+      "hle": 0.093,
+      "mmlu_pro": 0.838,
+      "humaneval": null,
+      "livecodebench": 0.651
+    },
+    {
+      "name": "Qwen3 Max Thinking",
+      "creator": "Alibaba",
+      "intelligence_index": 39.67,
+      "agentic_index": 50.13,
+      "coding_index": 30.51,
+      "math_index": null,
+      "aime25": null,
+      "gpqa": 0.861,
+      "hle": 0.262,
+      "mmlu_pro": null,
+      "humaneval": null,
+      "livecodebench": null
+    },
+    {
+      "name": "Qwen3 Max Thinking (Preview)",
+      "creator": "Alibaba",
+      "intelligence_index": 32.45,
+      "agentic_index": 43.03,
+      "coding_index": 24.5,
+      "math_index": 82.33,
+      "aime25": 0.823,
+      "gpqa": 0.776,
+      "hle": 0.12,
+      "mmlu_pro": 0.824,
+      "humaneval": null,
+      "livecodebench": 0.535
+    },
+    {
+      "name": "Qwen3 Next 80B A3B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 26.49,
+      "agentic_index": 23.56,
+      "coding_index": 19.49,
+      "math_index": 84.33,
+      "aime25": 0.843,
+      "gpqa": 0.759,
+      "hle": 0.117,
+      "mmlu_pro": 0.824,
+      "humaneval": null,
+      "livecodebench": 0.784
+    },
+    {
+      "name": "Qwen3 Next 80B A3B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 20.08,
+      "agentic_index": 14.19,
+      "coding_index": 15.27,
+      "math_index": 66.33,
+      "aime25": 0.663,
+      "gpqa": 0.738,
+      "hle": 0.073,
+      "mmlu_pro": 0.819,
+      "humaneval": null,
+      "livecodebench": 0.684
+    },
+    {
+      "name": "Qwen3 Omni 30B A3B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 15.6,
+      "agentic_index": 10.61,
+      "coding_index": 12.71,
+      "math_index": 74,
+      "aime25": 0.74,
+      "gpqa": 0.726,
+      "hle": 0.073,
+      "mmlu_pro": 0.792,
+      "humaneval": null,
+      "livecodebench": 0.679
+    },
+    {
+      "name": "Qwen3 Omni 30B A3B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 10.68,
+      "agentic_index": 5.46,
+      "coding_index": 7.22,
+      "math_index": 52.33,
+      "aime25": 0.523,
+      "gpqa": 0.62,
+      "hle": 0.051,
+      "mmlu_pro": 0.725,
+      "humaneval": null,
+      "livecodebench": 0.422
+    },
+    {
+      "name": "Qwen3 VL 235B A22B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 27.51,
+      "agentic_index": 27.02,
+      "coding_index": 20.89,
+      "math_index": 88.33,
+      "aime25": 0.883,
+      "gpqa": 0.772,
+      "hle": 0.101,
+      "mmlu_pro": 0.836,
+      "humaneval": null,
+      "livecodebench": 0.646
+    },
+    {
+      "name": "Qwen3 VL 235B A22B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 20.58,
+      "agentic_index": 19.13,
+      "coding_index": 16.51,
+      "math_index": 70.67,
+      "aime25": 0.707,
+      "gpqa": 0.712,
+      "hle": 0.063,
+      "mmlu_pro": 0.823,
+      "humaneval": null,
+      "livecodebench": 0.594
+    },
+    {
+      "name": "Qwen3 VL 30B A3B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 19.62,
+      "agentic_index": 14.87,
+      "coding_index": 13.14,
+      "math_index": 82.33,
+      "aime25": 0.823,
+      "gpqa": 0.72,
+      "hle": 0.087,
+      "mmlu_pro": 0.807,
+      "humaneval": null,
+      "livecodebench": 0.697
+    },
+    {
+      "name": "Qwen3 VL 30B A3B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 16.03,
+      "agentic_index": 9.47,
+      "coding_index": 14.3,
+      "math_index": 72.33,
+      "aime25": 0.723,
+      "gpqa": 0.695,
+      "hle": 0.064,
+      "mmlu_pro": 0.764,
+      "humaneval": null,
+      "livecodebench": 0.476
+    },
+    {
+      "name": "Qwen3 VL 32B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": 24.52,
+      "agentic_index": 23.4,
+      "coding_index": 14.54,
+      "math_index": 84.67,
+      "aime25": 0.847,
+      "gpqa": 0.733,
+      "hle": 0.096,
+      "mmlu_pro": 0.818,
+      "humaneval": null,
+      "livecodebench": 0.738
+    },
+    {
+      "name": "Qwen3 VL 32B Instruct",
+      "creator": "Alibaba",
+      "intelligence_index": 17.17,
+      "agentic_index": 9.75,
+      "coding_index": 15.59,
+      "math_index": 68.33,
+      "aime25": 0.683,
+      "gpqa": 0.671,
+      "hle": 0.063,
+      "mmlu_pro": 0.791,
+      "humaneval": null,
+      "livecodebench": 0.514
+    },
+    {
+      "name": "Qwen3 VL 4B (Reasoning)",
+      "creator": "Alibaba",
+      "intelligence_index": null,
+      "agentic_index": 14.43,
+      "coding_index": 6.72,
+      "math_index": 25.67,
+      "aime25": 0.257,
+      "gpqa": 0.494,
+      "hle": 0.044,
+      "mmlu_pro": 0.7,
+      "humaneval": null,
+      "livecodebench": 0.32
+    }
+  ]
+}
