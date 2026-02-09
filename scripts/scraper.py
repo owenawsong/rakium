@@ -5,10 +5,10 @@ Extracts data from multiple AI leaderboard sources.
 
 Sources & Methods:
 - Arena/LM Arena: Tavily API (with include_raw_content=True)
-- LiveBench: HuggingFace Dataset Viewer API (primary) / Tavily / Steel fallback
+- LiveBench: Steel browser (JS-rendered SPA at livebench.ai)
 - YUPP: Steel.dev /scrape endpoint (escaped JSON with nested model_rating structure)
 - Artificial Analysis: HTTP (escaped JSON in Next.js RSC streaming format)
-- OpenRouter: HTTP API
+- OpenRouter: HTTP (/rankings page, escaped JSON with models + rankingData)
 - EQ Bench: HTTP + Steel fallback
 """
 
@@ -20,7 +20,6 @@ from pathlib import Path
 from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 import requests
-import pandas as pd
 
 # Tavily for Arena.ai
 try:
@@ -552,277 +551,172 @@ def try_parse_structured_text(text):
 
 
 # =============================================================================
-# LIVEBENCH - HuggingFace API (primary) / Tavily (fallback) / Steel (last resort)
+# LIVEBENCH - Steel Browser (JS-rendered SPA)
 # =============================================================================
 def scrape_livebench():
     """
-    Scrape LiveBench leaderboard data.
+    Scrape LiveBench leaderboard data using Steel browser.
 
-    Strategy (3-tier):
-      1. HuggingFace Dataset Viewer API (JSON, no browser needed)
-         - LiveBench publishes data at livebench/model_judgment on HF
-      2. Tavily search (if HF fails)
-      3. Steel browser (last resort - often returns empty SPA shell)
+    LiveBench (livebench.ai) is a React SPA that requires JS rendering.
+    The HuggingFace dataset is 1+ year outdated - DO NOT use it.
+
+    Strategy:
+      1. Steel browser -> parse rendered HTML table
+      2. Fallback: Try escaped JSON in the HTML
     """
     print("Scraping LiveBench...")
 
     results = {
-        "source": "livebench.ai",
+        "source": "livebench.ai (via Steel)",
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "categories": {}
     }
 
-    # Tier 1: HuggingFace Dataset Viewer API
-    print("  Tier 1: Trying HuggingFace Dataset Viewer API...")
-    models = _scrape_livebench_huggingface()
-    if models:
-        results["source"] = "livebench.ai (via HuggingFace API)"
-        results["categories"]["overall"] = {
-            "models": models,
-            "num_models": len(models)
-        }
-        print(f"  SUCCESS: Found {len(models)} models from HuggingFace")
+    if not STEEL_API_KEY:
+        results["error"] = "STEEL_API_KEY not set"
+        print("  ERROR: STEEL_API_KEY not set, skipping LiveBench")
         return results
 
-    # Tier 2: Tavily search
-    print("  Tier 2: Trying Tavily search...")
-    models = _scrape_livebench_tavily()
-    if models:
-        results["source"] = "livebench.ai (via Tavily)"
+    try:
+        html = fetch_with_steel("https://livebench.ai", timeout=90)
+        if not html:
+            print("  Empty response from Steel")
+            results["categories"]["overall"] = {
+                "models": [], "num_models": 0, "note": "Empty Steel response"
+            }
+            return results
+
+        debug_file = DATA_DIR / "livebench_raw.html"
+        with open(debug_file, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"  Saved raw HTML ({len(html)} chars)")
+
+        models = _extract_livebench_models(html)
+        if models:
+            results["categories"]["overall"] = {
+                "models": models,
+                "num_models": len(models)
+            }
+            print(f"  SUCCESS: Found {len(models)} models from Steel")
+            return results
+
+        print("  WARNING: No models extracted from LiveBench")
         results["categories"]["overall"] = {
-            "models": models,
-            "num_models": len(models)
+            "models": [], "num_models": 0,
+            "note": "Could not extract models from rendered HTML"
         }
-        print(f"  SUCCESS: Found {len(models)} models from Tavily")
-        return results
 
-    # Tier 3: Steel browser (last resort)
-    print("  Tier 3: Trying Steel browser...")
-    if STEEL_API_KEY:
-        try:
-            html = fetch_with_steel("https://livebench.ai")
-            if html:
-                debug_file = DATA_DIR / "livebench_raw.html"
-                with open(debug_file, "w", encoding="utf-8") as f:
-                    f.write(html)
-                print(f"  Saved raw HTML ({len(html)} chars) to {debug_file}")
+    except Exception as e:
+        print(f"  Error: {e}")
+        results["error"] = str(e)
 
-                models = extract_models_from_livebench_html(html)
-                if models:
-                    results["source"] = "livebench.ai (via Steel)"
-                    results["categories"]["overall"] = {
-                        "models": models,
-                        "num_models": len(models)
-                    }
-                    print(f"  SUCCESS: Found {len(models)} models from Steel")
-                    return results
-                else:
-                    print("  No models extracted from Steel HTML")
-        except Exception as e:
-            print(f"  Steel error: {e}")
-    else:
-        print("  STEEL_API_KEY not set, skipping Steel")
-
-    # All tiers failed
-    print("  WARNING: All tiers failed for LiveBench")
-    results["categories"]["overall"] = {
-        "models": [],
-        "num_models": 0,
-        "note": "All extraction methods failed"
-    }
     return results
 
 
-def _scrape_livebench_huggingface():
+def _extract_livebench_models(html):
     """
-    Fetch LiveBench data from HuggingFace Dataset Viewer API.
+    Extract model data from LiveBench rendered HTML.
 
-    LiveBench publishes results to HuggingFace datasets. We use the
-    datasets-server API to get rows without needing pyarrow/parquet.
+    LiveBench table columns:
+      Model | Global Avg | Reasoning | Coding | Agentic Coding | Math | Data Analysis | Language | IF
 
-    Endpoint: https://datasets-server.huggingface.co/rows
+    Returns list of dicts with 'name' and 'scores' dict containing all category scores.
     """
-    HF_BASE = "https://datasets-server.huggingface.co"
-    DATASET = "livebench/model_judgment"
-
-    try:
-        # Step 1: Get dataset info to find available configs/splits
-        info_url = f"{HF_BASE}/info?dataset={DATASET}"
-        info_resp = requests.get(info_url, headers=HEADERS, timeout=30)
-        info_resp.raise_for_status()
-        info_data = info_resp.json()
-
-        dataset_info = info_data.get("dataset_info", {})
-        if not dataset_info:
-            print("    No dataset_info found")
-            return []
-
-        # Find a config with data
-        config_name = None
-        split_name = None
-
-        for cfg_name, cfg_data in dataset_info.items():
-            splits = cfg_data.get("splits", {})
-            if splits:
-                config_name = cfg_name
-                # Prefer 'train' split, otherwise take the first available
-                if "train" in splits:
-                    split_name = "train"
-                else:
-                    split_name = next(iter(splits))
-                break
-
-        if not config_name or not split_name:
-            print("    No suitable config/split found in dataset")
-            return []
-
-        print(f"    Using config={config_name}, split={split_name}")
-
-        # Step 2: Fetch rows in batches
-        all_rows = []
-        offset = 0
-        batch_size = 100
-        max_rows = 5000  # Safety limit
-
-        while offset < max_rows:
-            rows_url = (
-                f"{HF_BASE}/rows?dataset={DATASET}"
-                f"&config={config_name}&split={split_name}"
-                f"&offset={offset}&length={batch_size}"
-            )
-            resp = requests.get(rows_url, headers=HEADERS, timeout=30)
-            resp.raise_for_status()
-            rows_data = resp.json()
-
-            rows = rows_data.get("rows", [])
-            if not rows:
-                break
-
-            for row_wrapper in rows:
-                row = row_wrapper.get("row", row_wrapper)
-                all_rows.append(row)
-
-            print(f"    Fetched {len(all_rows)} rows so far...")
-
-            if len(rows) < batch_size:
-                break
-            offset += batch_size
-
-        if not all_rows:
-            print("    No rows returned from HuggingFace")
-            return []
-
-        print(f"    Total rows fetched: {len(all_rows)}")
-
-        # Step 3: Aggregate scores by model
-        # LiveBench data typically has per-question scores; we average them per model
-        model_scores = {}
-        for row in all_rows:
-            model_name = row.get("model") or row.get("model_name") or row.get("name")
-            if not model_name:
-                continue
-
-            score = row.get("score") or row.get("global_avg") or row.get("average")
-            if score is None:
-                # Try to find any numeric score field
-                for key in ["accuracy", "correct", "result", "value"]:
-                    if key in row and isinstance(row[key], (int, float)):
-                        score = row[key]
-                        break
-
-            if model_name not in model_scores:
-                model_scores[model_name] = {"scores": [], "org": row.get("organization", "")}
-
-            if score is not None:
-                try:
-                    model_scores[model_name]["scores"].append(float(score))
-                except (ValueError, TypeError):
-                    pass
-
-        # Build model list with averaged scores
-        models = []
-        for name, data in model_scores.items():
-            avg_score = None
-            if data["scores"]:
-                avg_score = round(sum(data["scores"]) / len(data["scores"]), 2)
-            models.append({
-                "name": name,
-                "score": avg_score,
-                "organization": data["org"],
-                "num_scores": len(data["scores"])
-            })
-
-        # Sort by score descending
-        models.sort(key=lambda x: x.get("score") or 0, reverse=True)
-        return models
-
-    except Exception as e:
-        print(f"    HuggingFace API error: {e}")
-        return []
-
-
-def _scrape_livebench_tavily():
-    """Fallback: Try to get LiveBench data via Tavily search."""
-    if not TAVILY_AVAILABLE:
-        return []
-
-    tavily_keys = get_tavily_keys()
-    if not tavily_keys:
-        return []
-
-    for api_key in tavily_keys:
-        try:
-            client = TavilyClient(api_key=api_key)
-            response = client.search(
-                query="LiveBench AI model leaderboard rankings scores site:livebench.ai",
-                max_results=5,
-                include_raw_content=True,
-                search_depth="advanced"
-            )
-
-            models = []
-            for result in response.get("results", []):
-                for content_field in ["raw_content", "content"]:
-                    content = result.get(content_field)
-                    if not content:
-                        continue
-
-                    # Try parsing structured text
-                    parsed = try_parse_structured_text(content)
-                    if parsed and len(parsed) > 3:
-                        models.extend(parsed)
-                        break
-
-                    # Try JSON arrays
-                    parsed = try_parse_json_array(content)
-                    if parsed and len(parsed) > 3:
-                        models.extend(parsed)
-                        break
-
-            if models:
-                # Deduplicate
-                seen = set()
-                unique = []
-                for m in models:
-                    n = m.get("name", "")
-                    if n and n not in seen:
-                        seen.add(n)
-                        unique.append(m)
-                return unique
-
-        except Exception as e:
-            print(f"    Tavily error with key ...{api_key[-6:]}: {e}")
-            continue
-
-    return []
-
-
-def extract_models_from_livebench_html(html):
-    """Extract model data from LiveBench HTML."""
     models = []
 
-    # Strategy 0: Try escaped JSON (Next.js RSC streaming format)
-    # Many modern Next.js sites use this instead of __NEXT_DATA__
+    # The score columns we expect (in order after "Model")
+    score_columns = [
+        "global_avg", "reasoning", "coding", "agentic_coding",
+        "math", "data_analysis", "language", "if"
+    ]
+
+    # Strategy 1: Parse HTML table
+    soup = BeautifulSoup(html, 'lxml')
+    tables = soup.find_all('table')
+
+    for table in tables:
+        rows = table.find_all('tr')
+        if len(rows) < 3:
+            continue
+
+        # Get headers
+        header_row = rows[0]
+        headers = [th.get_text(strip=True).lower() for th in header_row.find_all(['th', 'td'])]
+
+        # Check if this looks like the LiveBench table
+        name_idx = None
+        for i, h in enumerate(headers):
+            if 'model' in h or 'name' in h:
+                name_idx = i
+                break
+
+        if name_idx is None:
+            continue
+
+        # Map header names to our score column names
+        header_to_col = {}
+        for i, h in enumerate(headers):
+            if i == name_idx:
+                continue
+            h_clean = h.strip()
+            if 'global' in h_clean or 'avg' in h_clean:
+                header_to_col[i] = "global_avg"
+            elif 'agentic' in h_clean:
+                header_to_col[i] = "agentic_coding"
+            elif 'coding' in h_clean:
+                header_to_col[i] = "coding"
+            elif 'reasoning' in h_clean:
+                header_to_col[i] = "reasoning"
+            elif 'math' in h_clean:
+                header_to_col[i] = "math"
+            elif 'data' in h_clean and 'analysis' in h_clean:
+                header_to_col[i] = "data_analysis"
+            elif 'language' in h_clean:
+                header_to_col[i] = "language"
+            elif h_clean == 'if' or 'instruction' in h_clean:
+                header_to_col[i] = "if"
+
+        # If we couldn't map headers, just assign positionally
+        if not header_to_col and len(headers) > name_idx + 1:
+            col_idx = 0
+            for i in range(len(headers)):
+                if i == name_idx:
+                    continue
+                if col_idx < len(score_columns):
+                    header_to_col[i] = score_columns[col_idx]
+                    col_idx += 1
+
+        # Parse data rows
+        for row in rows[1:]:
+            cells = row.find_all(['td', 'th'])
+            if len(cells) <= name_idx:
+                continue
+
+            name = cells[name_idx].get_text(strip=True)
+            if not name or len(name) < 2:
+                continue
+
+            scores = {}
+            for col_i, col_name in header_to_col.items():
+                if col_i < len(cells):
+                    text = cells[col_i].get_text(strip=True)
+                    try:
+                        scores[col_name] = round(float(text), 2)
+                    except (ValueError, TypeError):
+                        scores[col_name] = None
+
+            models.append({
+                "name": name,
+                "scores": scores,
+                "score": scores.get("global_avg"),  # convenience field
+            })
+
+        if models:
+            # Sort by global_avg descending
+            models.sort(key=lambda x: (x.get("score") or 0), reverse=True)
+            return models
+
+    # Strategy 2: Try escaped JSON from Next.js
     for marker in ['\\"models\\":', '\\"leaderboard\\":', '\\"data\\":', '\\"rankings\\":']:
         escaped_data = extract_escaped_json_array(html, marker)
         if escaped_data and isinstance(escaped_data, list) and len(escaped_data) > 3:
@@ -830,107 +724,23 @@ def extract_models_from_livebench_html(html):
             if isinstance(first, dict) and any(k in first for k in ["model", "name", "model_name", "score", "global_avg"]):
                 for item in escaped_data:
                     if isinstance(item, dict):
+                        name = item.get("model_name", item.get("name", item.get("model", "")))
+                        scores = {}
+                        for col in score_columns:
+                            val = item.get(col)
+                            if val is not None:
+                                try:
+                                    scores[col] = round(float(val), 2)
+                                except (ValueError, TypeError):
+                                    pass
                         models.append({
-                            "name": item.get("model_name", item.get("name", item.get("model", ""))),
-                            "score": item.get("score", item.get("global_avg", item.get("average"))),
-                            "organization": item.get("organization", item.get("org", "")),
+                            "name": name,
+                            "scores": scores,
+                            "score": scores.get("global_avg", item.get("score", item.get("global_avg"))),
                         })
                 if models:
-                    print(f"    Found via escaped JSON marker: {marker}")
+                    models.sort(key=lambda x: (x.get("score") or 0), reverse=True)
                     return models
-
-    # Strategy 1: Try Next.js __NEXT_DATA__
-    next_data_match = re.search(
-        r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>',
-        html, re.DOTALL
-    )
-    if next_data_match:
-        try:
-            data = json.loads(next_data_match.group(1))
-            props = data.get("props", {}).get("pageProps", {})
-
-            for key in ["models", "leaderboard", "data", "rankings"]:
-                models_data = props.get(key)
-                if isinstance(models_data, list) and models_data:
-                    for model in models_data:
-                        if isinstance(model, dict):
-                            models.append({
-                                "name": model.get("model_name", model.get("name", model.get("model", ""))),
-                                "score": model.get("score", model.get("global_avg", model.get("average"))),
-                                "organization": model.get("organization", model.get("org", "")),
-                            })
-                    if models:
-                        return models
-        except (json.JSONDecodeError, KeyError) as e:
-            print(f"    Next.js data parse error: {e}")
-
-    # Strategy 2: Look for JSON data in script tags
-    script_matches = re.findall(r'<script[^>]*>(.*?)</script>', html, re.DOTALL)
-    for script_content in script_matches:
-        if 'model' in script_content.lower() and ('score' in script_content.lower() or 'elo' in script_content.lower()):
-            json_arrays = re.finditer(r'\[[\s\S]{20,}?\]', script_content)
-            for jm in json_arrays:
-                try:
-                    arr = json.loads(jm.group())
-                    if isinstance(arr, list) and len(arr) > 3:
-                        first = arr[0]
-                        if isinstance(first, dict) and any(k in first for k in ["model", "name", "model_name"]):
-                            for item in arr:
-                                models.append({
-                                    "name": item.get("model_name", item.get("name", item.get("model", ""))),
-                                    "score": item.get("score", item.get("global_avg")),
-                                })
-                            return models
-                except (json.JSONDecodeError, TypeError):
-                    continue
-
-    # Strategy 3: Parse table from HTML
-    soup = BeautifulSoup(html, 'lxml')
-    tables = soup.find_all('table')
-
-    for table in tables:
-        rows = table.find_all('tr')
-        if len(rows) < 2:
-            continue
-
-        header_row = rows[0]
-        headers = [th.get_text(strip=True).lower() for th in header_row.find_all(['th', 'td'])]
-
-        name_idx = None
-        score_idx = None
-        for i, h in enumerate(headers):
-            if any(kw in h for kw in ['model', 'name']):
-                name_idx = i
-            if any(kw in h for kw in ['score', 'average', 'global', 'overall']):
-                score_idx = i
-
-        if name_idx is not None:
-            for row in rows[1:]:
-                cells = row.find_all(['td', 'th'])
-                if len(cells) > name_idx:
-                    name = cells[name_idx].get_text(strip=True)
-                    score = None
-                    if score_idx is not None and len(cells) > score_idx:
-                        score_text = cells[score_idx].get_text(strip=True)
-                        try:
-                            score = float(score_text)
-                        except ValueError:
-                            pass
-                    if name and len(name) > 2:
-                        models.append({"name": name, "score": score})
-
-            if models:
-                return models
-
-    # Strategy 4: Look for known model name patterns (last resort)
-    known_prefixes = ['gpt-', 'claude-', 'gemini-', 'llama-', 'mistral-', 'qwen-', 'deepseek-']
-    text_content = soup.get_text()
-    for prefix in known_prefixes:
-        pattern = rf'({re.escape(prefix)}[\w.-]+)'
-        found = re.findall(pattern, text_content, re.IGNORECASE)
-        for name in found:
-            if name not in [m.get("name") for m in models]:
-                models.append({"name": name})
 
     return models
 
@@ -960,6 +770,10 @@ def scrape_yupp():
 
     categories = [
         {"url": f"{base_url}/leaderboard", "name": "overall"},
+        {"url": f"{base_url}/leaderboard/text", "name": "text"},
+        {"url": f"{base_url}/leaderboard/image", "name": "image"},
+        {"url": f"{base_url}/leaderboard/video", "name": "video"},
+        {"url": f"{base_url}/leaderboard/audio", "name": "audio"},
     ]
 
     for cat in categories:
@@ -1281,14 +1095,23 @@ def scrape_artificial_analysis():
 
 
 # =============================================================================
-# OPENROUTER - HTTP
+# OPENROUTER - HTTP (/rankings page, escaped JSON)
 # =============================================================================
 def scrape_openrouter():
-    """Scrape OpenRouter rankings."""
+    """
+    Scrape OpenRouter /rankings page for popularity/usage data.
+
+    The /rankings page contains escaped JSON with two key arrays:
+      - "models": [{id, slug, name, author, request_count, p50_latency, p50_throughput, provider_count}, ...]
+      - "rankingData": [{model_permaslug, total_completion_tokens, total_prompt_tokens, count}, ...]
+
+    We merge these by slug to get full ranking data per model.
+    DO NOT use /api/v1/models - that's just the catalog, not usage/popularity data.
+    """
     print("Scraping OpenRouter...")
 
     results = {
-        "source": "openrouter.ai",
+        "source": "openrouter.ai/rankings",
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "rankings": []
     }
@@ -1297,26 +1120,69 @@ def scrape_openrouter():
 
     try:
         html = fetch_with_retry(url)
+        print(f"  Fetched {len(html)} chars from /rankings")
 
-        rankings_data = extract_json_from_html(html, '"rankings":')
-        if rankings_data and isinstance(rankings_data, list):
-            results["rankings"] = rankings_data
-            print(f"  Found {len(results['rankings'])} models from 'rankings' key")
+        # Extract the \"models\" array (escaped JSON)
+        models_data = extract_escaped_json_array(html, '\\"models\\":')
+
+        # Extract the \"rankingData\" array (escaped JSON)
+        ranking_data = extract_escaped_json_array(html, '\\"rankingData\\":')
+
+        if models_data and isinstance(models_data, list) and len(models_data) > 0:
+            # Build lookup from rankingData by slug
+            ranking_lookup = {}
+            if ranking_data and isinstance(ranking_data, list):
+                for rd in ranking_data:
+                    if isinstance(rd, dict):
+                        slug = rd.get("model_permaslug", "")
+                        if slug:
+                            ranking_lookup[slug] = rd
+                print(f"  Found {len(ranking_lookup)} entries in rankingData")
+
+            # Merge models with ranking data
+            merged = []
+            for model in models_data:
+                if not isinstance(model, dict):
+                    continue
+
+                slug = model.get("slug", model.get("id", ""))
+                name = model.get("name", slug)
+                author = model.get("author", "")
+
+                entry = {
+                    "name": name,
+                    "slug": slug,
+                    "author": author,
+                    "request_count": model.get("request_count"),
+                    "p50_latency": model.get("p50_latency"),
+                    "p50_throughput": model.get("p50_throughput"),
+                    "provider_count": model.get("provider_count"),
+                }
+
+                # Merge ranking data if available
+                rd = ranking_lookup.get(slug, {})
+                if rd:
+                    total_tokens = (rd.get("total_completion_tokens", 0) or 0) + (rd.get("total_prompt_tokens", 0) or 0)
+                    entry["total_tokens"] = total_tokens
+                    entry["total_requests"] = rd.get("count")
+
+                merged.append(entry)
+
+            # Sort by request_count descending
+            merged.sort(key=lambda x: (x.get("request_count") or 0), reverse=True)
+            results["rankings"] = merged
+            print(f"  Found {len(merged)} models from escaped JSON")
             return results
 
-        # Try the API endpoint directly
-        api_url = "https://openrouter.ai/api/v1/models"
-        try:
-            api_response = fetch_with_retry(api_url)
-            api_data = json.loads(api_response)
-            if "data" in api_data:
-                results["rankings"] = api_data["data"]
-                print(f"  Found {len(results['rankings'])} models from API")
+        # Fallback: try non-escaped JSON markers
+        for marker in ['"models":', '"rankings":']:
+            data = extract_json_from_html(html, marker)
+            if data and isinstance(data, list) and len(data) > 5:
+                results["rankings"] = data
+                print(f"  Found {len(data)} models from '{marker}' (non-escaped)")
                 return results
-        except Exception:
-            pass
 
-        print("  Could not extract rankings data")
+        print("  Could not extract rankings data from /rankings page")
 
     except Exception as e:
         print(f"  Error: {e}")
@@ -1396,26 +1262,126 @@ def scrape_eqbench():
 
 
 def _parse_tables_for_models(html):
-    """Helper: extract model names/scores from HTML tables."""
+    """
+    Helper: extract model data from EQ Bench HTML tables.
+
+    EQ Bench table columns:
+      Model | Abilities | Humanlike | Safety | Assertive | Social IQ |
+      Warm | Analytic | Insight | Empathy | Compliant | Moralising | Pragmatic | Elo Score
+
+    We capture the model name, elo score, and all trait scores.
+    """
     models = []
     soup = BeautifulSoup(html, 'lxml')
     tables = soup.find_all('table')
+
+    # Known EQ Bench trait columns (in expected order after Model)
+    trait_names = [
+        "abilities", "humanlike", "safety", "assertive", "social_iq",
+        "warm", "analytic", "insight", "empathy", "compliant",
+        "moralising", "pragmatic"
+    ]
+
     for table in tables:
         rows = table.find_all('tr')
-        if len(rows) > 2:
-            for row in rows[1:]:
-                cells = row.find_all(['td', 'th'])
-                if len(cells) >= 2:
-                    name = cells[0].get_text(strip=True)
-                    score = cells[1].get_text(strip=True)
-                    if name and len(name) > 2:
-                        try:
-                            score = float(score)
-                        except ValueError:
-                            score = None
-                        models.append({"name": name, "score": score})
-            if models:
-                return models
+        if len(rows) < 3:
+            continue
+
+        # Get headers
+        header_row = rows[0]
+        headers = [th.get_text(strip=True).lower() for th in header_row.find_all(['th', 'td'])]
+
+        # Find model name column
+        name_idx = None
+        for i, h in enumerate(headers):
+            if 'model' in h or 'name' in h:
+                name_idx = i
+                break
+
+        if name_idx is None:
+            name_idx = 0  # Fall back to first column
+
+        # Map headers to trait names and find elo column
+        header_map = {}  # col_index -> trait_name
+        elo_idx = None
+        for i, h in enumerate(headers):
+            if i == name_idx:
+                continue
+            h_clean = h.strip().replace(' ', '_').lower()
+            if 'elo' in h_clean or ('score' in h_clean and 'elo' in h_clean):
+                elo_idx = i
+            elif 'abilities' in h_clean:
+                header_map[i] = "abilities"
+            elif 'humanlike' in h_clean or 'human' in h_clean:
+                header_map[i] = "humanlike"
+            elif 'safety' in h_clean:
+                header_map[i] = "safety"
+            elif 'assertive' in h_clean:
+                header_map[i] = "assertive"
+            elif 'social' in h_clean:
+                header_map[i] = "social_iq"
+            elif 'warm' in h_clean:
+                header_map[i] = "warm"
+            elif 'analytic' in h_clean:
+                header_map[i] = "analytic"
+            elif 'insight' in h_clean:
+                header_map[i] = "insight"
+            elif 'empathy' in h_clean:
+                header_map[i] = "empathy"
+            elif 'compliant' in h_clean:
+                header_map[i] = "compliant"
+            elif 'moralis' in h_clean:
+                header_map[i] = "moralising"
+            elif 'pragmatic' in h_clean:
+                header_map[i] = "pragmatic"
+
+        # If no header mapping found, try positional assignment
+        if not header_map and len(headers) > 3:
+            col_idx = 0
+            for i in range(len(headers)):
+                if i == name_idx:
+                    continue
+                if col_idx < len(trait_names):
+                    header_map[i] = trait_names[col_idx]
+                    col_idx += 1
+                elif elo_idx is None:
+                    elo_idx = i
+
+        # Parse data rows
+        for row in rows[1:]:
+            cells = row.find_all(['td', 'th'])
+            if len(cells) <= name_idx:
+                continue
+
+            name = cells[name_idx].get_text(strip=True)
+            if not name or len(name) < 2:
+                continue
+
+            # Get elo score
+            elo = None
+            if elo_idx is not None and elo_idx < len(cells):
+                try:
+                    elo = float(cells[elo_idx].get_text(strip=True))
+                except (ValueError, TypeError):
+                    pass
+
+            # Get trait scores
+            traits = {}
+            for col_i, trait_name in header_map.items():
+                if col_i < len(cells):
+                    text = cells[col_i].get_text(strip=True)
+                    try:
+                        traits[trait_name] = round(float(text), 2)
+                    except (ValueError, TypeError):
+                        traits[trait_name] = None
+
+            model_entry = {"name": name, "elo": elo, "traits": traits, "score": elo}
+            models.append(model_entry)
+
+        if models:
+            models.sort(key=lambda x: (x.get("elo") or 0), reverse=True)
+            return models
+
     return models
 
 
