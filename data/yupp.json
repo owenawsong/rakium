@@ -1,26 +1,426 @@
 {
-  "source": "yupp.ai",
-  "scraped_at": "2026-02-08T04:33:22.805357",
+  "source": "yupp.ai (via Steel)",
+  "scraped_at": "2026-02-08T23:56:29.921308+00:00",
   "categories": {
     "overall": {
       "url": "https://yupp.ai/leaderboard",
-      "html_size": 1246236
-    },
-    "text": {
-      "url": "https://yupp.ai/leaderboard/text",
-      "html_size": 1064399
-    },
-    "image": {
-      "url": "https://yupp.ai/leaderboard/image",
-      "html_size": 1051693
-    },
-    "search": {
-      "url": "https://yupp.ai/leaderboard/search",
-      "html_size": 1061204
-    },
-    "coding": {
-      "url": "https://yupp.ai/leaderboard/coding",
-      "html_size": 1082491
+      "models": [
+        {
+          "name": "Claude Opus 4.6 (Thinking)",
+          "score": 1416.8421894819712,
+          "rank": 1,
+          "wins": 3720,
+          "losses": 1305,
+          "ci_lower": 1411.8741892915589,
+          "ci_upper": 1421.60927959001
+        },
+        {
+          "name": "Grok 4.1 Fast Non-Reasoning",
+          "score": 1242.5093516138409,
+          "rank": 1,
+          "wins": 18625,
+          "losses": 16200,
+          "ci_lower": 1239.682768353118,
+          "ci_upper": 1245.6031812501585
+        },
+        {
+          "name": "Nano Banana Pro 2K",
+          "score": 1635.8482309083975,
+          "rank": 1,
+          "wins": 30185,
+          "losses": 7990,
+          "ci_lower": 1632.3577263224643,
+          "ci_upper": 1638.8987098889756
+        },
+        {
+          "name": "Nano Banana Pro 4K",
+          "score": 1633.1299983623855,
+          "rank": 1,
+          "wins": 26405,
+          "losses": 6630,
+          "ci_lower": 1630.3494298304436,
+          "ci_upper": 1636.9397694372365
+        },
+        {
+          "name": "FLUX.1 Schnell (Fast)",
+          "score": 856.1778241926075,
+          "rank": 1,
+          "wins": 13865,
+          "losses": 20940,
+          "ci_lower": 853.6961793035098,
+          "ci_upper": 859.6402105891292
+        },
+        {
+          "name": "Sana",
+          "score": 708.7339194546192,
+          "rank": 1,
+          "wins": 6125,
+          "losses": 11240,
+          "ci_lower": 699.5081304052616,
+          "ci_upper": 714.2705617109058
+        },
+        {
+          "name": "GPT-5.1 Search (High)",
+          "score": 1248.2395010478585,
+          "rank": 1,
+          "wins": 8720,
+          "losses": 5800,
+          "ci_lower": 1245.348283364188,
+          "ci_upper": 1253.0661078719822
+        },
+        {
+          "name": "Claude Opus 4.6",
+          "score": 1400.3808410586732,
+          "rank": 2,
+          "wins": 4750,
+          "losses": 1925,
+          "ci_lower": 1396.1045587450913,
+          "ci_upper": 1402.194303905294
+        },
+        {
+          "name": "Qwen3 30B A3B Instruct 2507",
+          "score": 1220.432233519,
+          "rank": 2,
+          "wins": 24035,
+          "losses": 18490,
+          "ci_lower": 1218.9690763728706,
+          "ci_upper": 1222.5162192609878
+        },
+        {
+          "name": "Kimi K2 Thinking Turbo",
+          "score": 1208.510617838064,
+          "rank": 2,
+          "wins": 11060,
+          "losses": 11975,
+          "ci_lower": 1206.0327549281228,
+          "ci_upper": 1210.50891887265
+        },
+        {
+          "name": "FLUX Dev",
+          "score": 902.847900616427,
+          "rank": 2,
+          "wins": 10845,
+          "losses": 12795,
+          "ci_lower": 896.4776062446338,
+          "ci_upper": 909.5883394145352
+        },
+        {
+          "name": "GPT-5.1 Search",
+          "score": 1192.8362917308198,
+          "rank": 2,
+          "wins": 2800,
+          "losses": 2085,
+          "ci_lower": 1187.3995117460925,
+          "ci_upper": 1197.0669467051152
+        },
+        {
+          "name": "Claude Opus 4.5 (Thinking) Online",
+          "score": 1191.5330684018252,
+          "rank": 2,
+          "wins": 5560,
+          "losses": 3790,
+          "ci_lower": 1186.4960959821294,
+          "ci_upper": 1195.2147456204875
+        },
+        {
+          "name": "GPT-5.1",
+          "score": 1328.1711520101724,
+          "rank": 3,
+          "wins": 25545,
+          "losses": 15285,
+          "ci_lower": 1326.45062065717,
+          "ci_upper": 1330.5286970263837
+        },
+        {
+          "name": "DeepSeek V3.2",
+          "score": 1208.7064364302078,
+          "rank": 3,
+          "wins": 12690,
+          "losses": 12400,
+          "ci_lower": 1206.5888047176777,
+          "ci_upper": 1210.704780917423
+        },
+        {
+          "name": "Kimi K2.5",
+          "score": 1199.0718683883417,
+          "rank": 3,
+          "wins": 8790,
+          "losses": 9270,
+          "ci_lower": 1195.9628792677856,
+          "ci_upper": 1202.186939015499
+        },
+        {
+          "name": "GPT Image 1.5",
+          "score": 1546.2333124729585,
+          "rank": 3,
+          "wins": 25555,
+          "losses": 11440,
+          "ci_lower": 1544.0302721802755,
+          "ci_upper": 1548.9524649441478
+        },
+        {
+          "name": "ByteDance SDXL Lightning 4-Step",
+          "score": 729.9207474025307,
+          "rank": 3,
+          "wins": 9395,
+          "losses": 15780,
+          "ci_lower": 723.9846654996785,
+          "ci_upper": 733.4380547060825
+        },
+        {
+          "name": "FLUX.2 [dev] Flash",
+          "score": 1153.1978674909865,
+          "rank": 3,
+          "wins": 10825,
+          "losses": 14345,
+          "ci_lower": 1149.5321486652563,
+          "ci_upper": 1156.9262279952416
+        },
+        {
+          "name": "GPT-5.1 (High)",
+          "score": 1322.844693178084,
+          "rank": 4,
+          "wins": 33165,
+          "losses": 20140,
+          "ci_lower": 1320.8949605448922,
+          "ci_upper": 1324.6114426656368
+        },
+        {
+          "name": "Claude Opus 4.5 (Thinking)",
+          "score": 1319.7437138620878,
+          "rank": 4,
+          "wins": 73280,
+          "losses": 26700,
+          "ci_lower": 1318.5783529278988,
+          "ci_upper": 1322.4128389587058
+        },
+        {
+          "name": "Nova Experimental Chat 11-10",
+          "score": 1277.1181315397139,
+          "rank": 4,
+          "wins": 13730,
+          "losses": 11130,
+          "ci_lower": 1274.7572813733218,
+          "ci_upper": 1279.453786245441
+        },
+        {
+          "name": "Grok 4.1 Fast Reasoning",
+          "score": 1205.1007267840691,
+          "rank": 4,
+          "wins": 22120,
+          "losses": 25695,
+          "ci_lower": 1203.2768950306167,
+          "ci_upper": 1206.4286380052172
+        },
+        {
+          "name": "Qwen3 235B A22B Instruct 2507",
+          "score": 1203.2482916652937,
+          "rank": 4,
+          "wins": 23130,
+          "losses": 19365,
+          "ci_lower": 1202.2482916652937,
+          "ci_upper": 1205.4509682321204
+        },
+        {
+          "name": "Nano Banana Pro",
+          "score": 1433.715447893848,
+          "rank": 4,
+          "wins": 128330,
+          "losses": 25985,
+          "ci_lower": 1430.5717056480294,
+          "ci_upper": 1436.8727252918156
+        },
+        {
+          "name": "FLUX1.1 Pro",
+          "score": 956.9032817019967,
+          "rank": 4,
+          "wins": 9845,
+          "losses": 12070,
+          "ci_lower": 951.6598069079378,
+          "ci_upper": 961.4852098774237
+        },
+        {
+          "name": "Claude Opus 4.5",
+          "score": 1429.352100938132,
+          "rank": 4,
+          "wins": 9190,
+          "losses": 3140,
+          "ci_lower": 1423.1825076134805,
+          "ci_upper": 1435.308181243065
+        },
+        {
+          "name": "Gemini 3 Pro Online",
+          "score": 1178.6112901245904,
+          "rank": 4,
+          "wins": 13435,
+          "losses": 9810,
+          "ci_lower": 1175.381058707756,
+          "ci_upper": 1183.4056896517277
+        },
+        {
+          "name": "Kimi K2.5 Instant",
+          "score": 1188.2191187915987,
+          "rank": 5,
+          "wins": 6125,
+          "losses": 6075,
+          "ci_lower": 1185.0640832639133,
+          "ci_upper": 1192.4308772108907
+        },
+        {
+          "name": "MiniMax M2.1",
+          "score": 1185.2324185642335,
+          "rank": 5,
+          "wins": 21395,
+          "losses": 21395,
+          "ci_lower": 1182.5375162608352,
+          "ci_upper": 1187.4383968791078
+        },
+        {
+          "name": "Step 3.5 Flash",
+          "score": 1180.0527518497656,
+          "rank": 5,
+          "wins": 710,
+          "losses": 690,
+          "ci_lower": 1175.7583425113423,
+          "ci_upper": 1191.605469242421
+        },
+        {
+          "name": "Seedream 4.5 Max",
+          "score": 1364.315080764875,
+          "rank": 5,
+          "wins": 28965,
+          "losses": 20795,
+          "ci_lower": 1360.8412723045872,
+          "ci_upper": 1368.117071669927
+        },
+        {
+          "name": "FLUX.2 [klein] 4B",
+          "score": 1035.7034756483154,
+          "rank": 5,
+          "wins": 6385,
+          "losses": 9590,
+          "ci_lower": 1030.6321517431627,
+          "ci_upper": 1041.1846558442928
+        },
+        {
+          "name": "Luma Photon Flash",
+          "score": 894.1608821288125,
+          "rank": 5,
+          "wins": 9280,
+          "losses": 12800,
+          "ci_lower": 888.4039085396836,
+          "ci_upper": 899.4709100736054
+        },
+        {
+          "name": "Gemini 3 Pro",
+          "score": 1300.409760049714,
+          "rank": 6,
+          "wins": 73730,
+          "losses": 44815,
+          "ci_lower": 1298.8795762063298,
+          "ci_upper": 1302.0436007171263
+        },
+        {
+          "name": "Claude Sonnet 4.5 (Thinking)",
+          "score": 1298.3515654687894,
+          "rank": 6,
+          "wins": 64755,
+          "losses": 29130,
+          "ci_lower": 1296.6029715295344,
+          "ci_upper": 1299.6872791100654
+        },
+        {
+          "name": "Grok 4 Fast Reasoning",
+          "score": 1196.434304498798,
+          "rank": 6,
+          "wins": 15770,
+          "losses": 16315,
+          "ci_lower": 1194.5774442360885,
+          "ci_upper": 1197.9148101517617
+        },
+        {
+          "name": "DeepSeek V3.2 Thinking",
+          "score": 1195.778189210204,
+          "rank": 6,
+          "wins": 14045,
+          "losses": 15770,
+          "ci_lower": 1192.5873483010612,
+          "ci_upper": 1197.725566589495
+        },
+        {
+          "name": "FLUX.2 Max",
+          "score": 1317.947805584949,
+          "rank": 6,
+          "wins": 7315,
+          "losses": 7705,
+          "ci_lower": 1314.2442228759762,
+          "ci_upper": 1322.8722970447889
+        },
+        {
+          "name": "FLUX.2 Pro",
+          "score": 1315.8360403449315,
+          "rank": 6,
+          "wins": 32365,
+          "losses": 34065,
+          "ci_lower": 1314.2646487415955,
+          "ci_upper": 1319.941826016105
+        },
+        {
+          "name": "Z-Image Turbo",
+          "score": 724.9482316733531,
+          "rank": 6,
+          "wins": 5405,
+          "losses": 23140,
+          "ci_lower": 719.9760571745774,
+          "ci_upper": 731.1074494398862
+        },
+        {
+          "name": "FLUX.2 [dev] Turbo",
+          "score": 1186.7834768911544,
+          "rank": 6,
+          "wins": 12015,
+          "losses": 15175,
+          "ci_lower": 1181.824062545174,
+          "ci_upper": 1190.8619000226897
+        },
+        {
+          "name": "GPT-5.2 Instant",
+          "score": 1296.6509097867681,
+          "rank": 7,
+          "wins": 30045,
+          "losses": 20530,
+          "ci_lower": 1294.3628337081523,
+          "ci_upper": 1298.4699049357234
+        },
+        {
+          "name": "FLUX Dev Lora",
+          "score": 861.071374718281,
+          "rank": 7,
+          "wins": 7795,
+          "losses": 10520,
+          "ci_lower": 855.9521507668492,
+          "ci_upper": 865.1948587078783
+        },
+        {
+          "name": "FLUX.2 [klein] Base 4B",
+          "score": 867.8393761253897,
+          "rank": 7,
+          "wins": 3385,
+          "losses": 7740,
+          "ci_lower": 861.8480362677492,
+          "ci_upper": 879.4199778934502
+        },
+        {
+          "name": "Gemini 3 Flash Preview Thinking",
+          "score": 1255.1893505704218,
+          "rank": 7,
+          "wins": 21875,
+          "losses": 19635,
+          "ci_lower": 1253.9147453336486,
+          "ci_upper": 1257.7691168925107
+        }
+      ],
+      "num_models": 46
     }
   }
 }

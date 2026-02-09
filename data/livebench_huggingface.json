@@ -1,0 +1,12 @@
+{
+  "source": "livebench.ai (HuggingFace - may be outdated)",
+  "scraped_at": "2026-02-08T18:59:54.608344",
+  "warning": "Data may not be current. Check livebench.ai for latest.",
+  "categories": [
+    "language",
+    "coding",
+    "instruction_following"
+  ],
+  "total_models": 195,
+  "total_evaluations": 60372
+}

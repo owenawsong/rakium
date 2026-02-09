@@ -1,0 +1,20 @@
+{
+  "source": "steel.dev browser automation",
+  "scraped_at": "2026-02-08T18:59:27.760351",
+  "data": {
+    "arena": {
+      "url": "https://arena.ai/leaderboard",
+      "models": [],
+      "error": "name 'model_names' is not defined"
+    },
+    "yupp": {
+      "url": "https://yupp.ai/leaderboard",
+      "models": []
+    },
+    "livebench": {
+      "url": "https://livebench.ai/",
+      "categories": {},
+      "error": "'set' object is not subscriptable"
+    }
+  }
+}

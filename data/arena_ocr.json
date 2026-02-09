@@ -1,0 +1,6 @@
+{
+  "source": "arena.ai (OCR.space extraction)",
+  "scraped_at": "2026-02-08T18:31:35.748420",
+  "models": [],
+  "error": "HTTPSConnectionPool(host='api.ocr.space', port=443): Read timed out. (read timeout=60)"
+}

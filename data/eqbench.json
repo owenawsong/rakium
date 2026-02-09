@@ -1,5 +1,238 @@
 {
   "source": "eqbench.com",
-  "scraped_at": "2026-02-08T04:33:55.947025",
-  "models": []
+  "scraped_at": "2026-02-08T23:56:37.008941+00:00",
+  "models": [
+    {
+      "name": "Model",
+      "score": null
+    },
+    {
+      "name": "\ud83c\udd95 claude-opus-4-6",
+      "score": null
+    },
+    {
+      "name": "gpt-5.1-2025-11-13",
+      "score": null
+    },
+    {
+      "name": "claude-opus-4-5-20251101",
+      "score": null
+    },
+    {
+      "name": "gpt-5.2",
+      "score": null
+    },
+    {
+      "name": "gemini-3-pro-preview",
+      "score": null
+    },
+    {
+      "name": "Kimi-K2-Instruct",
+      "score": null
+    },
+    {
+      "name": "gemini-2.5-pro-preview-06-05",
+      "score": null
+    },
+    {
+      "name": "horizon-alpha",
+      "score": null
+    },
+    {
+      "name": "claude-sonnet-4.5",
+      "score": null
+    },
+    {
+      "name": "gpt-5-chat-latest-2025-08-07",
+      "score": null
+    },
+    {
+      "name": "GLM-4.7",
+      "score": null
+    },
+    {
+      "name": "claude-opus-4",
+      "score": null
+    },
+    {
+      "name": "grok-4.1-fast",
+      "score": null
+    },
+    {
+      "name": "gemini-2.5-pro-preview-03-25",
+      "score": null
+    },
+    {
+      "name": "chatgpt-4o-latest-2025-03-27",
+      "score": null
+    },
+    {
+      "name": "Hermes-4-405B",
+      "score": null
+    },
+    {
+      "name": "chatgpt-4o-latest-2025-04-25",
+      "score": null
+    },
+    {
+      "name": "GLM-4.5",
+      "score": null
+    },
+    {
+      "name": "o4-mini",
+      "score": null
+    },
+    {
+      "name": "claude-sonnet-4",
+      "score": null
+    },
+    {
+      "name": "DeepSeek-R1",
+      "score": null
+    },
+    {
+      "name": "grok-3-beta",
+      "score": null
+    },
+    {
+      "name": "Qwen3-235B-A22B",
+      "score": null
+    },
+    {
+      "name": "gemini-2.5-pro-preview-2025-05-07",
+      "score": null
+    },
+    {
+      "name": "qwq-32b",
+      "score": null
+    },
+    {
+      "name": "gpt-4.1",
+      "score": null
+    },
+    {
+      "name": "grok-4",
+      "score": null
+    },
+    {
+      "name": "gpt-4.1-mini",
+      "score": null
+    },
+    {
+      "name": "claude-3-7-sonnet-20250219",
+      "score": null
+    },
+    {
+      "name": "claude-3-5-sonnet-20241022",
+      "score": null
+    },
+    {
+      "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "score": null
+    },
+    {
+      "name": "gemini-2.5-flash-preview",
+      "score": null
+    },
+    {
+      "name": "gpt-oss-120b",
+      "score": null
+    },
+    {
+      "name": "gemma-3-27b-it",
+      "score": null
+    },
+    {
+      "name": "DeepSeek-V3-0324",
+      "score": null
+    },
+    {
+      "name": "gpt-4.5-preview-2025-02-27",
+      "score": null
+    },
+    {
+      "name": "GLM-4.7-Flash",
+      "score": null
+    },
+    {
+      "name": "gemini-2.0-flash-001",
+      "score": null
+    },
+    {
+      "name": "Qwen3-32B",
+      "score": null
+    },
+    {
+      "name": "grok-3-mini-beta",
+      "score": null
+    },
+    {
+      "name": "gpt-oss-20b",
+      "score": null
+    },
+    {
+      "name": "gemma-3-4b-it",
+      "score": null
+    },
+    {
+      "name": "Qwen3-30B-A3B",
+      "score": null
+    },
+    {
+      "name": "Qwen3-8B",
+      "score": null
+    },
+    {
+      "name": "qwen-2.5-72b-instruct",
+      "score": null
+    },
+    {
+      "name": "gpt-4.1-nano",
+      "score": null
+    },
+    {
+      "name": "Mistral-Large-Instruct-2411",
+      "score": null
+    },
+    {
+      "name": "Mistral-Small-3.1-24B-Instruct-2503",
+      "score": null
+    },
+    {
+      "name": "llama-3.1-nemotron-ultra-253b-v1:free",
+      "score": null
+    },
+    {
+      "name": "Llama-4-Maverick-17B-128E-Instruct",
+      "score": null
+    },
+    {
+      "name": "Mistral-Small-24B-Instruct-2501",
+      "score": null
+    },
+    {
+      "name": "Llama-3.1-405B-Instruct",
+      "score": null
+    },
+    {
+      "name": "Nanbeige4-3B-Thinking-2511",
+      "score": null
+    },
+    {
+      "name": "Llama-4-Scout-17B-16E-Instruct",
+      "score": null
+    },
+    {
+      "name": "gpt-4-0314",
+      "score": null
+    },
+    {
+      "name": "gemma-2-9b-it",
+      "score": null
+    },
+    {
+      "name": "llama-3.2-1b-instruct",
+      "score": null
+    }
+  ]
 }
