@@ -1,0 +1,8 @@
+# Tavily API Keys (one per line)
+# Get keys at: https://tavily.com/
+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
+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
+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
+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
+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
+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

@@ -4,9 +4,9 @@ AI Benchmark Aggregator Scraper (Rakium)
 Extracts data from multiple AI leaderboard sources.
 
 Sources & Methods:
-- Arena/LM Arena: Steel browser (arena.ai Next.js SPA)
-- LiveBench: Direct CSV + categories JSON from livebench.ai (no Steel needed!)
-- YUPP: Direct tRPC API at yupp.ai (no Steel needed!)
+- Arena/LM Arena: Tavily API (with include_raw_content=True)
+- LiveBench: Steel browser (JS-rendered SPA at livebench.ai)
+- YUPP: Steel.dev /scrape endpoint (escaped JSON with nested model_rating structure)
 - Artificial Analysis: HTTP (escaped JSON in Next.js RSC streaming format)
 - OpenRouter: HTTP (/rankings page, escaped JSON with models + rankingData)
 - EQ Bench: HTTP + Steel fallback
@@ -16,11 +16,8 @@ import json
 import re
 import time
 import os
-import csv
-from io import StringIO
 from pathlib import Path
 from datetime import datetime, timezone
-from urllib.parse import quote
 from bs4 import BeautifulSoup
 import requests
 
@@ -348,245 +345,80 @@ def get_tavily_keys():
 
 def scrape_arena():
     """
-    Scrape Arena/LM Arena leaderboard from arena.ai.
-
-    Arena.ai is a Next.js app that server-renders the leaderboard table in the HTML.
-    Strategy:
-      1. Try plain HTTP first (SSR HTML contains the full table)
-      2. Fall back to Steel browser if Cloudflare blocks plain HTTP
-
-    Table columns: Rank, Rank Spread, Model, Score, 95% CI (±), Votes, Organization, License
+    Scrape Arena/LM Arena leaderboard using Tavily API.
+    Uses include_raw_content=True to get the full page text,
+    then parses model data from it.
     """
-    print("Scraping Arena/LM Arena...")
+    print("Scraping Arena/LM Arena (Tavily)...")
 
     results = {
-        "source": "arena.ai",
+        "source": "arena.ai (via Tavily)",
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "categories": {}
     }
 
-    # Categories to scrape (URLs from arena.ai navigation)
+    if not TAVILY_AVAILABLE:
+        results["error"] = "Tavily not installed. Run: pip install tavily-python"
+        return results
+
+    tavily_keys = get_tavily_keys()
+    if not tavily_keys:
+        results["error"] = "No Tavily API key found"
+        return results
+
+    # Categories to scrape
     categories = [
-        {"url": "https://arena.ai/leaderboard/text", "name": "text"},
-        {"url": "https://arena.ai/leaderboard/code", "name": "code"},
-        {"url": "https://arena.ai/leaderboard/vision", "name": "vision"},
-        {"url": "https://arena.ai/leaderboard/text-to-image", "name": "text-to-image"},
-        {"url": "https://arena.ai/leaderboard/image-edit", "name": "image-edit"},
-        {"url": "https://arena.ai/leaderboard/search", "name": "search"},
-        {"url": "https://arena.ai/leaderboard/text-to-video", "name": "text-to-video"},
-        {"url": "https://arena.ai/leaderboard/image-to-video", "name": "image-to-video"},
+        {"url": "https://lmarena.ai/leaderboard", "name": "overall"},
+        {"url": "https://lmarena.ai/leaderboard/text", "name": "text"},
+        {"url": "https://lmarena.ai/leaderboard/vision", "name": "vision"},
+        {"url": "https://lmarena.ai/leaderboard/image", "name": "image"},
+        {"url": "https://lmarena.ai/leaderboard/video", "name": "video"},
+        {"url": "https://lmarena.ai/leaderboard/coding", "name": "coding"},
     ]
 
     for cat in categories:
         print(f"  Scraping: {cat['name']}...")
-        try:
-            html = None
+        models = []
 
-            # Strategy 1: Try plain HTTP (arena.ai server-renders the table)
+        for api_key in tavily_keys:
             try:
-                html = fetch_with_retry(cat["url"], timeout=30)
-                if html and len(html) > 50000:
-                    print(f"    Got {len(html)} chars via HTTP")
+                client = TavilyClient(api_key=api_key)
+
+                response = client.search(
+                    query=f"AI model leaderboard rankings from {cat['url']}",
+                    max_results=5,
+                    include_raw_content=True,
+                    search_depth="advanced"
+                )
+
+                models = parse_tavily_arena_response(response)
+
+                if models:
+                    print(f"    Found {len(models)} models with key ...{api_key[-6:]}")
+                    break
                 else:
-                    print(f"    HTTP response too small ({len(html) if html else 0} chars), trying Steel...")
-                    html = None
+                    print(f"    No models parsed with key ...{api_key[-6:]}, trying next...")
+
             except Exception as e:
-                print(f"    HTTP failed ({e}), trying Steel...")
-
-            # Strategy 2: Fall back to Steel browser
-            if not html and STEEL_API_KEY:
-                html = fetch_with_steel(cat["url"], timeout=120, wait_for=30000)
-                if html:
-                    print(f"    Got {len(html)} chars via Steel")
-
-            if not html:
-                print(f"    No HTML for {cat['name']}")
-                results["categories"][cat["name"]] = {
-                    "url": cat["url"], "models": [], "num_models": 0,
-                    "error": "Could not fetch HTML"
-                }
+                print(f"    Tavily error with key ...{api_key[-6:]}: {e}")
                 continue
 
-            models = _extract_arena_models_from_html(html)
-
-            if models:
-                results["categories"][cat["name"]] = {
-                    "url": cat["url"],
-                    "models": models,
-                    "num_models": len(models)
-                }
-                print(f"    Found {len(models)} models")
-            else:
-                print(f"    WARNING: No models found for {cat['name']}")
-                results["categories"][cat["name"]] = {
-                    "url": cat["url"], "models": [], "num_models": 0,
-                    "error": "Could not extract models from HTML"
-                }
-
-        except Exception as e:
-            print(f"    Error: {e}")
+        if models:
             results["categories"][cat["name"]] = {
-                "url": cat["url"], "error": str(e)
+                "url": cat["url"],
+                "models": models,
+                "num_models": len(models)
+            }
+        else:
+            print(f"    WARNING: No models found for {cat['name']}")
+            results["categories"][cat["name"]] = {
+                "url": cat["url"],
+                "models": [],
+                "num_models": 0,
+                "error": "No models found from Tavily"
             }
 
     return results
-
-
-def _extract_arena_models_from_html(html):
-    """
-    Extract model data from Arena.ai server-rendered HTML.
-
-    Arena.ai table structure:
-      <table>
-        <thead><tr><th>Rank</th><th>Rank Spread</th><th>Model</th><th>Score</th>
-               <th>95% CI (±)</th><th>Votes</th><th>Organization</th><th>License</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>1◄─►2</td>
-            <td>...<a title="claude-opus-4-6">claude-opus-4-6</a>...</td>
-            <td>1496</td>
-            <td>±11</td>
-            <td>2,829</td>
-            <td>Anthropic</td>
-            <td>Proprietary</td>
-          </tr>
-          ...
-        </tbody>
-      </table>
-
-    The model name is best extracted from the <a> tag's title attribute or text,
-    as get_text() on the cell concatenates the org SVG title with the model name.
-    """
-    models = []
-
-    soup = BeautifulSoup(html, "lxml")
-    table = soup.find("table")
-    if not table:
-        # Fallback: try escaped JSON (older method)
-        return _extract_arena_models_escaped_json(html)
-
-    rows = table.find_all("tr")
-    if len(rows) < 2:
-        return models
-
-    # Detect column indices from headers
-    header_row = rows[0]
-    headers = [th.get_text(strip=True).lower() for th in header_row.find_all(["th", "td"])]
-
-    col_map = {}
-    for i, h in enumerate(headers):
-        if h == "rank" and "rank" not in col_map:
-            col_map["rank"] = i
-        elif "model" in h or "name" in h:
-            col_map["model"] = i
-        elif h == "score" or h == "elo" or h == "rating":
-            col_map["score"] = i
-        elif "ci" in h or "±" in h:
-            col_map["ci"] = i
-        elif "vote" in h:
-            col_map["votes"] = i
-        elif "organization" in h or "org" in h:
-            col_map["org"] = i
-        elif "license" in h:
-            col_map["license"] = i
-
-    model_idx = col_map.get("model", 2)
-    score_idx = col_map.get("score", 3)
-    rank_idx = col_map.get("rank", 0)
-    ci_idx = col_map.get("ci")
-    votes_idx = col_map.get("votes")
-    org_idx = col_map.get("org")
-    license_idx = col_map.get("license")
-
-    # Parse data rows
-    for row in rows[1:]:
-        cells = row.find_all(["td", "th"])
-        if len(cells) <= max(model_idx, score_idx):
-            continue
-
-        # Extract model name from <a> tag (avoids org name contamination)
-        model_cell = cells[model_idx]
-        a_tag = model_cell.find("a")
-        if a_tag:
-            name = a_tag.get("title") or a_tag.get_text(strip=True)
-        else:
-            name = model_cell.get_text(strip=True)
-
-        if not name or len(name) < 2:
-            continue
-
-        # Extract score
-        score_text = cells[score_idx].get_text(strip=True)
-        try:
-            score = float(score_text.replace(",", ""))
-        except (ValueError, TypeError):
-            score = None
-
-        entry = {
-            "name": name,
-            "rating": score,
-        }
-
-        # Extract rank
-        try:
-            rank_text = cells[rank_idx].get_text(strip=True)
-            entry["rank"] = int(rank_text)
-        except (ValueError, IndexError):
-            pass
-
-        # Extract CI
-        if ci_idx is not None and ci_idx < len(cells):
-            ci_text = cells[ci_idx].get_text(strip=True).replace("±", "").strip()
-            try:
-                entry["ci"] = float(ci_text.replace(",", ""))
-            except (ValueError, TypeError):
-                pass
-
-        # Extract votes
-        if votes_idx is not None and votes_idx < len(cells):
-            votes_text = cells[votes_idx].get_text(strip=True).replace(",", "")
-            try:
-                entry["votes"] = int(votes_text)
-            except (ValueError, TypeError):
-                pass
-
-        # Extract organization
-        if org_idx is not None and org_idx < len(cells):
-            entry["organization"] = cells[org_idx].get_text(strip=True)
-
-        # Extract license
-        if license_idx is not None and license_idx < len(cells):
-            entry["license"] = cells[license_idx].get_text(strip=True)
-
-        models.append(entry)
-
-    return models
-
-
-def _extract_arena_models_escaped_json(html):
-    """Fallback: try to extract Arena model data from escaped JSON in HTML."""
-    models = []
-    for marker in ['\\"leaderboard\\":', '\\"models\\":', '\\"data\\":', '\\"rankings\\":']:
-        data = extract_escaped_json_array(html, marker)
-        if data and isinstance(data, list) and len(data) > 5:
-            sample = data[0] if data else {}
-            if isinstance(sample, dict) and any(
-                k in sample for k in ("model", "name", "score", "elo", "rating")
-            ):
-                for item in data:
-                    if isinstance(item, dict):
-                        name = item.get("model", item.get("name", ""))
-                        if name:
-                            models.append({
-                                "name": name,
-                                "rating": item.get("elo", item.get("score", item.get("rating"))),
-                                "rank": item.get("rank"),
-                                "organization": item.get("organization", item.get("org", "")),
-                            })
-                if models:
-                    return models
-    return models
 
 
 def parse_tavily_arena_response(response):
@@ -727,80 +559,60 @@ def try_parse_structured_text(text):
 
 
 # =============================================================================
-# LIVEBENCH - Direct CSV + JSON (no Steel needed!)
+# LIVEBENCH - Steel Browser (JS-rendered SPA)
 # =============================================================================
-def _discover_livebench_csv_url():
-    """
-    Discover the current LiveBench CSV URL by fetching the homepage and finding
-    the table_YYYY_MM_DD.csv filename. Falls back to known recent URL.
-    """
-    try:
-        html = fetch_with_retry("https://livebench.ai", timeout=30)
-        # Look for table_YYYY_MM_DD.csv pattern in the HTML
-        match = re.search(r'table_(\d{4}_\d{2}_\d{2})\.csv', html)
-        if match:
-            date_str = match.group(1)
-            csv_url = f"https://livebench.ai/table_{date_str}.csv"
-            categories_url = f"https://livebench.ai/categories_{date_str}.json"
-            print(f"  Discovered LiveBench date: {date_str}")
-            return csv_url, categories_url
-    except Exception as e:
-        print(f"  Could not discover LiveBench CSV URL: {e}")
-
-    # Fallback to known recent URL
-    csv_url = "https://livebench.ai/table_2026_01_08.csv"
-    categories_url = "https://livebench.ai/categories_2026_01_08.json"
-    print("  Using fallback LiveBench date: 2026_01_08")
-    return csv_url, categories_url
-
-
 def scrape_livebench():
     """
-    Scrape LiveBench leaderboard using direct CSV + JSON fetching (NO Steel needed!).
+    Scrape LiveBench leaderboard data using Steel browser.
 
-    LiveBench hosts static files:
-      - table_YYYY_MM_DD.csv: Raw benchmark scores per model per task
-      - categories_YYYY_MM_DD.json: Maps category names to task column names
+    LiveBench (livebench.ai) is a React SPA that requires JS rendering.
+    The HuggingFace dataset is 1+ year outdated - DO NOT use it.
 
-    We fetch both, compute category averages from per-task scores, and produce
-    the same output structure the generator expects.
+    Strategy:
+      1. Steel browser -> parse rendered HTML table
+      2. Fallback: Try escaped JSON in the HTML
     """
-    print("Scraping LiveBench (direct CSV)...")
+    print("Scraping LiveBench...")
 
     results = {
-        "source": "livebench.ai (CSV)",
+        "source": "livebench.ai (via Steel)",
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "categories": {}
     }
 
+    if not STEEL_API_KEY:
+        results["error"] = "STEEL_API_KEY not set"
+        print("  ERROR: STEEL_API_KEY not set, skipping LiveBench")
+        return results
+
     try:
-        csv_url, categories_url = _discover_livebench_csv_url()
+        html = fetch_with_steel("https://livebench.ai", timeout=120, wait_for=30000)
+        if not html:
+            print("  Empty response from Steel")
+            results["categories"]["overall"] = {
+                "models": [], "num_models": 0, "note": "Empty Steel response"
+            }
+            return results
 
-        # Fetch both files
-        print(f"  Fetching CSV: {csv_url}")
-        csv_text = fetch_with_retry(csv_url, timeout=30)
-        print(f"  Fetched CSV: {len(csv_text)} chars")
+        debug_file = DATA_DIR / "livebench_raw.html"
+        with open(debug_file, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"  Saved raw HTML ({len(html)} chars)")
 
-        print(f"  Fetching categories: {categories_url}")
-        categories_text = fetch_with_retry(categories_url, timeout=30)
-        categories_map = json.loads(categories_text)
-        print(f"  Categories: {list(categories_map.keys())}")
-
-        # Parse CSV and compute scores
-        models = _parse_livebench_csv(csv_text, categories_map)
-
+        models = _extract_livebench_models(html)
         if models:
             results["categories"]["overall"] = {
                 "models": models,
                 "num_models": len(models)
             }
-            print(f"  SUCCESS: Found {len(models)} models")
-        else:
-            print("  WARNING: No models parsed from CSV")
-            results["categories"]["overall"] = {
-                "models": [], "num_models": 0,
-                "note": "Could not parse models from CSV"
-            }
+            print(f"  SUCCESS: Found {len(models)} models from Steel")
+            return results
+
+        print("  WARNING: No models extracted from LiveBench")
+        results["categories"]["overall"] = {
+            "models": [], "num_models": 0,
+            "note": "Could not extract models from rendered HTML"
+        }
 
     except Exception as e:
         print(f"  Error: {e}")
@@ -809,218 +621,206 @@ def scrape_livebench():
     return results
 
 
-def _parse_livebench_csv(csv_text, categories_map):
+def _extract_livebench_models(html):
     """
-    Parse LiveBench CSV file.
+    Extract model data from LiveBench rendered HTML.
 
-    CSV columns: model, task1, task2, task3, ...
-    Categories JSON: {"Reasoning": ["theory_of_mind", "zebra_puzzle", ...], ...}
+    LiveBench table columns:
+      Model | Global Avg | Reasoning | Coding | Agentic Coding | Math | Data Analysis | Language | IF
 
-    We compute:
-      - Each category score = average of its task scores
-      - Global average = average of all category scores
+    Returns list of dicts with 'name' and 'scores' dict containing all category scores.
     """
     models = []
 
-    reader = csv.DictReader(StringIO(csv_text))
-    csv_columns = reader.fieldnames
-    if not csv_columns or "model" not in csv_columns:
-        print("  ERROR: CSV missing 'model' column")
-        return models
+    # The score columns we expect (in order after "Model")
+    score_columns = [
+        "global_avg", "reasoning", "coding", "agentic_coding",
+        "math", "data_analysis", "language", "if"
+    ]
 
-    # Category name mapping for output (display names -> internal keys)
-    category_display_to_key = {
-        "Reasoning": "reasoning",
-        "Coding": "coding",
-        "Agentic Coding": "agentic_coding",
-        "Mathematics": "math",
-        "Data Analysis": "data_analysis",
-        "Language": "language",
-        "IF": "if",
-    }
+    # Strategy 1: Parse HTML table
+    soup = BeautifulSoup(html, 'lxml')
+    tables = soup.find_all('table')
 
-    for row in reader:
-        name = row.get("model", "").strip()
-        if not name:
+    for table in tables:
+        rows = table.find_all('tr')
+        if len(rows) < 3:
             continue
 
-        scores = {}
-        category_scores = []
+        # Get headers
+        header_row = rows[0]
+        headers = [th.get_text(strip=True).lower() for th in header_row.find_all(['th', 'td'])]
 
-        for cat_display, tasks in categories_map.items():
-            cat_key = category_display_to_key.get(cat_display, cat_display.lower().replace(" ", "_"))
+        # Check if this looks like the LiveBench table
+        name_idx = None
+        for i, h in enumerate(headers):
+            if 'model' in h or 'name' in h:
+                name_idx = i
+                break
 
-            # Compute average of task scores for this category
-            task_values = []
-            for task in tasks:
-                val_str = row.get(task, "").strip()
-                if val_str:
+        if name_idx is None:
+            continue
+
+        # Map header names to our score column names
+        header_to_col = {}
+        for i, h in enumerate(headers):
+            if i == name_idx:
+                continue
+            h_clean = h.strip()
+            if 'global' in h_clean or 'avg' in h_clean:
+                header_to_col[i] = "global_avg"
+            elif 'agentic' in h_clean:
+                header_to_col[i] = "agentic_coding"
+            elif 'coding' in h_clean:
+                header_to_col[i] = "coding"
+            elif 'reasoning' in h_clean:
+                header_to_col[i] = "reasoning"
+            elif 'math' in h_clean:
+                header_to_col[i] = "math"
+            elif 'data' in h_clean and 'analysis' in h_clean:
+                header_to_col[i] = "data_analysis"
+            elif 'language' in h_clean:
+                header_to_col[i] = "language"
+            elif h_clean == 'if' or 'instruction' in h_clean:
+                header_to_col[i] = "if"
+
+        # If we couldn't map headers, just assign positionally
+        if not header_to_col and len(headers) > name_idx + 1:
+            col_idx = 0
+            for i in range(len(headers)):
+                if i == name_idx:
+                    continue
+                if col_idx < len(score_columns):
+                    header_to_col[i] = score_columns[col_idx]
+                    col_idx += 1
+
+        # Parse data rows
+        for row in rows[1:]:
+            cells = row.find_all(['td', 'th'])
+            if len(cells) <= name_idx:
+                continue
+
+            name = cells[name_idx].get_text(strip=True)
+            if not name or len(name) < 2:
+                continue
+
+            scores = {}
+            for col_i, col_name in header_to_col.items():
+                if col_i < len(cells):
+                    text = cells[col_i].get_text(strip=True)
                     try:
-                        task_values.append(float(val_str))
-                    except ValueError:
-                        pass
+                        scores[col_name] = round(float(text), 2)
+                    except (ValueError, TypeError):
+                        scores[col_name] = None
 
-            if task_values:
-                cat_avg = round(sum(task_values) / len(task_values), 2)
-                scores[cat_key] = cat_avg
-                category_scores.append(cat_avg)
-            else:
-                scores[cat_key] = None
+            models.append({
+                "name": name,
+                "scores": scores,
+                "score": scores.get("global_avg"),  # convenience field
+            })
 
-        # Global average = average of all category averages
-        global_avg = None
-        if category_scores:
-            global_avg = round(sum(category_scores) / len(category_scores), 2)
-        scores["global_avg"] = global_avg
+        if models:
+            # Sort by global_avg descending
+            models.sort(key=lambda x: (x.get("score") or 0), reverse=True)
+            return models
 
-        models.append({
-            "name": name,
-            "scores": scores,
-            "score": global_avg,
-        })
+    # Strategy 2: Try escaped JSON from Next.js
+    for marker in ['\\"models\\":', '\\"leaderboard\\":', '\\"data\\":', '\\"rankings\\":']:
+        escaped_data = extract_escaped_json_array(html, marker)
+        if escaped_data and isinstance(escaped_data, list) and len(escaped_data) > 3:
+            first = escaped_data[0]
+            if isinstance(first, dict) and any(k in first for k in ["model", "name", "model_name", "score", "global_avg"]):
+                for item in escaped_data:
+                    if isinstance(item, dict):
+                        name = item.get("model_name", item.get("name", item.get("model", "")))
+                        scores = {}
+                        for col in score_columns:
+                            val = item.get(col)
+                            if val is not None:
+                                try:
+                                    scores[col] = round(float(val), 2)
+                                except (ValueError, TypeError):
+                                    pass
+                        models.append({
+                            "name": name,
+                            "scores": scores,
+                            "score": scores.get("global_avg", item.get("score", item.get("global_avg"))),
+                        })
+                if models:
+                    models.sort(key=lambda x: (x.get("score") or 0), reverse=True)
+                    return models
 
-    # Sort by global average descending
-    models.sort(key=lambda x: (x.get("score") or 0), reverse=True)
     return models
 
 
 # =============================================================================
-# YUPP - Direct tRPC API (no Steel needed!)
+# YUPP - Steel Browser (JS-rendered)
 # =============================================================================
-def _fetch_yupp_category(category_name, extra_filters=None, num_results=500):
-    """
-    Fetch a single category from YUPP's public tRPC API.
-
-    The tRPC endpoint uses batch format:
-      URL: /api/trpc/leaderboard.getLeaderboard?batch=1&input={"0":{"json":{...}}}
-      Response: [{"result":{"data":{"json":{"models":[...], ...}}}}]
-
-    Categories are NOT controlled by backendTier (always "stable").
-    Instead, boolean filter flags select different subsets:
-      - text/overall: no special filter
-      - image: imageGenerationModels=true
-      - image-new: newImageGenerations=true
-      - image-edit: imageEditModels=true
-      - search: liveModels=true
-      - svg: svgModels=true
-      - coding: codingModels=true
-
-    Args:
-        category_name: Display name for logging (e.g. "overall", "text")
-        extra_filters: Dict of boolean filter flags (e.g. {"imageGenerationModels": True})
-        num_results: Max models to fetch (default 500)
-
-    Returns:
-        List of normalized model dicts, or empty list on failure.
-    """
-    # Build the tRPC batch input - base params always the same
-    json_params = {
-        "offset": 0,
-        "numResults": num_results,
-        "collectStats": True,
-        "backendTier": "stable",
-    }
-
-    # Add category-specific filter flags
-    if extra_filters:
-        json_params.update(extra_filters)
-
-    trpc_params = {
-        "0": {
-            "json": json_params
-        }
-    }
-
-    encoded_input = quote(json.dumps(trpc_params, separators=(",", ":")))
-    url = f"https://yupp.ai/api/trpc/leaderboard.getLeaderboard?batch=1&input={encoded_input}"
-
-    headers = {
-        **HEADERS,
-        "Accept": "application/json",
-        "Referer": f"https://yupp.ai/leaderboard/{category_name}" if category_name != "overall" else "https://yupp.ai/leaderboard",
-    }
-
-    response_text = fetch_with_retry(url, headers=headers, timeout=30)
-    data = json.loads(response_text)
-
-    if not isinstance(data, list) or len(data) == 0:
-        print(f"    Unexpected tRPC response format for {category_name}")
-        return []
-
-    # Navigate to the leaderboard data: data[0].result.data.json
-    try:
-        lb_data = data[0]["result"]["data"]["json"]
-    except (KeyError, IndexError, TypeError) as e:
-        print(f"    Could not navigate tRPC response for {category_name}: {e}")
-        if isinstance(data[0], dict) and "error" in data[0]:
-            print(f"    tRPC error: {data[0]['error']}")
-        return []
-
-    raw_models = lb_data.get("models", [])
-    total = lb_data.get("total_count", len(raw_models))
-    print(f"    tRPC returned {len(raw_models)} models (total_count={total}) for {category_name}")
-
-    # Normalize model data
-    models = []
-    for item in raw_models:
-        parsed = _extract_yupp_model_from_rating(item)
-        if parsed:
-            models.append(parsed)
-
-    # Sort by rank
-    models.sort(key=lambda x: x.get("rank") or 99999)
-    return models
-
-
 def scrape_yupp():
     """
-    Scrape YUPP leaderboard using their public tRPC API endpoint (NO Steel needed!).
-
-    YUPP has 8 leaderboard categories: overall + 7 sub-categories.
-    All use backendTier="stable" but different boolean filter flags select subsets.
+    Scrape YUPP leaderboard using Steel's /scrape endpoint.
+    Tavily doesn't work well for this site.
     """
-    print("Scraping YUPP (tRPC API)...")
+    print("Scraping YUPP (Steel browser)...")
 
     results = {
-        "source": "yupp.ai (tRPC API)",
+        "source": "yupp.ai (via Steel)",
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "categories": {}
     }
 
-    # Categories: name -> extra filter flags for the tRPC API
-    # All categories use backendTier="stable"; the filter flags select the subset
+    if not STEEL_API_KEY:
+        results["error"] = "STEEL_API_KEY not set"
+        print("  ERROR: STEEL_API_KEY not set, skipping YUPP")
+        return results
+
+    base_url = "https://yupp.ai"
+
     categories = [
-        {"name": "overall",    "filters": None},
-        {"name": "text",       "filters": None},  # text = default (same as overall)
-        {"name": "image",      "filters": {"imageGenerationModels": True}},
-        {"name": "image-new",  "filters": {"newImageGenerations": True}},
-        {"name": "image-edit", "filters": {"imageEditModels": True}},
-        {"name": "search",     "filters": {"liveModels": True}},
-        {"name": "svg",        "filters": {"svgModels": True}},
-        {"name": "coding",     "filters": {"codingModels": True}},
+        {"url": f"{base_url}/leaderboard", "name": "overall"},
+        {"url": f"{base_url}/leaderboard/text", "name": "text"},
+        {"url": f"{base_url}/leaderboard/image", "name": "image"},
+        {"url": f"{base_url}/leaderboard/video", "name": "video"},
+        {"url": f"{base_url}/leaderboard/audio", "name": "audio"},
     ]
 
     for cat in categories:
-        filter_desc = cat["filters"] if cat["filters"] else "default"
-        print(f"  Fetching: {cat['name']} ({filter_desc})...")
+        print(f"  Scraping: {cat['name']}...")
         try:
-            models = _fetch_yupp_category(cat["name"], cat["filters"])
+            html = fetch_with_steel(cat["url"], wait_for=30000)
 
-            results["categories"][cat["name"]] = {
-                "url": f"https://yupp.ai/leaderboard/{cat['name']}" if cat["name"] != "overall" else "https://yupp.ai/leaderboard",
-                "models": models,
-                "num_models": len(models)
-            }
+            if not html:
+                print(f"    Empty response for {cat['name']}")
+                continue
+
+            # Save raw HTML for debugging
+            debug_file = DATA_DIR / f"yupp_{cat['name']}.html"
+            with open(debug_file, "w", encoding="utf-8") as f:
+                f.write(html)
+            print(f"    Saved raw HTML ({len(html)} chars)")
+
+            models = extract_models_from_yupp_html(html)
 
             if models:
+                results["categories"][cat["name"]] = {
+                    "url": cat["url"],
+                    "models": models,
+                    "num_models": len(models)
+                }
                 print(f"    Found {len(models)} models")
             else:
-                print(f"    WARNING: No models for {cat['name']}")
+                results["categories"][cat["name"]] = {
+                    "url": cat["url"],
+                    "models": [],
+                    "num_models": 0,
+                    "note": "Could not extract models - HTML saved for debugging"
+                }
+                print(f"    No models extracted")
 
         except Exception as e:
             print(f"    Error: {e}")
             results["categories"][cat["name"]] = {
-                "url": f"https://yupp.ai/leaderboard/{cat['name']}",
+                "url": cat["url"],
                 "error": str(e)
             }
 
@@ -1031,32 +831,34 @@ def _extract_yupp_model_from_rating(item):
     """
     Extract a normalized model dict from a YUPP leaderboard item.
 
-    YUPP tRPC response structure per model:
+    Actual YUPP structure (from diagnostic):
       {
         "model_rating": {
-          "taxonomy_label": "GPT-5.1 Search (High)",  <-- display name
-          "rating": 1249.68,                            <-- ELO score
+          "taxonomy_id": "...",
+          "taxonomy_label": "Claude Opus 4.6 (Thinking)",  <-- model name
+          "rating": 1416.84,                                <-- score
+          "rating_lower": 1411.87,
+          "rating_upper": 1421.61,
           "rank": 1,
           "global_rank": 1,
-          "wins": 8705,
-          "losses": 5790,
-          "rating_lower": 1245.95,
-          "rating_upper": 1253.03,
+          "active_rank": 1,
+          "wins": 3720,
+          "losses": 1305,
+          "ties": 0,
+          "downvotes": 60,
+          "win_notes": {"Informative": 1776, ...},
           ...
-        },
-        "model_info": {
-          "model_publisher": "OpenAI",
-          "model_family": "GPT",
-          ...
-        },
-        "model_stats": { ... }
+        }
       }
+
+    The model data is ALL inside the model_rating sub-object.
     """
     if not isinstance(item, dict):
         return None
 
     mr = item.get("model_rating")
     if not isinstance(mr, dict):
+        # Maybe the item itself IS the model_rating (no wrapper)
         mr = item
 
     # Model name: taxonomy_label is the display name
@@ -1073,6 +875,7 @@ def _extract_yupp_model_from_rating(item):
     if not name:
         return None
 
+    # Score: rating is the ELO-like rating
     score = mr.get("rating") or item.get("rating") or item.get("elo_score") or item.get("score")
 
     result = {
@@ -1081,7 +884,7 @@ def _extract_yupp_model_from_rating(item):
         "rank": mr.get("rank") or mr.get("global_rank"),
     }
 
-    # Extra fields from model_rating
+    # Extra fields
     if "wins" in mr:
         result["wins"] = mr["wins"]
     if "losses" in mr:
@@ -1090,15 +893,157 @@ def _extract_yupp_model_from_rating(item):
         result["ci_lower"] = mr["rating_lower"]
         result["ci_upper"] = mr["rating_upper"]
 
-    # Extra fields from model_info
-    mi = item.get("model_info")
-    if isinstance(mi, dict):
-        if mi.get("model_publisher"):
-            result["organization"] = mi["model_publisher"]
-        if mi.get("model_family"):
-            result["model_family"] = mi["model_family"]
+    # Top-level extras
+    for key in ["organization", "license", "knowledge_cutoff", "vibe_score"]:
+        if key in item:
+            result[key] = item[key]
 
     return result
+
+
+def _walk_for_models(obj, depth=0):
+    """
+    Recursively walk a parsed JSON structure to find ALL 'models' arrays.
+    Returns a flat list of all model items found anywhere in the structure.
+    """
+    if depth > 10:
+        return []
+
+    results = []
+
+    if isinstance(obj, dict):
+        for key, val in obj.items():
+            if key == "models" and isinstance(val, list):
+                results.extend(val)
+            else:
+                results.extend(_walk_for_models(val, depth + 1))
+    elif isinstance(obj, list):
+        for item in obj:
+            results.extend(_walk_for_models(item, depth + 1))
+
+    return results
+
+
+def extract_models_from_yupp_html(html):
+    """
+    Extract model data from YUPP HTML.
+
+    YUPP's data structure is:
+      "leaderboardData": {
+        "highlights": [
+          {"title": "Most preferred", "models": [...]},
+          {"title": "Best text models", "models": [...]},
+          ...
+        ],
+        "best_and_worst": [...],
+        ...
+      }
+
+    Each "models" array contains items with a nested "model_rating" object
+    where the actual data lives (taxonomy_label=name, rating=score).
+    """
+    models = []
+
+    # Strategy 0: Extract the full leaderboardData object, then walk it
+    # to find ALL model arrays (highlights, best_and_worst, etc.)
+    print("      Trying leaderboardData object extraction...")
+    leaderboard_data = extract_escaped_json_object(html, '\\"leaderboardData\\":')
+    if leaderboard_data and isinstance(leaderboard_data, dict):
+        print(f"      Extracted leaderboardData with keys: {list(leaderboard_data.keys())}")
+
+        # Walk the entire structure to find ALL "models" arrays
+        all_model_items = _walk_for_models(leaderboard_data)
+        print(f"      Found {len(all_model_items)} total model items across all sections")
+
+        seen_names = set()
+        for item in all_model_items:
+            parsed = _extract_yupp_model_from_rating(item)
+            if parsed and parsed["name"] not in seen_names:
+                seen_names.add(parsed["name"])
+                models.append(parsed)
+
+        if models:
+            # Sort by rank if available, otherwise by score
+            models.sort(key=lambda x: x.get("rank") or 99999)
+            print(f"      Deduplicated to {len(models)} unique models")
+            return models
+
+    # Strategy 1: Find ALL \"models\": arrays across the entire HTML
+    # (fallback if leaderboardData extraction fails)
+    print("      Trying all \\\"models\\\": occurrences...")
+    search_start = 0
+    marker = '\\"models\\":'
+    all_model_items = []
+
+    while True:
+        idx = html.find(marker, search_start)
+        if idx == -1:
+            break
+
+        arr_start = idx + len(marker)
+        # Skip whitespace
+        while arr_start < len(html) and html[arr_start] in ' \t\n\r':
+            arr_start += 1
+
+        if arr_start < len(html) and html[arr_start] == '[':
+            result, end_pos = _extract_escaped_json_block(html, arr_start)
+            if isinstance(result, list):
+                all_model_items.extend(result)
+                print(f"      Found models array at index {idx} with {len(result)} items")
+            search_start = end_pos if end_pos > arr_start else arr_start + 1
+        else:
+            search_start = arr_start + 1
+
+    if all_model_items:
+        seen_names = set()
+        for item in all_model_items:
+            parsed = _extract_yupp_model_from_rating(item)
+            if parsed and parsed["name"] not in seen_names:
+                seen_names.add(parsed["name"])
+                models.append(parsed)
+
+        if models:
+            models.sort(key=lambda x: x.get("rank") or 99999)
+            print(f"      Deduplicated to {len(models)} unique models from all arrays")
+            return models
+
+    # Strategy 2: BeautifulSoup table parsing
+    soup = BeautifulSoup(html, 'lxml')
+    tables = soup.find_all('table')
+
+    for table in tables:
+        rows = table.find_all('tr')
+        if len(rows) < 2:
+            continue
+
+        headers = [th.get_text(strip=True).lower() for th in rows[0].find_all(['th', 'td'])]
+
+        name_idx = None
+        score_idx = None
+        for i, h in enumerate(headers):
+            if any(kw in h for kw in ['model', 'name']):
+                name_idx = i
+            if any(kw in h for kw in ['score', 'elo', 'rating']):
+                score_idx = i
+
+        if name_idx is not None:
+            for row in rows[1:]:
+                cells = row.find_all(['td', 'th'])
+                if len(cells) > name_idx:
+                    name = cells[name_idx].get_text(strip=True)
+                    score = None
+                    if score_idx is not None and len(cells) > score_idx:
+                        try:
+                            score = float(cells[score_idx].get_text(strip=True))
+                        except ValueError:
+                            pass
+                    if name and len(name) > 2:
+                        models.append({"name": name, "score": score})
+
+            if models:
+                return models
+
+    return models
 
 
 # =============================================================================
@@ -1562,9 +1507,8 @@ def main():
     }
 
     # Sources configuration:
-    # - Arena uses Steel browser (arena.ai Next.js SPA)
-    # - LiveBench uses direct CSV + categories JSON (fast, no Steel!)
-    # - YUPP uses direct tRPC API (fast, no Steel!)
+    # - Arena uses Tavily (BEST for this site, per user testing)
+    # - YUPP and LiveBench use Steel browser (JS-rendered SPAs)
     # - Others use plain HTTP
     sources = [
         ("arena", scrape_arena),

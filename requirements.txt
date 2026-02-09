@@ -8,6 +8,9 @@ lxml>=4.9.0
 # Browser automation (for JS-rendered sites)
 playwright>=1.40.0
 
+# Tavily API (best for Arena.ai)
+tavily-python>=0.3.0
+
 # Data processing
 pandas>=2.0.0
 pyarrow>=14.0.0

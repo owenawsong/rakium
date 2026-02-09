@@ -28,13 +28,25 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+        env:
+          # Tavily API keys (GitHub Secrets)
+          TAVILY_API_KEY_1: ${{ secrets.TAVILY_API_KEY_1 }}
+          TAVILY_API_KEY_2: ${{ secrets.TAVILY_API_KEY_2 }}
+          TAVILY_API_KEY_3: ${{ secrets.TAVILY_API_KEY_3 }}
+          TAVILY_API_KEY_4: ${{ secrets.TAVILY_API_KEY_4 }}
+          TAVILY_API_KEY_5: ${{ secrets.TAVILY_API_KEY_5 }}
+          TAVILY_API_KEY_6: ${{ secrets.TAVILY_API_KEY_6 }}
 
-      - name: Install Playwright browsers
+      - name: Setup Steel browser
         run: |
-          playwright install chromium --with-deps
+          # Steel.dev is cloud-based, no installation needed
+          echo "Steel browser configured via STEEL_API_KEY secret"
 
       - name: Run scraper
         run: python scripts/scraper.py
+        env:
+          STEEL_API_KEY: ${{ secrets.STEEL_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY_1 }}
 
       - name: Run generator
         run: python scripts/generator.py
