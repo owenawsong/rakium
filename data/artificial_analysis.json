@@ -1,6 +1,6 @@
 {
   "source": "artificialanalysis.ai",
-  "scraped_at": "2026-02-09T04:43:02.342499+00:00",
+  "scraped_at": "2026-02-09T23:37:43.886667+00:00",
   "models": [
     {
       "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
@@ -2313,12 +2313,12 @@
       }
     },
     {
-      "id": "c43aa1f9-31bd-4a99-be70-84c5e6bd2e75",
-      "slug": "qwen-chat-14b",
-      "name": "Qwen Chat 14B",
-      "shortName": "Qwen Chat 14B",
-      "deprecated": true,
-      "isReasoning": false,
+      "id": "4ae6c88d-9e4a-4850-89fe-18a1c04a66cc",
+      "slug": "qwen3-0.6b-instruct-reasoning",
+      "name": "Qwen3 0.6B (Reasoning)",
+      "shortName": "Qwen3 0.6B",
+      "deprecated": false,
+      "isReasoning": true,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -2327,12 +2327,12 @@
       }
     },
     {
-      "id": "4ae6c88d-9e4a-4850-89fe-18a1c04a66cc",
-      "slug": "qwen3-0.6b-instruct-reasoning",
-      "name": "Qwen3 0.6B (Reasoning)",
-      "shortName": "Qwen3 0.6B",
-      "deprecated": false,
-      "isReasoning": true,
+      "id": "c43aa1f9-31bd-4a99-be70-84c5e6bd2e75",
+      "slug": "qwen-chat-14b",
+      "name": "Qwen Chat 14B",
+      "shortName": "Qwen Chat 14B",
+      "deprecated": true,
+      "isReasoning": false,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
