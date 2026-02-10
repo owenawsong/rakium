@@ -8,7 +8,7 @@ Data format from scraper.py:
   - livebench.json:          { categories: { overall: { models: [{name, score, scores: {global_avg, reasoning, coding, agentic_coding, math, data_analysis, language, if}}] } } }
   - yupp.json:               { categories: { overall, text, image, image-new, image-edit, search, svg, coding: { models: [{name, score, rank, wins, losses}] } } }
   - artificial_analysis.json:{ models: [{name, additional_text, model_creators: [{id, name}], ...}] }
-  - openrouter.json:         { rankings: [{name, slug, author, request_count, p50_latency, p50_throughput, provider_count, total_tokens, total_requests}] }
+  - openrouter.json:         { rankings: [{name, slug, author, context_length, prompt_price, completion_price, provider_count, modality, request_count?}] }
   - eqbench.json:            { models: [{name, elo, score, traits: {abilities, humanlike, safety, assertive, social_iq, warm, analytic, insight, empathy, compliant, moralising, pragmatic}}] }
 """
 
@@ -80,6 +80,42 @@ def fmt_throughput(val):
         return f"{float(val):,.1f} t/s"
     except (ValueError, TypeError):
         return str(val)
+
+
+def fmt_price(val):
+    """Format per-token price as $/M tokens."""
+    if val is None:
+        return "N/A"
+    try:
+        val = float(val)
+    except (ValueError, TypeError):
+        return str(val)
+    if val == 0:
+        return "Free"
+    # Convert per-token to per-million-tokens
+    per_million = val * 1_000_000
+    if per_million >= 100:
+        return f"${per_million:,.0f}"
+    if per_million >= 1:
+        return f"${per_million:,.2f}"
+    if per_million >= 0.01:
+        return f"${per_million:,.3f}"
+    return f"${per_million:.4f}"
+
+
+def fmt_context(val):
+    """Format context length as human-readable string."""
+    if val is None:
+        return "N/A"
+    try:
+        val = int(val)
+    except (ValueError, TypeError):
+        return str(val)
+    if val >= 1_000_000:
+        return f"{val / 1_000_000:.1f}M"
+    if val >= 1_000:
+        return f"{val / 1_000:.0f}K"
+    return f"{val:,}"
 
 
 def get_creator_name(model):
@@ -489,14 +525,14 @@ def generate_html():
 """
 
     # =========================================================================
-    # OPENROUTER SECTION (with ranking data: requests, latency, throughput, tokens)
+    # OPENROUTER SECTION (model catalog with pricing, context, modality)
     # =========================================================================
     html += """
         <!-- OpenRouter Section -->
         <div id="openrouter" class="section">
             <div class="category-header">
-                <h2>OpenRouter Rankings</h2>
-                <p>Sourced from openrouter.ai/rankings (popularity &amp; usage data)</p>
+                <h2>OpenRouter Model Catalog</h2>
+                <p>Sourced from openrouter.ai (model catalog &amp; pricing data)</p>
             </div>
             <input type="text" class="search-box" placeholder="Search models..." oninput="filterTable(this)">
             <div class="table-wrap">
@@ -506,10 +542,10 @@ def generate_html():
                         <th>#</th>
                         <th>Model</th>
                         <th>Author</th>
-                        <th>Requests</th>
-                        <th>P50 Latency</th>
-                        <th>P50 Throughput</th>
-                        <th>Total Tokens</th>
+                        <th>Context</th>
+                        <th>Input $/M</th>
+                        <th>Output $/M</th>
+                        <th>Modality</th>
                         <th>Providers</th>
                     </tr>
                 </thead>
@@ -525,14 +561,20 @@ def generate_html():
             author_clean = author.lower().replace(" ", "").replace("-", "")
             if prefix == author_clean or prefix in author_clean or author_clean in prefix:
                 name = name.split(": ", 1)[1]
+        modality = model.get("modality", "")
+        # Clean up modality display
+        if isinstance(modality, str):
+            modality = modality.replace("text->", "").replace("->text", " → text").replace("text+image->", "multimodal → ")
+            if not modality or modality == "text":
+                modality = "Text"
         html += f"""                    <tr>
                         <td class="rank">{i}</td>
                         <td class="model-name">{esc(name)}</td>
                         <td class="org">{esc(author)}</td>
-                        <td class="score">{fmt_big_number(model.get('request_count'))}</td>
-                        <td class="dim">{fmt_latency(model.get('p50_latency'))}</td>
-                        <td class="dim">{fmt_throughput(model.get('p50_throughput'))}</td>
-                        <td class="dim">{fmt_big_number(model.get('total_tokens'))}</td>
+                        <td class="dim">{fmt_context(model.get('context_length'))}</td>
+                        <td class="score">{fmt_price(model.get('prompt_price'))}</td>
+                        <td class="score">{fmt_price(model.get('completion_price'))}</td>
+                        <td class="dim">{esc(modality)}</td>
                         <td class="dim">{fmt_number(model.get('provider_count'))}</td>
                     </tr>
 """

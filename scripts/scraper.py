@@ -1218,201 +1218,293 @@ def scrape_artificial_analysis():
 
 
 # =============================================================================
-# OPENROUTER - HTTP (/rankings page, escaped JSON)
+# OPENROUTER - Public API endpoints
 # =============================================================================
-
-def _extract_openrouter_models_array(html):
-    """
-    Auto-discover the escaped JSON array that contains model ranking objects.
-
-    OpenRouter's Next.js page embeds model data in an escaped JSON array, but
-    the key name changes over time (has been "models", could become anything).
-    We find the array by:
-      1. Looking for the first occurrence of '\"request_count\":' — this exists
-         inside each model object.
-      2. Searching backwards from that position to find the start of the
-         enclosing '[' bracket.
-      3. Extracting the full escaped JSON array from that position.
-
-    Also tries a set of known/likely key names as a quick first pass.
-    """
-    # --- Quick pass: try known key names first ---
-    for key in ['\\"models\\":', '\\"rankings\\":', '\\"rankedModels\\":', '\\"topModels\\":',
-                '\\"modelRankings\\":', '\\"allModels\\":', '\\"items\\\":']:
-        data = extract_escaped_json_array(html, key)
-        if data and isinstance(data, list) and len(data) > 5:
-            # Verify it actually contains ranking-style objects
-            sample = data[0] if data else {}
-            if isinstance(sample, dict) and any(
-                k in sample for k in ("request_count", "weekly_request_count", "slug", "permaslug", "model_permaslug")
-            ):
-                print(f"  Found models array via known key: {key} ({len(data)} items)")
-                return data
-
-    # --- Auto-discovery: find array containing request_count ---
-    marker = '\\"request_count\\":'
-    marker_idx = html.find(marker)
-    if marker_idx == -1:
-        # Try alternate field names
-        for alt_marker in ['\\"weekly_request_count\\":', '\\"model_permaslug\\":']:
-            marker_idx = html.find(alt_marker)
-            if marker_idx != -1:
-                marker = alt_marker
-                break
-
-    if marker_idx == -1:
-        print("  Could not find any request_count-like field in HTML")
-        return None
-
-    print(f"  Found {marker} at position {marker_idx}, searching backwards for array start...")
-
-    # Search backwards from marker_idx to find the opening '[' of the enclosing array.
-    # We need to find an unescaped '[' that isn't inside a nested object.
-    # Walk backwards tracking brace/bracket depth.
-    search_start = max(0, marker_idx - 200000)  # Don't search more than 200K chars back
-    region = html[search_start:marker_idx]
-
-    # Find the last '[' before the marker that could be an array start
-    # We try multiple positions, extracting from each until we get a valid array
-    bracket_positions = []
-    pos = len(region) - 1
-    while pos >= 0:
-        if region[pos] == '[':
-            bracket_positions.append(search_start + pos)
-        # Don't look further back than the nearest ':[' pattern (escaped key + array start)
-        # which would indicate a different key's array
-        if len(bracket_positions) > 20:
-            break
-        pos -= 1
-
-    # Try each bracket position (closest to marker first)
-    for arr_start in bracket_positions:
-        result, end_pos = _extract_escaped_json_block(html, arr_start)
-        if result and isinstance(result, list) and len(result) > 5:
-            # Verify it contains model-like objects
-            sample = result[0] if result else {}
-            if isinstance(sample, dict) and any(
-                k in sample for k in ("request_count", "weekly_request_count", "slug", "permaslug", "name", "model_permaslug")
-            ):
-                # Try to find the key name for logging
-                key_region = html[max(0, arr_start - 100):arr_start]
-                key_match = re.search(r'\\"(\w+)\\":\s*$', key_region)
-                key_name = key_match.group(1) if key_match else "unknown"
-                print(f"  Auto-discovered models array under key \"{key_name}\" ({len(result)} items)")
-                return result
-
-    print("  Auto-discovery failed: no valid array found containing model data")
-    return None
-
 
 def scrape_openrouter():
     """
-    Scrape OpenRouter /rankings page for popularity/usage data.
+    Scrape OpenRouter model catalog via public API endpoints.
 
-    The /rankings page contains escaped JSON with two key arrays:
-      - A models array (key name varies): [{slug, name, author, request_count, ...}, ...]
-      - "rankingData": [{model_permaslug, total_completion_tokens, total_prompt_tokens, count}, ...]
+    Primary: /api/frontend/models  — full model catalog with pricing, context, etc.
+    Secondary: /api/frontend/all-providers — provider metadata
+    Fallback: /rankings HTML page (legacy escaped JSON parsing)
 
-    We merge these by slug to get full ranking data per model.
-    DO NOT use /api/v1/models - that's just the catalog, not usage/popularity data.
+    Output format:
+      rankings: [{name, slug, author, context_length, prompt_price, completion_price,
+                  provider_count, modality, request_count (if available), ...}]
     """
     print("Scraping OpenRouter...")
 
     results = {
-        "source": "openrouter.ai/rankings",
+        "source": "openrouter.ai",
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "rankings": []
     }
 
-    url = "https://openrouter.ai/rankings"
-
+    # --- Strategy 1: Public API endpoints ---
     try:
-        html = fetch_with_retry(url)
-        print(f"  Fetched {len(html)} chars from /rankings")
+        api_url = "https://openrouter.ai/api/frontend/models"
+        print(f"  Fetching {api_url}...")
+        api_text = fetch_with_retry(api_url, timeout=30)
+        api_data = json.loads(api_text)
 
-        # Save raw HTML for debugging
-        debug_file = DATA_DIR / "openrouter_rankings.html"
-        with open(debug_file, "w", encoding="utf-8") as f:
-            f.write(html)
+        # Response is either {"data": [...]} or just [...]
+        if isinstance(api_data, dict) and "data" in api_data:
+            models_list = api_data["data"]
+        elif isinstance(api_data, list):
+            models_list = api_data
+        else:
+            models_list = []
 
-        # --- Strategy: auto-discover the array key containing model data ---
-        # The page embeds escaped JSON in Next.js RSC format.  The key name
-        # for the models array changes over time (was "models" at one point).
-        # We locate the first occurrence of \"request_count\": and search
-        # backwards for the escaped key + opening bracket, then extract.
-        models_data = _extract_openrouter_models_array(html)
+        print(f"  API returned {len(models_list)} models")
 
-        # Extract the \"rankingData\" array (escaped JSON)
-        ranking_data = extract_escaped_json_array(html, '\\"rankingData\\":')
+        if models_list and len(models_list) > 5:
+            # Also fetch provider info for enrichment
+            providers_lookup = {}
+            try:
+                prov_url = "https://openrouter.ai/api/frontend/all-providers"
+                prov_text = fetch_with_retry(prov_url, timeout=20)
+                prov_data = json.loads(prov_text)
+                if isinstance(prov_data, list):
+                    for p in prov_data:
+                        if isinstance(p, dict) and p.get("slug"):
+                            providers_lookup[p["slug"]] = p
+                elif isinstance(prov_data, dict) and "data" in prov_data:
+                    for p in prov_data["data"]:
+                        if isinstance(p, dict) and p.get("slug"):
+                            providers_lookup[p["slug"]] = p
+                print(f"  Fetched {len(providers_lookup)} providers")
+            except Exception as pe:
+                print(f"  Could not fetch providers: {pe}")
 
-        if models_data and isinstance(models_data, list) and len(models_data) > 0:
-            # Build lookup from rankingData by slug
-            ranking_lookup = {}
-            if ranking_data and isinstance(ranking_data, list):
-                for rd in ranking_data:
-                    if isinstance(rd, dict):
-                        slug = rd.get("model_permaslug", "")
-                        if slug:
-                            ranking_lookup[slug] = rd
-                print(f"  Found {len(ranking_lookup)} entries in rankingData")
-
-            # Merge models with ranking data
+            # Process each model
             merged = []
-            for model in models_data:
+            for model in models_list:
                 if not isinstance(model, dict):
                     continue
 
-                slug = model.get("slug", model.get("permaslug", model.get("id", "")))
-                name = model.get("name", slug)
-                author = model.get("author", model.get("creator", ""))
+                slug = model.get("slug") or model.get("id") or ""
+                name = model.get("name") or slug
+                author = model.get("author") or ""
+
+                # Pricing: per-token prices (string or float)
+                pricing = model.get("pricing") or model.get("endpoint", {}).get("pricing", {}) or {}
+                if isinstance(pricing, dict):
+                    prompt_price = pricing.get("prompt") or pricing.get("input")
+                    completion_price = pricing.get("completion") or pricing.get("output")
+                else:
+                    prompt_price = None
+                    completion_price = None
+
+                # Convert price strings to floats
+                try:
+                    prompt_price = float(prompt_price) if prompt_price else None
+                except (ValueError, TypeError):
+                    prompt_price = None
+                try:
+                    completion_price = float(completion_price) if completion_price else None
+                except (ValueError, TypeError):
+                    completion_price = None
+
+                # Context length
+                context_length = model.get("context_length") or model.get("top_provider", {}).get("context_length")
+
+                # Provider count
+                provider_count = None
+                top_prov = model.get("top_provider") or {}
+                if isinstance(top_prov, dict):
+                    provider_count = top_prov.get("provider_count")
+
+                # Modality
+                modality = model.get("modality") or model.get("type") or ""
+                # Architecture info
+                arch = model.get("architecture") or {}
+                if isinstance(arch, dict) and not modality:
+                    modality = arch.get("modality") or ""
+
+                # Usage data if available
+                request_count = model.get("request_count") or model.get("weekly_request_count")
+                p50_latency = model.get("p50_latency") or model.get("median_latency")
+                p50_throughput = model.get("p50_throughput") or model.get("median_throughput")
 
                 entry = {
                     "name": name,
                     "slug": slug,
                     "author": author,
-                    "request_count": model.get("request_count", model.get("weekly_request_count")),
-                    "p50_latency": model.get("p50_latency", model.get("median_latency")),
-                    "p50_throughput": model.get("p50_throughput", model.get("median_throughput")),
-                    "provider_count": model.get("provider_count", model.get("num_providers")),
+                    "context_length": context_length,
+                    "prompt_price": prompt_price,
+                    "completion_price": completion_price,
+                    "provider_count": provider_count,
+                    "modality": modality,
                 }
 
-                # Merge ranking data if available
-                rd = ranking_lookup.get(slug, {})
-                if rd:
-                    total_tokens = (rd.get("total_completion_tokens", 0) or 0) + (rd.get("total_prompt_tokens", 0) or 0)
-                    entry["total_tokens"] = total_tokens
-                    entry["total_requests"] = rd.get("count")
+                # Add usage fields only if they exist
+                if request_count is not None:
+                    entry["request_count"] = request_count
+                if p50_latency is not None:
+                    entry["p50_latency"] = p50_latency
+                if p50_throughput is not None:
+                    entry["p50_throughput"] = p50_throughput
 
                 merged.append(entry)
 
-            # Sort by request_count descending
-            merged.sort(key=lambda x: (x.get("request_count") or 0), reverse=True)
+            # Sort: by request_count if available, otherwise by context_length
+            has_requests = any(m.get("request_count") for m in merged)
+            if has_requests:
+                merged.sort(key=lambda x: (x.get("request_count") or 0), reverse=True)
+            else:
+                merged.sort(key=lambda x: (x.get("context_length") or 0), reverse=True)
+
             results["rankings"] = merged
-            print(f"  Found {len(merged)} models from escaped JSON")
+            print(f"  SUCCESS: {len(merged)} models from API")
             return results
 
-        # Fallback: try non-escaped JSON markers
-        for marker in ['"models":', '"rankings":', '"rankingData":']:
+    except Exception as e:
+        print(f"  API method failed: {e}")
+
+    # --- Strategy 2: Fallback to /rankings HTML parsing ---
+    print("  Falling back to /rankings HTML...")
+    try:
+        html = fetch_with_retry("https://openrouter.ai/rankings")
+        print(f"  Fetched {len(html)} chars from /rankings")
+
+        # Try escaped JSON markers
+        for key in ['\\"models\\":', '\\"rankings\\":', '\\"rankedModels\\":']:
+            data = extract_escaped_json_array(html, key)
+            if data and isinstance(data, list) and len(data) > 5:
+                sample = data[0] if data else {}
+                if isinstance(sample, dict) and any(
+                    k in sample for k in ("request_count", "slug", "name")
+                ):
+                    results["rankings"] = data
+                    print(f"  Found {len(data)} models from HTML escaped JSON")
+                    return results
+
+        # Try non-escaped JSON
+        for marker in ['"models":', '"rankings":']:
             data = extract_json_from_html(html, marker)
             if data and isinstance(data, list) and len(data) > 5:
                 results["rankings"] = data
-                print(f"  Found {len(data)} models from '{marker}' (non-escaped)")
+                print(f"  Found {len(data)} models from HTML JSON")
                 return results
 
-        print("  Could not extract rankings data from /rankings page")
+        print("  Could not extract data from /rankings HTML either")
 
-    except Exception as e:
-        print(f"  Error: {e}")
-        results["error"] = str(e)
+    except Exception as e2:
+        print(f"  HTML fallback also failed: {e2}")
+        results["error"] = str(e2)
 
     return results
 
 
 # =============================================================================
-# EQ BENCH - HTTP
+# EQ BENCH - GitHub canonical data + website fallbacks
 # =============================================================================
+def _extract_eqbench_models_from_data(data):
+    """
+    Extract model list from EQ Bench canonical data (various formats).
+
+    The GitHub data can be:
+    1. A dict with model names as keys: {"model_name": {"elo": 1234, ...}, ...}
+    2. A dict with "elo_ratings" key: {"elo_ratings": {"model": score, ...}, ...}
+    3. A list of model objects: [{"name": "...", "elo": 1234, ...}, ...]
+    4. A dict with "pairwise_comparisons" or other nested structures
+
+    Returns list of normalized model dicts.
+    """
+    models = []
+
+    if isinstance(data, list):
+        # Format 3: direct list of model objects
+        for item in data:
+            if isinstance(item, dict):
+                name = item.get("name") or item.get("model") or item.get("model_name") or ""
+                if not name:
+                    continue
+                elo = item.get("elo") or item.get("score") or item.get("elo_score") or item.get("rating")
+                traits = {}
+                for trait in ["abilities", "humanlike", "safety", "assertive", "social_iq",
+                              "warm", "analytic", "insight", "empathy", "compliant",
+                              "moralising", "pragmatic"]:
+                    if trait in item:
+                        try:
+                            traits[trait] = round(float(item[trait]), 2)
+                        except (ValueError, TypeError):
+                            pass
+                    # Check nested "traits" dict
+                    elif isinstance(item.get("traits"), dict) and trait in item["traits"]:
+                        try:
+                            traits[trait] = round(float(item["traits"][trait]), 2)
+                        except (ValueError, TypeError):
+                            pass
+                models.append({"name": name, "elo": elo, "score": elo, "traits": traits})
+        return models
+
+    if not isinstance(data, dict):
+        return models
+
+    # Format 2: {"elo_ratings": {"model_name": score, ...}}
+    elo_ratings = data.get("elo_ratings")
+    if isinstance(elo_ratings, dict) and len(elo_ratings) > 3:
+        # Also try to get trait data from other keys
+        trait_data = {}
+        for key in ["trait_scores", "personality_scores", "dimensional_scores"]:
+            if isinstance(data.get(key), dict):
+                trait_data = data[key]
+                break
+
+        for model_name, score in elo_ratings.items():
+            try:
+                elo_val = float(score)
+            except (ValueError, TypeError):
+                elo_val = None
+            traits = {}
+            if model_name in trait_data and isinstance(trait_data[model_name], dict):
+                for trait_key, trait_val in trait_data[model_name].items():
+                    clean_key = trait_key.lower().replace(" ", "_")
+                    try:
+                        traits[clean_key] = round(float(trait_val), 2)
+                    except (ValueError, TypeError):
+                        pass
+            models.append({"name": model_name, "elo": elo_val, "score": elo_val, "traits": traits})
+        return models
+
+    # Format 1: model names as top-level keys in a dict
+    # Detect: most keys should be model-name-like strings
+    model_like_keys = [k for k in data.keys() if isinstance(data[k], dict) and
+                       k not in ("metadata", "config", "info", "settings", "pairwise_comparisons",
+                                 "elo_ratings", "trait_scores")]
+    if len(model_like_keys) > 3:
+        for model_name in model_like_keys:
+            model_data = data[model_name]
+            if not isinstance(model_data, dict):
+                continue
+            elo = model_data.get("elo") or model_data.get("score") or model_data.get("rating")
+            traits = {}
+            for trait in ["abilities", "humanlike", "safety", "assertive", "social_iq",
+                          "warm", "analytic", "insight", "empathy", "compliant",
+                          "moralising", "pragmatic"]:
+                if trait in model_data:
+                    try:
+                        traits[trait] = round(float(model_data[trait]), 2)
+                    except (ValueError, TypeError):
+                        pass
+            if elo is not None or traits:
+                models.append({"name": model_name, "elo": elo, "score": elo, "traits": traits})
+        return models
+
+    return models
+
+
 def scrape_eqbench():
-    """Scrape EQ Bench."""
+    """
+    Scrape EQ Bench leaderboard.
+
+    Strategy:
+      1. Fetch canonical Elo results from GitHub (EQ-bench/eqbench3 repo)
+      2. Fall back to eqbench.com HTML (JSON extraction + table parsing)
+      3. Fall back to Steel browser for JS-rendered content
+    """
     print("Scraping EQ Bench...")
 
     results = {
@@ -1421,60 +1513,85 @@ def scrape_eqbench():
         "models": []
     }
 
-    url = "https://eqbench.com/"
+    # --- Strategy 1: GitHub canonical data ---
+    github_urls = [
+        "https://raw.githubusercontent.com/EQ-bench/eqbench3/main/data/canonical_leaderboard_elo_results.json",
+        "https://raw.githubusercontent.com/EQ-bench/eqbench3/main/data/leaderboard_elo_results.json",
+        "https://raw.githubusercontent.com/EQ-bench/eqbench3/main/data/results.json",
+    ]
 
-    try:
-        html = fetch_with_retry(url)
+    for gh_url in github_urls:
+        try:
+            print(f"  Trying GitHub: {gh_url}")
+            gh_text = fetch_with_retry(gh_url, timeout=20)
+            gh_data = json.loads(gh_text)
 
-        for marker in ['"models":', '"results":', '"leaderboard":']:
-            models_data = extract_json_from_html(html, marker)
-            if models_data and isinstance(models_data, list) and len(models_data) > 0:
-                results["models"] = models_data
-                print(f"  Found {len(models_data)} models from '{marker}' key")
+            models = _extract_eqbench_models_from_data(gh_data)
+            if models:
+                models.sort(key=lambda x: (x.get("elo") or 0), reverse=True)
+                results["models"] = models
+                results["source"] = f"GitHub ({gh_url.split('/')[-1]})"
+                print(f"  SUCCESS: {len(models)} models from GitHub")
                 return results
+            else:
+                print(f"    Got data but couldn't extract models (keys: {list(gh_data.keys()) if isinstance(gh_data, dict) else type(gh_data).__name__})")
 
-        # Fallback: parse table from HTTP HTML
+        except Exception as e:
+            print(f"    Failed: {e}")
+
+    # --- Strategy 2: eqbench.com HTML ---
+    print("  Trying eqbench.com...")
+    try:
+        html = fetch_with_retry("https://eqbench.com/", timeout=30)
+
+        # Try JSON extraction
+        for marker in ['"models":', '"results":', '"leaderboard":', '"elo_ratings":']:
+            models_data = extract_json_from_html(html, marker)
+            if models_data:
+                if isinstance(models_data, list) and len(models_data) > 0:
+                    results["models"] = models_data
+                    print(f"  Found {len(models_data)} models from '{marker}'")
+                    return results
+                elif isinstance(models_data, dict):
+                    models = _extract_eqbench_models_from_data(models_data)
+                    if models:
+                        models.sort(key=lambda x: (x.get("elo") or 0), reverse=True)
+                        results["models"] = models
+                        print(f"  Found {len(models)} models from '{marker}' (dict)")
+                        return results
+
+        # Try table parsing
         models_from_table = _parse_tables_for_models(html)
         if models_from_table:
             results["models"] = models_from_table
             print(f"  Found {len(models_from_table)} models from HTTP table")
             return results
 
-        print("  HTTP didn't find data, trying Steel browser...")
-
-        # Fallback: Try Steel for JS-rendered content
-        if STEEL_API_KEY:
-            try:
-                steel_html = fetch_with_steel(url)
-                if steel_html:
-                    debug_file = DATA_DIR / "eqbench_raw.html"
-                    with open(debug_file, "w", encoding="utf-8") as f:
-                        f.write(steel_html)
-                    print(f"  Saved Steel HTML ({len(steel_html)} chars)")
-
-                    # Try JSON markers on Steel HTML
-                    for marker in ['"models":', '"results":', '"leaderboard":']:
-                        models_data = extract_json_from_html(steel_html, marker)
-                        if models_data and isinstance(models_data, list) and len(models_data) > 0:
-                            results["models"] = models_data
-                            print(f"  Found {len(models_data)} models from Steel '{marker}'")
-                            return results
-
-                    # Try table parsing on Steel HTML
-                    models_from_table = _parse_tables_for_models(steel_html)
-                    if models_from_table:
-                        results["models"] = models_from_table
-                        print(f"  Found {len(models_from_table)} models from Steel table")
-                        return results
-            except Exception as e2:
-                print(f"  Steel fallback error: {e2}")
-
-        print("  Could not extract models")
-
     except Exception as e:
-        print(f"  Error: {e}")
-        results["error"] = str(e)
+        print(f"  eqbench.com failed: {e}")
 
+    # --- Strategy 3: Steel browser fallback ---
+    if STEEL_API_KEY:
+        print("  Trying Steel browser...")
+        try:
+            steel_html = fetch_with_steel("https://eqbench.com/", timeout=120, wait_for=15000)
+            if steel_html:
+                for marker in ['"models":', '"results":', '"leaderboard":']:
+                    models_data = extract_json_from_html(steel_html, marker)
+                    if models_data and isinstance(models_data, list) and len(models_data) > 0:
+                        results["models"] = models_data
+                        print(f"  Found {len(models_data)} models from Steel '{marker}'")
+                        return results
+
+                models_from_table = _parse_tables_for_models(steel_html)
+                if models_from_table:
+                    results["models"] = models_from_table
+                    print(f"  Found {len(models_from_table)} models from Steel table")
+                    return results
+        except Exception as e3:
+            print(f"  Steel fallback error: {e3}")
+
+    print("  Could not extract models from any source")
     return results
 
 
