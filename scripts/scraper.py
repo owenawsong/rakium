@@ -475,21 +475,25 @@ def _extract_arena_models_from_html(html):
     headers = [th.get_text(strip=True).lower() for th in header_row.find_all(["th", "td"])]
 
     col_map = {}
+    print(f"    Table headers: {headers}")
     for i, h in enumerate(headers):
-        if h == "rank" and "rank" not in col_map:
+        if ("rank" in h) and "rank" not in col_map and "spread" not in h:
             col_map["rank"] = i
+        elif "spread" in h:
+            pass  # skip "rank spread" column
         elif "model" in h or "name" in h:
             col_map["model"] = i
-        elif h == "score" or h == "elo" or h == "rating":
+        elif "score" in h or "elo" in h or "rating" in h:
             col_map["score"] = i
-        elif "ci" in h or "±" in h:
+        elif "ci" in h or "±" in h or "confidence" in h:
             col_map["ci"] = i
         elif "vote" in h:
             col_map["votes"] = i
-        elif "organization" in h or "org" in h:
+        elif "organization" in h or "org" in h or "provider" in h or "developer" in h:
             col_map["org"] = i
         elif "license" in h:
             col_map["license"] = i
+    print(f"    Column map: {col_map}")
 
     model_idx = col_map.get("model", 2)
     score_idx = col_map.get("score", 3)
@@ -500,15 +504,21 @@ def _extract_arena_models_from_html(html):
     license_idx = col_map.get("license")
 
     # Parse data rows
+    first_row_logged = False
     for row in rows[1:]:
         cells = row.find_all(["td", "th"])
         if len(cells) <= max(model_idx, score_idx):
             continue
+        if not first_row_logged:
+            cell_texts = [c.get_text(strip=True)[:40] for c in cells]
+            print(f"    First row cells ({len(cells)} cols): {cell_texts}")
+            first_row_logged = True
 
-        # Extract model name from <a> tag (avoids org name contamination)
+        # --- Extract model name, organization, and license from the model cell ---
         model_cell = cells[model_idx]
         a_tag = model_cell.find("a")
         if a_tag:
+            # Clean model name from <a> tag title or text
             name = a_tag.get("title") or a_tag.get_text(strip=True)
         else:
             name = model_cell.get_text(strip=True)
@@ -516,17 +526,69 @@ def _extract_arena_models_from_html(html):
         if not name or len(name) < 2:
             continue
 
-        # Extract score
+        # Extract org + license from model cell (they're embedded, not in separate columns)
+        # Full cell text is like "Anthropicclaude-opus-4-6-thinking" or
+        # "gemini-3-proGoogle · Proprietary"
+        # The <a> tag has the model name; everything else in the cell is org/license
+        organization = ""
+        license_text = ""
+        if a_tag:
+            # Get all text nodes NOT inside the <a> tag
+            full_text = model_cell.get_text(strip=True)
+            model_text = a_tag.get_text(strip=True)
+            # Remove the model name portion to get org+license remainder
+            remainder = full_text.replace(model_text, "", 1).strip()
+            if remainder:
+                # Format is typically "OrgName · License" or just "OrgName"
+                if " · " in remainder:
+                    parts = remainder.split(" · ", 1)
+                    organization = parts[0].strip()
+                    license_text = parts[1].strip()
+                elif "·" in remainder:
+                    parts = remainder.split("·", 1)
+                    organization = parts[0].strip()
+                    license_text = parts[1].strip()
+                else:
+                    organization = remainder
+
+        # --- Extract score and CI from the score cell ---
+        # Score cell format: "1504±10" or "1576+20/-20" or "1289±9" or "1400±10Preliminary"
         score_text = cells[score_idx].get_text(strip=True)
-        try:
-            score = float(score_text.replace(",", ""))
-        except (ValueError, TypeError):
-            score = None
+        # Remove trailing text like "Preliminary"
+        score_text = re.sub(r'[A-Za-z]+$', '', score_text).strip()
+        score = None
+        ci = None
+        if "±" in score_text:
+            parts = score_text.split("±", 1)
+            try:
+                score = float(parts[0].replace(",", ""))
+            except (ValueError, TypeError):
+                pass
+            try:
+                ci = float(parts[1].replace(",", ""))
+            except (ValueError, TypeError):
+                pass
+        elif "+" in score_text and "/" in score_text:
+            # Format: "1576+20/-20"
+            match = re.match(r'([0-9,]+)\+([0-9]+)/-([0-9]+)', score_text)
+            if match:
+                try:
+                    score = float(match.group(1).replace(",", ""))
+                    ci = (float(match.group(2)) + float(match.group(3))) / 2
+                except (ValueError, TypeError):
+                    pass
+        else:
+            try:
+                score = float(score_text.replace(",", ""))
+            except (ValueError, TypeError):
+                pass
 
         entry = {
             "name": name,
             "rating": score,
         }
+        if ci is not None:
+            entry["ci"] = ci
 
         # Extract rank
         try:
@@ -534,14 +596,6 @@ def _extract_arena_models_from_html(html):
             entry["rank"] = int(rank_text)
         except (ValueError, IndexError):
             pass
-
-        # Extract CI
-        if ci_idx is not None and ci_idx < len(cells):
-            ci_text = cells[ci_idx].get_text(strip=True).replace("±", "").strip()
-            try:
-                entry["ci"] = float(ci_text.replace(",", ""))
-            except (ValueError, TypeError):
-                pass
 
         # Extract votes
         if votes_idx is not None and votes_idx < len(cells):
@@ -551,13 +605,17 @@ def _extract_arena_models_from_html(html):
             except (ValueError, TypeError):
                 pass
 
-        # Extract organization
+        # Use org from model cell if no separate org column exists
         if org_idx is not None and org_idx < len(cells):
             entry["organization"] = cells[org_idx].get_text(strip=True)
+        elif organization:
+            entry["organization"] = organization
 
-        # Extract license
+        # Use license from model cell if no separate license column exists
         if license_idx is not None and license_idx < len(cells):
             entry["license"] = cells[license_idx].get_text(strip=True)
+        elif license_text:
+            entry["license"] = license_text
 
         models.append(entry)
 
