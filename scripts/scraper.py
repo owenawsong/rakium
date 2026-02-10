@@ -527,33 +527,31 @@ def _extract_arena_models_from_html(html):
             continue
 
         # Extract org + license from model cell (they're embedded, not in separate columns)
-        # Cell structure: <svg><title>Anthropic</title></svg> <a>model-name</a> Anthropic · Proprietary
-        # Must skip <svg> and <a> elements to avoid double-counting org name
+        # Full cell text pattern: "[SVG org]model-name[Org · License]"
+        # e.g. "Anthropicclaude-opus-4-6-thinkingAnthropic · Proprietary"
+        # Strategy: split full text by the <a> tag's text content, take what comes AFTER
         organization = ""
         license_text = ""
         if a_tag:
-            # Collect text from direct children, skipping <a> and <svg> elements
-            remainder_parts = []
-            for child in model_cell.children:
-                if hasattr(child, 'name'):
-                    if child.name in ('a', 'svg', 'img'):
-                        continue
-                    remainder_parts.append(child.get_text(strip=True))
-                elif isinstance(child, str) and child.strip():
-                    remainder_parts.append(child.strip())
-            remainder = " ".join(remainder_parts).strip()
-            if remainder:
+            a_text = a_tag.get_text(strip=True)
+            full_text = model_cell.get_text(strip=True)
+            # Split by the <a> tag's visible text and take the part after it
+            if a_text and a_text in full_text:
+                after = full_text.split(a_text, 1)[1].strip()
+            else:
+                after = ""
+            if after:
                 # Format is typically "OrgName · License" or just "OrgName"
-                if " · " in remainder:
-                    parts = remainder.split(" · ", 1)
+                if " · " in after:
+                    parts = after.split(" · ", 1)
                     organization = parts[0].strip()
                     license_text = parts[1].strip()
-                elif "·" in remainder:
-                    parts = remainder.split("·", 1)
+                elif "·" in after:
+                    parts = after.split("·", 1)
                     organization = parts[0].strip()
                     license_text = parts[1].strip()
                 else:
-                    organization = remainder
+                    organization = after
 
         # --- Extract score and CI from the score cell ---
         # Score cell format: "1504±10" or "1576+20/-20" or "1289±9" or "1400±10Preliminary"

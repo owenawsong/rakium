@@ -1,6 +1,6 @@
 {
   "source": "arena.ai",
-  "scraped_at": "2026-02-10T00:38:34.401056+00:00",
+  "scraped_at": "2026-02-10T01:18:12.926450+00:00",
   "categories": {
     "text": {
       "url": "https://arena.ai/leaderboard/text",
@@ -11,7 +11,7 @@
           "ci": 10.0,
           "rank": 1,
           "votes": 3401,
-          "organization": "Anthropicclaude-opus-4-6-thinkingAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -20,7 +20,7 @@
           "ci": 10.0,
           "rank": 2,
           "votes": 4131,
-          "organization": "Anthropicclaude-opus-4-6Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -29,7 +29,7 @@
           "ci": 4.0,
           "rank": 3,
           "votes": 35204,
-          "organization": "gemini-3-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -38,7 +38,7 @@
           "ci": 4.0,
           "rank": 4,
           "votes": 34891,
-          "organization": "grok-4.1-thinkingxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -47,7 +47,7 @@
           "ci": 5.0,
           "rank": 5,
           "votes": 25859,
-          "organization": "gemini-3-flashGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -56,7 +56,7 @@
           "ci": 5.0,
           "rank": 6,
           "votes": 26925,
-          "organization": "Anthropicclaude-opus-4-5-20251101-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -65,7 +65,7 @@
           "ci": 5.0,
           "rank": 7,
           "votes": 31852,
-          "organization": "Anthropicclaude-opus-4-5-20251101Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -74,7 +74,7 @@
           "ci": 4.0,
           "rank": 8,
           "votes": 39008,
-          "organization": "grok-4.1xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -83,7 +83,7 @@
           "ci": 5.0,
           "rank": 9,
           "votes": 17043,
-          "organization": "gemini-3-flash (thinking-minimal)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -92,7 +92,7 @@
           "ci": 4.0,
           "rank": 10,
           "votes": 31211,
-          "organization": "gpt-5.1-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -101,7 +101,7 @@
           "ci": 7.0,
           "rank": 11,
           "votes": 10809,
-          "organization": "ernie-5.0-0110Baidu",
+          "organization": "Baidu",
           "license": "Proprietary"
         },
         {
@@ -110,7 +110,7 @@
           "ci": 4.0,
           "rank": 12,
           "votes": 43204,
-          "organization": "Anthropicclaude-sonnet-4-5-20250929Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -119,7 +119,7 @@
           "ci": 4.0,
           "rank": 13,
           "votes": 45488,
-          "organization": "Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -128,7 +128,7 @@
           "ci": 3.0,
           "rank": 14,
           "votes": 94550,
-          "organization": "gemini-2.5-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -137,7 +137,7 @@
           "ci": 7.0,
           "rank": 15,
           "votes": 9771,
-          "organization": "ernie-5.0-preview-1203Baidu",
+          "organization": "Baidu",
           "license": "Proprietary"
         },
         {
@@ -146,7 +146,7 @@
           "ci": 4.0,
           "rank": 16,
           "votes": 49944,
-          "organization": "Anthropicclaude-opus-4-1-20250805-thinking-16kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -155,7 +155,7 @@
           "ci": 7.0,
           "rank": 17,
           "votes": 7780,
-          "organization": "MoonshotAIkimi-k2.5-thinkingMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -164,7 +164,7 @@
           "ci": 3.0,
           "rank": 18,
           "votes": 74591,
-          "organization": "Anthropicclaude-opus-4-1-20250805Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -173,7 +173,7 @@
           "ci": 6.0,
           "rank": 19,
           "votes": 14549,
-          "organization": "gpt-4.5-preview-2025-02-27OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -182,7 +182,7 @@
           "ci": 3.0,
           "rank": 20,
           "votes": 82022,
-          "organization": "chatgpt-4o-latest-20250326OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -191,7 +191,7 @@
           "ci": 6.0,
           "rank": 21,
           "votes": 12015,
-          "organization": "glm-4.7Z.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -200,7 +200,7 @@
           "ci": 6.0,
           "rank": 22,
           "votes": 12448,
-          "organization": "gpt-5.2OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -209,7 +209,7 @@
           "ci": 4.0,
           "rank": 23,
           "votes": 33436,
-          "organization": "gpt-5.1OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -218,7 +218,7 @@
           "ci": 10.0,
           "rank": 24,
           "votes": 3530,
-          "organization": "MoonshotAIkimi-k2.5-instantMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -227,7 +227,7 @@
           "ci": 6.0,
           "rank": 25,
           "votes": 15794,
-          "organization": "gpt-5.2-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -236,7 +236,7 @@
           "ci": 5.0,
           "rank": 26,
           "votes": 32616,
-          "organization": "gpt-5-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -245,7 +245,7 @@
           "ci": 5.0,
           "rank": 27,
           "votes": 27837,
-          "organization": "qwen3-max-previewAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -254,7 +254,7 @@
           "ci": 4.0,
           "rank": 28,
           "votes": 61348,
-          "organization": "o3-2025-04-16OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -263,7 +263,7 @@
           "ci": 4.0,
           "rank": 29,
           "votes": 27856,
-          "organization": "grok-4-1-fast-reasoningxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -272,7 +272,7 @@
           "ci": 4.0,
           "rank": 30,
           "votes": 32797,
-          "organization": "MoonshotAIkimi-k2-thinking-turboMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -281,7 +281,7 @@
           "ci": 4.0,
           "rank": 31,
           "votes": 31822,
-          "organization": "gpt-5-chatOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -290,7 +290,7 @@
           "ci": 4.0,
           "rank": 32,
           "votes": 35335,
-          "organization": "glm-4.6Z.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -299,7 +299,7 @@
           "ci": 6.0,
           "rank": 33,
           "votes": 9224,
-          "organization": "qwen3-max-2025-09-23Alibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -308,7 +308,7 @@
           "ci": 4.0,
           "rank": 34,
           "votes": 37974,
-          "organization": "Anthropicclaude-opus-4-20250514-thinking-16kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -317,7 +317,7 @@
           "ci": 6.0,
           "rank": 35,
           "votes": 11761,
-          "organization": "deepseek-v3.2-expDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -326,7 +326,7 @@
           "ci": 7.0,
           "rank": 36,
           "votes": 8998,
-          "organization": "deepseek-v3.2-exp-thinkingDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -335,7 +335,7 @@
           "ci": 3.0,
           "rank": 37,
           "votes": 68866,
-          "organization": "qwen3-235b-a22b-instruct-2507Alibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -344,7 +344,7 @@
           "ci": 8.0,
           "rank": 38,
           "votes": 6989,
-          "organization": "grok-4-fast-chatxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -353,7 +353,7 @@
           "ci": 5.0,
           "rank": 39,
           "votes": 22457,
-          "organization": "deepseek-v3.2-thinkingDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -362,7 +362,7 @@
           "ci": 5.0,
           "rank": 40,
           "votes": 27399,
-          "organization": "deepseek-v3.2DeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -371,7 +371,7 @@
           "ci": 6.0,
           "rank": 41,
           "votes": 19290,
-          "organization": "deepseek-r1-0528DeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -380,7 +380,7 @@
           "ci": 9.0,
           "rank": 42,
           "votes": 4618,
-          "organization": "ernie-5.0-preview-1022Baidu",
+          "organization": "Baidu",
           "license": "Proprietary"
         },
         {
@@ -389,7 +389,7 @@
           "ci": 6.0,
           "rank": 43,
           "votes": 15298,
-          "organization": "deepseek-v3.1DeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -398,7 +398,7 @@
           "ci": 6.0,
           "rank": 44,
           "votes": 11973,
-          "organization": "MoonshotAIkimi-k2-0905-previewMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -407,7 +407,7 @@
           "ci": 7.0,
           "rank": 45,
           "votes": 11984,
-          "organization": "deepseek-v3.1-thinkingDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -416,7 +416,7 @@
           "ci": 5.0,
           "rank": 46,
           "votes": 28660,
-          "organization": "MoonshotAIkimi-k2-0711-previewMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -425,7 +425,7 @@
           "ci": 10.0,
           "rank": 47,
           "votes": 3761,
-          "organization": "deepseek-v3.1-terminusDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -434,7 +434,7 @@
           "ci": 10.0,
           "rank": 48,
           "votes": 3548,
-          "organization": "deepseek-v3.1-terminus-thinkingDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -443,7 +443,7 @@
           "ci": 5.0,
           "rank": 49,
           "votes": 23730,
-          "organization": "mistral-large-3Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -452,7 +452,7 @@
           "ci": 6.0,
           "rank": 50,
           "votes": 11684,
-          "organization": "qwen3-vl-235b-a22b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -461,7 +461,7 @@
           "ci": 4.0,
           "rank": 51,
           "votes": 52210,
-          "organization": "gpt-4.1-2025-04-14OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -470,7 +470,7 @@
           "ci": 4.0,
           "rank": 52,
           "votes": 45571,
-          "organization": "Anthropicclaude-opus-4-20250514Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -479,7 +479,7 @@
           "ci": 4.0,
           "rank": 53,
           "votes": 33971,
-          "organization": "grok-3-preview-02-24xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -488,7 +488,7 @@
           "ci": 3.0,
           "rank": 54,
           "votes": 62703,
-          "organization": "mistral-medium-2508Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -497,7 +497,7 @@
           "ci": 3.0,
           "rank": 55,
           "votes": 93809,
-          "organization": "gemini-2.5-flashGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -506,7 +506,7 @@
           "ci": 5.0,
           "rank": 56,
           "votes": 24791,
-          "organization": "glm-4.5Z.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -515,7 +515,7 @@
           "ci": 4.0,
           "rank": 57,
           "votes": 42145,
-          "organization": "grok-4-0709xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -524,7 +524,7 @@
           "ci": 4.0,
           "rank": 58,
           "votes": 32879,
-          "organization": "gemini-2.5-flash-preview-09-2025Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -533,7 +533,7 @@
           "ci": 4.0,
           "rank": 59,
           "votes": 44199,
-          "organization": "Anthropicclaude-haiku-4-5-20251001Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -542,7 +542,7 @@
           "ci": 5.0,
           "rank": 60,
           "votes": 18639,
-          "organization": "grok-4-fast-reasoningxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -551,7 +551,7 @@
           "ci": 4.0,
           "rank": 61,
           "votes": 27822,
-          "organization": "o1-2024-12-17OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -560,7 +560,7 @@
           "ci": 4.0,
           "rank": 62,
           "votes": 39544,
-          "organization": "qwen3-235b-a22b-no-thinkingAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -569,7 +569,7 @@
           "ci": 5.0,
           "rank": 63,
           "votes": 22857,
-          "organization": "qwen3-next-80b-a3b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -578,7 +578,7 @@
           "ci": 4.0,
           "rank": 64,
           "votes": 36200,
-          "organization": "Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -587,7 +587,7 @@
           "ci": 6.0,
           "rank": 65,
           "votes": 11546,
-          "organization": "longcat-flash-chatMeituan",
+          "organization": "Meituan",
           "license": "MIT"
         },
         {
@@ -596,7 +596,7 @@
           "ci": 6.0,
           "rank": 66,
           "votes": 9252,
-          "organization": "qwen3-235b-a22b-thinking-2507Alibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -605,7 +605,7 @@
           "ci": 5.0,
           "rank": 67,
           "votes": 18537,
-          "organization": "deepseek-r1DeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -614,7 +614,7 @@
           "ci": 5.0,
           "rank": 68,
           "votes": 16332,
-          "organization": "mimo-v2-flash (non-thinking)Xiaomi",
+          "organization": "Xiaomi",
           "license": "MIT"
         },
         {
@@ -623,7 +623,7 @@
           "ci": 7.0,
           "rank": 69,
           "votes": 7970,
-          "organization": "qwen3-vl-235b-a22b-thinkingAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -632,7 +632,7 @@
           "ci": 10.0,
           "rank": 70,
           "votes": 3718,
-          "organization": "amazon-nova-experimental-chat-12-10Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -641,7 +641,7 @@
           "ci": 4.0,
           "rank": 71,
           "votes": 46690,
-          "organization": "deepseek-v3-0324DeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -650,7 +650,7 @@
           "ci": 12.0,
           "rank": 72,
           "votes": 2225,
-          "organization": "Tencenthunyuan-vision-1.5-thinkingTencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -659,7 +659,7 @@
           "ci": 5.0,
           "rank": 73,
           "votes": 18134,
-          "organization": "mai-1-previewMicrosoft AI",
+          "organization": "Microsoft AI",
           "license": "Proprietary"
         },
         {
@@ -668,7 +668,7 @@
           "ci": 4.0,
           "rank": 74,
           "votes": 46670,
-          "organization": "o4-mini-2025-04-16OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -677,7 +677,7 @@
           "ci": 5.0,
           "rank": 75,
           "votes": 27144,
-          "organization": "gpt-5-mini-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -686,7 +686,7 @@
           "ci": 4.0,
           "rank": 76,
           "votes": 41642,
-          "organization": "Anthropicclaude-sonnet-4-20250514Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -695,7 +695,7 @@
           "ci": 4.0,
           "rank": 77,
           "votes": 39889,
-          "organization": "Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -704,7 +704,7 @@
           "ci": 5.0,
           "rank": 78,
           "votes": 31120,
-          "organization": "o1-previewOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -713,7 +713,7 @@
           "ci": 9.0,
           "rank": 79,
           "votes": 4801,
-          "organization": "Tencenthunyuan-t1-20250711Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -722,7 +722,7 @@
           "ci": 5.0,
           "rank": 80,
           "votes": 26651,
-          "organization": "qwen3-coder-480b-a35b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -731,7 +731,7 @@
           "ci": 6.0,
           "rank": 81,
           "votes": 15805,
-          "organization": "Minimaxminimax-m2.1-previewMiniMax",
+          "organization": "MiniMax",
           "license": "MIT"
         },
         {
@@ -740,7 +740,7 @@
           "ci": 5.0,
           "rank": 82,
           "votes": 34546,
-          "organization": "mistral-medium-2505Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -749,7 +749,7 @@
           "ci": 5.0,
           "rank": 83,
           "votes": 24088,
-          "organization": "qwen3-30b-a3b-instruct-2507Alibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -758,7 +758,7 @@
           "ci": 6.0,
           "rank": 84,
           "votes": 11052,
-          "organization": "Tencenthunyuan-turbos-20250416Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -767,7 +767,7 @@
           "ci": 4.0,
           "rank": 85,
           "votes": 40526,
-          "organization": "gpt-4.1-mini-2025-04-14OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -776,7 +776,7 @@
           "ci": 4.0,
           "rank": 86,
           "votes": 47203,
-          "organization": "gemini-2.5-flash-lite-preview-09-2025-no-thinkingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -785,7 +785,7 @@
           "ci": 11.0,
           "rank": 87,
           "votes": 2817,
-          "organization": "glm-4.6vZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -794,7 +794,7 @@
           "ci": 4.0,
           "rank": 88,
           "votes": 33926,
-          "organization": "gemini-2.5-flash-lite-preview-06-17-thinkingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -803,7 +803,7 @@
           "ci": 5.0,
           "rank": 89,
           "votes": 27162,
-          "organization": "qwen3-235b-a22bAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -812,7 +812,7 @@
           "ci": 4.0,
           "rank": 90,
           "votes": 33291,
-          "organization": "qwen2.5-maxAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -821,7 +821,7 @@
           "ci": 3.0,
           "rank": 91,
           "votes": 89469,
-          "organization": "Anthropicclaude-3-5-sonnet-20241022Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -830,7 +830,7 @@
           "ci": 4.0,
           "rank": 92,
           "votes": 44434,
-          "organization": "Anthropicclaude-3-7-sonnet-20250219Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -839,7 +839,7 @@
           "ci": 4.0,
           "rank": 93,
           "votes": 31379,
-          "organization": "glm-4.5-airZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -848,7 +848,7 @@
           "ci": 6.0,
           "rank": 94,
           "votes": 13858,
-          "organization": "qwen3-next-80b-a3b-thinkingAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -857,7 +857,7 @@
           "ci": 5.0,
           "rank": 95,
           "votes": 16128,
-          "organization": "amazon-nova-experimental-chat-11-10Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -866,7 +866,7 @@
           "ci": 4.0,
           "rank": 96,
           "votes": 36833,
-          "organization": "Minimaxminimax-m1MiniMax",
+          "organization": "MiniMax",
           "license": "Apache 2.0"
         },
         {
@@ -875,7 +875,7 @@
           "ci": 4.0,
           "rank": 97,
           "votes": 48690,
-          "organization": "gemma-3-27b-itGoogle",
+          "organization": "Google",
           "license": "Gemma"
         },
         {
@@ -884,7 +884,7 @@
           "ci": 5.0,
           "rank": 98,
           "votes": 18584,
-          "organization": "o3-mini-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -893,7 +893,7 @@
           "ci": 5.0,
           "rank": 99,
           "votes": 17521,
-          "organization": "grok-3-mini-highxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -902,7 +902,7 @@
           "ci": 7.0,
           "rank": 100,
           "votes": 7023,
-          "organization": "glm-4.7-flashZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -911,7 +911,7 @@
           "ci": 4.0,
           "rank": 101,
           "votes": 44823,
-          "organization": "gemini-2.0-flash-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -920,7 +920,7 @@
           "ci": 5.0,
           "rank": 102,
           "votes": 21788,
-          "organization": "deepseek-v3DeepSeek",
+          "organization": "DeepSeek",
           "license": "DeepSeek"
         },
         {
@@ -929,7 +929,7 @@
           "ci": 5.0,
           "rank": 103,
           "votes": 23764,
-          "organization": "grok-3-mini-betaxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -938,7 +938,7 @@
           "ci": 8.0,
           "rank": 104,
           "votes": 5325,
-          "organization": "intellect-3Prime Intellect",
+          "organization": "Prime Intellect",
           "license": "MIT"
         },
         {
@@ -947,7 +947,7 @@
           "ci": 5.0,
           "rank": 105,
           "votes": 18343,
-          "organization": "mistral-small-2506Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -956,7 +956,7 @@
           "ci": 4.0,
           "rank": 106,
           "votes": 30962,
-          "organization": "gpt-oss-120bOpenAI",
+          "organization": "OpenAI",
           "license": "Apache 2.0"
         },
         {
@@ -965,7 +965,7 @@
           "ci": 4.0,
           "rank": 107,
           "votes": 24951,
-          "organization": "gemini-2.0-flash-lite-preview-02-05Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -974,7 +974,7 @@
           "ci": 8.0,
           "rank": 108,
           "votes": 4973,
-          "organization": "glm-4.5vZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -983,7 +983,7 @@
           "ci": 3.0,
           "rank": 109,
           "votes": 57437,
-          "organization": "Coherecommand-a-03-2025Cohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -992,7 +992,7 @@
           "ci": 3.0,
           "rank": 110,
           "votes": 55607,
-          "organization": "gemini-1.5-pro-002Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1001,7 +1001,7 @@
           "ci": 6.0,
           "rank": 111,
           "votes": 11440,
-          "organization": "amazon-nova-experimental-chat-10-20Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -1010,7 +1010,7 @@
           "ci": 12.0,
           "rank": 112,
           "votes": 2226,
-          "organization": "Tencenthunyuan-turbos-20250226Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -1019,7 +1019,7 @@
           "ci": 3.0,
           "rank": 113,
           "votes": 58638,
-          "organization": "o3-miniOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1028,7 +1028,7 @@
           "ci": 11.0,
           "rank": 114,
           "votes": 2890,
-          "organization": "amazon-nova-experimental-chat-10-09Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -1037,7 +1037,7 @@
           "ci": 12.0,
           "rank": 115,
           "votes": 2546,
-          "organization": "Nvidiallama-3.1-nemotron-ultra-253b-v1Nvidia",
+          "organization": "Nvidia",
           "license": "Nvidia Open Model"
         },
         {
@@ -1046,7 +1046,7 @@
           "ci": 9.0,
           "rank": 116,
           "votes": 3932,
-          "organization": "qwen3-32bAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -1055,7 +1055,7 @@
           "ci": 7.0,
           "rank": 117,
           "votes": 7038,
-          "organization": "ling-flash-2.0Ant Group",
+          "organization": "Ant Group",
           "license": "MIT"
         },
         {
@@ -1064,7 +1064,7 @@
           "ci": 8.0,
           "rank": 118,
           "votes": 6742,
-          "organization": "Minimaxminimax-m2MiniMax",
+          "organization": "MiniMax",
           "license": "Apache 2.0"
         },
         {
@@ -1073,7 +1073,7 @@
           "ci": 7.0,
           "rank": 119,
           "votes": 6590,
-          "organization": "Stepfunstep-3StepFun",
+          "organization": "StepFun",
           "license": "Apache 2.0"
         },
         {
@@ -1082,7 +1082,7 @@
           "ci": 8.0,
           "rank": 120,
           "votes": 5823,
-          "organization": "qwen-plus-0125Alibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -1091,7 +1091,7 @@
           "ci": 3.0,
           "rank": 121,
           "votes": 112863,
-          "organization": "gpt-4o-2024-05-13OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1100,7 +1100,7 @@
           "ci": 8.0,
           "rank": 122,
           "votes": 5760,
-          "organization": "glm-4-plus-0111Zhipu",
+          "organization": "Zhipu",
           "license": "Proprietary"
         },
         {
@@ -1109,7 +1109,7 @@
           "ci": 3.0,
           "rank": 123,
           "votes": 82417,
-          "organization": "Anthropicclaude-3-5-sonnet-20240620Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -1118,7 +1118,7 @@
           "ci": 10.0,
           "rank": 124,
           "votes": 3829,
-          "organization": "gemma-3-12b-itGoogle",
+          "organization": "Google",
           "license": "Gemma"
         },
         {
@@ -1127,7 +1127,7 @@
           "ci": 10.0,
           "rank": 125,
           "votes": 3432,
-          "organization": "Nvidianvidia-llama-3.3-nemotron-super-49b-v1.5Nvidia",
+          "organization": "Nvidia",
           "license": "Nvidia Open"
         },
         {
@@ -1136,7 +1136,7 @@
           "ci": 12.0,
           "rank": 126,
           "votes": 2295,
-          "organization": "Tencenthunyuan-turbo-0110Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -1145,7 +1145,7 @@
           "ci": 7.0,
           "rank": 127,
           "votes": 8398,
-          "organization": "gpt-5-nano-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1154,7 +1154,7 @@
           "ci": 6.0,
           "rank": 128,
           "votes": 12257,
-          "organization": "nova-2-liteAmazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -1163,7 +1163,7 @@
           "ci": 4.0,
           "rank": 129,
           "votes": 51986,
-          "organization": "o1-miniOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1172,7 +1172,7 @@
           "ci": 4.0,
           "rank": 130,
           "votes": 26118,
-          "organization": "qwq-32bAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -1181,7 +1181,7 @@
           "ci": 4.0,
           "rank": 131,
           "votes": 41392,
-          "organization": "Metallama-3.1-405b-instruct-bf16Meta",
+          "organization": "Meta",
           "license": "Llama 3.1 Community"
         },
         {
@@ -1190,7 +1190,7 @@
           "ci": 4.0,
           "rank": 132,
           "votes": 45498,
-          "organization": "gpt-4o-2024-08-06OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1199,7 +1199,7 @@
           "ci": 4.0,
           "rank": 133,
           "votes": 63495,
-          "organization": "grok-2-2024-08-13xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -1208,7 +1208,7 @@
           "ci": 5.0,
           "rank": 134,
           "votes": 50142,
-          "organization": "gemini-advanced-0514Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1217,7 +1217,7 @@
           "ci": 9.0,
           "rank": 135,
           "votes": 4829,
-          "organization": "Stepfunstep-2-16k-exp-202412StepFun",
+          "organization": "StepFun",
           "license": "Proprietary"
         },
         {
@@ -1226,7 +1226,7 @@
           "ci": 4.0,
           "rank": 136,
           "votes": 59655,
-          "organization": "Metallama-3.1-405b-instruct-fp8Meta",
+          "organization": "Meta",
           "license": "Llama 3.1 Community"
         },
         {
@@ -1235,7 +1235,7 @@
           "ci": 6.0,
           "rank": 137,
           "votes": 11333,
-          "organization": "olmo-3.1-32b-instructAllen AI",
+          "organization": "Allen AI",
           "license": "Apache 2.0"
         },
         {
@@ -1244,7 +1244,7 @@
           "ci": 5.0,
           "rank": 138,
           "votes": 27340,
-          "organization": "01.AIyi-lightning01 AI",
+          "organization": "01 AI",
           "license": "Proprietary"
         },
         {
@@ -1253,7 +1253,7 @@
           "ci": 5.0,
           "rank": 139,
           "votes": 27432,
-          "organization": "qwen3-30b-a3bAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -1262,7 +1262,7 @@
           "ci": 4.0,
           "rank": 140,
           "votes": 41133,
-          "organization": "Metallama-4-maverick-17b-128e-instructMeta",
+          "organization": "Meta",
           "license": "Llama 4"
         },
         {
@@ -1271,7 +1271,7 @@
           "ci": 12.0,
           "rank": 141,
           "votes": 2230,
-          "organization": "Nvidiallama-3.3-nemotron-49b-super-v1Nvidia",
+          "organization": "Nvidia",
           "license": "Nvidia"
         },
         {
@@ -1280,7 +1280,7 @@
           "ci": 10.0,
           "rank": 142,
           "votes": 3738,
-          "organization": "Tencenthunyuan-large-2025-02-10Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -1289,7 +1289,7 @@
           "ci": 4.0,
           "rank": 143,
           "votes": 98130,
-          "organization": "gpt-4-turbo-2024-04-09OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1298,7 +1298,7 @@
           "ci": 3.0,
           "rank": 144,
           "votes": 71180,
-          "organization": "Anthropicclaude-3-5-haiku-20241022Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -1307,7 +1307,7 @@
           "ci": 8.0,
           "rank": 145,
           "votes": 6793,
-          "organization": "deepseek-v2.5-1210DeepSeek",
+          "organization": "DeepSeek",
           "license": "DeepSeek"
         },
         {
@@ -1316,7 +1316,7 @@
           "ci": 4.0,
           "rank": 146,
           "votes": 79132,
-          "organization": "gemini-1.5-pro-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1325,7 +1325,7 @@
           "ci": 5.0,
           "rank": 147,
           "votes": 31231,
-          "organization": "Metallama-4-scout-17b-16e-instructMeta",
+          "organization": "Meta",
           "license": "Llama"
         },
         {
@@ -1334,7 +1334,7 @@
           "ci": 3.0,
           "rank": 148,
           "votes": 194904,
-          "organization": "Anthropicclaude-3-opus-20240229Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -1343,7 +1343,7 @@
           "ci": 8.0,
           "rank": 149,
           "votes": 6107,
-          "organization": "gpt-4.1-nano-2025-04-14OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1352,7 +1352,7 @@
           "ci": 7.0,
           "rank": 150,
           "votes": 9687,
-          "organization": "Stepfunstep-1o-turbo-202506StepFun",
+          "organization": "StepFun",
           "license": "Proprietary"
         },
         {
@@ -1361,7 +1361,7 @@
           "ci": 7.0,
           "rank": 151,
           "votes": 7204,
-          "organization": "ring-flash-2.0Ant Group",
+          "organization": "Ant Group",
           "license": "MIT"
         },
         {
@@ -1370,7 +1370,7 @@
           "ci": 3.0,
           "rank": 152,
           "votes": 55572,
-          "organization": "Metallama-3.3-70b-instructMeta",
+          "organization": "Meta",
           "license": "Llama-3.3"
         },
         {
@@ -1379,7 +1379,7 @@
           "ci": 5.0,
           "rank": 153,
           "votes": 26134,
-          "organization": "glm-4-plusZhipu AI",
+          "organization": "Zhipu AI",
           "license": "Proprietary"
         },
         {
@@ -1388,7 +1388,7 @@
           "ci": 5.0,
           "rank": 154,
           "votes": 23340,
-          "organization": "gemma-3n-e4b-itGoogle",
+          "organization": "Google",
           "license": "Gemma"
         },
         {
@@ -1397,7 +1397,7 @@
           "ci": 6.0,
           "rank": 155,
           "votes": 16479,
-          "organization": "qwen-max-0919Alibaba",
+          "organization": "Alibaba",
           "license": "Qwen"
         },
         {
@@ -1406,7 +1406,7 @@
           "ci": 3.0,
           "rank": 156,
           "votes": 68801,
-          "organization": "gpt-4o-mini-2024-07-18OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1415,7 +1415,7 @@
           "ci": 6.0,
           "rank": 157,
           "votes": 10808,
-          "organization": "gpt-oss-20bOpenAI",
+          "organization": "OpenAI",
           "license": "Apache 2.0"
         },
         {
@@ -1424,7 +1424,7 @@
           "ci": 6.0,
           "rank": 158,
           "votes": 15504,
-          "organization": "Nvidianvidia-nemotron-3-nano-30b-a3b-bf16Nvidia",
+          "organization": "Nvidia",
           "license": "NVIDIA Open Model"
         },
         {
@@ -1433,7 +1433,7 @@
           "ci": 6.0,
           "rank": 159,
           "votes": 10179,
-          "organization": "qwen2.5-plus-1127Alibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -1442,7 +1442,7 @@
           "ci": 5.0,
           "rank": 160,
           "votes": 24746,
-          "organization": "athene-v2-chatNexusFlow",
+          "organization": "NexusFlow",
           "license": "NexusFlow"
         },
         {
@@ -1451,7 +1451,7 @@
           "ci": 4.0,
           "rank": 161,
           "votes": 45460,
-          "organization": "mistral-large-2407Mistral",
+          "organization": "Mistral",
           "license": "Mistral Research"
         },
         {
@@ -1460,7 +1460,7 @@
           "ci": 4.0,
           "rank": 162,
           "votes": 93439,
-          "organization": "gpt-4-0125-previewOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1469,7 +1469,7 @@
           "ci": 4.0,
           "rank": 163,
           "votes": 100107,
-          "organization": "gpt-4-1106-previewOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1478,7 +1478,7 @@
           "ci": 10.0,
           "rank": 164,
           "votes": 3905,
-          "organization": "Tencenthunyuan-standard-2025-02-10Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -1487,7 +1487,7 @@
           "ci": 14.0,
           "rank": 165,
           "votes": 1920,
-          "organization": "mercuryInception AI",
+          "organization": "Inception AI",
           "license": "Proprietary"
         },
         {
@@ -1496,7 +1496,7 @@
           "ci": 4.0,
           "rank": 166,
           "votes": 34909,
-          "organization": "gemini-1.5-flash-002Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1505,7 +1505,7 @@
           "ci": 4.0,
           "rank": 167,
           "votes": 52574,
-          "organization": "grok-2-mini-2024-08-13xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -1514,7 +1514,7 @@
           "ci": 5.0,
           "rank": 168,
           "votes": 24574,
-          "organization": "deepseek-v2.5DeepSeek",
+          "organization": "DeepSeek",
           "license": "DeepSeek"
         },
         {
@@ -1523,7 +1523,7 @@
           "ci": 6.0,
           "rank": 169,
           "votes": 19622,
-          "organization": "athene-70b-0725NexusFlow",
+          "organization": "NexusFlow",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -1532,7 +1532,7 @@
           "ci": 8.0,
           "rank": 170,
           "votes": 5892,
-          "organization": "olmo-3-32b-thinkAllen AI",
+          "organization": "Allen AI",
           "license": "Apache 2.0"
         },
         {
@@ -1541,7 +1541,7 @@
           "ci": 4.0,
           "rank": 171,
           "votes": 28081,
-          "organization": "mistral-large-2411Mistral",
+          "organization": "Mistral",
           "license": "MRL"
         },
         {
@@ -1550,7 +1550,7 @@
           "ci": 6.0,
           "rank": 172,
           "votes": 12063,
-          "organization": "magistral-medium-2506Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -1559,7 +1559,7 @@
           "ci": 4.0,
           "rank": 173,
           "votes": 34128,
-          "organization": "mistral-small-3.1-24b-instruct-2503Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -1568,7 +1568,7 @@
           "ci": 9.0,
           "rank": 174,
           "votes": 4177,
-          "organization": "gemma-3-4b-itGoogle",
+          "organization": "Google",
           "license": "Gemma"
         },
         {
@@ -1577,7 +1577,7 @@
           "ci": 4.0,
           "rank": 175,
           "votes": 39409,
-          "organization": "qwen2.5-72b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Qwen"
         },
         {
@@ -1586,7 +1586,7 @@
           "ci": 8.0,
           "rank": 176,
           "votes": 7136,
-          "organization": "Nvidiallama-3.1-nemotron-70b-instructNvidia",
+          "organization": "Nvidia",
           "license": "Llama 3.1"
         },
         {
@@ -1595,7 +1595,7 @@
           "ci": 9.0,
           "rank": 177,
           "votes": 5600,
-          "organization": "Tencenthunyuan-large-visionTencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -1604,7 +1604,7 @@
           "ci": 4.0,
           "rank": 178,
           "votes": 55234,
-          "organization": "Metallama-3.1-70b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3.1 Community"
         },
         {
@@ -1613,7 +1613,7 @@
           "ci": 5.0,
           "rank": 179,
           "votes": 24753,
-          "organization": "amazon-nova-pro-v1.0Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -1622,7 +1622,7 @@
           "ci": 7.0,
           "rank": 180,
           "votes": 8659,
-          "organization": "jamba-1.5-largeAI21 Labs",
+          "organization": "AI21 Labs",
           "license": "Jamba Open"
         },
         {
@@ -1631,7 +1631,7 @@
           "ci": 3.0,
           "rank": 181,
           "votes": 75764,
-          "organization": "gemma-2-27b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -1640,7 +1640,7 @@
           "ci": 8.0,
           "rank": 182,
           "votes": 5681,
-          "organization": "ibm-granite-h-smallIBM",
+          "organization": "IBM",
           "license": "Apache 2.0"
         },
         {
@@ -1649,7 +1649,7 @@
           "ci": 7.0,
           "rank": 183,
           "votes": 7309,
-          "organization": "reka-core-20240904Reka AI",
+          "organization": "Reka AI",
           "license": "Proprietary"
         },
         {
@@ -1658,7 +1658,7 @@
           "ci": 5.0,
           "rank": 184,
           "votes": 54167,
-          "organization": "gpt-4-0314OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1667,7 +1667,7 @@
           "ci": 10.0,
           "rank": 185,
           "votes": 2846,
-          "organization": "llama-3.1-tulu-3-70bAi2",
+          "organization": "Ai2",
           "license": "Llama 3.1"
         },
         {
@@ -1676,7 +1676,7 @@
           "ci": 10.0,
           "rank": 186,
           "votes": 3749,
-          "organization": "Nvidiallama-3.1-nemotron-51b-instructNvidia",
+          "organization": "Nvidia",
           "license": "Llama 3.1"
         },
         {
@@ -1685,7 +1685,7 @@
           "ci": 7.0,
           "rank": 187,
           "votes": 8484,
-          "organization": "olmo-3.1-32b-thinkAllen AI",
+          "organization": "Allen AI",
           "license": "Apache 2.0"
         },
         {
@@ -1694,7 +1694,7 @@
           "ci": 4.0,
           "rank": 188,
           "votes": 62823,
-          "organization": "gemini-1.5-flash-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1703,7 +1703,7 @@
           "ci": 4.0,
           "rank": 189,
           "votes": 109289,
-          "organization": "Anthropicclaude-3-sonnet-20240229Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -1712,7 +1712,7 @@
           "ci": 7.0,
           "rank": 190,
           "votes": 10069,
-          "organization": "gemma-2-9b-it-simpoPrinceton",
+          "organization": "Princeton",
           "license": "MIT"
         },
         {
@@ -1721,7 +1721,7 @@
           "ci": 5.0,
           "rank": 191,
           "votes": 19661,
-          "organization": "Nvidianemotron-4-340b-instructNvidia",
+          "organization": "Nvidia",
           "license": "NVIDIA Open Model"
         },
         {
@@ -1730,7 +1730,7 @@
           "ci": 7.0,
           "rank": 192,
           "votes": 9869,
-          "organization": "Coherecommand-r-plus-08-2024Cohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -1739,7 +1739,7 @@
           "ci": 4.0,
           "rank": 193,
           "votes": 156880,
-          "organization": "Metallama-3-70b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3 Community"
         },
         {
@@ -1748,7 +1748,7 @@
           "ci": 4.0,
           "rank": 194,
           "votes": 88721,
-          "organization": "gpt-4-0613OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -1757,7 +1757,7 @@
           "ci": 6.0,
           "rank": 195,
           "votes": 14677,
-          "organization": "mistral-small-24b-instruct-2501Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -1766,7 +1766,7 @@
           "ci": 7.0,
           "rank": 196,
           "votes": 9788,
-          "organization": "glm-4-0520Zhipu AI",
+          "organization": "Zhipu AI",
           "license": "Proprietary"
         },
         {
@@ -1775,7 +1775,7 @@
           "ci": 7.0,
           "rank": 197,
           "votes": 7537,
-          "organization": "reka-flash-20240904Reka AI",
+          "organization": "Reka AI",
           "license": "Proprietary"
         },
         {
@@ -1784,7 +1784,7 @@
           "ci": 8.0,
           "rank": 198,
           "votes": 5430,
-          "organization": "qwen2.5-coder-32b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -1793,7 +1793,7 @@
           "ci": 5.0,
           "rank": 199,
           "votes": 27123,
-          "organization": "Coherec4ai-aya-expanse-32bCohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -1802,7 +1802,7 @@
           "ci": 4.0,
           "rank": 200,
           "votes": 54615,
-          "organization": "gemma-2-9b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -1811,7 +1811,7 @@
           "ci": 6.0,
           "rank": 201,
           "votes": 15147,
-          "organization": "deepseek-coder-v2DeepSeek",
+          "organization": "DeepSeek",
           "license": "DeepSeek License"
         },
         {
@@ -1820,7 +1820,7 @@
           "ci": 4.0,
           "rank": 202,
           "votes": 77556,
-          "organization": "Coherecommand-r-plusCohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -1829,7 +1829,7 @@
           "ci": 5.0,
           "rank": 203,
           "votes": 37325,
-          "organization": "qwen2-72b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -1838,7 +1838,7 @@
           "ci": 4.0,
           "rank": 204,
           "votes": 117705,
-          "organization": "Anthropicclaude-3-haiku-20240307Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -1847,7 +1847,7 @@
           "ci": 5.0,
           "rank": 205,
           "votes": 19376,
-          "organization": "amazon-nova-lite-v1.0Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -1856,7 +1856,7 @@
           "ci": 4.0,
           "rank": 206,
           "votes": 35556,
-          "organization": "gemini-1.5-flash-8b-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1865,7 +1865,7 @@
           "ci": 5.0,
           "rank": 207,
           "votes": 24126,
-          "organization": "Azurephi-4Microsoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -1874,7 +1874,7 @@
           "ci": 11.0,
           "rank": 208,
           "votes": 3335,
-          "organization": "olmo-2-0325-32b-instructAllen AI",
+          "organization": "Allen AI",
           "license": "Apache-2.0"
         },
         {
@@ -1883,7 +1883,7 @@
           "ci": 7.0,
           "rank": 209,
           "votes": 10141,
-          "organization": "Coherecommand-r-08-2024Cohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -1892,7 +1892,7 @@
           "ci": 5.0,
           "rank": 210,
           "votes": 62437,
-          "organization": "mistral-large-2402Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -1901,7 +1901,7 @@
           "ci": 5.0,
           "rank": 211,
           "votes": 19355,
-          "organization": "amazon-nova-micro-v1.0Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -1910,7 +1910,7 @@
           "ci": 7.0,
           "rank": 212,
           "votes": 8854,
-          "organization": "jamba-1.5-miniAI21 Labs",
+          "organization": "AI21 Labs",
           "license": "Jamba Open"
         },
         {
@@ -1919,7 +1919,7 @@
           "ci": 9.0,
           "rank": 213,
           "votes": 4780,
-          "organization": "ministral-8b-2410Mistral",
+          "organization": "Mistral",
           "license": "MRL"
         },
         {
@@ -1928,7 +1928,7 @@
           "ci": 7.0,
           "rank": 214,
           "votes": 18352,
-          "organization": "gemini-pro-dev-apiGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -1937,7 +1937,7 @@
           "ci": 6.0,
           "rank": 215,
           "votes": 26191,
-          "organization": "qwen1.5-110b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -1946,7 +1946,7 @@
           "ci": 7.0,
           "rank": 216,
           "votes": 15451,
-          "organization": "reka-flash-21b-20240226-onlineReka AI",
+          "organization": "Reka AI",
           "license": "Proprietary"
         },
         {
@@ -1955,7 +1955,7 @@
           "ci": 5.0,
           "rank": 217,
           "votes": 39296,
-          "organization": "qwen1.5-72b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -1964,7 +1964,7 @@
           "ci": 12.0,
           "rank": 218,
           "votes": 2729,
-          "organization": "Tencenthunyuan-standard-256kTencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -1973,7 +1973,7 @@
           "ci": 5.0,
           "rank": 219,
           "votes": 51417,
-          "organization": "mixtral-8x22b-instruct-v0.1Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -1982,7 +1982,7 @@
           "ci": 5.0,
           "rank": 220,
           "votes": 54038,
-          "organization": "Coherecommand-rCohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -1991,7 +1991,7 @@
           "ci": 6.0,
           "rank": 221,
           "votes": 24806,
-          "organization": "reka-flash-21b-20240226Reka AI",
+          "organization": "Reka AI",
           "license": "Proprietary"
         },
         {
@@ -2000,7 +2000,7 @@
           "ci": 5.0,
           "rank": 222,
           "votes": 66191,
-          "organization": "gpt-3.5-turbo-0125OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2009,7 +2009,7 @@
           "ci": 4.0,
           "rank": 223,
           "votes": 104636,
-          "organization": "Metallama-3-8b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3 Community"
         },
         {
@@ -2018,7 +2018,7 @@
           "ci": 5.0,
           "rank": 224,
           "votes": 34552,
-          "organization": "mistral-mediumMistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -2027,7 +2027,7 @@
           "ci": 7.0,
           "rank": 225,
           "votes": 9827,
-          "organization": "Coherec4ai-aya-expanse-8bCohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -2036,7 +2036,7 @@
           "ci": 12.0,
           "rank": 226,
           "votes": 6390,
-          "organization": "gemini-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -2045,7 +2045,7 @@
           "ci": 11.0,
           "rank": 227,
           "votes": 2895,
-          "organization": "llama-3.1-tulu-3-8bAi2",
+          "organization": "Ai2",
           "license": "Llama 3.1"
         },
         {
@@ -2054,7 +2054,7 @@
           "ci": 5.0,
           "rank": 228,
           "votes": 24142,
-          "organization": "01.AIyi-1.5-34b-chat01 AI",
+          "organization": "01 AI",
           "license": "Apache-2.0"
         },
         {
@@ -2063,7 +2063,7 @@
           "ci": 11.0,
           "rank": 229,
           "votes": 4653,
-          "organization": "HuggingFacezephyr-orpo-141b-A35b-v0.1HuggingFace",
+          "organization": "HuggingFace",
           "license": "Apache 2.0"
         },
         {
@@ -2072,7 +2072,7 @@
           "ci": 4.0,
           "rank": 230,
           "votes": 49605,
-          "organization": "Metallama-3.1-8b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3.1 Community"
         },
         {
@@ -2081,7 +2081,7 @@
           "ci": 11.0,
           "rank": 231,
           "votes": 3092,
-          "organization": "granite-3.1-8b-instructIBM",
+          "organization": "IBM",
           "license": "Apache 2.0"
         },
         {
@@ -2090,7 +2090,7 @@
           "ci": 6.0,
           "rank": 232,
           "votes": 21744,
-          "organization": "qwen1.5-32b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -2099,7 +2099,7 @@
           "ci": 9.0,
           "rank": 233,
           "votes": 16616,
-          "organization": "gpt-3.5-turbo-1106OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2108,7 +2108,7 @@
           "ci": 4.0,
           "rank": 234,
           "votes": 46618,
-          "organization": "gemma-2-2b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -2117,7 +2117,7 @@
           "ci": 5.0,
           "rank": 235,
           "votes": 25055,
-          "organization": "Azurephi-3-medium-4k-instructMicrosoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -2126,7 +2126,7 @@
           "ci": 4.0,
           "rank": 236,
           "votes": 73505,
-          "organization": "mixtral-8x7b-instruct-v0.1Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -2135,7 +2135,7 @@
           "ci": 6.0,
           "rank": 237,
           "votes": 32196,
-          "organization": "dbrx-instruct-previewDatabricks",
+          "organization": "Databricks",
           "license": "DBRX LICENSE"
         },
         {
@@ -2144,7 +2144,7 @@
           "ci": 7.0,
           "rank": 238,
           "votes": 9902,
-          "organization": "InternLMinternlm2_5-20b-chatInternLM",
+          "organization": "InternLM",
           "license": "Other"
         },
         {
@@ -2153,7 +2153,7 @@
           "ci": 7.0,
           "rank": 239,
           "votes": 17841,
-          "organization": "qwen1.5-14b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -2162,7 +2162,7 @@
           "ci": 9.0,
           "rank": 240,
           "votes": 8214,
-          "organization": "Azurewizardlm-70bMicrosoft",
+          "organization": "Microsoft",
           "license": "Llama 2 Community"
         },
         {
@@ -2171,7 +2171,7 @@
           "ci": 12.0,
           "rank": 241,
           "votes": 4933,
-          "organization": "deepseek-llm-67b-chatDeepSeek",
+          "organization": "DeepSeek",
           "license": "DeepSeek License"
         },
         {
@@ -2180,7 +2180,7 @@
           "ci": 7.0,
           "rank": 242,
           "votes": 15483,
-          "organization": "01.AIyi-34b-chat01 AI",
+          "organization": "01 AI",
           "license": "Yi License"
         },
         {
@@ -2189,7 +2189,7 @@
           "ci": 8.0,
           "rank": 243,
           "votes": 12636,
-          "organization": "OpenChatopenchat-3.5-0106OpenChat",
+          "organization": "OpenChat",
           "license": "Apache-2.0"
         },
         {
@@ -2198,7 +2198,7 @@
           "ci": 10.0,
           "rank": 244,
           "votes": 7967,
-          "organization": "OpenChatopenchat-3.5OpenChat",
+          "organization": "OpenChat",
           "license": "Apache-2.0"
         },
         {
@@ -2207,7 +2207,7 @@
           "ci": 9.0,
           "rank": 245,
           "votes": 6643,
-          "organization": "granite-3.0-8b-instructIBM",
+          "organization": "IBM",
           "license": "Apache 2.0"
         },
         {
@@ -2216,7 +2216,7 @@
           "ci": 6.0,
           "rank": 246,
           "votes": 23893,
-          "organization": "gemma-1.1-7b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -2225,7 +2225,7 @@
           "ci": 6.0,
           "rank": 247,
           "votes": 32836,
-          "organization": "Snowflakesnowflake-arctic-instructSnowflake",
+          "organization": "Snowflake",
           "license": "Apache 2.0"
         },
         {
@@ -2234,7 +2234,7 @@
           "ci": 11.0,
           "rank": 248,
           "votes": 3191,
-          "organization": "granite-3.1-2b-instructIBM",
+          "organization": "IBM",
           "license": "Apache 2.0"
         },
         {
@@ -2243,7 +2243,7 @@
           "ci": 10.0,
           "rank": 249,
           "votes": 6534,
-          "organization": "tulu-2-dpo-70bAllenAI/UW",
+          "organization": "AllenAI/UW",
           "license": "AI2 ImpACT Low-risk"
         },
         {
@@ -2252,7 +2252,7 @@
           "ci": 10.0,
           "rank": 250,
           "votes": 5006,
-          "organization": "openhermes-2.5-mistral-7bNousResearch",
+          "organization": "NousResearch",
           "license": "Apache-2.0"
         },
         {
@@ -2261,7 +2261,7 @@
           "ci": 6.0,
           "rank": 251,
           "votes": 22479,
-          "organization": "vicuna-33bLMSYS",
+          "organization": "LMSYS",
           "license": "Non-commercial"
         },
         {
@@ -2270,7 +2270,7 @@
           "ci": 7.0,
           "rank": 252,
           "votes": 16057,
-          "organization": "starling-lm-7b-betaNexusflow",
+          "organization": "Nexusflow",
           "license": "Apache-2.0"
         },
         {
@@ -2279,7 +2279,7 @@
           "ci": 6.0,
           "rank": 253,
           "votes": 17763,
-          "organization": "Azurephi-3-small-8k-instructMicrosoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -2288,7 +2288,7 @@
           "ci": 5.0,
           "rank": 254,
           "votes": 38491,
-          "organization": "Metallama-2-70b-chatMeta",
+          "organization": "Meta",
           "license": "Llama 2 Community"
         },
         {
@@ -2297,7 +2297,7 @@
           "ci": 8.0,
           "rank": 255,
           "votes": 10224,
-          "organization": "starling-lm-7b-alphaUC Berkeley",
+          "organization": "UC Berkeley",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -2306,7 +2306,7 @@
           "ci": 8.0,
           "rank": 256,
           "votes": 7936,
-          "organization": "Metallama-3.2-3b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3.2"
         },
         {
@@ -2315,7 +2315,7 @@
           "ci": 12.0,
           "rank": 257,
           "votes": 3776,
-          "organization": "nous-hermes-2-mixtral-8x7b-dpoNousResearch",
+          "organization": "NousResearch",
           "license": "Apache-2.0"
         },
         {
@@ -2324,7 +2324,7 @@
           "ci": 12.0,
           "rank": 258,
           "votes": 3233,
-          "organization": "qwq-32b-previewAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -2333,7 +2333,7 @@
           "ci": 8.0,
           "rank": 259,
           "votes": 6837,
-          "organization": "granite-3.0-2b-instructIBM",
+          "organization": "IBM",
           "license": "Apache 2.0"
         },
         {
@@ -2342,7 +2342,7 @@
           "ci": 13.0,
           "rank": 260,
           "votes": 3584,
-          "organization": "Nvidiallama2-70b-steerlm-chatNvidia",
+          "organization": "Nvidia",
           "license": "Llama 2 Community"
         },
         {
@@ -2351,7 +2351,7 @@
           "ci": 13.0,
           "rank": 261,
           "votes": 4155,
-          "organization": "solar-10.7b-instruct-v1.0Upstage AI",
+          "organization": "Upstage AI",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -2360,7 +2360,7 @@
           "ci": 15.0,
           "rank": 262,
           "votes": 1679,
-          "organization": "dolphin-2.2.1-mistral-7bCognitive Computations",
+          "organization": "Cognitive Computations",
           "license": "Apache-2.0"
         },
         {
@@ -2369,7 +2369,7 @@
           "ci": 12.0,
           "rank": 263,
           "votes": 2571,
-          "organization": "mpt-30b-chatMosaicML",
+          "organization": "MosaicML",
           "license": "CC-BY-NC-SA-4.0"
         },
         {
@@ -2378,7 +2378,7 @@
           "ci": 7.0,
           "rank": 264,
           "votes": 19402,
-          "organization": "mistral-7b-instruct-v0.2Mistral",
+          "organization": "Mistral",
           "license": "Apache-2.0"
         },
         {
@@ -2387,7 +2387,7 @@
           "ci": 9.0,
           "rank": 265,
           "votes": 7046,
-          "organization": "Azurewizardlm-13bMicrosoft",
+          "organization": "Microsoft",
           "license": "Llama 2 Community"
         },
         {
@@ -2396,7 +2396,7 @@
           "ci": 17.0,
           "rank": 266,
           "votes": 1295,
-          "organization": "falcon-180b-chatTII",
+          "organization": "TII",
           "license": "Falcon-180B TII License"
         },
         {
@@ -2405,7 +2405,7 @@
           "ci": 10.0,
           "rank": 267,
           "votes": 4735,
-          "organization": "qwen1.5-7b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -2414,7 +2414,7 @@
           "ci": 6.0,
           "rank": 268,
           "votes": 12296,
-          "organization": "Azurephi-3-mini-4k-instruct-june-2024Microsoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -2423,7 +2423,7 @@
           "ci": 7.0,
           "rank": 269,
           "votes": 19171,
-          "organization": "Metallama-2-13b-chatMeta",
+          "organization": "Meta",
           "license": "Llama 2 Community"
         },
         {
@@ -2432,7 +2432,7 @@
           "ci": 7.0,
           "rank": 270,
           "votes": 19366,
-          "organization": "vicuna-13bLMSYS",
+          "organization": "LMSYS",
           "license": "Llama 2 Community"
         },
         {
@@ -2441,7 +2441,7 @@
           "ci": 11.0,
           "rank": 271,
           "votes": 4964,
-          "organization": "qwen-14b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -2450,7 +2450,7 @@
           "ci": 9.0,
           "rank": 272,
           "votes": 8554,
-          "organization": "palm-2Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -2459,7 +2459,7 @@
           "ci": 9.0,
           "rank": 273,
           "votes": 7363,
-          "organization": "Metacodellama-34b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 2 Community"
         },
         {
@@ -2468,7 +2468,7 @@
           "ci": 10.0,
           "rank": 274,
           "votes": 8925,
-          "organization": "gemma-7b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -2477,7 +2477,7 @@
           "ci": 9.0,
           "rank": 275,
           "votes": 11116,
-          "organization": "HuggingFacezephyr-7b-betaHuggingFace",
+          "organization": "HuggingFace",
           "license": "MIT"
         },
         {
@@ -2486,7 +2486,7 @@
           "ci": 7.0,
           "rank": 276,
           "votes": 20691,
-          "organization": "Azurephi-3-mini-128k-instructMicrosoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -2495,7 +2495,7 @@
           "ci": 6.0,
           "rank": 277,
           "votes": 20115,
-          "organization": "Azurephi-3-mini-4k-instructMicrosoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -2504,7 +2504,7 @@
           "ci": 12.0,
           "rank": 278,
           "votes": 2921,
-          "organization": "guanaco-33bUW",
+          "organization": "UW",
           "license": "Non-commercial"
         },
         {
@@ -2513,7 +2513,7 @@
           "ci": 16.0,
           "rank": 279,
           "votes": 1785,
-          "organization": "HuggingFacezephyr-7b-alphaHuggingFace",
+          "organization": "HuggingFace",
           "license": "MIT"
         },
         {
@@ -2522,7 +2522,7 @@
           "ci": 11.0,
           "rank": 280,
           "votes": 5184,
-          "organization": "stripedhyena-nous-7bTogether AI",
+          "organization": "Together AI",
           "license": "Apache 2.0"
         },
         {
@@ -2531,7 +2531,7 @@
           "ci": 18.0,
           "rank": 281,
           "votes": 1143,
-          "organization": "Metacodellama-70b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 2 Community"
         },
         {
@@ -2540,7 +2540,7 @@
           "ci": 9.0,
           "rank": 282,
           "votes": 6923,
-          "organization": "vicuna-7bLMSYS",
+          "organization": "LMSYS",
           "license": "Llama 2 Community"
         },
         {
@@ -2549,7 +2549,7 @@
           "ci": 14.0,
           "rank": 283,
           "votes": 2201,
-          "organization": "HuggingFacesmollm2-1.7b-instructHuggingFace",
+          "organization": "HuggingFace",
           "license": "Apache 2.0"
         },
         {
@@ -2558,7 +2558,7 @@
           "ci": 8.0,
           "rank": 284,
           "votes": 10853,
-          "organization": "gemma-1.1-2b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -2567,7 +2567,7 @@
           "ci": 8.0,
           "rank": 285,
           "votes": 8045,
-          "organization": "Metallama-3.2-1b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3.2"
         },
         {
@@ -2576,7 +2576,7 @@
           "ci": 9.0,
           "rank": 286,
           "votes": 8977,
-          "organization": "mistral-7b-instructMistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -2585,7 +2585,7 @@
           "ci": 7.0,
           "rank": 287,
           "votes": 14148,
-          "organization": "Metallama-2-7b-chatMeta",
+          "organization": "Meta",
           "license": "Llama 2 Community"
         },
         {
@@ -2594,7 +2594,7 @@
           "ci": 12.0,
           "rank": 288,
           "votes": 4779,
-          "organization": "gemma-2b-itGoogle",
+          "organization": "Google",
           "license": "Gemma license"
         },
         {
@@ -2603,7 +2603,7 @@
           "ci": 9.0,
           "rank": 289,
           "votes": 7598,
-          "organization": "qwen1.5-4b-chatAlibaba",
+          "organization": "Alibaba",
           "license": "Qianwen LICENSE"
         },
         {
@@ -2612,7 +2612,7 @@
           "ci": 11.0,
           "rank": 290,
           "votes": 6329,
-          "organization": "olmo-7b-instructAllen AI",
+          "organization": "Allen AI",
           "license": "Apache-2.0"
         },
         {
@@ -2621,7 +2621,7 @@
           "ci": 10.0,
           "rank": 291,
           "votes": 6964,
-          "organization": "koala-13bUC Berkeley",
+          "organization": "UC Berkeley",
           "license": "Non-commercial"
         },
         {
@@ -2630,7 +2630,7 @@
           "ci": 12.0,
           "rank": 292,
           "votes": 5745,
-          "organization": "alpaca-13bStanford",
+          "organization": "Stanford",
           "license": "Non-commercial"
         },
         {
@@ -2639,7 +2639,7 @@
           "ci": 15.0,
           "rank": 293,
           "votes": 1743,
-          "organization": "gpt4all-13b-snoozyNomic AI",
+          "organization": "Nomic AI",
           "license": "Non-commercial"
         },
         {
@@ -2648,7 +2648,7 @@
           "ci": 12.0,
           "rank": 294,
           "votes": 3925,
-          "organization": "mpt-7b-chatMosaicML",
+          "organization": "MosaicML",
           "license": "CC-BY-NC-SA-4.0"
         },
         {
@@ -2657,7 +2657,7 @@
           "ci": 12.0,
           "rank": 295,
           "votes": 4658,
-          "organization": "chatglm3-6bTsinghua",
+          "organization": "Tsinghua",
           "license": "Apache-2.0"
         },
         {
@@ -2666,7 +2666,7 @@
           "ci": 11.0,
           "rank": 296,
           "votes": 4845,
-          "organization": "RWKVRWKV-4-Raven-14BRWKV",
+          "organization": "RWKV",
           "license": "Apache 2.0"
         },
         {
@@ -2675,7 +2675,7 @@
           "ci": 14.0,
           "rank": 297,
           "votes": 2657,
-          "organization": "chatglm2-6bTsinghua",
+          "organization": "Tsinghua",
           "license": "Apache-2.0"
         },
         {
@@ -2684,7 +2684,7 @@
           "ci": 11.0,
           "rank": 298,
           "votes": 6311,
-          "organization": "oasst-pythia-12bOpenAssistant",
+          "organization": "OpenAssistant",
           "license": "Apache 2.0"
         },
         {
@@ -2693,7 +2693,7 @@
           "ci": 13.0,
           "rank": 299,
           "votes": 4914,
-          "organization": "chatglm-6bTsinghua",
+          "organization": "Tsinghua",
           "license": "Non-commercial"
         },
         {
@@ -2702,7 +2702,7 @@
           "ci": 12.0,
           "rank": 300,
           "votes": 4203,
-          "organization": "fastchat-t5-3bLMSYS",
+          "organization": "LMSYS",
           "license": "Apache 2.0"
         },
         {
@@ -2711,7 +2711,7 @@
           "ci": 14.0,
           "rank": 301,
           "votes": 3412,
-          "organization": "dolly-v2-12bDatabricks",
+          "organization": "Databricks",
           "license": "MIT"
         },
         {
@@ -2720,7 +2720,7 @@
           "ci": 16.0,
           "rank": 302,
           "votes": 2391,
-          "organization": "Metallama-13bMeta",
+          "organization": "Meta",
           "license": "Non-commercial"
         },
         {
@@ -2729,7 +2729,7 @@
           "ci": 13.0,
           "rank": 303,
           "votes": 3287,
-          "organization": "Stabilitystablelm-tuned-alpha-7bStability AI",
+          "organization": "Stability AI",
           "license": "CC-BY-NC-SA-4.0"
         }
       ],
@@ -2744,7 +2744,7 @@
           "ci": 20.0,
           "rank": 1,
           "votes": 1268,
-          "organization": "Anthropicclaude-opus-4-6-thinkingAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2753,7 +2753,7 @@
           "ci": 17.0,
           "rank": 2,
           "votes": 1824,
-          "organization": "Anthropicclaude-opus-4-6Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2762,7 +2762,7 @@
           "ci": 9.0,
           "rank": 3,
           "votes": 9409,
-          "organization": "Anthropicclaude-opus-4-5-20251101-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2771,7 +2771,7 @@
           "ci": 16.0,
           "rank": 4,
           "votes": 1691,
-          "organization": "gpt-5.2-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2780,7 +2780,7 @@
           "ci": 8.0,
           "rank": 5,
           "votes": 9597,
-          "organization": "Anthropicclaude-opus-4-5-20251101Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2789,7 +2789,7 @@
           "ci": 8.0,
           "rank": 6,
           "votes": 15589,
-          "organization": "gemini-3-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -2798,7 +2798,7 @@
           "ci": 12.0,
           "rank": 7,
           "votes": 2495,
-          "organization": "MoonshotAIkimi-k2.5-thinkingMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -2807,7 +2807,7 @@
           "ci": 8.0,
           "rank": 8,
           "votes": 11158,
-          "organization": "gemini-3-flashGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -2816,7 +2816,7 @@
           "ci": 10.0,
           "rank": 9,
           "votes": 5130,
-          "organization": "glm-4.7Z.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -2825,7 +2825,7 @@
           "ci": 17.0,
           "rank": 10,
           "votes": 1439,
-          "organization": "MoonshotAIkimi-k2.5-instantMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -2834,7 +2834,7 @@
           "ci": 9.0,
           "rank": 11,
           "votes": 7208,
-          "organization": "gemini-3-flash (thinking-minimal)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -2843,7 +2843,7 @@
           "ci": 9.0,
           "rank": 12,
           "votes": 8466,
-          "organization": "Minimaxminimax-m2.1-previewMiniMax",
+          "organization": "MiniMax",
           "license": "MIT"
         },
         {
@@ -2852,7 +2852,7 @@
           "ci": 16.0,
           "rank": 13,
           "votes": 1632,
-          "organization": "gpt-5.2OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2861,7 +2861,7 @@
           "ci": 12.0,
           "rank": 14,
           "votes": 3926,
-          "organization": "gpt-5-mediumOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2870,7 +2870,7 @@
           "ci": 8.0,
           "rank": 15,
           "votes": 8980,
-          "organization": "Anthropicclaude-opus-4-1-20250805Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2879,7 +2879,7 @@
           "ci": 9.0,
           "rank": 16,
           "votes": 6438,
-          "organization": "gpt-5.1-mediumOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2888,7 +2888,7 @@
           "ci": 7.0,
           "rank": 17,
           "votes": 12743,
-          "organization": "Anthropicclaude-sonnet-4-5-20250929-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2897,7 +2897,7 @@
           "ci": 7.0,
           "rank": 18,
           "votes": 14337,
-          "organization": "Anthropicclaude-sonnet-4-5-20250929Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2906,7 +2906,7 @@
           "ci": 10.0,
           "rank": 19,
           "votes": 4765,
-          "organization": "deepseek-v3.2-thinkingDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -2915,7 +2915,7 @@
           "ci": 8.0,
           "rank": 20,
           "votes": 8744,
-          "organization": "glm-4.6Z.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -2924,7 +2924,7 @@
           "ci": 7.0,
           "rank": 21,
           "votes": 11643,
-          "organization": "gpt-5.1OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2933,7 +2933,7 @@
           "ci": 9.0,
           "rank": 22,
           "votes": 5535,
-          "organization": "mimo-v2-flash (non-thinking)Xiaomi",
+          "organization": "Xiaomi",
           "license": "MIT"
         },
         {
@@ -2942,7 +2942,7 @@
           "ci": 7.0,
           "rank": 23,
           "votes": 11143,
-          "organization": "MoonshotAIkimi-k2-thinking-turboMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -2951,7 +2951,7 @@
           "ci": 10.0,
           "rank": 24,
           "votes": 4234,
-          "organization": "gpt-5.2-codexOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2960,7 +2960,7 @@
           "ci": 9.0,
           "rank": 25,
           "votes": 6502,
-          "organization": "gpt-5.1-codexOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -2969,7 +2969,7 @@
           "ci": 9.0,
           "rank": 26,
           "votes": 8833,
-          "organization": "Minimaxminimax-m2MiniMax",
+          "organization": "MiniMax",
           "license": "Apache 2.0"
         },
         {
@@ -2978,7 +2978,7 @@
           "ci": 9.0,
           "rank": 27,
           "votes": 6028,
-          "organization": "deepseek-v3.2DeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -2987,7 +2987,7 @@
           "ci": 7.0,
           "rank": 28,
           "votes": 12415,
-          "organization": "Anthropicclaude-haiku-4-5-20251001Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -2996,7 +2996,7 @@
           "ci": 10.0,
           "rank": 29,
           "votes": 5131,
-          "organization": "deepseek-v3.2-expDeepSeek",
+          "organization": "DeepSeek",
           "license": "MIT"
         },
         {
@@ -3005,7 +3005,7 @@
           "ci": 7.0,
           "rank": 30,
           "votes": 12199,
-          "organization": "qwen3-coder-480b-a35b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -3014,7 +3014,7 @@
           "ci": 15.0,
           "rank": 31,
           "votes": 1953,
-          "organization": "KwaiKAT-Coder-Pro-V1KwaiKAT",
+          "organization": "KwaiKAT",
           "license": "Proprietary"
         },
         {
@@ -3023,7 +3023,7 @@
           "ci": 17.0,
           "rank": 32,
           "votes": 1537,
-          "organization": "gpt-5.1-codex-miniOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3032,7 +3032,7 @@
           "ci": 9.0,
           "rank": 33,
           "votes": 6886,
-          "organization": "grok-4-1-fast-reasoningxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -3041,7 +3041,7 @@
           "ci": 20.0,
           "rank": 34,
           "votes": 1037,
-          "organization": "mistral-large-3Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -3050,7 +3050,7 @@
           "ci": 13.0,
           "rank": 35,
           "votes": 3453,
-          "organization": "gemini-2.5-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3059,7 +3059,7 @@
           "ci": 19.0,
           "rank": 36,
           "votes": 1266,
-          "organization": "grok-4.1-thinkingxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -3068,7 +3068,7 @@
           "ci": 16.0,
           "rank": 37,
           "votes": 1678,
-          "organization": "devstral-2Mistral",
+          "organization": "Mistral",
           "license": "Modified MIT"
         },
         {
@@ -3077,7 +3077,7 @@
           "ci": 22.0,
           "rank": 38,
           "votes": 968,
-          "organization": "grok-4-fast-reasoningxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -3086,7 +3086,7 @@
           "ci": 21.0,
           "rank": 39,
           "votes": 1016,
-          "organization": "grok-code-fast-1xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -3095,7 +3095,7 @@
           "ci": 22.0,
           "rank": 40,
           "votes": 1021,
-          "organization": "devstral-medium-2507Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         }
       ],
@@ -3110,7 +3110,7 @@
           "ci": 9.0,
           "rank": 1,
           "votes": 11297,
-          "organization": "gemini-3-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3119,7 +3119,7 @@
           "ci": 9.0,
           "rank": 2,
           "votes": 9175,
-          "organization": "gemini-3-flashGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3128,7 +3128,7 @@
           "ci": 14.0,
           "rank": 3,
           "votes": 2749,
-          "organization": "gpt-5.2-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3137,7 +3137,7 @@
           "ci": 10.0,
           "rank": 4,
           "votes": 7313,
-          "organization": "gemini-3-flash (thinking-minimal)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3146,7 +3146,7 @@
           "ci": 10.0,
           "rank": 5,
           "votes": 7299,
-          "organization": "gpt-5.1-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3155,7 +3155,7 @@
           "ci": 13.0,
           "rank": 6,
           "votes": 2979,
-          "organization": "MoonshotAIkimi-k2.5-thinkingMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -3164,7 +3164,7 @@
           "ci": 6.0,
           "rank": 7,
           "votes": 79747,
-          "organization": "gemini-2.5-proGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3173,7 +3173,7 @@
           "ci": 6.0,
           "rank": 8,
           "votes": 23313,
-          "organization": "chatgpt-4o-latest-20250326OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3182,7 +3182,7 @@
           "ci": 9.0,
           "rank": 9,
           "votes": 7974,
-          "organization": "gpt-5.1OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3191,7 +3191,7 @@
           "ci": 17.0,
           "rank": 10,
           "votes": 1663,
-          "organization": "MoonshotAIkimi-k2.5-instantMoonshot",
+          "organization": "Moonshot",
           "license": "Modified MIT"
         },
         {
@@ -3200,7 +3200,7 @@
           "ci": 10.0,
           "rank": 11,
           "votes": 5293,
-          "organization": "gemini-2.5-flash-preview-09-2025Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3209,7 +3209,7 @@
           "ci": 11.0,
           "rank": 12,
           "votes": 2925,
-          "organization": "gpt-4.5-preview-2025-02-27OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3218,7 +3218,7 @@
           "ci": 14.0,
           "rank": 13,
           "votes": 3013,
-          "organization": "gpt-5.2OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3227,7 +3227,7 @@
           "ci": 7.0,
           "rank": 14,
           "votes": 43264,
-          "organization": "gpt-5-chatOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3236,7 +3236,7 @@
           "ci": 11.0,
           "rank": 15,
           "votes": 3623,
-          "organization": "ernie-5.0-preview-1220Baidu",
+          "organization": "Baidu",
           "license": "Proprietary"
         },
         {
@@ -3245,7 +3245,7 @@
           "ci": 7.0,
           "rank": 16,
           "votes": 49181,
-          "organization": "o3-2025-04-16OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3254,7 +3254,7 @@
           "ci": 6.0,
           "rank": 17,
           "votes": 48047,
-          "organization": "gemini-2.5-flashGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3263,7 +3263,7 @@
           "ci": 7.0,
           "rank": 18,
           "votes": 44463,
-          "organization": "gpt-4.1-2025-04-14OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3272,7 +3272,7 @@
           "ci": 8.0,
           "rank": 19,
           "votes": 10750,
-          "organization": "qwen3-vl-235b-a22b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -3281,7 +3281,7 @@
           "ci": 8.0,
           "rank": 20,
           "votes": 37581,
-          "organization": "gpt-5-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3290,7 +3290,7 @@
           "ci": 15.0,
           "rank": 21,
           "votes": 1495,
-          "organization": "Anthropicclaude-opus-4-20250514-thinking-16kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3299,7 +3299,7 @@
           "ci": 16.0,
           "rank": 22,
           "votes": 1361,
-          "organization": "Anthropicclaude-sonnet-4-20250514-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3308,7 +3308,7 @@
           "ci": 8.0,
           "rank": 23,
           "votes": 43674,
-          "organization": "gpt-4.1-mini-2025-04-14OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3317,7 +3317,7 @@
           "ci": 7.0,
           "rank": 24,
           "votes": 44239,
-          "organization": "o4-mini-2025-04-16OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3326,7 +3326,7 @@
           "ci": 15.0,
           "rank": 25,
           "votes": 1676,
-          "organization": "Anthropicclaude-3-7-sonnet-20250219-thinking-32kAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3335,7 +3335,7 @@
           "ci": 10.0,
           "rank": 26,
           "votes": 3694,
-          "organization": "o1-2024-12-17OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3344,7 +3344,7 @@
           "ci": 12.0,
           "rank": 27,
           "votes": 2579,
-          "organization": "Anthropicclaude-opus-4-20250514Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3353,7 +3353,7 @@
           "ci": 8.0,
           "rank": 28,
           "votes": 39110,
-          "organization": "gemini-2.5-flash-lite-preview-06-17-thinkingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3362,7 +3362,7 @@
           "ci": 12.0,
           "rank": 29,
           "votes": 2869,
-          "organization": "Tencenthunyuan-vision-1.5-thinkingTencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -3371,7 +3371,7 @@
           "ci": 12.0,
           "rank": 30,
           "votes": 2664,
-          "organization": "qwen3-vl-235b-a22b-thinkingAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -3380,7 +3380,7 @@
           "ci": 13.0,
           "rank": 31,
           "votes": 2066,
-          "organization": "Anthropicclaude-sonnet-4-20250514Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3389,7 +3389,7 @@
           "ci": 8.0,
           "rank": 32,
           "votes": 34737,
-          "organization": "grok-4-0709xAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -3398,7 +3398,7 @@
           "ci": 9.0,
           "rank": 33,
           "votes": 31410,
-          "organization": "gpt-5-mini-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3407,7 +3407,7 @@
           "ci": 12.0,
           "rank": 34,
           "votes": 3454,
-          "organization": "qwen-vl-max-2025-08-13Alibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -3416,7 +3416,7 @@
           "ci": 8.0,
           "rank": 35,
           "votes": 8902,
-          "organization": "gemini-1.5-pro-002Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3425,7 +3425,7 @@
           "ci": 9.0,
           "rank": 36,
           "votes": 4674,
-          "organization": "Anthropicclaude-3-7-sonnet-20250219Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3434,7 +3434,7 @@
           "ci": 10.0,
           "rank": 37,
           "votes": 5330,
-          "organization": "gemini-2.5-flash-lite-preview-09-2025-no-thinkingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3443,7 +3443,7 @@
           "ci": 7.0,
           "rank": 38,
           "votes": 9875,
-          "organization": "gemini-2.0-flash-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3452,7 +3452,7 @@
           "ci": 8.0,
           "rank": 39,
           "votes": 23273,
-          "organization": "gpt-4o-2024-05-13OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3461,7 +3461,7 @@
           "ci": 14.0,
           "rank": 40,
           "votes": 2611,
-          "organization": "glm-4.6vZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -3470,7 +3470,7 @@
           "ci": 7.0,
           "rank": 41,
           "votes": 10568,
-          "organization": "Anthropicclaude-3-5-sonnet-20241022Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3479,7 +3479,7 @@
           "ci": 8.0,
           "rank": 42,
           "votes": 18534,
-          "organization": "gemma-3-27b-itGoogle",
+          "organization": "Google",
           "license": "Gemma"
         },
         {
@@ -3488,7 +3488,7 @@
           "ci": 8.0,
           "rank": 43,
           "votes": 11519,
-          "organization": "mistral-medium-2505Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -3497,7 +3497,7 @@
           "ci": 12.0,
           "rank": 44,
           "votes": 3576,
-          "organization": "glm-4.5vZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -3506,7 +3506,7 @@
           "ci": 14.0,
           "rank": 45,
           "votes": 2037,
-          "organization": "Stepfunstep-1o-turbo-202506StepFun",
+          "organization": "StepFun",
           "license": "Proprietary"
         },
         {
@@ -3515,7 +3515,7 @@
           "ci": 16.0,
           "rank": 46,
           "votes": 1440,
-          "organization": "Tencenthunyuan-large-visionTencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -3524,7 +3524,7 @@
           "ci": 7.0,
           "rank": 47,
           "votes": 41998,
-          "organization": "mistral-medium-2508Mistral",
+          "organization": "Mistral",
           "license": "Proprietary"
         },
         {
@@ -3533,7 +3533,7 @@
           "ci": 9.0,
           "rank": 48,
           "votes": 21624,
-          "organization": "Anthropicclaude-3-5-sonnet-20240620Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3542,7 +3542,7 @@
           "ci": 9.0,
           "rank": 49,
           "votes": 7410,
-          "organization": "Metallama-4-maverick-17b-128e-instructMeta",
+          "organization": "Meta",
           "license": "Llama 4"
         },
         {
@@ -3551,7 +3551,7 @@
           "ci": 11.0,
           "rank": 50,
           "votes": 4325,
-          "organization": "gpt-5-nano-highOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3560,7 +3560,7 @@
           "ci": 12.0,
           "rank": 51,
           "votes": 3558,
-          "organization": "Stepfunstep-3StepFun",
+          "organization": "StepFun",
           "license": "Apache 2.0"
         },
         {
@@ -3569,7 +3569,7 @@
           "ci": 9.0,
           "rank": 52,
           "votes": 11713,
-          "organization": "mistral-small-2506Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -3578,7 +3578,7 @@
           "ci": 9.0,
           "rank": 53,
           "votes": 7241,
-          "organization": "gemini-1.5-flash-002Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3587,7 +3587,7 @@
           "ci": 10.0,
           "rank": 54,
           "votes": 3991,
-          "organization": "gemini-2.0-flash-lite-preview-02-05Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3596,7 +3596,7 @@
           "ci": 15.0,
           "rank": 55,
           "votes": 1583,
-          "organization": "Anthropicclaude-3-5-haiku-20241022Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3605,7 +3605,7 @@
           "ci": 9.0,
           "rank": 56,
           "votes": 30955,
-          "organization": "mistral-small-3.1-24b-instruct-2503Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -3614,7 +3614,7 @@
           "ci": 10.0,
           "rank": 57,
           "votes": 6826,
-          "organization": "Metallama-4-scout-17b-16e-instructMeta",
+          "organization": "Meta",
           "license": "Llama"
         },
         {
@@ -3623,7 +3623,7 @@
           "ci": 12.0,
           "rank": 58,
           "votes": 2833,
-          "organization": "Stepfunstep-1o-vision-32k-highresStepFun",
+          "organization": "StepFun",
           "license": "Proprietary"
         },
         {
@@ -3632,7 +3632,7 @@
           "ci": 10.0,
           "rank": 59,
           "votes": 3768,
-          "organization": "qwen2.5-vl-72b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Qwen"
         },
         {
@@ -3641,7 +3641,7 @@
           "ci": 12.0,
           "rank": 60,
           "votes": 3376,
-          "organization": "gpt-4o-2024-08-06OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3650,7 +3650,7 @@
           "ci": 11.0,
           "rank": 61,
           "votes": 16734,
-          "organization": "gemini-1.5-pro-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3659,7 +3659,7 @@
           "ci": 15.0,
           "rank": 62,
           "votes": 1490,
-          "organization": "qwen2.5-vl-32b-instructAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -3668,7 +3668,7 @@
           "ci": 11.0,
           "rank": 63,
           "votes": 13391,
-          "organization": "gpt-4-turbo-2024-04-09OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3677,7 +3677,7 @@
           "ci": 7.0,
           "rank": 64,
           "votes": 17347,
-          "organization": "gpt-4o-mini-2024-07-18OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3686,7 +3686,7 @@
           "ci": 9.0,
           "rank": 65,
           "votes": 5423,
-          "organization": "pixtral-large-2411Mistral",
+          "organization": "Mistral",
           "license": "MRL"
         },
         {
@@ -3695,7 +3695,7 @@
           "ci": 18.0,
           "rank": 66,
           "votes": 1211,
-          "organization": "gpt-4.1-nano-2025-04-14OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3704,7 +3704,7 @@
           "ci": 9.0,
           "rank": 67,
           "votes": 5937,
-          "organization": "qwen2-vl-72bAlibaba",
+          "organization": "Alibaba",
           "license": "Qwen"
         },
         {
@@ -3713,7 +3713,7 @@
           "ci": 16.0,
           "rank": 68,
           "votes": 1422,
-          "organization": "qwen-vl-max-1119Alibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -3722,7 +3722,7 @@
           "ci": 10.0,
           "rank": 69,
           "votes": 6243,
-          "organization": "gemini-1.5-flash-8b-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3731,7 +3731,7 @@
           "ci": 10.0,
           "rank": 70,
           "votes": 15565,
-          "organization": "Anthropicclaude-3-opus-20240229Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3740,7 +3740,7 @@
           "ci": 16.0,
           "rank": 71,
           "votes": 1534,
-          "organization": "Stepfunstep-1v-32kStepFun",
+          "organization": "StepFun",
           "license": "Proprietary"
         },
         {
@@ -3749,7 +3749,7 @@
           "ci": 11.0,
           "rank": 72,
           "votes": 13260,
-          "organization": "gemini-1.5-flash-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3758,7 +3758,7 @@
           "ci": 13.0,
           "rank": 73,
           "votes": 3048,
-          "organization": "molmo-72b-0924AI2",
+          "organization": "AI2",
           "license": "Apache 2.0"
         },
         {
@@ -3767,7 +3767,7 @@
           "ci": 21.0,
           "rank": 74,
           "votes": 809,
-          "organization": "Tencenthunyuan-standard-vision-2024-12-31Tencent",
+          "organization": "Tencent",
           "license": "Proprietary"
         },
         {
@@ -3776,7 +3776,7 @@
           "ci": 8.0,
           "rank": 75,
           "votes": 8682,
-          "organization": "Metallama-3.2-vision-90b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3.2"
         },
         {
@@ -3785,7 +3785,7 @@
           "ci": 10.0,
           "rank": 76,
           "votes": 5766,
-          "organization": "qwen2-vl-7b-instructAliaba",
+          "organization": "Aliaba",
           "license": "Apache 2.0"
         },
         {
@@ -3794,7 +3794,7 @@
           "ci": 9.0,
           "rank": 77,
           "votes": 7511,
-          "organization": "pixtral-12b-2409Mistral",
+          "organization": "Mistral",
           "license": "Apache 2.0"
         },
         {
@@ -3803,7 +3803,7 @@
           "ci": 12.0,
           "rank": 78,
           "votes": 5148,
-          "organization": "internvl2-26bOpenGVLab",
+          "organization": "OpenGVLab",
           "license": "MIT"
         },
         {
@@ -3812,7 +3812,7 @@
           "ci": 15.0,
           "rank": 79,
           "votes": 1854,
-          "organization": "amazon-nova-lite-v1.0Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -3821,7 +3821,7 @@
           "ci": 13.0,
           "rank": 80,
           "votes": 2335,
-          "organization": "amazon-nova-pro-v1.0Amazon",
+          "organization": "Amazon",
           "license": "Proprietary"
         },
         {
@@ -3830,7 +3830,7 @@
           "ci": 11.0,
           "rank": 81,
           "votes": 12314,
-          "organization": "Anthropicclaude-3-sonnet-20240229Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3839,7 +3839,7 @@
           "ci": 18.0,
           "rank": 82,
           "votes": 1219,
-          "organization": "01.AIyi-vision01 AI",
+          "organization": "01 AI",
           "license": "Proprietary"
         },
         {
@@ -3848,7 +3848,7 @@
           "ci": 12.0,
           "rank": 83,
           "votes": 13380,
-          "organization": "Anthropicclaude-3-haiku-20240307Anthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -3857,7 +3857,7 @@
           "ci": 22.0,
           "rank": 84,
           "votes": 847,
-          "organization": "Coherec4ai-aya-vision-32bCohere",
+          "organization": "Cohere",
           "license": "CC-BY-NC-4.0"
         },
         {
@@ -3866,7 +3866,7 @@
           "ci": 13.0,
           "rank": 85,
           "votes": 2815,
-          "organization": "molmo-7b-d-0924AI2",
+          "organization": "AI2",
           "license": "Apache 2.0"
         },
         {
@@ -3875,7 +3875,7 @@
           "ci": 11.0,
           "rank": 86,
           "votes": 4817,
-          "organization": "Metallama-3.2-vision-11b-instructMeta",
+          "organization": "Meta",
           "license": "Llama 3.2"
         },
         {
@@ -3884,7 +3884,7 @@
           "ci": 20.0,
           "rank": 87,
           "votes": 1077,
-          "organization": "Nvidianvila-internal-15b-v1Nvidia",
+          "organization": "Nvidia",
           "license": "-"
         },
         {
@@ -3893,7 +3893,7 @@
           "ci": 18.0,
           "rank": 88,
           "votes": 1321,
-          "organization": "llava-onevision-qwen2-72b-ovLLaVA",
+          "organization": "LLaVA",
           "license": "Apache 2.0"
         },
         {
@@ -3902,7 +3902,7 @@
           "ci": 12.0,
           "rank": 89,
           "votes": 4531,
-          "organization": "llava-v1.6-34bLLaVA",
+          "organization": "LLaVA",
           "license": "Apache 2.0"
         },
         {
@@ -3911,7 +3911,7 @@
           "ci": 15.0,
           "rank": 90,
           "votes": 1987,
-          "organization": "minicpm-v-2_6OpenBMB",
+          "organization": "OpenBMB",
           "license": "Apache 2.0"
         },
         {
@@ -3920,7 +3920,7 @@
           "ci": 15.0,
           "rank": 91,
           "votes": 1991,
-          "organization": "cogvlm2-llama3-chat-19bZhipu AI",
+          "organization": "Zhipu AI",
           "license": "CogVLM2"
         },
         {
@@ -3929,7 +3929,7 @@
           "ci": 12.0,
           "rank": 92,
           "votes": 3703,
-          "organization": "internvl2-4bOpenGVLab",
+          "organization": "OpenGVLab",
           "license": "MIT"
         },
         {
@@ -3938,7 +3938,7 @@
           "ci": 15.0,
           "rank": 93,
           "votes": 2592,
-          "organization": "Azurephi-3.5-vision-instructMicrosoft",
+          "organization": "Microsoft",
           "license": "MIT"
         },
         {
@@ -3947,7 +3947,7 @@
           "ci": 18.0,
           "rank": 94,
           "votes": 1401,
-          "organization": "Azurephi-3-vision-128k-instructMicrosoft",
+          "organization": "Microsoft",
           "license": "MIT"
         }
       ],
@@ -3962,7 +3962,7 @@
           "ci": 5.0,
           "rank": 1,
           "votes": 39574,
-          "organization": "gpt-image-1.5-high-fidelityOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -3971,7 +3971,7 @@
           "ci": 5.0,
           "rank": 2,
           "votes": 40603,
-          "organization": "gemini-3-pro-image-preview-2k (nano-banana-pro)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3980,7 +3980,7 @@
           "ci": 5.0,
           "rank": 3,
           "votes": 83655,
-          "organization": "gemini-3-pro-image-preview (nano-banana-pro)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -3989,7 +3989,7 @@
           "ci": 7.0,
           "rank": 4,
           "votes": 7451,
-          "organization": "grok-imagine-imagexAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -3998,7 +3998,7 @@
           "ci": 5.0,
           "rank": 5,
           "votes": 45102,
-          "organization": "Fluxflux-2-maxBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4007,7 +4007,7 @@
           "ci": 7.0,
           "rank": 6,
           "votes": 8768,
-          "organization": "grok-imagine-image-proxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4016,7 +4016,7 @@
           "ci": 4.0,
           "rank": 7,
           "votes": 64406,
-          "organization": "Fluxflux-2-flexBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4025,7 +4025,7 @@
           "ci": 3.0,
           "rank": 8,
           "votes": 651765,
-          "organization": "gemini-2.5-flash-image-preview (nano-banana)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4034,7 +4034,7 @@
           "ci": 4.0,
           "rank": 9,
           "votes": 75967,
-          "organization": "Fluxflux-2-proBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4043,7 +4043,7 @@
           "ci": 4.0,
           "rank": 10,
           "votes": 155682,
-          "organization": "Tencenthunyuan-image-3.0Tencent",
+          "organization": "Tencent",
           "license": "tencent-hunyuan-community"
         },
         {
@@ -4052,7 +4052,7 @@
           "ci": 5.0,
           "rank": 11,
           "votes": 37640,
-          "organization": "Fluxflux-2-devBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4061,7 +4061,7 @@
           "ci": 4.0,
           "rank": 12,
           "votes": 391894,
-          "organization": "imagen-ultra-4.0-generate-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4070,7 +4070,7 @@
           "ci": 4.0,
           "rank": 13,
           "votes": 46361,
-          "organization": "Bytedanceseedream-4.5Bytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4079,7 +4079,7 @@
           "ci": 6.0,
           "rank": 14,
           "votes": 12591,
-          "organization": "Bytedanceseedream-4-2kBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4088,7 +4088,7 @@
           "ci": 5.0,
           "rank": 15,
           "votes": 26962,
-          "organization": "qwen-image-2512Alibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -4097,7 +4097,7 @@
           "ci": 3.0,
           "rank": 16,
           "votes": 440732,
-          "organization": "imagen-4.0-generate-001Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4106,7 +4106,7 @@
           "ci": 6.0,
           "rank": 17,
           "votes": 11766,
-          "organization": "Bytedanceseedream-4-falBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4115,7 +4115,7 @@
           "ci": 4.0,
           "rank": 18,
           "votes": 99561,
-          "organization": "wan2.5-t2i-previewAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -4124,7 +4124,7 @@
           "ci": 3.0,
           "rank": 19,
           "votes": 250867,
-          "organization": "gpt-image-1OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4133,7 +4133,7 @@
           "ci": 4.0,
           "rank": 20,
           "votes": 101209,
-          "organization": "Bytedanceseedream-4-high-res-falBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4142,7 +4142,7 @@
           "ci": 5.0,
           "rank": 21,
           "votes": 25368,
-          "organization": "wan2.6-t2iAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -4151,7 +4151,7 @@
           "ci": 4.0,
           "rank": 22,
           "votes": 83112,
-          "organization": "gpt-image-1-miniOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4160,7 +4160,7 @@
           "ci": 4.0,
           "rank": 23,
           "votes": 71948,
-          "organization": "mai-image-1Microsoft AI",
+          "organization": "Microsoft AI",
           "license": "Proprietary"
         },
         {
@@ -4169,7 +4169,7 @@
           "ci": 5.0,
           "rank": 24,
           "votes": 36696,
-          "organization": "Bytedanceseedream-3Bytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4178,7 +4178,7 @@
           "ci": 7.0,
           "rank": 25,
           "votes": 7279,
-          "organization": "z-image-turboAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -4187,7 +4187,7 @@
           "ci": 3.0,
           "rank": 26,
           "votes": 66460,
-          "organization": "Fluxflux-1-kontext-maxBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4196,7 +4196,7 @@
           "ci": 5.0,
           "rank": 27,
           "votes": 24590,
-          "organization": "Fluxflux-2-klein-9bBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "flux-non-commercial-license"
         },
         {
@@ -4205,7 +4205,7 @@
           "ci": 3.0,
           "rank": 28,
           "votes": 578284,
-          "organization": "qwen-image-prompt-extendAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -4214,7 +4214,7 @@
           "ci": 3.0,
           "rank": 29,
           "votes": 334511,
-          "organization": "Fluxflux-1-kontext-proBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4223,7 +4223,7 @@
           "ci": 3.0,
           "rank": 30,
           "votes": 362797,
-          "organization": "imagen-3.0-generate-002Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4232,7 +4232,7 @@
           "ci": 2.0,
           "rank": 31,
           "votes": 86476,
-          "organization": "qwen-imageAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -4241,7 +4241,7 @@
           "ci": 6.0,
           "rank": 32,
           "votes": 15292,
-          "organization": "p-imagePruna",
+          "organization": "Pruna",
           "license": "Proprietary"
         },
         {
@@ -4250,7 +4250,7 @@
           "ci": 4.0,
           "rank": 33,
           "votes": 115959,
-          "organization": "Ideogramideogram-v3-qualityIdeogram",
+          "organization": "Ideogram",
           "license": "Proprietary"
         },
         {
@@ -4259,7 +4259,7 @@
           "ci": 4.0,
           "rank": 34,
           "votes": 128162,
-          "organization": "LumaphotonLuma AI",
+          "organization": "Luma AI",
           "license": "Proprietary"
         },
         {
@@ -4268,7 +4268,7 @@
           "ci": 5.0,
           "rank": 35,
           "votes": 24766,
-          "organization": "Fluxflux-2-klein-4bBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Apache 2.0"
         },
         {
@@ -4277,7 +4277,7 @@
           "ci": 4.0,
           "rank": 36,
           "votes": 176928,
-          "organization": "Recraftrecraft-v3Recraft",
+          "organization": "Recraft",
           "license": "Proprietary"
         },
         {
@@ -4286,7 +4286,7 @@
           "ci": 3.0,
           "rank": 37,
           "votes": 70353,
-          "organization": "Fluxflux-1.1-proBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4295,7 +4295,7 @@
           "ci": 3.0,
           "rank": 38,
           "votes": 288689,
-          "organization": "lucid-originLeonardo AI",
+          "organization": "Leonardo AI",
           "license": "Proprietary"
         },
         {
@@ -4304,7 +4304,7 @@
           "ci": 3.0,
           "rank": 39,
           "votes": 72113,
-          "organization": "Ideogramideogram-v2Ideogram",
+          "organization": "Ideogram",
           "license": "Proprietary"
         },
         {
@@ -4313,7 +4313,7 @@
           "ci": 9.0,
           "rank": 40,
           "votes": 4687,
-          "organization": "glm-imageZ.ai",
+          "organization": "Z.ai",
           "license": "MIT"
         },
         {
@@ -4322,7 +4322,7 @@
           "ci": 3.0,
           "rank": 41,
           "votes": 259821,
-          "organization": "gemini-2.0-flash-preview-image-generationGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4331,7 +4331,7 @@
           "ci": 4.0,
           "rank": 42,
           "votes": 49319,
-          "organization": "Fluxflux-1-dev-fp8Black Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Open"
         },
         {
@@ -4340,7 +4340,7 @@
           "ci": 4.0,
           "rank": 43,
           "votes": 241299,
-          "organization": "dall-e-3OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4349,7 +4349,7 @@
           "ci": 4.0,
           "rank": 44,
           "votes": 218035,
-          "organization": "Fluxflux-1-kontext-devBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "flux-1-dev-non-commercial-license"
         },
         {
@@ -4358,7 +4358,7 @@
           "ci": 4.0,
           "rank": 45,
           "votes": 23379,
-          "organization": "Stabilitystable-diffusion-v35-largeStability AI",
+          "organization": "Stability AI",
           "license": "Open"
         },
         {
@@ -4367,7 +4367,7 @@
           "ci": 6.0,
           "rank": 46,
           "votes": 12491,
-          "organization": "BytedancebagelBytedance",
+          "organization": "Bytedance",
           "license": "Apache 2.0"
         }
       ],
@@ -4382,7 +4382,7 @@
           "ci": 4.0,
           "rank": 1,
           "votes": 184593,
-          "organization": "chatgpt-image-latest-high-fidelity (20251216)OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4391,7 +4391,7 @@
           "ci": 4.0,
           "rank": 2,
           "votes": 179642,
-          "organization": "gemini-3-pro-image-preview-2k (nano-banana-pro)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4400,7 +4400,7 @@
           "ci": 3.0,
           "rank": 3,
           "votes": 510948,
-          "organization": "gemini-3-pro-image-preview (nano-banana-pro)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4409,7 +4409,7 @@
           "ci": 4.0,
           "rank": 4,
           "votes": 202523,
-          "organization": "gpt-image-1.5-high-fidelityOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4418,7 +4418,7 @@
           "ci": 5.0,
           "rank": 5,
           "votes": 11347,
-          "organization": "grok-imagine-image-proxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4427,7 +4427,7 @@
           "ci": 7.0,
           "rank": 6,
           "votes": 7183,
-          "organization": "grok-imagine-imagexAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4436,7 +4436,7 @@
           "ci": 2.0,
           "rank": 7,
           "votes": 237793,
-          "organization": "Bytedanceseedream-4.5Bytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4445,7 +4445,7 @@
           "ci": 4.0,
           "rank": 8,
           "votes": 50075,
-          "organization": "Tencenthunyuan-image-3.0-instructTencent",
+          "organization": "Tencent",
           "license": "tencent-hunyuan-community"
         },
         {
@@ -4454,7 +4454,7 @@
           "ci": 2.0,
           "rank": 9,
           "votes": 10456668,
-          "organization": "gemini-2.5-flash-image-preview (nano-banana)Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4463,7 +4463,7 @@
           "ci": 6.0,
           "rank": 10,
           "votes": 218668,
-          "organization": "Bytedanceseedream-4-2kBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4472,7 +4472,7 @@
           "ci": 3.0,
           "rank": 11,
           "votes": 109294,
-          "organization": "Fluxflux-2-maxBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4481,7 +4481,7 @@
           "ci": 2.0,
           "rank": 12,
           "votes": 227779,
-          "organization": "reve-v1.1Reve",
+          "organization": "Reve",
           "license": "Proprietary"
         },
         {
@@ -4490,7 +4490,7 @@
           "ci": 3.0,
           "rank": 13,
           "votes": 110368,
-          "organization": "Fluxflux-2-proBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4499,7 +4499,7 @@
           "ci": 5.0,
           "rank": 14,
           "votes": 382212,
-          "organization": "reve-v1Reve",
+          "organization": "Reve",
           "license": "Proprietary"
         },
         {
@@ -4508,7 +4508,7 @@
           "ci": 2.0,
           "rank": 15,
           "votes": 959984,
-          "organization": "Bytedanceseedream-4-high-res-falBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4517,7 +4517,7 @@
           "ci": 3.0,
           "rank": 16,
           "votes": 99394,
-          "organization": "qwen-image-edit-2511Alibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -4526,7 +4526,7 @@
           "ci": 3.0,
           "rank": 17,
           "votes": 104299,
-          "organization": "Fluxflux-2-klein-9bBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "flux-non-commercial-license"
         },
         {
@@ -4535,7 +4535,7 @@
           "ci": 2.0,
           "rank": 18,
           "votes": 1718417,
-          "organization": "qwen-image-editAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -4544,7 +4544,7 @@
           "ci": 3.0,
           "rank": 19,
           "votes": 85555,
-          "organization": "Fluxflux-2-devBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4553,7 +4553,7 @@
           "ci": 4.0,
           "rank": 20,
           "votes": 48422,
-          "organization": "wan2.6-imageAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -4562,7 +4562,7 @@
           "ci": 3.0,
           "rank": 21,
           "votes": 103321,
-          "organization": "Fluxflux-2-flexBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4571,7 +4571,7 @@
           "ci": 6.0,
           "rank": 22,
           "votes": 154440,
-          "organization": "Bytedanceseedream-4-falBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4580,7 +4580,7 @@
           "ci": 2.0,
           "rank": 23,
           "votes": 214261,
-          "organization": "reve-v1.1-fastReve",
+          "organization": "Reve",
           "license": "Proprietary"
         },
         {
@@ -4589,7 +4589,7 @@
           "ci": 4.0,
           "rank": 24,
           "votes": 60186,
-          "organization": "p-image-editPruna",
+          "organization": "Pruna",
           "license": "Proprietary"
         },
         {
@@ -4598,7 +4598,7 @@
           "ci": 4.0,
           "rank": 25,
           "votes": 221766,
-          "organization": "reve-edit-fastReve",
+          "organization": "Reve",
           "license": "Proprietary"
         },
         {
@@ -4607,7 +4607,7 @@
           "ci": 3.0,
           "rank": 26,
           "votes": 104522,
-          "organization": "Fluxflux-2-klein-4bBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Apache 2.0"
         },
         {
@@ -4616,7 +4616,7 @@
           "ci": 4.0,
           "rank": 27,
           "votes": 78611,
-          "organization": "wan2.5-i2i-previewAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -4625,7 +4625,7 @@
           "ci": 2.0,
           "rank": 28,
           "votes": 394850,
-          "organization": "Fluxflux-1-kontext-maxBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4634,7 +4634,7 @@
           "ci": 2.0,
           "rank": 29,
           "votes": 6475424,
-          "organization": "Fluxflux-1-kontext-proBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "Proprietary"
         },
         {
@@ -4643,7 +4643,7 @@
           "ci": 3.0,
           "rank": 30,
           "votes": 3686812,
-          "organization": "Fluxflux-1-kontext-devBlack Forest Labs",
+          "organization": "Black Forest Labs",
           "license": "flux-1-dev-non-commercial-license"
         },
         {
@@ -4652,7 +4652,7 @@
           "ci": 2.0,
           "rank": 31,
           "votes": 2805501,
-          "organization": "gpt-image-1OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4661,7 +4661,7 @@
           "ci": 2.0,
           "rank": 32,
           "votes": 4987917,
-          "organization": "Bytedanceseededit-3.0Bytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4670,7 +4670,7 @@
           "ci": 3.0,
           "rank": 33,
           "votes": 428164,
-          "organization": "gpt-image-1-miniOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4679,7 +4679,7 @@
           "ci": 2.0,
           "rank": 34,
           "votes": 4997269,
-          "organization": "gemini-2.0-flash-preview-image-generationGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4688,7 +4688,7 @@
           "ci": 5.0,
           "rank": 35,
           "votes": 13447,
-          "organization": "BytedancebagelBytedance",
+          "organization": "Bytedance",
           "license": "Apache 2.0"
         },
         {
@@ -4697,7 +4697,7 @@
           "ci": 4.0,
           "rank": 36,
           "votes": 156077,
-          "organization": "Stepfunstep1x-editStepFun",
+          "organization": "StepFun",
           "license": "Apache 2.0"
         }
       ],
@@ -4712,7 +4712,7 @@
           "ci": 6.0,
           "rank": 1,
           "votes": 11062,
-          "organization": "gemini-3-flash-groundingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4721,7 +4721,7 @@
           "ci": 6.0,
           "rank": 2,
           "votes": 18839,
-          "organization": "gemini-3-pro-groundingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4730,7 +4730,7 @@
           "ci": 7.0,
           "rank": 3,
           "votes": 12157,
-          "organization": "gpt-5.2-searchOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4739,7 +4739,7 @@
           "ci": 6.0,
           "rank": 4,
           "votes": 14152,
-          "organization": "gpt-5.1-searchOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4748,7 +4748,7 @@
           "ci": 8.0,
           "rank": 5,
           "votes": 5510,
-          "organization": "gpt-5.2-search-non-reasoningOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4757,7 +4757,7 @@
           "ci": 6.0,
           "rank": 6,
           "votes": 14111,
-          "organization": "grok-4-1-fast-searchxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4766,7 +4766,7 @@
           "ci": 10.0,
           "rank": 7,
           "votes": 4293,
-          "organization": "Anthropicclaude-opus-4-5-searchAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -4775,7 +4775,7 @@
           "ci": 5.0,
           "rank": 8,
           "votes": 31388,
-          "organization": "grok-4-fast-searchxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4784,7 +4784,7 @@
           "ci": 5.0,
           "rank": 9,
           "votes": 21056,
-          "organization": "o3-searchOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4793,7 +4793,7 @@
           "ci": 4.0,
           "rank": 10,
           "votes": 36828,
-          "organization": "gemini-2.5-pro-groundingGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4802,7 +4802,7 @@
           "ci": 5.0,
           "rank": 11,
           "votes": 29825,
-          "organization": "Perplexityppl-sonar-reasoning-pro-highPerplexity",
+          "organization": "Perplexity",
           "license": "Proprietary"
         },
         {
@@ -4811,7 +4811,7 @@
           "ci": 5.0,
           "rank": 12,
           "votes": 19628,
-          "organization": "grok-4-searchxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4820,7 +4820,7 @@
           "ci": 10.0,
           "rank": 13,
           "votes": 4348,
-          "organization": "Anthropicclaude-sonnet-4-5-searchAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -4829,7 +4829,7 @@
           "ci": 4.0,
           "rank": 14,
           "votes": 36199,
-          "organization": "Anthropicclaude-opus-4-1-searchAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -4838,7 +4838,7 @@
           "ci": 5.0,
           "rank": 15,
           "votes": 21212,
-          "organization": "gpt-5-searchOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4847,7 +4847,7 @@
           "ci": 5.0,
           "rank": 16,
           "votes": 29379,
-          "organization": "Perplexityppl-sonar-pro-highPerplexity",
+          "organization": "Perplexity",
           "license": "Proprietary"
         },
         {
@@ -4856,7 +4856,7 @@
           "ci": 5.0,
           "rank": 17,
           "votes": 32002,
-          "organization": "Anthropicclaude-opus-4-searchAnthropic",
+          "organization": "Anthropic",
           "license": "Proprietary"
         },
         {
@@ -4865,7 +4865,7 @@
           "ci": 8.0,
           "rank": 18,
           "votes": 6473,
-          "organization": "diffbot-small-xlDiffbot",
+          "organization": "Diffbot",
           "license": "Apache 2.0"
         },
         {
@@ -4874,7 +4874,7 @@
           "ci": 11.0,
           "rank": 19,
           "votes": 3399,
-          "organization": "api-gpt-4o-searchOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         }
       ],
@@ -4889,7 +4889,7 @@
           "ci": 14.0,
           "rank": 1,
           "votes": 12572,
-          "organization": "veo-3.1-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4898,7 +4898,7 @@
           "ci": 11.0,
           "rank": 2,
           "votes": 11435,
-          "organization": "sora-2-proOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4907,7 +4907,7 @@
           "ci": 13.0,
           "rank": 3,
           "votes": 13963,
-          "organization": "veo-3.1-fast-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4916,7 +4916,7 @@
           "ci": 13.0,
           "rank": 4,
           "votes": 7952,
-          "organization": "grok-imagine-video-720pxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -4925,7 +4925,7 @@
           "ci": 11.0,
           "rank": 5,
           "votes": 25771,
-          "organization": "veo-3-fast-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4934,7 +4934,7 @@
           "ci": 12.0,
           "rank": 6,
           "votes": 19329,
-          "organization": "veo-3-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4943,7 +4943,7 @@
           "ci": 10.0,
           "rank": 7,
           "votes": 14207,
-          "organization": "sora-2OpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -4952,7 +4952,7 @@
           "ci": 17.0,
           "rank": 8,
           "votes": 6077,
-          "organization": "wan2.5-t2v-previewAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -4961,7 +4961,7 @@
           "ci": 10.0,
           "rank": 9,
           "votes": 13960,
-          "organization": "Bytedanceseedance-v1.5-proBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -4970,7 +4970,7 @@
           "ci": 11.0,
           "rank": 10,
           "votes": 15192,
-          "organization": "veo-3Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4979,7 +4979,7 @@
           "ci": 12.0,
           "rank": 11,
           "votes": 15476,
-          "organization": "veo-3-fastGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -4988,7 +4988,7 @@
           "ci": 17.0,
           "rank": 12,
           "votes": 2054,
-          "organization": "kling-2.5-turbo-1080pKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -4997,7 +4997,7 @@
           "ci": 9.0,
           "rank": 13,
           "votes": 17486,
-          "organization": "kling-2.6-proKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5006,7 +5006,7 @@
           "ci": 27.0,
           "rank": 14,
           "votes": 1197,
-          "organization": "kling-o1-proKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5015,7 +5015,7 @@
           "ci": 23.0,
           "rank": 15,
           "votes": 1057,
-          "organization": "Lumaray-3Luma AI",
+          "organization": "Luma AI",
           "license": "Proprietary"
         },
         {
@@ -5024,7 +5024,7 @@
           "ci": 12.0,
           "rank": 16,
           "votes": 9888,
-          "organization": "Minimaxhailuo-02-proMiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5033,7 +5033,7 @@
           "ci": 10.0,
           "rank": 17,
           "votes": 13037,
-          "organization": "Minimaxhailuo-2.3MiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5042,7 +5042,7 @@
           "ci": 11.0,
           "rank": 18,
           "votes": 12895,
-          "organization": "Bytedanceseedance-v1-proBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -5051,7 +5051,7 @@
           "ci": 11.0,
           "rank": 19,
           "votes": 9935,
-          "organization": "Minimaxhailuo-02-standardMiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5060,7 +5060,7 @@
           "ci": 21.0,
           "rank": 20,
           "votes": 1888,
-          "organization": "kandinsky-5.0-t2v-proKandinsky",
+          "organization": "Kandinsky",
           "license": "MIT"
         },
         {
@@ -5069,7 +5069,7 @@
           "ci": 16.0,
           "rank": 21,
           "votes": 4101,
-          "organization": "Tencenthunyuan-video-1.5Tencent",
+          "organization": "Tencent",
           "license": "tencent-hunyuan-community"
         },
         {
@@ -5078,7 +5078,7 @@
           "ci": 9.0,
           "rank": 22,
           "votes": 14527,
-          "organization": "kling-v2.1-masterKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5087,7 +5087,7 @@
           "ci": 16.0,
           "rank": 23,
           "votes": 7106,
-          "organization": "veo-2Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5096,7 +5096,7 @@
           "ci": 15.0,
           "rank": 24,
           "votes": 11160,
-          "organization": "wan-v2.2-a14bAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -5105,7 +5105,7 @@
           "ci": 9.0,
           "rank": 25,
           "votes": 16716,
-          "organization": "Bytedanceseedance-v1-liteBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -5114,7 +5114,7 @@
           "ci": 18.0,
           "rank": 26,
           "votes": 1351,
-          "organization": "kandinsky-5.0-t2v-liteKandinsky",
+          "organization": "Kandinsky",
           "license": "MIT"
         },
         {
@@ -5123,7 +5123,7 @@
           "ci": 13.0,
           "rank": 27,
           "votes": 8759,
-          "organization": "Lightricksltx-2-19blightricks",
+          "organization": "lightricks",
           "license": "ltx-2-community-license-agreement"
         },
         {
@@ -5132,7 +5132,7 @@
           "ci": 14.0,
           "rank": 28,
           "votes": 4521,
-          "organization": "soraOpenAI",
+          "organization": "OpenAI",
           "license": "Proprietary"
         },
         {
@@ -5141,7 +5141,7 @@
           "ci": 17.0,
           "rank": 29,
           "votes": 5611,
-          "organization": "Lumaray2Luma AI",
+          "organization": "Luma AI",
           "license": "Proprietary"
         },
         {
@@ -5150,7 +5150,7 @@
           "ci": 15.0,
           "rank": 30,
           "votes": 6496,
-          "organization": "Pikapika-v2.2Pika",
+          "organization": "Pika",
           "license": "Proprietary"
         },
         {
@@ -5159,7 +5159,7 @@
           "ci": 16.0,
           "rank": 31,
           "votes": 6681,
-          "organization": "mochi-v1Genmo AI",
+          "organization": "Genmo AI",
           "license": "Apache 2.0"
         }
       ],
@@ -5174,7 +5174,7 @@
           "ci": 10.0,
           "rank": 1,
           "votes": 7215,
-          "organization": "grok-imagine-video-720pxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -5183,7 +5183,7 @@
           "ci": 11.0,
           "rank": 2,
           "votes": 23432,
-          "organization": "veo-3.1-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5192,7 +5192,7 @@
           "ci": 11.0,
           "rank": 3,
           "votes": 30039,
-          "organization": "veo-3.1-fast-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5201,7 +5201,7 @@
           "ci": 9.0,
           "rank": 4,
           "votes": 19582,
-          "organization": "grok-imagine-video-480pxAI",
+          "organization": "xAI",
           "license": "Proprietary"
         },
         {
@@ -5210,7 +5210,7 @@
           "ci": 16.0,
           "rank": 5,
           "votes": 11270,
-          "organization": "vidu-q3-proShengshu",
+          "organization": "Shengshu",
           "license": "Proprietary"
         },
         {
@@ -5219,7 +5219,7 @@
           "ci": 12.0,
           "rank": 6,
           "votes": 12039,
-          "organization": "wan2.5-i2v-previewAlibaba",
+          "organization": "Alibaba",
           "license": "Proprietary"
         },
         {
@@ -5228,7 +5228,7 @@
           "ci": 11.0,
           "rank": 7,
           "votes": 34546,
-          "organization": "veo-3-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5237,7 +5237,7 @@
           "ci": 9.0,
           "rank": 8,
           "votes": 43912,
-          "organization": "veo-3-fast-audioGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5246,7 +5246,7 @@
           "ci": 10.0,
           "rank": 9,
           "votes": 39229,
-          "organization": "Bytedanceseedance-v1.5-proBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -5255,7 +5255,7 @@
           "ci": 10.0,
           "rank": 10,
           "votes": 30845,
-          "organization": "kling-2.6-proKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5264,7 +5264,7 @@
           "ci": 7.0,
           "rank": 11,
           "votes": 36475,
-          "organization": "Bytedanceseedance-v1-proBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -5273,7 +5273,7 @@
           "ci": 12.0,
           "rank": 12,
           "votes": 3873,
-          "organization": "kling-2.5-turbo-1080pKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5282,7 +5282,7 @@
           "ci": 9.0,
           "rank": 13,
           "votes": 27874,
-          "organization": "veo-3-fastGoogle",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5291,7 +5291,7 @@
           "ci": 8.0,
           "rank": 14,
           "votes": 36884,
-          "organization": "Minimaxhailuo-2.3MiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5300,7 +5300,7 @@
           "ci": 10.0,
           "rank": 15,
           "votes": 27736,
-          "organization": "veo-3Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5309,7 +5309,7 @@
           "ci": 17.0,
           "rank": 16,
           "votes": 2481,
-          "organization": "vidu-q2-turboShengshu",
+          "organization": "Shengshu",
           "license": "Proprietary"
         },
         {
@@ -5318,7 +5318,7 @@
           "ci": 7.0,
           "rank": 17,
           "votes": 32254,
-          "organization": "kling-v2.1-masterKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5327,7 +5327,7 @@
           "ci": 10.0,
           "rank": 18,
           "votes": 23839,
-          "organization": "Minimaxhailuo-02-proMiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5336,7 +5336,7 @@
           "ci": 8.0,
           "rank": 19,
           "votes": 32258,
-          "organization": "kling-v2.1-standardKlingAI",
+          "organization": "KlingAI",
           "license": "Proprietary"
         },
         {
@@ -5345,7 +5345,7 @@
           "ci": 16.0,
           "rank": 20,
           "votes": 2566,
-          "organization": "vidu-q2-proShengshu",
+          "organization": "Shengshu",
           "license": "Proprietary"
         },
         {
@@ -5354,7 +5354,7 @@
           "ci": 9.0,
           "rank": 21,
           "votes": 23651,
-          "organization": "Minimaxhailuo-02-standardMiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5363,7 +5363,7 @@
           "ci": 19.0,
           "rank": 22,
           "votes": 1580,
-          "organization": "Lumaray-3Luma AI",
+          "organization": "Luma AI",
           "license": "Proprietary"
         },
         {
@@ -5372,7 +5372,7 @@
           "ci": 10.0,
           "rank": 23,
           "votes": 24578,
-          "organization": "Minimaxhailuo-02-fastMiniMax",
+          "organization": "MiniMax",
           "license": "Proprietary"
         },
         {
@@ -5381,7 +5381,7 @@
           "ci": 15.0,
           "rank": 24,
           "votes": 5429,
-          "organization": "Tencenthunyuan-video-1.5Tencent",
+          "organization": "Tencent",
           "license": "tencent-hunyuan-community"
         },
         {
@@ -5390,7 +5390,7 @@
           "ci": 7.0,
           "rank": 25,
           "votes": 36129,
-          "organization": "Bytedanceseedance-v1-liteBytedance",
+          "organization": "Bytedance",
           "license": "Proprietary"
         },
         {
@@ -5399,7 +5399,7 @@
           "ci": 9.0,
           "rank": 26,
           "votes": 29450,
-          "organization": "wan-v2.2-a14bAlibaba",
+          "organization": "Alibaba",
           "license": "Apache 2.0"
         },
         {
@@ -5408,7 +5408,7 @@
           "ci": 16.0,
           "rank": 27,
           "votes": 11536,
-          "organization": "veo-2Google",
+          "organization": "Google",
           "license": "Proprietary"
         },
         {
@@ -5417,7 +5417,7 @@
           "ci": 9.0,
           "rank": 28,
           "votes": 22315,
-          "organization": "Lightricksltx-2-19blightricks",
+          "organization": "lightricks",
           "license": "ltx-2-community-license-agreement"
         },
         {
@@ -5426,7 +5426,7 @@
           "ci": 16.0,
           "rank": 29,
           "votes": 10828,
-          "organization": "Lumaray2Luma AI",
+          "organization": "Luma AI",
           "license": "Proprietary"
         },
         {
@@ -5435,7 +5435,7 @@
           "ci": 12.0,
           "rank": 30,
           "votes": 7506,
-          "organization": "Runwayrunway-gen4-turboRunway",
+          "organization": "Runway",
           "license": "Proprietary"
         },
         {
@@ -5444,7 +5444,7 @@
           "ci": 13.0,
           "rank": 31,
           "votes": 9458,
-          "organization": "Pikapika-v2.2Pika",
+          "organization": "Pika",
           "license": "Proprietary"
         }
       ],
