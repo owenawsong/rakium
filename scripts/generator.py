@@ -519,6 +519,12 @@ def generate_html():
     for i, model in enumerate(openrouter_models[:200], 1):
         name = model.get("name") or model.get("slug", "Unknown")
         author = model.get("author", "")
+        # Remove author prefix from name if present (e.g. "Google: Gemini 2.5 Flash" → "Gemini 2.5 Flash")
+        if author and ": " in name:
+            prefix = name.split(": ", 1)[0].lower().replace(" ", "").replace("-", "")
+            author_clean = author.lower().replace(" ", "").replace("-", "")
+            if prefix == author_clean or prefix in author_clean or author_clean in prefix:
+                name = name.split(": ", 1)[1]
         html += f"""                    <tr>
                         <td class="rank">{i}</td>
                         <td class="model-name">{esc(name)}</td>

@@ -527,17 +527,21 @@ def _extract_arena_models_from_html(html):
             continue
 
         # Extract org + license from model cell (they're embedded, not in separate columns)
-        # Full cell text is like "Anthropicclaude-opus-4-6-thinking" or
-        # "gemini-3-proGoogle · Proprietary"
-        # The <a> tag has the model name; everything else in the cell is org/license
+        # Cell structure: <svg><title>Anthropic</title></svg> <a>model-name</a> Anthropic · Proprietary
+        # Must skip <svg> and <a> elements to avoid double-counting org name
         organization = ""
         license_text = ""
         if a_tag:
-            # Get all text nodes NOT inside the <a> tag
-            full_text = model_cell.get_text(strip=True)
-            model_text = a_tag.get_text(strip=True)
-            # Remove the model name portion to get org+license remainder
-            remainder = full_text.replace(model_text, "", 1).strip()
+            # Collect text from direct children, skipping <a> and <svg> elements
+            remainder_parts = []
+            for child in model_cell.children:
+                if hasattr(child, 'name'):
+                    if child.name in ('a', 'svg', 'img'):
+                        continue
+                    remainder_parts.append(child.get_text(strip=True))
+                elif isinstance(child, str) and child.strip():
+                    remainder_parts.append(child.strip())
+            remainder = " ".join(remainder_parts).strip()
             if remainder:
                 # Format is typically "OrgName · License" or just "OrgName"
                 if " · " in remainder:
