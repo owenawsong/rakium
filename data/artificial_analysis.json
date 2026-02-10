@@ -1,12 +1,12 @@
 {
   "source": "artificialanalysis.ai",
-  "scraped_at": "2026-02-09T23:37:43.886667+00:00",
+  "scraped_at": "2026-02-10T00:03:43.187805+00:00",
   "models": [
     {
-      "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
-      "slug": "gpt-oss-120b",
-      "name": "gpt-oss-120B (high)",
-      "shortName": "gpt-oss-120B (high)",
+      "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
+      "slug": "gpt-oss-120b-low",
+      "name": "gpt-oss-120B (low)",
+      "shortName": "gpt-oss-120B (low)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -17,10 +17,10 @@
       }
     },
     {
-      "id": "c99f3bde-7c08-4de8-bd5c-8ee9123ebffa",
-      "slug": "gpt-oss-120b-low",
-      "name": "gpt-oss-120B (low)",
-      "shortName": "gpt-oss-120B (low)",
+      "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
+      "slug": "gpt-oss-20b-low",
+      "name": "gpt-oss-20B (low)",
+      "shortName": "gpt-oss-20B (low)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -59,38 +59,10 @@
       }
     },
     {
-      "id": "fd4454ff-e703-46c0-a7f5-fa69af09486d",
-      "slug": "gpt-5-1-codex-mini",
-      "name": "GPT-5.1 Codex mini (high)",
-      "shortName": "GPT-5.1 Codex mini (high)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "16149b9c-a1e9-4669-a5cb-ff3c00d78f89",
-      "slug": "gpt-oss-20b-low",
-      "name": "gpt-oss-20B (low)",
-      "shortName": "gpt-oss-20B (low)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "019e86f6-e66b-42d8-8a50-235a06b53003",
-      "slug": "gpt-5-2-codex",
-      "name": "GPT-5.2 Codex (xhigh)",
-      "shortName": "GPT-5.2 Codex (xhigh)",
+      "id": "f0083258-8646-45b8-8082-7aaf6c2ea82a",
+      "slug": "gpt-oss-120b",
+      "name": "gpt-oss-120B (high)",
+      "shortName": "gpt-oss-120B (high)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -129,6 +101,34 @@
       }
     },
     {
+      "id": "019e86f6-e66b-42d8-8a50-235a06b53003",
+      "slug": "gpt-5-2-codex",
+      "name": "GPT-5.2 Codex (xhigh)",
+      "shortName": "GPT-5.2 Codex (xhigh)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "04d023f3-025c-4d78-9571-53edda3eaf2a",
+      "slug": "gpt-5-1-codex",
+      "name": "GPT-5.1 Codex (high)",
+      "shortName": "GPT-5.1 Codex (high)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
       "id": "84e3f11e-d659-4941-8988-1dbfabbaf538",
       "slug": "gpt-5-2-medium",
       "name": "GPT-5.2 (medium)",
@@ -157,20 +157,6 @@
       }
     },
     {
-      "id": "6dd8ba55-5680-44a9-b309-82928165d5f0",
-      "slug": "gpt-5-2-non-reasoning",
-      "name": "GPT-5.2 (Non-reasoning)",
-      "shortName": "GPT-5.2",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
       "id": "29855680-7469-43eb-8b88-cd3fb1d99da3",
       "slug": "gpt-5-mini",
       "name": "GPT-5 mini (high)",
@@ -185,10 +171,24 @@
       }
     },
     {
-      "id": "04d023f3-025c-4d78-9571-53edda3eaf2a",
-      "slug": "gpt-5-1-codex",
-      "name": "GPT-5.1 Codex (high)",
-      "shortName": "GPT-5.1 Codex (high)",
+      "id": "6dd8ba55-5680-44a9-b309-82928165d5f0",
+      "slug": "gpt-5-2-non-reasoning",
+      "name": "GPT-5.2 (Non-reasoning)",
+      "shortName": "GPT-5.2",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "fd4454ff-e703-46c0-a7f5-fa69af09486d",
+      "slug": "gpt-5-1-codex-mini",
+      "name": "GPT-5.1 Codex mini (high)",
+      "shortName": "GPT-5.1 Codex mini (high)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -283,20 +283,6 @@
       }
     },
     {
-      "id": "222fb320-6e55-4672-846a-b6d5a24a45f4",
-      "slug": "gemma-3-4b",
-      "name": "Gemma 3 4B Instruct",
-      "shortName": "Gemma 3 4B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
       "id": "783a0ea2-1eef-422a-8c3d-f6d40d943f54",
       "slug": "gemini-3-flash",
       "name": "Gemini 3 Flash Preview (Non-reasoning)",
@@ -325,10 +311,38 @@
       }
     },
     {
-      "id": "d1122eff-ee85-4fdc-8a9f-23bee6590667",
-      "slug": "gemini-3-pro",
-      "name": "Gemini 3 Pro Preview (high)",
-      "shortName": "Gemini 3 Pro Preview (high)",
+      "id": "a797eaf3-6d75-4f29-86a8-e1243ce52d43",
+      "slug": "gemma-3n-e4b",
+      "name": "Gemma 3n E4B Instruct",
+      "shortName": "Gemma 3n E4B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "222fb320-6e55-4672-846a-b6d5a24a45f4",
+      "slug": "gemma-3-4b",
+      "name": "Gemma 3 4B Instruct",
+      "shortName": "Gemma 3 4B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "b2f3191f-77d6-4155-8be6-330f0baa1ae5",
+      "slug": "gemini-3-pro-low",
+      "name": "Gemini 3 Pro Preview (low)",
+      "shortName": "Gemini 3 Pro Preview (low)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -343,6 +357,20 @@
       "slug": "gemma-3-27b",
       "name": "Gemma 3 27B Instruct",
       "shortName": "Gemma 3 27B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "2e6400f5-85ca-4ebc-ba8f-c2811a631138",
+      "slug": "gemma-3-12b",
+      "name": "Gemma 3 12B Instruct",
+      "shortName": "Gemma 3 12B",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -395,26 +423,12 @@
       }
     },
     {
-      "id": "2e6400f5-85ca-4ebc-ba8f-c2811a631138",
-      "slug": "gemma-3-12b",
-      "name": "Gemma 3 12B Instruct",
-      "shortName": "Gemma 3 12B",
+      "id": "d1122eff-ee85-4fdc-8a9f-23bee6590667",
+      "slug": "gemini-3-pro",
+      "name": "Gemini 3 Pro Preview (high)",
+      "shortName": "Gemini 3 Pro Preview (high)",
       "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "a797eaf3-6d75-4f29-86a8-e1243ce52d43",
-      "slug": "gemma-3n-e4b",
-      "name": "Gemma 3n E4B Instruct",
-      "shortName": "Gemma 3n E4B",
-      "deprecated": false,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
         "name": "Google",
@@ -465,38 +479,10 @@
       }
     },
     {
-      "id": "b2f3191f-77d6-4155-8be6-330f0baa1ae5",
-      "slug": "gemini-3-pro-low",
-      "name": "Gemini 3 Pro Preview (low)",
-      "shortName": "Gemini 3 Pro Preview (low)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "c2b1e769-7aee-4669-8076-73918bdebf6c",
-      "slug": "claude-4-5-haiku",
-      "name": "Claude 4.5 Haiku (Non-reasoning)",
-      "shortName": "Claude 4.5 Haiku",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-        "name": "Anthropic",
-        "color": "#cc785c",
-        "logo": "/img/logos/anthropic_small.svg"
-      }
-    },
-    {
-      "id": "4077490a-bbfb-404e-979a-a97a20e3b5de",
-      "slug": "claude-opus-4-5",
-      "name": "Claude Opus 4.5 (Non-reasoning)",
-      "shortName": "Claude Opus 4.5",
+      "id": "91cb6144-4937-4e4e-aeda-b4341d355c10",
+      "slug": "claude-4-5-sonnet",
+      "name": "Claude 4.5 Sonnet (Non-reasoning)",
+      "shortName": "Claude 4.5 Sonnet",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -521,20 +507,6 @@
       }
     },
     {
-      "id": "2660d74f-ce79-48a8-8b53-6e668e2071a2",
-      "slug": "claude-opus-4-5-thinking",
-      "name": "Claude Opus 4.5 (Reasoning)",
-      "shortName": "Claude Opus 4.5",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-        "name": "Anthropic",
-        "color": "#cc785c",
-        "logo": "/img/logos/anthropic_small.svg"
-      }
-    },
-    {
       "id": "4386585e-71b4-4a0c-8a63-afb333419cd6",
       "slug": "claude-opus-4-6",
       "name": "Claude Opus 4.6 (Non-reasoning)",
@@ -549,10 +521,52 @@
       }
     },
     {
-      "id": "91cb6144-4937-4e4e-aeda-b4341d355c10",
-      "slug": "claude-4-5-sonnet",
-      "name": "Claude 4.5 Sonnet (Non-reasoning)",
-      "shortName": "Claude 4.5 Sonnet",
+      "id": "53c98840-47af-49aa-94e6-469fb17e9a1b",
+      "slug": "claude-opus-4-6-adaptive",
+      "name": "Claude Opus 4.6 (Adaptive Reasoning)",
+      "shortName": "Claude Opus 4.6 (Adaptive)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "name": "Anthropic",
+        "color": "#cc785c",
+        "logo": "/img/logos/anthropic_small.svg"
+      }
+    },
+    {
+      "id": "c2b1e769-7aee-4669-8076-73918bdebf6c",
+      "slug": "claude-4-5-haiku",
+      "name": "Claude 4.5 Haiku (Non-reasoning)",
+      "shortName": "Claude 4.5 Haiku",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "name": "Anthropic",
+        "color": "#cc785c",
+        "logo": "/img/logos/anthropic_small.svg"
+      }
+    },
+    {
+      "id": "2660d74f-ce79-48a8-8b53-6e668e2071a2",
+      "slug": "claude-opus-4-5-thinking",
+      "name": "Claude Opus 4.5 (Reasoning)",
+      "shortName": "Claude Opus 4.5",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "name": "Anthropic",
+        "color": "#cc785c",
+        "logo": "/img/logos/anthropic_small.svg"
+      }
+    },
+    {
+      "id": "4077490a-bbfb-404e-979a-a97a20e3b5de",
+      "slug": "claude-opus-4-5",
+      "name": "Claude Opus 4.5 (Non-reasoning)",
+      "shortName": "Claude Opus 4.5",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -567,20 +581,6 @@
       "slug": "claude-4-5-haiku-reasoning",
       "name": "Claude 4.5 Haiku (Reasoning)",
       "shortName": "Claude 4.5 Haiku",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-        "name": "Anthropic",
-        "color": "#cc785c",
-        "logo": "/img/logos/anthropic_small.svg"
-      }
-    },
-    {
-      "id": "53c98840-47af-49aa-94e6-469fb17e9a1b",
-      "slug": "claude-opus-4-6-adaptive",
-      "name": "Claude Opus 4.6 (Adaptive Reasoning)",
-      "shortName": "Claude Opus 4.6 (Adaptive)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -619,10 +619,10 @@
       }
     },
     {
-      "id": "66f4ce73-9a9b-4b49-9c6e-bedb9bfdc720",
-      "slug": "ministral-3-3b",
-      "name": "Ministral 3 3B",
-      "shortName": "Ministral 3 3B",
+      "id": "43da3718-3d6e-40dd-901a-05664179ff7f",
+      "slug": "mistral-small-3-2",
+      "name": "Mistral Small 3.2",
+      "shortName": "Mistral Small 3.2",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -633,12 +633,12 @@
       }
     },
     {
-      "id": "43da3718-3d6e-40dd-901a-05664179ff7f",
-      "slug": "mistral-small-3-2",
-      "name": "Mistral Small 3.2",
-      "shortName": "Mistral Small 3.2",
+      "id": "70152cb0-fb36-4732-a925-89ef40994be1",
+      "slug": "magistral-small-2509",
+      "name": "Magistral Small 1.2",
+      "shortName": "Magistral Small 1.2",
       "deprecated": false,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
         "name": "Mistral",
@@ -661,12 +661,12 @@
       }
     },
     {
-      "id": "70152cb0-fb36-4732-a925-89ef40994be1",
-      "slug": "magistral-small-2509",
-      "name": "Magistral Small 1.2",
-      "shortName": "Magistral Small 1.2",
+      "id": "66f4ce73-9a9b-4b49-9c6e-bedb9bfdc720",
+      "slug": "ministral-3-3b",
+      "name": "Ministral 3 3B",
+      "shortName": "Ministral 3 3B",
       "deprecated": false,
-      "isReasoning": true,
+      "isReasoning": false,
       "creator": {
         "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
         "name": "Mistral",
@@ -745,26 +745,12 @@
       }
     },
     {
-      "id": "527e943a-adc6-4e69-93af-d1608e1b5fed",
-      "slug": "deepseek-v3-2-speciale",
-      "name": "DeepSeek V3.2 Speciale",
-      "shortName": "DeepSeek V3.2 Speciale",
+      "id": "a83f84b3-473a-4276-9ae1-8909da723159",
+      "slug": "deepseek-r1",
+      "name": "DeepSeek R1 0528 (May '25)",
+      "shortName": "DeepSeek R1 0528",
       "deprecated": false,
       "isReasoning": true,
-      "creator": {
-        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-        "name": "DeepSeek",
-        "color": "#2243e6",
-        "logo": "/img/logos/deepseek_small.svg"
-      }
-    },
-    {
-      "id": "5bebf309-45f9-4711-9dbd-b4502c813e62",
-      "slug": "deepseek-ocr",
-      "name": "DeepSeek-OCR",
-      "shortName": "DeepSeek-OCR",
-      "deprecated": false,
-      "isReasoning": false,
       "creator": {
         "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
         "name": "DeepSeek",
@@ -787,10 +773,10 @@
       }
     },
     {
-      "id": "a83f84b3-473a-4276-9ae1-8909da723159",
-      "slug": "deepseek-r1",
-      "name": "DeepSeek R1 0528 (May '25)",
-      "shortName": "DeepSeek R1 0528",
+      "id": "d621247c-d47e-458c-82cb-a166bc3b37e5",
+      "slug": "deepseek-v3-2-reasoning",
+      "name": "DeepSeek V3.2 (Reasoning)",
+      "shortName": "DeepSeek V3.2",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -815,10 +801,24 @@
       }
     },
     {
-      "id": "d621247c-d47e-458c-82cb-a166bc3b37e5",
-      "slug": "deepseek-v3-2-reasoning",
-      "name": "DeepSeek V3.2 (Reasoning)",
-      "shortName": "DeepSeek V3.2",
+      "id": "5bebf309-45f9-4711-9dbd-b4502c813e62",
+      "slug": "deepseek-ocr",
+      "name": "DeepSeek-OCR",
+      "shortName": "DeepSeek-OCR",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+        "name": "DeepSeek",
+        "color": "#2243e6",
+        "logo": "/img/logos/deepseek_small.svg"
+      }
+    },
+    {
+      "id": "527e943a-adc6-4e69-93af-d1608e1b5fed",
+      "slug": "deepseek-v3-2-speciale",
+      "name": "DeepSeek V3.2 Speciale",
+      "shortName": "DeepSeek V3.2 Speciale",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -857,10 +857,10 @@
       }
     },
     {
-      "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
-      "slug": "grok-4",
-      "name": "Grok 4",
-      "shortName": "Grok 4",
+      "id": "ff9bc5e5-a02f-4270-983e-4b3f834f3363",
+      "slug": "grok-3-mini-reasoning",
+      "name": "Grok 3 mini Reasoning (high)",
+      "shortName": "Grok 3 mini Reasoning (high)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -885,24 +885,10 @@
       }
     },
     {
-      "id": "ff9bc5e5-a02f-4270-983e-4b3f834f3363",
-      "slug": "grok-3-mini-reasoning",
-      "name": "Grok 3 mini Reasoning (high)",
-      "shortName": "Grok 3 mini Reasoning (high)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "xAI",
-        "color": "#736cd3",
-        "logo": "/img/logos/xai.svg"
-      }
-    },
-    {
-      "id": "23149f9b-c904-43e2-9ec4-afa2bf843941",
-      "slug": "grok-4-1-fast-reasoning",
-      "name": "Grok 4.1 Fast (Reasoning)",
-      "shortName": "Grok 4.1 Fast",
+      "id": "277d74aa-82dd-4bf3-bdcc-9b5f15108b00",
+      "slug": "grok-voice",
+      "name": "Grok Voice Agent",
+      "shortName": "Grok Voice Agent",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -927,10 +913,24 @@
       }
     },
     {
-      "id": "277d74aa-82dd-4bf3-bdcc-9b5f15108b00",
-      "slug": "grok-voice",
-      "name": "Grok Voice Agent",
-      "shortName": "Grok Voice Agent",
+      "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
+      "slug": "grok-4",
+      "name": "Grok 4",
+      "shortName": "Grok 4",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "xAI",
+        "color": "#736cd3",
+        "logo": "/img/logos/xai.svg"
+      }
+    },
+    {
+      "id": "23149f9b-c904-43e2-9ec4-afa2bf843941",
+      "slug": "grok-4-1-fast-reasoning",
+      "name": "Grok 4.1 Fast (Reasoning)",
+      "shortName": "Grok 4.1 Fast",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -955,66 +955,10 @@
       }
     },
     {
-      "id": "6fd796d3-f346-4f66-97df-5da81714fc73",
-      "slug": "nova-2-0-lite-reasoning-low",
-      "name": "Nova 2.0 Lite (low)",
-      "shortName": "Nova 2.0 Lite (low)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon",
-        "color": "#FF9900",
-        "logo": "/img/logos/aws_small.svg"
-      }
-    },
-    {
-      "id": "018c60e8-e908-431a-ba57-c840b1df3987",
-      "slug": "nova-2-0-omni-reasoning-medium",
-      "name": "Nova 2.0 Omni (medium)",
-      "shortName": "Nova 2.0 Omni (medium)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon",
-        "color": "#FF9900",
-        "logo": "/img/logos/aws_small.svg"
-      }
-    },
-    {
-      "id": "f4274721-ef28-4121-aa88-8e97267a5a82",
-      "slug": "nova-2-0-pro-reasoning-low",
-      "name": "Nova 2.0 Pro Preview (low)",
-      "shortName": "Nova 2.0 Pro Preview (low)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon",
-        "color": "#FF9900",
-        "logo": "/img/logos/aws_small.svg"
-      }
-    },
-    {
-      "id": "fbdf8da1-b341-448c-b3cb-8aff1d8f70b9",
-      "slug": "nova-2-0-lite-reasoning-medium",
-      "name": "Nova 2.0 Lite (medium)",
-      "shortName": "Nova 2.0 Lite (medium)",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
-        "name": "Amazon",
-        "color": "#FF9900",
-        "logo": "/img/logos/aws_small.svg"
-      }
-    },
-    {
-      "id": "a20ae33a-46e1-41e6-81a0-fe8b00d2e538",
-      "slug": "nova-2-0-pro",
-      "name": "Nova 2.0 Pro Preview (Non-reasoning)",
-      "shortName": "Nova 2.0 Pro Preview",
+      "id": "76bce7fb-3a3f-4b66-a78d-35ccf3edf5d2",
+      "slug": "nova-2-0-lite",
+      "name": "Nova 2.0 Lite (Non-reasoning)",
+      "shortName": "Nova 2.0 Lite",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1039,10 +983,38 @@
       }
     },
     {
-      "id": "76bce7fb-3a3f-4b66-a78d-35ccf3edf5d2",
-      "slug": "nova-2-0-lite",
-      "name": "Nova 2.0 Lite (Non-reasoning)",
-      "shortName": "Nova 2.0 Lite",
+      "id": "fbdf8da1-b341-448c-b3cb-8aff1d8f70b9",
+      "slug": "nova-2-0-lite-reasoning-medium",
+      "name": "Nova 2.0 Lite (medium)",
+      "shortName": "Nova 2.0 Lite (medium)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon",
+        "color": "#FF9900",
+        "logo": "/img/logos/aws_small.svg"
+      }
+    },
+    {
+      "id": "6fd796d3-f346-4f66-97df-5da81714fc73",
+      "slug": "nova-2-0-lite-reasoning-low",
+      "name": "Nova 2.0 Lite (low)",
+      "shortName": "Nova 2.0 Lite (low)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon",
+        "color": "#FF9900",
+        "logo": "/img/logos/aws_small.svg"
+      }
+    },
+    {
+      "id": "a20ae33a-46e1-41e6-81a0-fe8b00d2e538",
+      "slug": "nova-2-0-pro",
+      "name": "Nova 2.0 Pro Preview (Non-reasoning)",
+      "shortName": "Nova 2.0 Pro Preview",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1053,10 +1025,10 @@
       }
     },
     {
-      "id": "0d94dc87-12c8-4d4a-8d99-804ce3f17bc2",
-      "slug": "nova-2-0-pro-reasoning-medium",
-      "name": "Nova 2.0 Pro Preview (medium)",
-      "shortName": "Nova 2.0 Pro Preview (medium)",
+      "id": "f4274721-ef28-4121-aa88-8e97267a5a82",
+      "slug": "nova-2-0-pro-reasoning-low",
+      "name": "Nova 2.0 Pro Preview (low)",
+      "shortName": "Nova 2.0 Pro Preview (low)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -1081,6 +1053,20 @@
       }
     },
     {
+      "id": "0d94dc87-12c8-4d4a-8d99-804ce3f17bc2",
+      "slug": "nova-2-0-pro-reasoning-medium",
+      "name": "Nova 2.0 Pro Preview (medium)",
+      "shortName": "Nova 2.0 Pro Preview (medium)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon",
+        "color": "#FF9900",
+        "logo": "/img/logos/aws_small.svg"
+      }
+    },
+    {
       "id": "1f6478c9-3e22-4586-adbe-841782859677",
       "slug": "nova-2-0-omni",
       "name": "Nova 2.0 Omni (Non-reasoning)",
@@ -1095,10 +1081,38 @@
       }
     },
     {
+      "id": "018c60e8-e908-431a-ba57-c840b1df3987",
+      "slug": "nova-2-0-omni-reasoning-medium",
+      "name": "Nova 2.0 Omni (medium)",
+      "shortName": "Nova 2.0 Omni (medium)",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "bb5a4e55-7969-4ab4-8702-3b9fd6547dc2",
+        "name": "Amazon",
+        "color": "#FF9900",
+        "logo": "/img/logos/aws_small.svg"
+      }
+    },
+    {
       "id": "ee708f92-374e-4123-b900-e22d7b2afc19",
       "slug": "phi-4",
       "name": "Phi-4",
       "shortName": "Phi-4",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
+        "name": "Microsoft Azure",
+        "color": "#0078D5",
+        "logo": "/img/logos/microsoft_small.svg"
+      }
+    },
+    {
+      "id": "9f873c2f-2c2d-4ccb-9e1b-71bf61b052be",
+      "slug": "phi-4-mini",
+      "name": "Phi-4 Mini Instruct",
+      "shortName": "Phi-4 Mini",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1123,17 +1137,31 @@
       }
     },
     {
-      "id": "9f873c2f-2c2d-4ccb-9e1b-71bf61b052be",
-      "slug": "phi-4-mini",
-      "name": "Phi-4 Mini Instruct",
-      "shortName": "Phi-4 Mini",
+      "id": "739e531a-eb0a-478f-bb67-5845b79ce65d",
+      "slug": "lfm2-2-6b",
+      "name": "LFM2 2.6B",
+      "shortName": "LFM2 2.6B",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
-        "id": "ef5ce458-9986-4652-915a-e31fac5506b0",
-        "name": "Microsoft Azure",
-        "color": "#0078D5",
-        "logo": "/img/logos/microsoft_small.svg"
+        "id": "5b1886c4-43ba-4007-b840-9d21a2b7d42c",
+        "name": "Liquid AI",
+        "color": "#000000",
+        "logo": "/img/logos/liquidai_small.svg"
+      }
+    },
+    {
+      "id": "48194e0f-8226-4c57-8cb2-2a0fb68a84c9",
+      "slug": "lfm2-5-1-2b-instruct",
+      "name": "LFM2.5-1.2B-Instruct",
+      "shortName": "LFM2.5-1.2B-Instruct",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "5b1886c4-43ba-4007-b840-9d21a2b7d42c",
+        "name": "Liquid AI",
+        "color": "#000000",
+        "logo": "/img/logos/liquidai_small.svg"
       }
     },
     {
@@ -1165,34 +1193,6 @@
       }
     },
     {
-      "id": "48194e0f-8226-4c57-8cb2-2a0fb68a84c9",
-      "slug": "lfm2-5-1-2b-instruct",
-      "name": "LFM2.5-1.2B-Instruct",
-      "shortName": "LFM2.5-1.2B-Instruct",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "5b1886c4-43ba-4007-b840-9d21a2b7d42c",
-        "name": "Liquid AI",
-        "color": "#000000",
-        "logo": "/img/logos/liquidai_small.svg"
-      }
-    },
-    {
-      "id": "739e531a-eb0a-478f-bb67-5845b79ce65d",
-      "slug": "lfm2-2-6b",
-      "name": "LFM2 2.6B",
-      "shortName": "LFM2 2.6B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "5b1886c4-43ba-4007-b840-9d21a2b7d42c",
-        "name": "Liquid AI",
-        "color": "#000000",
-        "logo": "/img/logos/liquidai_small.svg"
-      }
-    },
-    {
       "id": "686ab020-ee58-4a70-a9ac-24d675a73506",
       "slug": "lfm2-8b-a1b",
       "name": "LFM2 8B A1B",
@@ -1207,10 +1207,10 @@
       }
     },
     {
-      "id": "eb689f7a-f210-4a87-b407-f249897f2764",
-      "slug": "solar-pro-2-reasoning",
-      "name": "Solar Pro 2 (Reasoning)",
-      "shortName": "Solar Pro 2",
+      "id": "59a1bb20-9170-4dc2-ba9c-12d326cf068e",
+      "slug": "solar-open-100b-reasoning",
+      "name": "Solar Open 100B (Reasoning)",
+      "shortName": "Solar Open 100B",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -1221,10 +1221,10 @@
       }
     },
     {
-      "id": "59a1bb20-9170-4dc2-ba9c-12d326cf068e",
-      "slug": "solar-open-100b-reasoning",
-      "name": "Solar Open 100B (Reasoning)",
-      "shortName": "Solar Open 100B",
+      "id": "eb689f7a-f210-4a87-b407-f249897f2764",
+      "slug": "solar-pro-2-reasoning",
+      "name": "Solar Pro 2 (Reasoning)",
+      "shortName": "Solar Pro 2",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -1277,62 +1277,6 @@
       }
     },
     {
-      "id": "cf095603-72b6-47f8-8ee1-09a42890f92a",
-      "slug": "llama-3-1-nemotron-ultra-253b-v1-reasoning",
-      "name": "Llama 3.1 Nemotron Ultra 253B v1 (Reasoning)",
-      "shortName": "Llama Nemotron Ultra",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA",
-        "color": "#86b737",
-        "logo": "/img/logos/nvidia_small.svg"
-      }
-    },
-    {
-      "id": "ab7f016c-a29b-4710-bdf6-6a5cd96aacca",
-      "slug": "nvidia-nemotron-nano-12b-v2-vl",
-      "name": "NVIDIA Nemotron Nano 12B v2 VL (Non-reasoning)",
-      "shortName": "NVIDIA Nemotron Nano 12B v2 VL",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA",
-        "color": "#86b737",
-        "logo": "/img/logos/nvidia_small.svg"
-      }
-    },
-    {
-      "id": "c4c3b42f-e0f0-48ca-b6f9-b296e7697806",
-      "slug": "llama-3-3-nemotron-super-49b",
-      "name": "Llama 3.3 Nemotron Super 49B v1 (Non-reasoning)",
-      "shortName": "Llama 3.3 Nemotron Super 49B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA",
-        "color": "#86b737",
-        "logo": "/img/logos/nvidia_small.svg"
-      }
-    },
-    {
-      "id": "e1cfa926-9e2b-4a0d-8c31-48366a5041c5",
-      "slug": "llama-nemotron-super-49b-v1-5-reasoning",
-      "name": "Llama Nemotron Super 49B v1.5 (Reasoning)",
-      "shortName": "Llama Nemotron Super 49B v1.5",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA",
-        "color": "#86b737",
-        "logo": "/img/logos/nvidia_small.svg"
-      }
-    },
-    {
       "id": "6e6e02fd-9cbd-417f-9bfc-673df89c313d",
       "slug": "nvidia-nemotron-nano-12b-v2-vl-reasoning",
       "name": "NVIDIA Nemotron Nano 12B v2 VL (Reasoning)",
@@ -1361,38 +1305,10 @@
       }
     },
     {
-      "id": "76dcf6ef-39ea-4be0-b693-b88da25b4caf",
-      "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
-      "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
-      "shortName": "NVIDIA Nemotron 3 Nano",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA",
-        "color": "#86b737",
-        "logo": "/img/logos/nvidia_small.svg"
-      }
-    },
-    {
-      "id": "b1fa84f8-1ed3-4124-b403-4655dafa4267",
-      "slug": "llama-3-1-nemotron-nano-4b-reasoning",
-      "name": "Llama 3.1 Nemotron Nano 4B v1.1 (Reasoning)",
-      "shortName": "Llama 3.1 Nemotron Nano 4B v1.1",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "0c303112-430d-4367-a484-51defaa2e166",
-        "name": "NVIDIA",
-        "color": "#86b737",
-        "logo": "/img/logos/nvidia_small.svg"
-      }
-    },
-    {
-      "id": "23b379f7-18df-492a-9fc1-a56c5a5b9cfc",
-      "slug": "nvidia-nemotron-3-nano-30b-a3b",
-      "name": "NVIDIA Nemotron 3 Nano 30B A3B (Non-reasoning)",
-      "shortName": "NVIDIA Nemotron 3 Nano",
+      "id": "26c0b5df-efa7-470f-a65e-2d883329e493",
+      "slug": "llama-nemotron-super-49b-v1-5",
+      "name": "Llama Nemotron Super 49B v1.5 (Non-reasoning)",
+      "shortName": "Llama Nemotron Super 49B v1.5",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1417,6 +1333,48 @@
       }
     },
     {
+      "id": "ab7f016c-a29b-4710-bdf6-6a5cd96aacca",
+      "slug": "nvidia-nemotron-nano-12b-v2-vl",
+      "name": "NVIDIA Nemotron Nano 12B v2 VL (Non-reasoning)",
+      "shortName": "NVIDIA Nemotron Nano 12B v2 VL",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA",
+        "color": "#86b737",
+        "logo": "/img/logos/nvidia_small.svg"
+      }
+    },
+    {
+      "id": "e1cfa926-9e2b-4a0d-8c31-48366a5041c5",
+      "slug": "llama-nemotron-super-49b-v1-5-reasoning",
+      "name": "Llama Nemotron Super 49B v1.5 (Reasoning)",
+      "shortName": "Llama Nemotron Super 49B v1.5",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA",
+        "color": "#86b737",
+        "logo": "/img/logos/nvidia_small.svg"
+      }
+    },
+    {
+      "id": "76dcf6ef-39ea-4be0-b693-b88da25b4caf",
+      "slug": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
+      "name": "NVIDIA Nemotron 3 Nano 30B A3B (Reasoning)",
+      "shortName": "NVIDIA Nemotron 3 Nano",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA",
+        "color": "#86b737",
+        "logo": "/img/logos/nvidia_small.svg"
+      }
+    },
+    {
       "id": "f1d52583-9d20-4099-99ac-b5df9430c3b6",
       "slug": "nvidia-nemotron-nano-9b-v2-reasoning",
       "name": "NVIDIA Nemotron Nano 9B V2 (Reasoning)",
@@ -1431,10 +1389,10 @@
       }
     },
     {
-      "id": "26c0b5df-efa7-470f-a65e-2d883329e493",
-      "slug": "llama-nemotron-super-49b-v1-5",
-      "name": "Llama Nemotron Super 49B v1.5 (Non-reasoning)",
-      "shortName": "Llama Nemotron Super 49B v1.5",
+      "id": "23b379f7-18df-492a-9fc1-a56c5a5b9cfc",
+      "slug": "nvidia-nemotron-3-nano-30b-a3b",
+      "name": "NVIDIA Nemotron 3 Nano 30B A3B (Non-reasoning)",
+      "shortName": "NVIDIA Nemotron 3 Nano",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1445,17 +1403,45 @@
       }
     },
     {
-      "id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
-      "slug": "kimi-k2-5",
-      "name": "Kimi K2.5 (Reasoning)",
-      "shortName": "Kimi K2.5",
+      "id": "b1fa84f8-1ed3-4124-b403-4655dafa4267",
+      "slug": "llama-3-1-nemotron-nano-4b-reasoning",
+      "name": "Llama 3.1 Nemotron Nano 4B v1.1 (Reasoning)",
+      "shortName": "Llama 3.1 Nemotron Nano 4B v1.1",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
-        "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
-        "name": "Kimi",
-        "color": "#047AFE",
-        "logo": "/img/logos/kimi_small.png"
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA",
+        "color": "#86b737",
+        "logo": "/img/logos/nvidia_small.svg"
+      }
+    },
+    {
+      "id": "c4c3b42f-e0f0-48ca-b6f9-b296e7697806",
+      "slug": "llama-3-3-nemotron-super-49b",
+      "name": "Llama 3.3 Nemotron Super 49B v1 (Non-reasoning)",
+      "shortName": "Llama 3.3 Nemotron Super 49B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA",
+        "color": "#86b737",
+        "logo": "/img/logos/nvidia_small.svg"
+      }
+    },
+    {
+      "id": "cf095603-72b6-47f8-8ee1-09a42890f92a",
+      "slug": "llama-3-1-nemotron-ultra-253b-v1-reasoning",
+      "name": "Llama 3.1 Nemotron Ultra 253B v1 (Reasoning)",
+      "shortName": "Llama Nemotron Ultra",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "0c303112-430d-4367-a484-51defaa2e166",
+        "name": "NVIDIA",
+        "color": "#86b737",
+        "logo": "/img/logos/nvidia_small.svg"
       }
     },
     {
@@ -1473,10 +1459,10 @@
       }
     },
     {
-      "id": "ba04694d-326a-4a6a-8f1b-46316f872a7f",
-      "slug": "kimi-k2-5-non-reasoning",
-      "name": "Kimi K2.5 (Non-reasoning)",
-      "shortName": "Kimi K2.5",
+      "id": "66445f84-b2e3-4202-afdc-92ba0f0e5f36",
+      "slug": "kimi-k2-0905",
+      "name": "Kimi K2 0905",
+      "shortName": "Kimi K2 0905",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1487,10 +1473,24 @@
       }
     },
     {
-      "id": "66445f84-b2e3-4202-afdc-92ba0f0e5f36",
-      "slug": "kimi-k2-0905",
-      "name": "Kimi K2 0905",
-      "shortName": "Kimi K2 0905",
+      "id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
+      "slug": "kimi-k2-5",
+      "name": "Kimi K2.5 (Reasoning)",
+      "shortName": "Kimi K2.5",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
+        "name": "Kimi",
+        "color": "#047AFE",
+        "logo": "/img/logos/kimi_small.png"
+      }
+    },
+    {
+      "id": "ba04694d-326a-4a6a-8f1b-46316f872a7f",
+      "slug": "kimi-k2-5-non-reasoning",
+      "name": "Kimi K2.5 (Non-reasoning)",
+      "shortName": "Kimi K2.5",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1529,26 +1529,12 @@
       }
     },
     {
-      "id": "8f74a6ed-f82f-4a2f-a96b-4914993e47da",
-      "slug": "olmo-3-7b-instruct",
-      "name": "Olmo 3 7B Instruct",
-      "shortName": "Olmo 3 7B",
+      "id": "39b64e04-7a69-4aa2-9e2e-fe38c24681ec",
+      "slug": "olmo-3-1-32b-think",
+      "name": "Olmo 3.1 32B Think",
+      "shortName": "Olmo 3.1 32B Think",
       "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
-        "name": "Allen Institute for AI",
-        "color": "#F0529C",
-        "logo": "/img/logos/ai2_small.svg"
-      }
-    },
-    {
-      "id": "94a6d26e-a903-47f3-8323-ae422d237bb9",
-      "slug": "olmo-3-1-32b-instruct",
-      "name": "Olmo 3.1 32B Instruct",
-      "shortName": "Olmo 3.1 32B Instruct",
-      "deprecated": false,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
         "name": "Allen Institute for AI",
@@ -1571,12 +1557,26 @@
       }
     },
     {
-      "id": "39b64e04-7a69-4aa2-9e2e-fe38c24681ec",
-      "slug": "olmo-3-1-32b-think",
-      "name": "Olmo 3.1 32B Think",
-      "shortName": "Olmo 3.1 32B Think",
+      "id": "3ef6db79-1dfa-4780-8c4b-affe2740d9ac",
+      "slug": "molmo2-8b",
+      "name": "Molmo2-8B",
+      "shortName": "Molmo2-8B",
       "deprecated": false,
-      "isReasoning": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
+        "name": "Allen Institute for AI",
+        "color": "#F0529C",
+        "logo": "/img/logos/ai2_small.svg"
+      }
+    },
+    {
+      "id": "8f74a6ed-f82f-4a2f-a96b-4914993e47da",
+      "slug": "olmo-3-7b-instruct",
+      "name": "Olmo 3 7B Instruct",
+      "shortName": "Olmo 3 7B",
+      "deprecated": false,
+      "isReasoning": false,
       "creator": {
         "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
         "name": "Allen Institute for AI",
@@ -1599,10 +1599,10 @@
       }
     },
     {
-      "id": "3ef6db79-1dfa-4780-8c4b-affe2740d9ac",
-      "slug": "molmo2-8b",
-      "name": "Molmo2-8B",
-      "shortName": "Molmo2-8B",
+      "id": "94a6d26e-a903-47f3-8323-ae422d237bb9",
+      "slug": "olmo-3-1-32b-instruct",
+      "name": "Olmo 3.1 32B Instruct",
+      "shortName": "Olmo 3.1 32B Instruct",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1610,6 +1610,20 @@
         "name": "Allen Institute for AI",
         "color": "#F0529C",
         "logo": "/img/logos/ai2_small.svg"
+      }
+    },
+    {
+      "id": "dafbb6d2-4825-43d1-a927-feedcfd2e998",
+      "slug": "granite-4-0-h-nano-1b",
+      "name": "Granite 4.0 H 1B",
+      "shortName": "Granite 4.0 H 1B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "512ef1e4-e02e-4532-a5f2-d11a40962498",
+        "name": "IBM",
+        "color": "#0f62fe",
+        "logo": "/img/logos/ibm_small.svg"
       }
     },
     {
@@ -1641,38 +1655,10 @@
       }
     },
     {
-      "id": "54c7f3fc-7078-442a-b472-e8691257a88c",
-      "slug": "granite-4-0-350m",
-      "name": "Granite 4.0 350M",
-      "shortName": "Granite 4.0 350M",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "512ef1e4-e02e-4532-a5f2-d11a40962498",
-        "name": "IBM",
-        "color": "#0f62fe",
-        "logo": "/img/logos/ibm_small.svg"
-      }
-    },
-    {
       "id": "1fc32894-1060-493b-af94-62bb1068555e",
       "slug": "granite-4-0-micro",
       "name": "Granite 4.0 Micro",
       "shortName": "Granite 4.0 Micro",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "512ef1e4-e02e-4532-a5f2-d11a40962498",
-        "name": "IBM",
-        "color": "#0f62fe",
-        "logo": "/img/logos/ibm_small.svg"
-      }
-    },
-    {
-      "id": "dafbb6d2-4825-43d1-a927-feedcfd2e998",
-      "slug": "granite-4-0-h-nano-1b",
-      "name": "Granite 4.0 H 1B",
-      "shortName": "Granite 4.0 H 1B",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1697,6 +1683,20 @@
       }
     },
     {
+      "id": "54c7f3fc-7078-442a-b472-e8691257a88c",
+      "slug": "granite-4-0-350m",
+      "name": "Granite 4.0 350M",
+      "shortName": "Granite 4.0 350M",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "512ef1e4-e02e-4532-a5f2-d11a40962498",
+        "name": "IBM",
+        "color": "#0f62fe",
+        "logo": "/img/logos/ibm_small.svg"
+      }
+    },
+    {
       "id": "dbbcf240-a69e-4078-8f16-7c94c7a8c514",
       "slug": "reka-flash-3",
       "name": "Reka Flash 3",
@@ -1711,52 +1711,10 @@
       }
     },
     {
-      "id": "82b207dd-d285-4a52-b2fc-2cbd27543899",
-      "slug": "hermes-4-llama-3-1-405b-reasoning",
-      "name": "Hermes 4 - Llama-3.1 405B (Reasoning)",
-      "shortName": "Hermes 4 405B",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "0a2f41cc-2cbc-4949-be54-9fef1319d4a9",
-        "name": "Nous Research",
-        "color": "#006fa8",
-        "logo": "/img/logos/nousresearch_small.jpg"
-      }
-    },
-    {
-      "id": "b7726745-9c77-40c3-8452-974cb53d6fbc",
-      "slug": "deephermes-3-llama-3-1-8b-preview",
-      "name": "DeepHermes 3 - Llama-3.1 8B Preview (Non-reasoning)",
-      "shortName": "DeepHermes 3 - Llama-3.1 8B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "0a2f41cc-2cbc-4949-be54-9fef1319d4a9",
-        "name": "Nous Research",
-        "color": "#006fa8",
-        "logo": "/img/logos/nousresearch_small.jpg"
-      }
-    },
-    {
       "id": "a8efb564-9d17-4d7f-8f43-e9110657ce21",
       "slug": "deephermes-3-mistral-24b-preview",
       "name": "DeepHermes 3 - Mistral 24B Preview (Non-reasoning)",
       "shortName": "DeepHermes 3 - Mistral 24B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "0a2f41cc-2cbc-4949-be54-9fef1319d4a9",
-        "name": "Nous Research",
-        "color": "#006fa8",
-        "logo": "/img/logos/nousresearch_small.jpg"
-      }
-    },
-    {
-      "id": "d3968fd3-97d8-4693-8d26-19cefc6f5d5f",
-      "slug": "hermes-4-llama-3-1-405b",
-      "name": "Hermes 4 - Llama-3.1 405B (Non-reasoning)",
-      "shortName": "Hermes 4 405B",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -1781,6 +1739,34 @@
       }
     },
     {
+      "id": "d3968fd3-97d8-4693-8d26-19cefc6f5d5f",
+      "slug": "hermes-4-llama-3-1-405b",
+      "name": "Hermes 4 - Llama-3.1 405B (Non-reasoning)",
+      "shortName": "Hermes 4 405B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "0a2f41cc-2cbc-4949-be54-9fef1319d4a9",
+        "name": "Nous Research",
+        "color": "#006fa8",
+        "logo": "/img/logos/nousresearch_small.jpg"
+      }
+    },
+    {
+      "id": "82b207dd-d285-4a52-b2fc-2cbd27543899",
+      "slug": "hermes-4-llama-3-1-405b-reasoning",
+      "name": "Hermes 4 - Llama-3.1 405B (Reasoning)",
+      "shortName": "Hermes 4 405B",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "0a2f41cc-2cbc-4949-be54-9fef1319d4a9",
+        "name": "Nous Research",
+        "color": "#006fa8",
+        "logo": "/img/logos/nousresearch_small.jpg"
+      }
+    },
+    {
       "id": "235060f4-057d-4bd1-8b8e-4a92908c770e",
       "slug": "hermes-4-llama-3-1-70b",
       "name": "Hermes 4 - Llama-3.1 70B (Non-reasoning)",
@@ -1792,6 +1778,62 @@
         "name": "Nous Research",
         "color": "#006fa8",
         "logo": "/img/logos/nousresearch_small.jpg"
+      }
+    },
+    {
+      "id": "b7726745-9c77-40c3-8452-974cb53d6fbc",
+      "slug": "deephermes-3-llama-3-1-8b-preview",
+      "name": "DeepHermes 3 - Llama-3.1 8B Preview (Non-reasoning)",
+      "shortName": "DeepHermes 3 - Llama-3.1 8B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "0a2f41cc-2cbc-4949-be54-9fef1319d4a9",
+        "name": "Nous Research",
+        "color": "#006fa8",
+        "logo": "/img/logos/nousresearch_small.jpg"
+      }
+    },
+    {
+      "id": "715e05fb-1313-441c-bf1d-8651c752a841",
+      "slug": "k-exaone",
+      "name": "K-EXAONE (Reasoning)",
+      "shortName": "K-EXAONE",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
+        "name": "LG AI Research",
+        "color": "#df3b8a",
+        "logo": "/img/logos/lg_small.png"
+      }
+    },
+    {
+      "id": "2f60d80d-c3d3-4a43-bded-0557898c4618",
+      "slug": "exaone-4-0-32b",
+      "name": "EXAONE 4.0 32B (Non-reasoning)",
+      "shortName": "EXAONE 4.0 32B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
+        "name": "LG AI Research",
+        "color": "#df3b8a",
+        "logo": "/img/logos/lg_small.png"
+      }
+    },
+    {
+      "id": "d734e2ce-5cf8-467f-8148-586d02671333",
+      "slug": "exaone-4-0-1-2b-reasoning",
+      "name": "Exaone 4.0 1.2B (Reasoning)",
+      "shortName": "Exaone 4.0 1.2B",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
+        "name": "LG AI Research",
+        "color": "#df3b8a",
+        "logo": "/img/logos/lg_small.png"
       }
     },
     {
@@ -1823,20 +1865,6 @@
       }
     },
     {
-      "id": "715e05fb-1313-441c-bf1d-8651c752a841",
-      "slug": "k-exaone",
-      "name": "K-EXAONE (Reasoning)",
-      "shortName": "K-EXAONE",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
-        "name": "LG AI Research",
-        "color": "#df3b8a",
-        "logo": "/img/logos/lg_small.png"
-      }
-    },
-    {
       "id": "44b19b51-5367-4ef9-a2ff-2f90b89a0867",
       "slug": "exaone-4-0-32b-reasoning",
       "name": "EXAONE 4.0 32B (Reasoning)",
@@ -1851,31 +1879,17 @@
       }
     },
     {
-      "id": "d734e2ce-5cf8-467f-8148-586d02671333",
-      "slug": "exaone-4-0-1-2b-reasoning",
-      "name": "Exaone 4.0 1.2B (Reasoning)",
-      "shortName": "Exaone 4.0 1.2B",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
-        "name": "LG AI Research",
-        "color": "#df3b8a",
-        "logo": "/img/logos/lg_small.png"
-      }
-    },
-    {
-      "id": "2f60d80d-c3d3-4a43-bded-0557898c4618",
-      "slug": "exaone-4-0-32b",
-      "name": "EXAONE 4.0 32B (Non-reasoning)",
-      "shortName": "EXAONE 4.0 32B",
+      "id": "82b36b4d-84dd-4bc0-ad32-e3aee9442789",
+      "slug": "mimo-v2-flash",
+      "name": "MiMo-V2-Flash (Non-reasoning)",
+      "shortName": "MiMo-V2-Flash",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
-        "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
-        "name": "LG AI Research",
-        "color": "#df3b8a",
-        "logo": "/img/logos/lg_small.png"
+        "id": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
+        "name": "Xiaomi",
+        "color": "#ff6900",
+        "logo": "/img/logos/xiaomi_small.svg"
       }
     },
     {
@@ -1885,20 +1899,6 @@
       "shortName": "MiMo-V2-Flash",
       "deprecated": false,
       "isReasoning": true,
-      "creator": {
-        "id": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
-        "name": "Xiaomi",
-        "color": "#ff6900",
-        "logo": "/img/logos/xiaomi_small.svg"
-      }
-    },
-    {
-      "id": "82b36b4d-84dd-4bc0-ad32-e3aee9442789",
-      "slug": "mimo-v2-flash",
-      "name": "MiMo-V2-Flash (Non-reasoning)",
-      "shortName": "MiMo-V2-Flash",
-      "deprecated": false,
-      "isReasoning": false,
       "creator": {
         "id": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
         "name": "Xiaomi",
@@ -2019,10 +2019,10 @@
       }
     },
     {
-      "id": "dd738be7-2b69-4775-91a5-8851d3341c2d",
-      "slug": "k2-v2-medium",
-      "name": "K2-V2 (medium)",
-      "shortName": "K2-V2 (medium)",
+      "id": "5a49ef80-3af5-404b-8ac0-e1b230ae95de",
+      "slug": "k2-think-v2",
+      "name": "K2 Think V2",
+      "shortName": "K2 Think V2",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -2047,10 +2047,10 @@
       }
     },
     {
-      "id": "5a49ef80-3af5-404b-8ac0-e1b230ae95de",
-      "slug": "k2-think-v2",
-      "name": "K2 Think V2",
-      "shortName": "K2 Think V2",
+      "id": "dd738be7-2b69-4775-91a5-8851d3341c2d",
+      "slug": "k2-v2-medium",
+      "name": "K2-V2 (medium)",
+      "shortName": "K2-V2 (medium)",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -2103,6 +2103,34 @@
       }
     },
     {
+      "id": "5d303dc9-c027-401f-9803-4e9aa3331007",
+      "slug": "glm-4-5-air",
+      "name": "GLM-4.5-Air",
+      "shortName": "GLM-4.5-Air",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+        "name": "Z AI",
+        "color": "#1c7ff8",
+        "logo": "/img/logos/zai_small.svg"
+      }
+    },
+    {
+      "id": "6fc35842-0165-44cf-8570-c484a92b3d8c",
+      "slug": "glm-4-7",
+      "name": "GLM-4.7 (Reasoning)",
+      "shortName": "GLM-4.7",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+        "name": "Z AI",
+        "color": "#1c7ff8",
+        "logo": "/img/logos/zai_small.svg"
+      }
+    },
+    {
       "id": "81b6ddfc-111e-4422-bd44-42ee6165b699",
       "slug": "glm-4-7-non-reasoning",
       "name": "GLM-4.7 (Non-reasoning)",
@@ -2117,10 +2145,10 @@
       }
     },
     {
-      "id": "6fc35842-0165-44cf-8570-c484a92b3d8c",
-      "slug": "glm-4-7",
-      "name": "GLM-4.7 (Reasoning)",
-      "shortName": "GLM-4.7",
+      "id": "2c4394a2-b443-470a-908e-5c4a271b780c",
+      "slug": "glm-4-7-flash",
+      "name": "GLM-4.7-Flash (Reasoning)",
+      "shortName": "GLM-4.7-Flash",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -2145,34 +2173,6 @@
       }
     },
     {
-      "id": "5d303dc9-c027-401f-9803-4e9aa3331007",
-      "slug": "glm-4-5-air",
-      "name": "GLM-4.5-Air",
-      "shortName": "GLM-4.5-Air",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
-        "name": "Z AI",
-        "color": "#1c7ff8",
-        "logo": "/img/logos/zai_small.svg"
-      }
-    },
-    {
-      "id": "43098bd0-77ca-408b-b698-9d60b1d1c3b8",
-      "slug": "glm-4-6v",
-      "name": "GLM-4.6V (Non-reasoning)",
-      "shortName": "GLM-4.6V",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
-        "name": "Z AI",
-        "color": "#1c7ff8",
-        "logo": "/img/logos/zai_small.svg"
-      }
-    },
-    {
       "id": "c8673741-5e1a-46a1-9e4f-710a5c920982",
       "slug": "glm-4-7-flash-non-reasoning",
       "name": "GLM-4.7-Flash (Non-reasoning)",
@@ -2187,12 +2187,12 @@
       }
     },
     {
-      "id": "2c4394a2-b443-470a-908e-5c4a271b780c",
-      "slug": "glm-4-7-flash",
-      "name": "GLM-4.7-Flash (Reasoning)",
-      "shortName": "GLM-4.7-Flash",
+      "id": "43098bd0-77ca-408b-b698-9d60b1d1c3b8",
+      "slug": "glm-4-6v",
+      "name": "GLM-4.6V (Non-reasoning)",
+      "shortName": "GLM-4.6V",
       "deprecated": false,
-      "isReasoning": true,
+      "isReasoning": false,
       "creator": {
         "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
         "name": "Z AI",
@@ -2229,6 +2229,20 @@
       }
     },
     {
+      "id": "b4f14013-37dd-4c75-bd8a-378365d9ed77",
+      "slug": "jamba-1-7-mini",
+      "name": "Jamba 1.7 Mini",
+      "shortName": "Jamba 1.7 Mini",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "6216c686-bc60-4dbb-9f25-83e9dba803d1",
+        "name": "AI21 Labs",
+        "color": "#d63864",
+        "logo": "/img/logos/ai21_small.svg"
+      }
+    },
+    {
       "id": "f78138d6-2e04-4a84-919a-20d177cb6ff1",
       "slug": "jamba-reasoning-3b",
       "name": "Jamba Reasoning 3B",
@@ -2257,76 +2271,6 @@
       }
     },
     {
-      "id": "b4f14013-37dd-4c75-bd8a-378365d9ed77",
-      "slug": "jamba-1-7-mini",
-      "name": "Jamba 1.7 Mini",
-      "shortName": "Jamba 1.7 Mini",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "6216c686-bc60-4dbb-9f25-83e9dba803d1",
-        "name": "AI21 Labs",
-        "color": "#d63864",
-        "logo": "/img/logos/ai21_small.svg"
-      }
-    },
-    {
-      "id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
-      "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
-      "name": "Qwen3 235B A22B 2507 (Reasoning)",
-      "shortName": "Qwen3 235B A22B 2507",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
-      "slug": "qwen3-coder-next",
-      "name": "Qwen3-Coder-Next",
-      "shortName": "Qwen3-Coder-Next",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "f93d0750-b659-4ceb-a123-7e657904ef2b",
-      "slug": "qwen3-vl-4b-reasoning",
-      "name": "Qwen3 VL 4B (Reasoning)",
-      "shortName": "Qwen3 VL 4B",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "4ae6c88d-9e4a-4850-89fe-18a1c04a66cc",
-      "slug": "qwen3-0.6b-instruct-reasoning",
-      "name": "Qwen3 0.6B (Reasoning)",
-      "shortName": "Qwen3 0.6B",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
       "id": "c43aa1f9-31bd-4a99-be70-84c5e6bd2e75",
       "slug": "qwen-chat-14b",
       "name": "Qwen Chat 14B",
@@ -2341,24 +2285,10 @@
       }
     },
     {
-      "id": "5e0164b3-d902-4bcb-a1b2-83b4f4cd6143",
-      "slug": "qwen3-30b-a3b-2507-reasoning",
-      "name": "Qwen3 30B A3B 2507 (Reasoning)",
-      "shortName": "Qwen3 30B A3B 2507",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "093883ed-f5fc-443b-8e18-afbfb166699e",
-      "slug": "qwen3-coder-480b-a35b-instruct",
-      "name": "Qwen3 Coder 480B A35B Instruct",
-      "shortName": "Qwen3 Coder 480B",
+      "id": "3cf875b8-b6b5-42c0-ad70-617d5be59d00",
+      "slug": "qwen3-vl-8b-instruct",
+      "name": "Qwen3 VL 8B Instruct",
+      "shortName": "Qwen3 VL 8B",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -2369,66 +2299,10 @@
       }
     },
     {
-      "id": "51d0b717-953d-4b44-af61-406c6b7dff39",
-      "slug": "qwen3-vl-30b-a3b-instruct",
-      "name": "Qwen3 VL 30B A3B Instruct",
-      "shortName": "Qwen3 VL 30B A3B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "d58cf573-1bd3-4d1f-9182-5482a460f570",
-      "slug": "qwen3-vl-235b-a22b-instruct",
-      "name": "Qwen3 VL 235B A22B Instruct",
-      "shortName": "Qwen3 VL 235B A22B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "da9fe224-8af3-46d7-a8c4-6220779c3f35",
-      "slug": "qwen3-coder-30b-a3b-instruct",
-      "name": "Qwen3 Coder 30B A3B Instruct",
-      "shortName": "Qwen3 Coder 30B A3B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "7ae943a9-9310-4472-a834-c61f0ab68485",
-      "slug": "qwen3-max",
-      "name": "Qwen3 Max",
-      "shortName": "Qwen3 Max",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "a803d3d0-d22e-49a0-ac2c-b9c6f1141065",
-      "slug": "qwen3-vl-235b-a22b-reasoning",
-      "name": "Qwen3 VL 235B A22B (Reasoning)",
-      "shortName": "Qwen3 VL 235B A22B",
+      "id": "806032ff-6252-4c22-ba99-a126e411b7a4",
+      "slug": "qwen3-max-thinking",
+      "name": "Qwen3 Max Thinking",
+      "shortName": "Qwen3 Max Thinking",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -2453,68 +2327,26 @@
       }
     },
     {
-      "id": "dec8073c-57e2-41c0-b1aa-7a62960f103f",
-      "slug": "qwen3-vl-8b-reasoning",
-      "name": "Qwen3 VL 8B (Reasoning)",
-      "shortName": "Qwen3 VL 8B",
+      "id": "093883ed-f5fc-443b-8e18-afbfb166699e",
+      "slug": "qwen3-coder-480b-a35b-instruct",
+      "name": "Qwen3 Coder 480B A35B Instruct",
+      "shortName": "Qwen3 Coder 480B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "cbac8c35-e069-4c73-823e-0953e6ed0e85",
+      "slug": "qwen3-max-thinking-preview",
+      "name": "Qwen3 Max Thinking (Preview)",
+      "shortName": "Qwen3 Max Thinking (Preview)",
       "deprecated": false,
       "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "0b226b82-1462-4860-bf1a-f8aed7024791",
-      "slug": "qwen3-omni-30b-a3b-instruct",
-      "name": "Qwen3 Omni 30B A3B Instruct",
-      "shortName": "Qwen3 Omni 30B A3B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "f5d83128-047f-496d-ba49-8a428abe8345",
-      "slug": "qwen3-vl-4b-instruct",
-      "name": "Qwen3 VL 4B Instruct",
-      "shortName": "Qwen3 VL 4B",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "7ec1065a-c90e-41e4-bd17-abb7042eed76",
-      "slug": "qwen3-30b-a3b-2507",
-      "name": "Qwen3 30B A3B 2507 Instruct",
-      "shortName": "Qwen3 30B A3B 2507",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
-      "slug": "qwen3-235b-a22b-instruct-2507",
-      "name": "Qwen3 235B A22B 2507 Instruct",
-      "shortName": "Qwen3 235B 2507",
-      "deprecated": false,
-      "isReasoning": false,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -2537,26 +2369,12 @@
       }
     },
     {
-      "id": "6da314d3-a984-4734-8f31-47dd32fb4699",
-      "slug": "qwen3-vl-32b-instruct",
-      "name": "Qwen3 VL 32B Instruct",
-      "shortName": "Qwen3 VL 32B",
+      "id": "f6ccbe1d-bd7e-484b-9795-18cc9f91552d",
+      "slug": "qwen3-235b-a22b-instruct-2507-reasoning",
+      "name": "Qwen3 235B A22B 2507 (Reasoning)",
+      "shortName": "Qwen3 235B A22B 2507",
       "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "0e5f6140-1154-4583-a3e0-8c032a338892",
-      "slug": "qwen3-0.6b-instruct",
-      "name": "Qwen3 0.6B (Non-reasoning)",
-      "shortName": "Qwen3 0.6B",
-      "deprecated": false,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -2579,12 +2397,12 @@
       }
     },
     {
-      "id": "5962d643-0a6f-4630-bb08-ab5720d80056",
-      "slug": "qwen3-1.7b-instruct-reasoning",
-      "name": "Qwen3 1.7B (Reasoning)",
-      "shortName": "Qwen3 1.7B",
+      "id": "3373245b-e6dc-4b66-a7b0-3f06f9b7bd46",
+      "slug": "qwen3-235b-a22b-instruct-2507",
+      "name": "Qwen3 235B A22B 2507 Instruct",
+      "shortName": "Qwen3 235B 2507",
       "deprecated": false,
-      "isReasoning": true,
+      "isReasoning": false,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -2593,10 +2411,10 @@
       }
     },
     {
-      "id": "2bb84433-f38e-4edc-9b65-4d7b1f473db9",
-      "slug": "qwen3-1.7b-instruct",
-      "name": "Qwen3 1.7B (Non-reasoning)",
-      "shortName": "Qwen3 1.7B",
+      "id": "d58cf573-1bd3-4d1f-9182-5482a460f570",
+      "slug": "qwen3-vl-235b-a22b-instruct",
+      "name": "Qwen3 VL 235B A22B Instruct",
+      "shortName": "Qwen3 VL 235B A22B",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -2621,10 +2439,108 @@
       }
     },
     {
-      "id": "3cf875b8-b6b5-42c0-ad70-617d5be59d00",
-      "slug": "qwen3-vl-8b-instruct",
-      "name": "Qwen3 VL 8B Instruct",
-      "shortName": "Qwen3 VL 8B",
+      "id": "5962d643-0a6f-4630-bb08-ab5720d80056",
+      "slug": "qwen3-1.7b-instruct-reasoning",
+      "name": "Qwen3 1.7B (Reasoning)",
+      "shortName": "Qwen3 1.7B",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "2aacdc07-5f4e-4ab9-8ea5-5f7ab93f9eeb",
+      "slug": "qwen3-4b-2507-instruct-reasoning",
+      "name": "Qwen3 4B 2507 (Reasoning)",
+      "shortName": "Qwen3 4B 2507",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "0e5f6140-1154-4583-a3e0-8c032a338892",
+      "slug": "qwen3-0.6b-instruct",
+      "name": "Qwen3 0.6B (Non-reasoning)",
+      "shortName": "Qwen3 0.6B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "6da314d3-a984-4734-8f31-47dd32fb4699",
+      "slug": "qwen3-vl-32b-instruct",
+      "name": "Qwen3 VL 32B Instruct",
+      "shortName": "Qwen3 VL 32B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "2bb84433-f38e-4edc-9b65-4d7b1f473db9",
+      "slug": "qwen3-1.7b-instruct",
+      "name": "Qwen3 1.7B (Non-reasoning)",
+      "shortName": "Qwen3 1.7B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "7ec1065a-c90e-41e4-bd17-abb7042eed76",
+      "slug": "qwen3-30b-a3b-2507",
+      "name": "Qwen3 30B A3B 2507 Instruct",
+      "shortName": "Qwen3 30B A3B 2507",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "4ae6c88d-9e4a-4850-89fe-18a1c04a66cc",
+      "slug": "qwen3-0.6b-instruct-reasoning",
+      "name": "Qwen3 0.6B (Reasoning)",
+      "shortName": "Qwen3 0.6B",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "fc92f822-04b7-420d-9c07-a21af5e9aac7",
+      "slug": "qwen3-coder-next",
+      "name": "Qwen3-Coder-Next",
+      "shortName": "Qwen3-Coder-Next",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -2663,10 +2579,38 @@
       }
     },
     {
-      "id": "806032ff-6252-4c22-ba99-a126e411b7a4",
-      "slug": "qwen3-max-thinking",
-      "name": "Qwen3 Max Thinking",
-      "shortName": "Qwen3 Max Thinking",
+      "id": "0b226b82-1462-4860-bf1a-f8aed7024791",
+      "slug": "qwen3-omni-30b-a3b-instruct",
+      "name": "Qwen3 Omni 30B A3B Instruct",
+      "shortName": "Qwen3 Omni 30B A3B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "51d0b717-953d-4b44-af61-406c6b7dff39",
+      "slug": "qwen3-vl-30b-a3b-instruct",
+      "name": "Qwen3 VL 30B A3B Instruct",
+      "shortName": "Qwen3 VL 30B A3B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "5e0164b3-d902-4bcb-a1b2-83b4f4cd6143",
+      "slug": "qwen3-30b-a3b-2507-reasoning",
+      "name": "Qwen3 30B A3B 2507 (Reasoning)",
+      "shortName": "Qwen3 30B A3B 2507",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -2677,10 +2621,38 @@
       }
     },
     {
-      "id": "cbac8c35-e069-4c73-823e-0953e6ed0e85",
-      "slug": "qwen3-max-thinking-preview",
-      "name": "Qwen3 Max Thinking (Preview)",
-      "shortName": "Qwen3 Max Thinking (Preview)",
+      "id": "da9fe224-8af3-46d7-a8c4-6220779c3f35",
+      "slug": "qwen3-coder-30b-a3b-instruct",
+      "name": "Qwen3 Coder 30B A3B Instruct",
+      "shortName": "Qwen3 Coder 30B A3B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "f5d83128-047f-496d-ba49-8a428abe8345",
+      "slug": "qwen3-vl-4b-instruct",
+      "name": "Qwen3 VL 4B Instruct",
+      "shortName": "Qwen3 VL 4B",
+      "deprecated": false,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "a803d3d0-d22e-49a0-ac2c-b9c6f1141065",
+      "slug": "qwen3-vl-235b-a22b-reasoning",
+      "name": "Qwen3 VL 235B A22B (Reasoning)",
+      "shortName": "Qwen3 VL 235B A22B",
       "deprecated": false,
       "isReasoning": true,
       "creator": {
@@ -2691,12 +2663,40 @@
       }
     },
     {
-      "id": "2aacdc07-5f4e-4ab9-8ea5-5f7ab93f9eeb",
-      "slug": "qwen3-4b-2507-instruct-reasoning",
-      "name": "Qwen3 4B 2507 (Reasoning)",
-      "shortName": "Qwen3 4B 2507",
+      "id": "dec8073c-57e2-41c0-b1aa-7a62960f103f",
+      "slug": "qwen3-vl-8b-reasoning",
+      "name": "Qwen3 VL 8B (Reasoning)",
+      "shortName": "Qwen3 VL 8B",
       "deprecated": false,
       "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "f93d0750-b659-4ceb-a123-7e657904ef2b",
+      "slug": "qwen3-vl-4b-reasoning",
+      "name": "Qwen3 VL 4B (Reasoning)",
+      "shortName": "Qwen3 VL 4B",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+      "slug": "qwen3-max",
+      "name": "Qwen3 Max",
+      "shortName": "Qwen3 Max",
+      "deprecated": false,
+      "isReasoning": false,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -2709,34 +2709,6 @@
       "slug": "ling-flash-2-0",
       "name": "Ling-flash-2.0",
       "shortName": "Ling-flash-2.0",
-      "deprecated": false,
-      "isReasoning": false,
-      "creator": {
-        "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
-        "name": "InclusionAI",
-        "color": "#4fb5ff",
-        "logo": "/img/logos/inclusionai_small.jpg"
-      }
-    },
-    {
-      "id": "a29e66d6-1c3c-456a-8770-59ee3845b35d",
-      "slug": "ring-1t",
-      "name": "Ring-1T",
-      "shortName": "Ring-1T",
-      "deprecated": false,
-      "isReasoning": true,
-      "creator": {
-        "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
-        "name": "InclusionAI",
-        "color": "#4fb5ff",
-        "logo": "/img/logos/inclusionai_small.jpg"
-      }
-    },
-    {
-      "id": "15b56b8e-7b93-4ed9-ac06-75c922e3b86e",
-      "slug": "ling-1t",
-      "name": "Ling-1T",
-      "shortName": "Ling-1T",
       "deprecated": false,
       "isReasoning": false,
       "creator": {
@@ -2767,6 +2739,34 @@
       "shortName": "Ring-flash-2.0",
       "deprecated": false,
       "isReasoning": true,
+      "creator": {
+        "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+        "name": "InclusionAI",
+        "color": "#4fb5ff",
+        "logo": "/img/logos/inclusionai_small.jpg"
+      }
+    },
+    {
+      "id": "a29e66d6-1c3c-456a-8770-59ee3845b35d",
+      "slug": "ring-1t",
+      "name": "Ring-1T",
+      "shortName": "Ring-1T",
+      "deprecated": false,
+      "isReasoning": true,
+      "creator": {
+        "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+        "name": "InclusionAI",
+        "color": "#4fb5ff",
+        "logo": "/img/logos/inclusionai_small.jpg"
+      }
+    },
+    {
+      "id": "15b56b8e-7b93-4ed9-ac06-75c922e3b86e",
+      "slug": "ling-1t",
+      "name": "Ling-1T",
+      "shortName": "Ling-1T",
+      "deprecated": false,
+      "isReasoning": false,
       "creator": {
         "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
         "name": "InclusionAI",
@@ -2929,12 +2929,26 @@
       }
     },
     {
-      "id": "05e45a36-b5c6-47a1-8adb-9ddc19add5b3",
-      "slug": "gpt-5-nano-minimal",
-      "name": "GPT-5 nano (minimal)",
-      "shortName": "GPT-5 nano (minimal)",
+      "id": "3b608b70-6434-4baa-99ad-45d499703c67",
+      "slug": "gpt-4-1",
+      "name": "GPT-4.1",
+      "shortName": "GPT-4.1",
       "deprecated": true,
       "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "ca04852c-eaae-4881-a208-f9b2ca3b7cd6",
+      "slug": "o3-pro",
+      "name": "o3-pro",
+      "shortName": "o3-pro",
+      "deprecated": true,
+      "isReasoning": true,
       "creator": {
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI",
@@ -2949,20 +2963,6 @@
       "shortName": "GPT-5 (high)",
       "deprecated": true,
       "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "72c358fd-7d45-4d68-89aa-699743710924",
-      "slug": "gpt-4-1-nano",
-      "name": "GPT-4.1 nano",
-      "shortName": "GPT-4.1 nano",
-      "deprecated": true,
-      "isReasoning": false,
       "creator": {
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI",
@@ -2999,10 +2999,10 @@
       }
     },
     {
-      "id": "bc26bfdb-4923-4442-a6ca-e77392923581",
-      "slug": "gpt-5-mini-minimal",
-      "name": "GPT-5 mini (minimal)",
-      "shortName": "GPT-5 mini (minimal)",
+      "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
+      "slug": "gpt-4-1-mini",
+      "name": "GPT-4.1 mini",
+      "shortName": "GPT-4.1 mini",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3013,12 +3013,26 @@
       }
     },
     {
-      "id": "c3274a19-6d3c-4d01-ab9b-5055a0a40429",
-      "slug": "gpt-5-mini-medium",
-      "name": "GPT-5 mini (medium)",
-      "shortName": "GPT-5 mini (medium)",
+      "id": "6a7c0e25-1dcb-4b15-8495-a8536a9da051",
+      "slug": "gpt-4",
+      "name": "GPT-4",
+      "shortName": "GPT-4",
       "deprecated": true,
-      "isReasoning": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "72c358fd-7d45-4d68-89aa-699743710924",
+      "slug": "gpt-4-1-nano",
+      "name": "GPT-4.1 nano",
+      "shortName": "GPT-4.1 nano",
+      "deprecated": true,
+      "isReasoning": false,
       "creator": {
         "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
         "name": "OpenAI",
@@ -3041,48 +3055,6 @@
       }
     },
     {
-      "id": "84b49308-6b93-47aa-a4f6-776ee1a1e8cd",
-      "slug": "o4-mini",
-      "name": "o4-mini (high)",
-      "shortName": "o4-mini (high)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "8b1a70d1-e05f-426b-9122-023d4629ab47",
-      "slug": "gpt-3-5-turbo-0613",
-      "name": "GPT-3.5 Turbo (0613)",
-      "shortName": "GPT-3.5 Turbo (0613)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "eab1492c-b853-4852-aa71-06b0ec2481c1",
-      "slug": "gpt-5-chatgpt",
-      "name": "GPT-5 (ChatGPT)",
-      "shortName": "GPT-5 (ChatGPT)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
       "id": "4dc12a38-b18f-4c43-8e1b-678f8434b5b1",
       "slug": "gpt-5-1",
       "name": "GPT-5.1 (high)",
@@ -3097,108 +3069,10 @@
       }
     },
     {
-      "id": "076f2674-bc4b-4925-be59-50832eb8c090",
-      "slug": "o3-mini-high",
-      "name": "o3-mini (high)",
-      "shortName": "o3-mini (high)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "d0b3d47e-aec6-425e-9de7-168dcc6d1e28",
-      "slug": "gpt-5-1-non-reasoning",
-      "name": "GPT-5.1 (Non-reasoning)",
-      "shortName": "GPT-5.1",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "7f3c9423-3ee3-4369-a6d9-3f2a40aff00e",
-      "slug": "gpt-5-low",
-      "name": "GPT-5 (low)",
-      "shortName": "GPT-5 (low)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
-      "slug": "gpt-4-1-mini",
-      "name": "GPT-4.1 mini",
-      "shortName": "GPT-4.1 mini",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "ca04852c-eaae-4881-a208-f9b2ca3b7cd6",
-      "slug": "o3-pro",
-      "name": "o3-pro",
-      "shortName": "o3-pro",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "3b608b70-6434-4baa-99ad-45d499703c67",
-      "slug": "gpt-4-1",
-      "name": "GPT-4.1",
-      "shortName": "GPT-4.1",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "e2e9ddc3-8c2d-4bf5-a60a-83a1afe61034",
-      "slug": "gpt-4o-realtime-dec-2024",
-      "name": "GPT-4o Realtime (Dec '24)",
-      "shortName": "GPT-4o Realtime (Dec)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-        "name": "OpenAI",
-        "color": "#1f1f1f",
-        "logo": "/img/logos/openai_small.svg"
-      }
-    },
-    {
-      "id": "4343afb1-c928-44c9-92e2-68fa1195b6f5",
-      "slug": "gpt-4o-mini-realtime-dec-2024",
-      "name": "GPT-4o mini Realtime (Dec '24)",
-      "shortName": "GPT-4o mini Realtime (Dec)",
+      "id": "5ce30d25-5353-45bb-bef9-6b87480ba3a2",
+      "slug": "gpt-4-5",
+      "name": "GPT-4.5 (Preview)",
+      "shortName": "GPT-4.5 (Preview)",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3223,10 +3097,10 @@
       }
     },
     {
-      "id": "5d11e7a1-4f70-4e5a-9364-e193761d6757",
-      "slug": "gpt-5-codex",
-      "name": "GPT-5 Codex (high)",
-      "shortName": "GPT-5 Codex (high)",
+      "id": "c3274a19-6d3c-4d01-ab9b-5055a0a40429",
+      "slug": "gpt-5-mini-medium",
+      "name": "GPT-5 mini (medium)",
+      "shortName": "GPT-5 mini (medium)",
       "deprecated": true,
       "isReasoning": true,
       "creator": {
@@ -3237,10 +3111,10 @@
       }
     },
     {
-      "id": "6a7c0e25-1dcb-4b15-8495-a8536a9da051",
-      "slug": "gpt-4",
-      "name": "GPT-4",
-      "shortName": "GPT-4",
+      "id": "b4784397-aa28-411b-b011-9c4331bfa9c8",
+      "slug": "gpt-4o-chatgpt",
+      "name": "GPT-4o (ChatGPT)",
+      "shortName": "GPT-4o (ChatGPT)",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3251,10 +3125,38 @@
       }
     },
     {
-      "id": "5ce30d25-5353-45bb-bef9-6b87480ba3a2",
-      "slug": "gpt-4-5",
-      "name": "GPT-4.5 (Preview)",
-      "shortName": "GPT-4.5 (Preview)",
+      "id": "8b1a70d1-e05f-426b-9122-023d4629ab47",
+      "slug": "gpt-3-5-turbo-0613",
+      "name": "GPT-3.5 Turbo (0613)",
+      "shortName": "GPT-3.5 Turbo (0613)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "84b49308-6b93-47aa-a4f6-776ee1a1e8cd",
+      "slug": "o4-mini",
+      "name": "o4-mini (high)",
+      "shortName": "o4-mini (high)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "eab1492c-b853-4852-aa71-06b0ec2481c1",
+      "slug": "gpt-5-chatgpt",
+      "name": "GPT-5 (ChatGPT)",
+      "shortName": "GPT-5 (ChatGPT)",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3293,10 +3195,108 @@
       }
     },
     {
-      "id": "b4784397-aa28-411b-b011-9c4331bfa9c8",
-      "slug": "gpt-4o-chatgpt",
-      "name": "GPT-4o (ChatGPT)",
-      "shortName": "GPT-4o (ChatGPT)",
+      "id": "d0b3d47e-aec6-425e-9de7-168dcc6d1e28",
+      "slug": "gpt-5-1-non-reasoning",
+      "name": "GPT-5.1 (Non-reasoning)",
+      "shortName": "GPT-5.1",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "e2e9ddc3-8c2d-4bf5-a60a-83a1afe61034",
+      "slug": "gpt-4o-realtime-dec-2024",
+      "name": "GPT-4o Realtime (Dec '24)",
+      "shortName": "GPT-4o Realtime (Dec)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "7f3c9423-3ee3-4369-a6d9-3f2a40aff00e",
+      "slug": "gpt-5-low",
+      "name": "GPT-5 (low)",
+      "shortName": "GPT-5 (low)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "05e45a36-b5c6-47a1-8adb-9ddc19add5b3",
+      "slug": "gpt-5-nano-minimal",
+      "name": "GPT-5 nano (minimal)",
+      "shortName": "GPT-5 nano (minimal)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "076f2674-bc4b-4925-be59-50832eb8c090",
+      "slug": "o3-mini-high",
+      "name": "o3-mini (high)",
+      "shortName": "o3-mini (high)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "bc26bfdb-4923-4442-a6ca-e77392923581",
+      "slug": "gpt-5-mini-minimal",
+      "name": "GPT-5 mini (minimal)",
+      "shortName": "GPT-5 mini (minimal)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "5d11e7a1-4f70-4e5a-9364-e193761d6757",
+      "slug": "gpt-5-codex",
+      "name": "GPT-5 Codex (high)",
+      "shortName": "GPT-5 Codex (high)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "name": "OpenAI",
+        "color": "#1f1f1f",
+        "logo": "/img/logos/openai_small.svg"
+      }
+    },
+    {
+      "id": "4343afb1-c928-44c9-92e2-68fa1195b6f5",
+      "slug": "gpt-4o-mini-realtime-dec-2024",
+      "name": "GPT-4o mini Realtime (Dec '24)",
+      "shortName": "GPT-4o mini Realtime (Dec)",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3405,10 +3405,10 @@
       }
     },
     {
-      "id": "599da8e0-bd9c-4b38-a127-b50e371fbcf8",
-      "slug": "llama-2-chat-70b",
-      "name": "Llama 2 Chat 70B",
-      "shortName": "Llama 2 Chat 70B",
+      "id": "6b08a75a-19ee-40b4-be33-133b8ef42f92",
+      "slug": "llama-2-chat-13b",
+      "name": "Llama 2 Chat 13B",
+      "shortName": "Llama 2 Chat 13B",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3419,10 +3419,10 @@
       }
     },
     {
-      "id": "6b08a75a-19ee-40b4-be33-133b8ef42f92",
-      "slug": "llama-2-chat-13b",
-      "name": "Llama 2 Chat 13B",
-      "shortName": "Llama 2 Chat 13B",
+      "id": "599da8e0-bd9c-4b38-a127-b50e371fbcf8",
+      "slug": "llama-2-chat-70b",
+      "name": "Llama 2 Chat 70B",
+      "shortName": "Llama 2 Chat 70B",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3545,206 +3545,10 @@
       }
     },
     {
-      "id": "877fdfc9-2026-477a-af96-e4fd602c0131",
-      "slug": "gemini-2-5-flash-preview-09-2025",
-      "name": "Gemini 2.5 Flash Preview (Sep '25) (Non-reasoning)",
+      "id": "c7667559-d9b6-43f1-8cd8-8bdbc78d190b",
+      "slug": "gemini-2-5-flash-preview-09-2025-reasoning",
+      "name": "Gemini 2.5 Flash Preview (Sep '25) (Reasoning)",
       "shortName": "Gemini 2.5 Flash (Sep)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "0399e614-5d46-484f-9183-e4f32d74e1c6",
-      "slug": "gemini-2-0-flash-thinking-exp-0121",
-      "name": "Gemini 2.0 Flash Thinking Experimental (Jan '25)",
-      "shortName": "Gemini 2.0 Flash Thinking exp. (Jan)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "62de31e8-a1a3-429c-b634-a2afccfd9363",
-      "slug": "gemini-2-5-pro-03-25",
-      "name": "Gemini 2.5 Pro Preview (Mar' 25)",
-      "shortName": "Gemini 2.5 Pro (Mar)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "073b5329-c4b3-4f1f-8f97-4753aadf4398",
-      "slug": "gemini-2-5-pro-05-06",
-      "name": "Gemini 2.5 Pro Preview (May' 25)",
-      "shortName": "Gemini 2.5 Pro (May)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "ac48c49d-9e77-4394-ac4e-d1ee51fd5fee",
-      "slug": "gemini-1-5-flash-may-2024",
-      "name": "Gemini 1.5 Flash (May '24)",
-      "shortName": "Gemini 1.5 Flash (May)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "219ed587-60c5-4a48-9517-8480e08d0ca1",
-      "slug": "gemini-2-5-flash-reasoning",
-      "name": "Gemini 2.5 Flash (Reasoning)",
-      "shortName": "Gemini 2.5 Flash",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "55a3ebf6-6117-4cc1-8596-c6de6e552fd4",
-      "slug": "gemini-2-5-flash-04-2025",
-      "name": "Gemini 2.5 Flash Preview (Non-reasoning)",
-      "shortName": "Gemini 2.5 Flash",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "bd2c3517-00d8-4ba5-a989-1f1e52f3ffab",
-      "slug": "gemma-3n-e4b-preview-0520",
-      "name": "Gemma 3n E4B Instruct Preview (May '25)",
-      "shortName": "Gemma 3n E4B (May)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "7b269763-ecc0-41ef-aa29-47ef632ac065",
-      "slug": "gemini-2-0-flash-lite-001",
-      "name": "Gemini 2.0 Flash-Lite (Feb '25)",
-      "shortName": "Gemini 2.0 Flash-Lite (Feb)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "515852e7-ba9c-4571-8cf9-82ad6b45f22f",
-      "slug": "palm-2",
-      "name": "PALM-2",
-      "shortName": "PALM-2",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "68c89ebf-779c-4445-9241-de964cd17355",
-      "slug": "gemini-2-5-flash-reasoning-04-2025",
-      "name": "Gemini 2.5 Flash Preview (Reasoning)",
-      "shortName": "Gemini 2.5 Flash",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "16f2578b-1b28-4be3-b371-700c2677bcd6",
-      "slug": "gemini-1-5-pro-may-2024",
-      "name": "Gemini 1.5 Pro (May '24)",
-      "shortName": "Gemini 1.5 Pro (May)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "1d81aa1c-64c8-442a-9c41-81b37e407b91",
-      "slug": "gemini-2-5-flash-lite",
-      "name": "Gemini 2.5 Flash-Lite (Non-reasoning)",
-      "shortName": "Gemini 2.5 Flash-Lite",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "8ddacd41-bf43-411b-aa30-43ebf0567dd8",
-      "slug": "gemini-1-0-pro",
-      "name": "Gemini 1.0 Pro",
-      "shortName": "Gemini 1.0 Pro",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
-        "name": "Google",
-        "color": "#34A853",
-        "logo": "/img/logos/google_small.svg"
-      }
-    },
-    {
-      "id": "dfeeb904-e784-4d5c-ad66-9400146b150b",
-      "slug": "gemini-2-0-flash-thinking-exp-1219",
-      "name": "Gemini 2.0 Flash Thinking Experimental (Dec '24)",
-      "shortName": "Gemini 2.0 Flash Thinking exp. (Dec)",
       "deprecated": true,
       "isReasoning": true,
       "creator": {
@@ -3769,10 +3573,192 @@
       }
     },
     {
-      "id": "c7667559-d9b6-43f1-8cd8-8bdbc78d190b",
-      "slug": "gemini-2-5-flash-preview-09-2025-reasoning",
-      "name": "Gemini 2.5 Flash Preview (Sep '25) (Reasoning)",
+      "id": "877fdfc9-2026-477a-af96-e4fd602c0131",
+      "slug": "gemini-2-5-flash-preview-09-2025",
+      "name": "Gemini 2.5 Flash Preview (Sep '25) (Non-reasoning)",
       "shortName": "Gemini 2.5 Flash (Sep)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "55a3ebf6-6117-4cc1-8596-c6de6e552fd4",
+      "slug": "gemini-2-5-flash-04-2025",
+      "name": "Gemini 2.5 Flash Preview (Non-reasoning)",
+      "shortName": "Gemini 2.5 Flash",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "62de31e8-a1a3-429c-b634-a2afccfd9363",
+      "slug": "gemini-2-5-pro-03-25",
+      "name": "Gemini 2.5 Pro Preview (Mar' 25)",
+      "shortName": "Gemini 2.5 Pro (Mar)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "dfeeb904-e784-4d5c-ad66-9400146b150b",
+      "slug": "gemini-2-0-flash-thinking-exp-1219",
+      "name": "Gemini 2.0 Flash Thinking Experimental (Dec '24)",
+      "shortName": "Gemini 2.0 Flash Thinking exp. (Dec)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "7b269763-ecc0-41ef-aa29-47ef632ac065",
+      "slug": "gemini-2-0-flash-lite-001",
+      "name": "Gemini 2.0 Flash-Lite (Feb '25)",
+      "shortName": "Gemini 2.0 Flash-Lite (Feb)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "0399e614-5d46-484f-9183-e4f32d74e1c6",
+      "slug": "gemini-2-0-flash-thinking-exp-0121",
+      "name": "Gemini 2.0 Flash Thinking Experimental (Jan '25)",
+      "shortName": "Gemini 2.0 Flash Thinking exp. (Jan)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "ac48c49d-9e77-4394-ac4e-d1ee51fd5fee",
+      "slug": "gemini-1-5-flash-may-2024",
+      "name": "Gemini 1.5 Flash (May '24)",
+      "shortName": "Gemini 1.5 Flash (May)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "16f2578b-1b28-4be3-b371-700c2677bcd6",
+      "slug": "gemini-1-5-pro-may-2024",
+      "name": "Gemini 1.5 Pro (May '24)",
+      "shortName": "Gemini 1.5 Pro (May)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "515852e7-ba9c-4571-8cf9-82ad6b45f22f",
+      "slug": "palm-2",
+      "name": "PALM-2",
+      "shortName": "PALM-2",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "1d81aa1c-64c8-442a-9c41-81b37e407b91",
+      "slug": "gemini-2-5-flash-lite",
+      "name": "Gemini 2.5 Flash-Lite (Non-reasoning)",
+      "shortName": "Gemini 2.5 Flash-Lite",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "073b5329-c4b3-4f1f-8f97-4753aadf4398",
+      "slug": "gemini-2-5-pro-05-06",
+      "name": "Gemini 2.5 Pro Preview (May' 25)",
+      "shortName": "Gemini 2.5 Pro (May)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "bd2c3517-00d8-4ba5-a989-1f1e52f3ffab",
+      "slug": "gemma-3n-e4b-preview-0520",
+      "name": "Gemma 3n E4B Instruct Preview (May '25)",
+      "shortName": "Gemma 3n E4B (May)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "219ed587-60c5-4a48-9517-8480e08d0ca1",
+      "slug": "gemini-2-5-flash-reasoning",
+      "name": "Gemini 2.5 Flash (Reasoning)",
+      "shortName": "Gemini 2.5 Flash",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "68c89ebf-779c-4445-9241-de964cd17355",
+      "slug": "gemini-2-5-flash-reasoning-04-2025",
+      "name": "Gemini 2.5 Flash Preview (Reasoning)",
+      "shortName": "Gemini 2.5 Flash",
       "deprecated": true,
       "isReasoning": true,
       "creator": {
@@ -3787,6 +3773,20 @@
       "slug": "gemini-2-5-flash",
       "name": "Gemini 2.5 Flash (Non-reasoning)",
       "shortName": "Gemini 2.5 Flash",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "name": "Google",
+        "color": "#34A853",
+        "logo": "/img/logos/google_small.svg"
+      }
+    },
+    {
+      "id": "8ddacd41-bf43-411b-aa30-43ebf0567dd8",
+      "slug": "gemini-1-0-pro",
+      "name": "Gemini 1.0 Pro",
+      "shortName": "Gemini 1.0 Pro",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -3895,20 +3895,6 @@
       }
     },
     {
-      "id": "13358187-4584-479c-ab43-5bcdf8f297a4",
-      "slug": "claude-3-7-sonnet-thinking",
-      "name": "Claude 3.7 Sonnet (Reasoning)",
-      "shortName": "Claude 3.7 Sonnet",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-        "name": "Anthropic",
-        "color": "#cc785c",
-        "logo": "/img/logos/anthropic_small.svg"
-      }
-    },
-    {
       "id": "f2f60e3a-e5f5-4471-acd2-9f2f29c76007",
       "slug": "claude-4-1-opus",
       "name": "Claude 4.1 Opus (Non-reasoning)",
@@ -3951,6 +3937,34 @@
       }
     },
     {
+      "id": "13358187-4584-479c-ab43-5bcdf8f297a4",
+      "slug": "claude-3-7-sonnet-thinking",
+      "name": "Claude 3.7 Sonnet (Reasoning)",
+      "shortName": "Claude 3.7 Sonnet",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "name": "Anthropic",
+        "color": "#cc785c",
+        "logo": "/img/logos/anthropic_small.svg"
+      }
+    },
+    {
+      "id": "d925845d-39ad-4de3-8495-f176b79828c0",
+      "slug": "claude-3-7-sonnet",
+      "name": "Claude 3.7 Sonnet (Non-reasoning)",
+      "shortName": "Claude 3.7 Sonnet",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "name": "Anthropic",
+        "color": "#cc785c",
+        "logo": "/img/logos/anthropic_small.svg"
+      }
+    },
+    {
       "id": "8a4a5ead-7789-4389-8400-30e9d20370b7",
       "slug": "claude-4-opus-thinking",
       "name": "Claude 4 Opus (Reasoning)",
@@ -3971,20 +3985,6 @@
       "shortName": "Claude 4 Sonnet",
       "deprecated": true,
       "isReasoning": true,
-      "creator": {
-        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-        "name": "Anthropic",
-        "color": "#cc785c",
-        "logo": "/img/logos/anthropic_small.svg"
-      }
-    },
-    {
-      "id": "d925845d-39ad-4de3-8495-f176b79828c0",
-      "slug": "claude-3-7-sonnet",
-      "name": "Claude 3.7 Sonnet (Non-reasoning)",
-      "shortName": "Claude 3.7 Sonnet",
-      "deprecated": true,
-      "isReasoning": false,
       "creator": {
         "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
         "name": "Anthropic",
@@ -4175,76 +4175,6 @@
       }
     },
     {
-      "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
-      "slug": "mistral-small-3-1",
-      "name": "Mistral Small 3.1",
-      "shortName": "Mistral Small 3.1",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral",
-        "color": "#fd6f00",
-        "logo": "/img/logos/mistral_small.png"
-      }
-    },
-    {
-      "id": "660965b2-66d2-49ee-a6b9-79a6ac47d3c0",
-      "slug": "magistral-medium",
-      "name": "Magistral Medium 1",
-      "shortName": "Magistral Medium 1",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral",
-        "color": "#fd6f00",
-        "logo": "/img/logos/mistral_small.png"
-      }
-    },
-    {
-      "id": "cc1fa238-1a76-486d-a997-22309275eadd",
-      "slug": "devstral-small-2505",
-      "name": "Devstral Small (May '25)",
-      "shortName": "Devstral Small (May)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral",
-        "color": "#fd6f00",
-        "logo": "/img/logos/mistral_small.png"
-      }
-    },
-    {
-      "id": "7a7b52f6-fdef-4dae-9203-58c710ccc81d",
-      "slug": "mistral-saba",
-      "name": "Mistral Saba",
-      "shortName": "Mistral Saba",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral",
-        "color": "#fd6f00",
-        "logo": "/img/logos/mistral_small.png"
-      }
-    },
-    {
-      "id": "0fec07d5-a9b2-407a-b5f8-5bf10bd86b59",
-      "slug": "magistral-small",
-      "name": "Magistral Small 1",
-      "shortName": "Magistral Small 1",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-        "name": "Mistral",
-        "color": "#fd6f00",
-        "logo": "/img/logos/mistral_small.png"
-      }
-    },
-    {
       "id": "aba82268-2bb7-4a0f-80be-9b7722e2145b",
       "slug": "devstral-medium",
       "name": "Devstral Medium",
@@ -4273,6 +4203,48 @@
       }
     },
     {
+      "id": "7a7b52f6-fdef-4dae-9203-58c710ccc81d",
+      "slug": "mistral-saba",
+      "name": "Mistral Saba",
+      "shortName": "Mistral Saba",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral",
+        "color": "#fd6f00",
+        "logo": "/img/logos/mistral_small.png"
+      }
+    },
+    {
+      "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
+      "slug": "mistral-small-3-1",
+      "name": "Mistral Small 3.1",
+      "shortName": "Mistral Small 3.1",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral",
+        "color": "#fd6f00",
+        "logo": "/img/logos/mistral_small.png"
+      }
+    },
+    {
+      "id": "0fec07d5-a9b2-407a-b5f8-5bf10bd86b59",
+      "slug": "magistral-small",
+      "name": "Magistral Small 1",
+      "shortName": "Magistral Small 1",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral",
+        "color": "#fd6f00",
+        "logo": "/img/logos/mistral_small.png"
+      }
+    },
+    {
       "id": "9eae4ec4-61b8-48bc-9843-3edd506ae933",
       "slug": "devstral-small",
       "name": "Devstral Small (Jul '25)",
@@ -4291,6 +4263,34 @@
       "slug": "mistral-medium",
       "name": "Mistral Medium",
       "shortName": "Mistral Medium",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral",
+        "color": "#fd6f00",
+        "logo": "/img/logos/mistral_small.png"
+      }
+    },
+    {
+      "id": "660965b2-66d2-49ee-a6b9-79a6ac47d3c0",
+      "slug": "magistral-medium",
+      "name": "Magistral Medium 1",
+      "shortName": "Magistral Medium 1",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
+        "name": "Mistral",
+        "color": "#fd6f00",
+        "logo": "/img/logos/mistral_small.png"
+      }
+    },
+    {
+      "id": "cc1fa238-1a76-486d-a997-22309275eadd",
+      "slug": "devstral-small-2505",
+      "name": "Devstral Small (May '25)",
+      "shortName": "Devstral Small (May)",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -4427,80 +4427,10 @@
       }
     },
     {
-      "id": "75e1c197-f239-4361-a9d6-66dccfead236",
-      "slug": "deepseek-v3-0324",
-      "name": "DeepSeek V3 0324",
-      "shortName": "DeepSeek V3 0324",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-        "name": "DeepSeek",
-        "color": "#2243e6",
-        "logo": "/img/logos/deepseek_small.svg"
-      }
-    },
-    {
-      "id": "0e34f05c-387e-4968-be15-ccec4a55d8c1",
-      "slug": "deepseek-r1-0120",
-      "name": "DeepSeek R1 (Jan '25)",
-      "shortName": "DeepSeek R1 (Jan)",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-        "name": "DeepSeek",
-        "color": "#2243e6",
-        "logo": "/img/logos/deepseek_small.svg"
-      }
-    },
-    {
-      "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
-      "slug": "deepseek-v3-1",
-      "name": "DeepSeek V3.1 (Non-reasoning)",
-      "shortName": "DeepSeek V3.1",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-        "name": "DeepSeek",
-        "color": "#2243e6",
-        "logo": "/img/logos/deepseek_small.svg"
-      }
-    },
-    {
-      "id": "0a7dda4d-cc9c-4a90-abc1-abb5772c901b",
-      "slug": "deepseek-v3-1-terminus-reasoning",
-      "name": "DeepSeek V3.1 Terminus (Reasoning)",
-      "shortName": "DeepSeek V3.1 Terminus",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-        "name": "DeepSeek",
-        "color": "#2243e6",
-        "logo": "/img/logos/deepseek_small.svg"
-      }
-    },
-    {
       "id": "dfb9292d-bc7c-4425-a260-4256217e709f",
       "slug": "deepseek-v3-1-terminus",
       "name": "DeepSeek V3.1 Terminus (Non-reasoning)",
       "shortName": "DeepSeek V3.1 Terminus",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-        "name": "DeepSeek",
-        "color": "#2243e6",
-        "logo": "/img/logos/deepseek_small.svg"
-      }
-    },
-    {
-      "id": "8a24865b-90d9-4e2b-a2fd-6851c2e9d627",
-      "slug": "deepseek-v2-5-sep-2024",
-      "name": "DeepSeek-V2.5",
-      "shortName": "DeepSeek-V2.5",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -4525,6 +4455,62 @@
       }
     },
     {
+      "id": "0a7dda4d-cc9c-4a90-abc1-abb5772c901b",
+      "slug": "deepseek-v3-1-terminus-reasoning",
+      "name": "DeepSeek V3.1 Terminus (Reasoning)",
+      "shortName": "DeepSeek V3.1 Terminus",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+        "name": "DeepSeek",
+        "color": "#2243e6",
+        "logo": "/img/logos/deepseek_small.svg"
+      }
+    },
+    {
+      "id": "0e34f05c-387e-4968-be15-ccec4a55d8c1",
+      "slug": "deepseek-r1-0120",
+      "name": "DeepSeek R1 (Jan '25)",
+      "shortName": "DeepSeek R1 (Jan)",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+        "name": "DeepSeek",
+        "color": "#2243e6",
+        "logo": "/img/logos/deepseek_small.svg"
+      }
+    },
+    {
+      "id": "75e1c197-f239-4361-a9d6-66dccfead236",
+      "slug": "deepseek-v3-0324",
+      "name": "DeepSeek V3 0324",
+      "shortName": "DeepSeek V3 0324",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+        "name": "DeepSeek",
+        "color": "#2243e6",
+        "logo": "/img/logos/deepseek_small.svg"
+      }
+    },
+    {
+      "id": "fb65266f-5a7d-403c-85d5-ccdf0d1ca838",
+      "slug": "deepseek-v3-1",
+      "name": "DeepSeek V3.1 (Non-reasoning)",
+      "shortName": "DeepSeek V3.1",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+        "name": "DeepSeek",
+        "color": "#2243e6",
+        "logo": "/img/logos/deepseek_small.svg"
+      }
+    },
+    {
       "id": "af134350-8ba3-4629-b56b-00bd6dcf60c4",
       "slug": "deepseek-v3-2-reasoning-0925",
       "name": "DeepSeek V3.2 Exp (Reasoning)",
@@ -4539,10 +4525,10 @@
       }
     },
     {
-      "id": "2d19c2d1-062d-436e-b2c2-3d3ecad34acc",
-      "slug": "deepseek-v2",
-      "name": "DeepSeek-V2-Chat",
-      "shortName": "DeepSeek-V2",
+      "id": "8a24865b-90d9-4e2b-a2fd-6851c2e9d627",
+      "slug": "deepseek-v2-5-sep-2024",
+      "name": "DeepSeek-V2.5",
+      "shortName": "DeepSeek-V2.5",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -4567,26 +4553,26 @@
       }
     },
     {
-      "id": "5ec4a0db-da66-4e46-9682-fceeed755ef8",
-      "slug": "sonar",
-      "name": "Sonar",
-      "shortName": "Sonar",
+      "id": "2d19c2d1-062d-436e-b2c2-3d3ecad34acc",
+      "slug": "deepseek-v2",
+      "name": "DeepSeek-V2-Chat",
+      "shortName": "DeepSeek-V2",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
-        "id": "941fc0f0-1d4e-405a-95b2-2d49494e0e6c",
-        "name": "Perplexity",
-        "color": "#1B818E",
-        "logo": "/img/logos/perplexity_small.png"
+        "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+        "name": "DeepSeek",
+        "color": "#2243e6",
+        "logo": "/img/logos/deepseek_small.svg"
       }
     },
     {
-      "id": "1edc272c-d799-44d6-909a-bf3c1909a3a0",
-      "slug": "sonar-reasoning-pro",
-      "name": "Sonar Reasoning Pro",
-      "shortName": "Sonar Reasoning Pro",
+      "id": "3435db18-9227-45a5-8e79-9546b14b5aaa",
+      "slug": "sonar-pro",
+      "name": "Sonar Pro",
+      "shortName": "Sonar Pro",
       "deprecated": true,
-      "isReasoning": true,
+      "isReasoning": false,
       "creator": {
         "id": "941fc0f0-1d4e-405a-95b2-2d49494e0e6c",
         "name": "Perplexity",
@@ -4609,10 +4595,24 @@
       }
     },
     {
-      "id": "3435db18-9227-45a5-8e79-9546b14b5aaa",
-      "slug": "sonar-pro",
-      "name": "Sonar Pro",
-      "shortName": "Sonar Pro",
+      "id": "1edc272c-d799-44d6-909a-bf3c1909a3a0",
+      "slug": "sonar-reasoning-pro",
+      "name": "Sonar Reasoning Pro",
+      "shortName": "Sonar Reasoning Pro",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "941fc0f0-1d4e-405a-95b2-2d49494e0e6c",
+        "name": "Perplexity",
+        "color": "#1B818E",
+        "logo": "/img/logos/perplexity_small.png"
+      }
+    },
+    {
+      "id": "5ec4a0db-da66-4e46-9682-fceeed755ef8",
+      "slug": "sonar",
+      "name": "Sonar",
+      "shortName": "Sonar",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -4651,10 +4651,24 @@
       }
     },
     {
-      "id": "573bbd93-114c-4b71-9ede-a73a7d4bdf84",
-      "slug": "grok-4-fast-reasoning",
-      "name": "Grok 4 Fast (Reasoning)",
-      "shortName": "Grok 4 Fast",
+      "id": "2443ac9e-a3db-423d-accb-8963f6fb0a53",
+      "slug": "grok-3",
+      "name": "Grok 3",
+      "shortName": "Grok 3",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+        "name": "xAI",
+        "color": "#736cd3",
+        "logo": "/img/logos/xai.svg"
+      }
+    },
+    {
+      "id": "ec3b22e6-48ac-416a-b4ae-55565a4f3046",
+      "slug": "grok-3-reasoning",
+      "name": "Grok 3 Reasoning Beta",
+      "shortName": "Grok 3 Reasoning Beta",
       "deprecated": true,
       "isReasoning": true,
       "creator": {
@@ -4679,24 +4693,10 @@
       }
     },
     {
-      "id": "2443ac9e-a3db-423d-accb-8963f6fb0a53",
-      "slug": "grok-3",
-      "name": "Grok 3",
-      "shortName": "Grok 3",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-        "name": "xAI",
-        "color": "#736cd3",
-        "logo": "/img/logos/xai.svg"
-      }
-    },
-    {
-      "id": "ec3b22e6-48ac-416a-b4ae-55565a4f3046",
-      "slug": "grok-3-reasoning",
-      "name": "Grok 3 Reasoning Beta",
-      "shortName": "Grok 3 Reasoning Beta",
+      "id": "573bbd93-114c-4b71-9ede-a73a7d4bdf84",
+      "slug": "grok-4-fast-reasoning",
+      "name": "Grok 4 Fast (Reasoning)",
+      "shortName": "Grok 4 Fast",
       "deprecated": true,
       "isReasoning": true,
       "creator": {
@@ -4805,12 +4805,12 @@
       }
     },
     {
-      "id": "8e78cf7a-5b76-4beb-beba-b99c6233b208",
-      "slug": "solar-pro-2-preview-reasoning",
-      "name": "Solar Pro 2 (Preview) (Reasoning)",
-      "shortName": "Solar Pro 2",
+      "id": "432d6c36-8825-47f3-b4eb-58529cea346b",
+      "slug": "solar-pro-2-preview",
+      "name": "Solar Pro 2 (Preview) (Non-reasoning)",
+      "shortName": "Solar Pro 2 ",
       "deprecated": true,
-      "isReasoning": true,
+      "isReasoning": false,
       "creator": {
         "id": "64ff7f06-c6fb-42ea-ba24-9cd103ab2d61",
         "name": "Upstage",
@@ -4819,12 +4819,12 @@
       }
     },
     {
-      "id": "432d6c36-8825-47f3-b4eb-58529cea346b",
-      "slug": "solar-pro-2-preview",
-      "name": "Solar Pro 2 (Preview) (Non-reasoning)",
-      "shortName": "Solar Pro 2 ",
+      "id": "8e78cf7a-5b76-4beb-beba-b99c6233b208",
+      "slug": "solar-pro-2-preview-reasoning",
+      "name": "Solar Pro 2 (Preview) (Reasoning)",
+      "shortName": "Solar Pro 2",
       "deprecated": true,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "64ff7f06-c6fb-42ea-ba24-9cd103ab2d61",
         "name": "Upstage",
@@ -4917,20 +4917,6 @@
       }
     },
     {
-      "id": "c8a3fa87-735e-49a9-afb1-270c5e9f53f7",
-      "slug": "olmo-3-32b-think",
-      "name": "Olmo 3 32B Think",
-      "shortName": "Olmo 3 32B Think",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
-        "name": "Allen Institute for AI",
-        "color": "#F0529C",
-        "logo": "/img/logos/ai2_small.svg"
-      }
-    },
-    {
       "id": "54442579-2a4d-40cc-b264-bc4ff29e311a",
       "slug": "olmo-2-32b",
       "name": "OLMo 2 32B",
@@ -4951,6 +4937,20 @@
       "shortName": "OLMo 2 7B",
       "deprecated": true,
       "isReasoning": false,
+      "creator": {
+        "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
+        "name": "Allen Institute for AI",
+        "color": "#F0529C",
+        "logo": "/img/logos/ai2_small.svg"
+      }
+    },
+    {
+      "id": "c8a3fa87-735e-49a9-afb1-270c5e9f53f7",
+      "slug": "olmo-3-32b-think",
+      "name": "Olmo 3 32B Think",
+      "shortName": "Olmo 3 32B Think",
+      "deprecated": true,
+      "isReasoning": true,
       "creator": {
         "id": "ab6c5270-d7b9-4c09-92fe-62662618c631",
         "name": "Allen Institute for AI",
@@ -5001,12 +5001,12 @@
       }
     },
     {
-      "id": "946e7aab-db1c-4c3f-b0b3-7720d0cff187",
-      "slug": "glm-4-6",
-      "name": "GLM-4.6 (Non-reasoning)",
+      "id": "6a5d56e1-bb68-4205-8d9b-26b97888bc84",
+      "slug": "glm-4-6-reasoning",
+      "name": "GLM-4.6 (Reasoning)",
       "shortName": "GLM-4.6",
       "deprecated": true,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
         "name": "Z AI",
@@ -5029,12 +5029,12 @@
       }
     },
     {
-      "id": "6a5d56e1-bb68-4205-8d9b-26b97888bc84",
-      "slug": "glm-4-6-reasoning",
-      "name": "GLM-4.6 (Reasoning)",
+      "id": "946e7aab-db1c-4c3f-b0b3-7720d0cff187",
+      "slug": "glm-4-6",
+      "name": "GLM-4.6 (Non-reasoning)",
       "shortName": "GLM-4.6",
       "deprecated": true,
-      "isReasoning": true,
+      "isReasoning": false,
       "creator": {
         "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
         "name": "Z AI",
@@ -5113,10 +5113,10 @@
       }
     },
     {
-      "id": "540ebc58-a2d8-4dc9-ba6b-973efa52fab1",
-      "slug": "jamba-1-5-mini",
-      "name": "Jamba 1.5 Mini",
-      "shortName": "Jamba 1.5 Mini",
+      "id": "92b19c88-fa87-4595-957e-fe9aa5fa5ad4",
+      "slug": "jamba-1-6-large",
+      "name": "Jamba 1.6 Large",
+      "shortName": "Jamba 1.6 Large",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -5141,10 +5141,10 @@
       }
     },
     {
-      "id": "e8ffd75b-766f-4551-8c52-6e54706220eb",
-      "slug": "jamba-1-6-mini",
-      "name": "Jamba 1.6 Mini",
-      "shortName": "Jamba 1.6 Mini",
+      "id": "540ebc58-a2d8-4dc9-ba6b-973efa52fab1",
+      "slug": "jamba-1-5-mini",
+      "name": "Jamba 1.5 Mini",
+      "shortName": "Jamba 1.5 Mini",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -5155,10 +5155,10 @@
       }
     },
     {
-      "id": "92b19c88-fa87-4595-957e-fe9aa5fa5ad4",
-      "slug": "jamba-1-6-large",
-      "name": "Jamba 1.6 Large",
-      "shortName": "Jamba 1.6 Large",
+      "id": "e8ffd75b-766f-4551-8c52-6e54706220eb",
+      "slug": "jamba-1-6-mini",
+      "name": "Jamba 1.6 Mini",
+      "shortName": "Jamba 1.6 Mini",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -5253,110 +5253,12 @@
       }
     },
     {
-      "id": "b00ecd62-a53f-4aed-b833-3e9d6b0170ba",
-      "slug": "qwen3-32b-instruct-reasoning",
-      "name": "Qwen3 32B (Reasoning)",
-      "shortName": "Qwen3 32B",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "3e6cf518-a1f4-42d3-8fcf-827c9bd8e6d5",
-      "slug": "qwen3-30b-a3b-instruct-reasoning",
-      "name": "Qwen3 30B A3B (Reasoning)",
-      "shortName": "Qwen3 30B",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "bbe6d782-e630-48d5-b11c-3ce37f373f1e",
-      "slug": "qwen3-235b-a22b-instruct-reasoning",
-      "name": "Qwen3 235B A22B (Reasoning)",
-      "shortName": "Qwen3 235B",
-      "deprecated": true,
-      "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "ecc6524a-d521-458a-8327-5009e8ce6549",
-      "slug": "qwen3-14b-instruct",
-      "name": "Qwen3 14B (Non-reasoning)",
-      "shortName": "Qwen3 14B",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "5b2beb12-81a9-47a1-8a2a-d0a727185b50",
-      "slug": "qwen3-max-preview",
-      "name": "Qwen3 Max (Preview)",
-      "shortName": "Qwen3 Max (Preview)",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
       "id": "191a2097-cce3-49cf-881e-0c790892059f",
       "slug": "qwen3-4b-instruct-reasoning",
       "name": "Qwen3 4B (Reasoning)",
       "shortName": "Qwen3 4B",
       "deprecated": true,
       "isReasoning": true,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "e46198a7-cd29-4afd-933d-cdf180f0f305",
-      "slug": "qwen3-4b-instruct",
-      "name": "Qwen3 4B (Non-reasoning)",
-      "shortName": "Qwen3 4B",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "43573c57-2403-46fb-af4b-a93de9a0c3f5",
-      "slug": "qwen3-235b-a22b-instruct",
-      "name": "Qwen3 235B A22B (Non-reasoning)",
-      "shortName": "Qwen3 235B",
-      "deprecated": true,
-      "isReasoning": false,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -5379,38 +5281,10 @@
       }
     },
     {
-      "id": "bf60740e-6aa5-422f-ba49-ef6e9d171205",
-      "slug": "qwen3-32b-instruct",
-      "name": "Qwen3 32B (Non-reasoning)",
-      "shortName": "Qwen3 32B",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "41f73c27-880c-4f30-8b07-9999ce89a4ae",
-      "slug": "qwen-chat-72b",
-      "name": "Qwen Chat 72B",
-      "shortName": "Qwen Chat 72B",
-      "deprecated": true,
-      "isReasoning": false,
-      "creator": {
-        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-        "name": "Alibaba",
-        "color": "#ff7018",
-        "logo": "/img/logos/alibaba_small.svg"
-      }
-    },
-    {
-      "id": "1d0db5a3-3132-4213-a94b-c2e395d08283",
-      "slug": "qwen2.5-32b-instruct",
-      "name": "Qwen2.5 Instruct 32B",
-      "shortName": "Qwen2.5 Instruct 32B",
+      "id": "e46198a7-cd29-4afd-933d-cdf180f0f305",
+      "slug": "qwen3-4b-instruct",
+      "name": "Qwen3 4B (Non-reasoning)",
+      "shortName": "Qwen3 4B",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -5435,6 +5309,48 @@
       }
     },
     {
+      "id": "43573c57-2403-46fb-af4b-a93de9a0c3f5",
+      "slug": "qwen3-235b-a22b-instruct",
+      "name": "Qwen3 235B A22B (Non-reasoning)",
+      "shortName": "Qwen3 235B",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "b00ecd62-a53f-4aed-b833-3e9d6b0170ba",
+      "slug": "qwen3-32b-instruct-reasoning",
+      "name": "Qwen3 32B (Reasoning)",
+      "shortName": "Qwen3 32B",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "bf60740e-6aa5-422f-ba49-ef6e9d171205",
+      "slug": "qwen3-32b-instruct",
+      "name": "Qwen3 32B (Non-reasoning)",
+      "shortName": "Qwen3 32B",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
       "id": "ceb4d610-d0a4-48c1-bea0-80ed76f1e5ca",
       "slug": "qwq-32b",
       "name": "QwQ 32B",
@@ -5449,10 +5365,66 @@
       }
     },
     {
-      "id": "f3169f25-8c6f-48e4-ae87-0cf872dc0ec1",
-      "slug": "qwen3-30b-a3b-instruct",
-      "name": "Qwen3 30B A3B (Non-reasoning)",
-      "shortName": "Qwen3 30B",
+      "id": "8823351e-8232-4c9c-8a1d-cd2c1d2c1196",
+      "slug": "QwQ-32B-Preview",
+      "name": "QwQ 32B-Preview",
+      "shortName": "QwQ 32B-Preview",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "bbe6d782-e630-48d5-b11c-3ce37f373f1e",
+      "slug": "qwen3-235b-a22b-instruct-reasoning",
+      "name": "Qwen3 235B A22B (Reasoning)",
+      "shortName": "Qwen3 235B",
+      "deprecated": true,
+      "isReasoning": true,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "1d0db5a3-3132-4213-a94b-c2e395d08283",
+      "slug": "qwen2.5-32b-instruct",
+      "name": "Qwen2.5 Instruct 32B",
+      "shortName": "Qwen2.5 Instruct 32B",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "d1768b3a-0a21-4e08-b3f6-56a9ab6cfbf3",
+      "slug": "qwen1.5-110b-chat",
+      "name": "Qwen1.5 Chat 110B",
+      "shortName": "Qwen1.5 Chat 110B",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "ecc6524a-d521-458a-8327-5009e8ce6549",
+      "slug": "qwen3-14b-instruct",
+      "name": "Qwen3 14B (Non-reasoning)",
+      "shortName": "Qwen3 14B",
       "deprecated": true,
       "isReasoning": false,
       "creator": {
@@ -5477,12 +5449,12 @@
       }
     },
     {
-      "id": "d1768b3a-0a21-4e08-b3f6-56a9ab6cfbf3",
-      "slug": "qwen1.5-110b-chat",
-      "name": "Qwen1.5 Chat 110B",
-      "shortName": "Qwen1.5 Chat 110B",
+      "id": "3e6cf518-a1f4-42d3-8fcf-827c9bd8e6d5",
+      "slug": "qwen3-30b-a3b-instruct-reasoning",
+      "name": "Qwen3 30B A3B (Reasoning)",
+      "shortName": "Qwen3 30B",
       "deprecated": true,
-      "isReasoning": false,
+      "isReasoning": true,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
@@ -5505,12 +5477,40 @@
       }
     },
     {
-      "id": "8823351e-8232-4c9c-8a1d-cd2c1d2c1196",
-      "slug": "QwQ-32B-Preview",
-      "name": "QwQ 32B-Preview",
-      "shortName": "QwQ 32B-Preview",
+      "id": "41f73c27-880c-4f30-8b07-9999ce89a4ae",
+      "slug": "qwen-chat-72b",
+      "name": "Qwen Chat 72B",
+      "shortName": "Qwen Chat 72B",
       "deprecated": true,
-      "isReasoning": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "5b2beb12-81a9-47a1-8a2a-d0a727185b50",
+      "slug": "qwen3-max-preview",
+      "name": "Qwen3 Max (Preview)",
+      "shortName": "Qwen3 Max (Preview)",
+      "deprecated": true,
+      "isReasoning": false,
+      "creator": {
+        "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+        "name": "Alibaba",
+        "color": "#ff7018",
+        "logo": "/img/logos/alibaba_small.svg"
+      }
+    },
+    {
+      "id": "f3169f25-8c6f-48e4-ae87-0cf872dc0ec1",
+      "slug": "qwen3-30b-a3b-instruct",
+      "name": "Qwen3 30B A3B (Non-reasoning)",
+      "shortName": "Qwen3 30B",
+      "deprecated": true,
+      "isReasoning": false,
       "creator": {
         "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
         "name": "Alibaba",
