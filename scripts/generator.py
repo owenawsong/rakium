@@ -9,7 +9,6 @@ Data format from scraper.py:
   - yupp.json:               { categories: { overall, text, image, image-new, image-edit, search, svg, coding: { models: [{name, score, rank, wins, losses}] } } }
   - artificial_analysis.json:{ models: [{name, additional_text, model_creators: [{id, name}], ...}] }
   - openrouter.json:         { rankings: [{name, slug, author, context_length, prompt_price, completion_price, provider_count, modality, request_count?}] }
-  - eqbench.json:            { models: [{name, elo, score, traits: {abilities, humanlike, safety, assertive, social_iq, warm, analytic, insight, empathy, compliant, moralising, pragmatic}}] }
 """
 
 import json
@@ -138,8 +137,6 @@ def generate_html():
     yupp_data = load_json("yupp.json")
     artificial_data = load_json("artificial_analysis.json")
     openrouter_data = load_json("openrouter.json")
-    eqbench_data = load_json("eqbench.json")
-
     # Arena categories
     arena_categories = {}
     if arena_data and "categories" in arena_data:
@@ -168,9 +165,6 @@ def generate_html():
 
     # OpenRouter
     openrouter_models = openrouter_data.get("rankings", []) if openrouter_data else []
-
-    # EQ Bench
-    eqbench_models = eqbench_data.get("models", []) if eqbench_data else []
 
     # Totals
     arena_total = sum(len(m) for m in arena_categories.values())
@@ -243,7 +237,6 @@ def generate_html():
             <button class="tab" onclick="showTab('yupp')">YUPP</button>
             <button class="tab" onclick="showTab('artificial')">Artificial Analysis</button>
             <button class="tab" onclick="showTab('openrouter')">OpenRouter</button>
-            <button class="tab" onclick="showTab('eqbench')">EQ Bench</button>
         </div>
 
         <!-- Overview Section -->
@@ -268,10 +261,6 @@ def generate_html():
                 <div class="stat-card">
                     <h3>{len(openrouter_models)}</h3>
                     <p>OpenRouter Models</p>
-                </div>
-                <div class="stat-card">
-                    <h3>{len(eqbench_models)}</h3>
-                    <p>EQ Bench Models</p>
                 </div>
             </div>
 
@@ -562,11 +551,18 @@ def generate_html():
             if prefix == author_clean or prefix in author_clean or author_clean in prefix:
                 name = name.split(": ", 1)[1]
         modality = model.get("modality", "")
-        # Clean up modality display
+        # Clean up modality display (format from scraper: "text→text", "text+image→text", etc.)
         if isinstance(modality, str):
-            modality = modality.replace("text->", "").replace("->text", " → text").replace("text+image->", "multimodal → ")
-            if not modality or modality == "text":
+            if modality in ("text→text", "text->text", ""):
                 modality = "Text"
+            elif modality == "text→embeddings":
+                modality = "Embeddings"
+            elif "image" in modality and "→image" in modality:
+                modality = "Image Gen"
+            elif ("image" in modality or "video" in modality or "audio" in modality) and "text" in modality:
+                modality = "Multimodal"
+            else:
+                modality = modality.replace("→", " → ")
         html += f"""                    <tr>
                         <td class="rank">{i}</td>
                         <td class="model-name">{esc(name)}</td>
@@ -585,70 +581,10 @@ def generate_html():
         </div>
 """
 
-    # =========================================================================
-    # EQ BENCH SECTION (with Elo + all 11 trait columns)
-    # =========================================================================
-    eq_trait_cols = [
-        ("abilities", "Abilities"),
-        ("humanlike", "Humanlike"),
-        ("safety", "Safety"),
-        ("assertive", "Assertive"),
-        ("social_iq", "Social IQ"),
-        ("warm", "Warm"),
-        ("analytic", "Analytic"),
-        ("insight", "Insight"),
-        ("empathy", "Empathy"),
-        ("compliant", "Compliant"),
-        ("moralising", "Moralising"),
-        ("pragmatic", "Pragmatic"),
-    ]
-
-    html += """
-        <!-- EQ Bench Section -->
-        <div id="eqbench" class="section">
-            <div class="category-header">
-                <h2>EQ Bench Leaderboard</h2>
-                <p>Sourced from eqbench.com</p>
-            </div>
-            <input type="text" class="search-box" placeholder="Search models..." oninput="filterTable(this)">
-            <div class="table-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Model</th>
-                        <th>Elo Score</th>
-"""
-
-    for _, label in eq_trait_cols:
-        html += f"                        <th>{label}</th>\n"
-
-    html += """                    </tr>
-                </thead>
-                <tbody>
-"""
-
-    for i, model in enumerate(eqbench_models[:200], 1):
-        traits = model.get("traits", {})
-        elo = model.get("elo") or model.get("score")
-        html += f"""                    <tr>
-                        <td class="rank">#{i}</td>
-                        <td class="model-name">{esc(model.get('name'))}</td>
-                        <td class="score">{fmt_number(elo)}</td>
-"""
-        for col_key, _ in eq_trait_cols:
-            val = traits.get(col_key) if traits else None
-            html += f'                        <td class="dim">{fmt_number(val)}</td>\n'
-        html += "                    </tr>\n"
-
-    html += f"""                </tbody>
-            </table>
-            </div>
-        </div>
-
+    html += f"""
         <div class="update-time">
             Last updated: {now}<br>
-            Data sources: Arena, LiveBench, YUPP, Artificial Analysis, OpenRouter, EQ Bench
+            Data sources: Arena, LiveBench, YUPP, Artificial Analysis, OpenRouter
         </div>
     </div>
 
@@ -702,7 +638,6 @@ def generate_html():
     print(f"  YUPP: {yupp_total} models across {len(yupp_categories)} categories")
     print(f"  Artificial Analysis: {len(artificial_models)} models")
     print(f"  OpenRouter: {len(openrouter_models)} models")
-    print(f"  EQ Bench: {len(eqbench_models)} models")
 
 
 if __name__ == "__main__":

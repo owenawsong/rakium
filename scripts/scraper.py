@@ -8,8 +8,7 @@ Sources & Methods:
 - LiveBench: Direct CSV + categories JSON from livebench.ai (no Steel needed!)
 - YUPP: Direct tRPC API at yupp.ai (no Steel needed!)
 - Artificial Analysis: HTTP (escaped JSON in Next.js RSC streaming format)
-- OpenRouter: HTTP (/rankings page, escaped JSON with models + rankingData)
-- EQ Bench: HTTP + Steel fallback
+- OpenRouter: Public API (/api/frontend/models + /api/frontend/all-providers)
 """
 
 import json
@@ -1287,14 +1286,15 @@ def scrape_openrouter():
                 name = model.get("name") or slug
                 author = model.get("author") or ""
 
-                # Pricing: per-token prices (string or float)
-                pricing = model.get("pricing") or model.get("endpoint", {}).get("pricing", {}) or {}
-                if isinstance(pricing, dict):
-                    prompt_price = pricing.get("prompt") or pricing.get("input")
-                    completion_price = pricing.get("completion") or pricing.get("output")
-                else:
-                    prompt_price = None
-                    completion_price = None
+                # Pricing lives inside endpoint.pricing (endpoint can be None)
+                endpoint = model.get("endpoint") or {}
+                if not isinstance(endpoint, dict):
+                    endpoint = {}
+                pricing = model.get("pricing") or endpoint.get("pricing") or {}
+                if not isinstance(pricing, dict):
+                    pricing = {}
+                prompt_price = pricing.get("prompt") or pricing.get("input")
+                completion_price = pricing.get("completion") or pricing.get("output")
 
                 # Convert price strings to floats
                 try:
@@ -1306,26 +1306,21 @@ def scrape_openrouter():
                 except (ValueError, TypeError):
                     completion_price = None
 
-                # Context length
-                context_length = model.get("context_length") or model.get("top_provider", {}).get("context_length")
+                # Context length (top-level or from endpoint)
+                context_length = model.get("context_length") or endpoint.get("context_length")
 
-                # Provider count
-                provider_count = None
-                top_prov = model.get("top_provider") or {}
-                if isinstance(top_prov, dict):
-                    provider_count = top_prov.get("provider_count")
+                # Provider count (from endpoint or providers_lookup)
+                provider_count = endpoint.get("provider_count")
+                if provider_count is None and slug in providers_lookup:
+                    provider_count = providers_lookup[slug].get("provider_count")
 
-                # Modality
-                modality = model.get("modality") or model.get("type") or ""
-                # Architecture info
-                arch = model.get("architecture") or {}
-                if isinstance(arch, dict) and not modality:
-                    modality = arch.get("modality") or ""
-
-                # Usage data if available
-                request_count = model.get("request_count") or model.get("weekly_request_count")
-                p50_latency = model.get("p50_latency") or model.get("median_latency")
-                p50_throughput = model.get("p50_throughput") or model.get("median_throughput")
+                # Modality: use input_modalities/output_modalities arrays
+                input_mods = model.get("input_modalities") or []
+                output_mods = model.get("output_modalities") or []
+                if input_mods or output_mods:
+                    modality = "+".join(input_mods) + "→" + "+".join(output_mods)
+                else:
+                    modality = model.get("modality") or model.get("type") or ""
 
                 entry = {
                     "name": name,
@@ -1338,22 +1333,14 @@ def scrape_openrouter():
                     "modality": modality,
                 }
 
-                # Add usage fields only if they exist
-                if request_count is not None:
-                    entry["request_count"] = request_count
-                if p50_latency is not None:
-                    entry["p50_latency"] = p50_latency
-                if p50_throughput is not None:
-                    entry["p50_throughput"] = p50_throughput
-
                 merged.append(entry)
 
-            # Sort: by request_count if available, otherwise by context_length
-            has_requests = any(m.get("request_count") for m in merged)
-            if has_requests:
-                merged.sort(key=lambda x: (x.get("request_count") or 0), reverse=True)
-            else:
-                merged.sort(key=lambda x: (x.get("context_length") or 0), reverse=True)
+            # Sort: models with pricing first (by context_length desc),
+            # then models without pricing (by context_length desc)
+            merged.sort(key=lambda x: (
+                1 if x.get("prompt_price") is not None else 0,
+                x.get("context_length") or 0,
+            ), reverse=True)
 
             results["rankings"] = merged
             print(f"  SUCCESS: {len(merged)} models from API")
@@ -1398,328 +1385,6 @@ def scrape_openrouter():
 
 
 # =============================================================================
-# EQ BENCH - GitHub canonical data + website fallbacks
-# =============================================================================
-def _extract_eqbench_models_from_data(data):
-    """
-    Extract model list from EQ Bench canonical data (various formats).
-
-    The GitHub data can be:
-    1. A dict with model names as keys: {"model_name": {"elo": 1234, ...}, ...}
-    2. A dict with "elo_ratings" key: {"elo_ratings": {"model": score, ...}, ...}
-    3. A list of model objects: [{"name": "...", "elo": 1234, ...}, ...]
-    4. A dict with "pairwise_comparisons" or other nested structures
-
-    Returns list of normalized model dicts.
-    """
-    models = []
-
-    if isinstance(data, list):
-        # Format 3: direct list of model objects
-        for item in data:
-            if isinstance(item, dict):
-                name = item.get("name") or item.get("model") or item.get("model_name") or ""
-                if not name:
-                    continue
-                elo = item.get("elo") or item.get("score") or item.get("elo_score") or item.get("rating")
-                traits = {}
-                for trait in ["abilities", "humanlike", "safety", "assertive", "social_iq",
-                              "warm", "analytic", "insight", "empathy", "compliant",
-                              "moralising", "pragmatic"]:
-                    if trait in item:
-                        try:
-                            traits[trait] = round(float(item[trait]), 2)
-                        except (ValueError, TypeError):
-                            pass
-                    # Check nested "traits" dict
-                    elif isinstance(item.get("traits"), dict) and trait in item["traits"]:
-                        try:
-                            traits[trait] = round(float(item["traits"][trait]), 2)
-                        except (ValueError, TypeError):
-                            pass
-                models.append({"name": name, "elo": elo, "score": elo, "traits": traits})
-        return models
-
-    if not isinstance(data, dict):
-        return models
-
-    # Format 2: {"elo_ratings": {"model_name": score, ...}}
-    elo_ratings = data.get("elo_ratings")
-    if isinstance(elo_ratings, dict) and len(elo_ratings) > 3:
-        # Also try to get trait data from other keys
-        trait_data = {}
-        for key in ["trait_scores", "personality_scores", "dimensional_scores"]:
-            if isinstance(data.get(key), dict):
-                trait_data = data[key]
-                break
-
-        for model_name, score in elo_ratings.items():
-            try:
-                elo_val = float(score)
-            except (ValueError, TypeError):
-                elo_val = None
-            traits = {}
-            if model_name in trait_data and isinstance(trait_data[model_name], dict):
-                for trait_key, trait_val in trait_data[model_name].items():
-                    clean_key = trait_key.lower().replace(" ", "_")
-                    try:
-                        traits[clean_key] = round(float(trait_val), 2)
-                    except (ValueError, TypeError):
-                        pass
-            models.append({"name": model_name, "elo": elo_val, "score": elo_val, "traits": traits})
-        return models
-
-    # Format 1: model names as top-level keys in a dict
-    # Detect: most keys should be model-name-like strings
-    model_like_keys = [k for k in data.keys() if isinstance(data[k], dict) and
-                       k not in ("metadata", "config", "info", "settings", "pairwise_comparisons",
-                                 "elo_ratings", "trait_scores")]
-    if len(model_like_keys) > 3:
-        for model_name in model_like_keys:
-            model_data = data[model_name]
-            if not isinstance(model_data, dict):
-                continue
-            elo = model_data.get("elo") or model_data.get("score") or model_data.get("rating")
-            traits = {}
-            for trait in ["abilities", "humanlike", "safety", "assertive", "social_iq",
-                          "warm", "analytic", "insight", "empathy", "compliant",
-                          "moralising", "pragmatic"]:
-                if trait in model_data:
-                    try:
-                        traits[trait] = round(float(model_data[trait]), 2)
-                    except (ValueError, TypeError):
-                        pass
-            if elo is not None or traits:
-                models.append({"name": model_name, "elo": elo, "score": elo, "traits": traits})
-        return models
-
-    return models
-
-
-def scrape_eqbench():
-    """
-    Scrape EQ Bench leaderboard.
-
-    Strategy:
-      1. Fetch canonical Elo results from GitHub (EQ-bench/eqbench3 repo)
-      2. Fall back to eqbench.com HTML (JSON extraction + table parsing)
-      3. Fall back to Steel browser for JS-rendered content
-    """
-    print("Scraping EQ Bench...")
-
-    results = {
-        "source": "eqbench.com",
-        "scraped_at": datetime.now(timezone.utc).isoformat(),
-        "models": []
-    }
-
-    # --- Strategy 1: GitHub canonical data ---
-    github_urls = [
-        "https://raw.githubusercontent.com/EQ-bench/eqbench3/main/data/canonical_leaderboard_elo_results.json",
-        "https://raw.githubusercontent.com/EQ-bench/eqbench3/main/data/leaderboard_elo_results.json",
-        "https://raw.githubusercontent.com/EQ-bench/eqbench3/main/data/results.json",
-    ]
-
-    for gh_url in github_urls:
-        try:
-            print(f"  Trying GitHub: {gh_url}")
-            gh_text = fetch_with_retry(gh_url, timeout=20)
-            gh_data = json.loads(gh_text)
-
-            models = _extract_eqbench_models_from_data(gh_data)
-            if models:
-                models.sort(key=lambda x: (x.get("elo") or 0), reverse=True)
-                results["models"] = models
-                results["source"] = f"GitHub ({gh_url.split('/')[-1]})"
-                print(f"  SUCCESS: {len(models)} models from GitHub")
-                return results
-            else:
-                print(f"    Got data but couldn't extract models (keys: {list(gh_data.keys()) if isinstance(gh_data, dict) else type(gh_data).__name__})")
-
-        except Exception as e:
-            print(f"    Failed: {e}")
-
-    # --- Strategy 2: eqbench.com HTML ---
-    print("  Trying eqbench.com...")
-    try:
-        html = fetch_with_retry("https://eqbench.com/", timeout=30)
-
-        # Try JSON extraction
-        for marker in ['"models":', '"results":', '"leaderboard":', '"elo_ratings":']:
-            models_data = extract_json_from_html(html, marker)
-            if models_data:
-                if isinstance(models_data, list) and len(models_data) > 0:
-                    results["models"] = models_data
-                    print(f"  Found {len(models_data)} models from '{marker}'")
-                    return results
-                elif isinstance(models_data, dict):
-                    models = _extract_eqbench_models_from_data(models_data)
-                    if models:
-                        models.sort(key=lambda x: (x.get("elo") or 0), reverse=True)
-                        results["models"] = models
-                        print(f"  Found {len(models)} models from '{marker}' (dict)")
-                        return results
-
-        # Try table parsing
-        models_from_table = _parse_tables_for_models(html)
-        if models_from_table:
-            results["models"] = models_from_table
-            print(f"  Found {len(models_from_table)} models from HTTP table")
-            return results
-
-    except Exception as e:
-        print(f"  eqbench.com failed: {e}")
-
-    # --- Strategy 3: Steel browser fallback ---
-    if STEEL_API_KEY:
-        print("  Trying Steel browser...")
-        try:
-            steel_html = fetch_with_steel("https://eqbench.com/", timeout=120, wait_for=15000)
-            if steel_html:
-                for marker in ['"models":', '"results":', '"leaderboard":']:
-                    models_data = extract_json_from_html(steel_html, marker)
-                    if models_data and isinstance(models_data, list) and len(models_data) > 0:
-                        results["models"] = models_data
-                        print(f"  Found {len(models_data)} models from Steel '{marker}'")
-                        return results
-
-                models_from_table = _parse_tables_for_models(steel_html)
-                if models_from_table:
-                    results["models"] = models_from_table
-                    print(f"  Found {len(models_from_table)} models from Steel table")
-                    return results
-        except Exception as e3:
-            print(f"  Steel fallback error: {e3}")
-
-    print("  Could not extract models from any source")
-    return results
-
-
-def _parse_tables_for_models(html):
-    """
-    Helper: extract model data from EQ Bench HTML tables.
-
-    EQ Bench table columns:
-      Model | Abilities | Humanlike | Safety | Assertive | Social IQ |
-      Warm | Analytic | Insight | Empathy | Compliant | Moralising | Pragmatic | Elo Score
-
-    We capture the model name, elo score, and all trait scores.
-    """
-    models = []
-    soup = BeautifulSoup(html, 'lxml')
-    tables = soup.find_all('table')
-
-    # Known EQ Bench trait columns (in expected order after Model)
-    trait_names = [
-        "abilities", "humanlike", "safety", "assertive", "social_iq",
-        "warm", "analytic", "insight", "empathy", "compliant",
-        "moralising", "pragmatic"
-    ]
-
-    for table in tables:
-        rows = table.find_all('tr')
-        if len(rows) < 3:
-            continue
-
-        # Get headers
-        header_row = rows[0]
-        headers = [th.get_text(strip=True).lower() for th in header_row.find_all(['th', 'td'])]
-
-        # Find model name column
-        name_idx = None
-        for i, h in enumerate(headers):
-            if 'model' in h or 'name' in h:
-                name_idx = i
-                break
-
-        if name_idx is None:
-            name_idx = 0  # Fall back to first column
-
-        # Map headers to trait names and find elo column
-        header_map = {}  # col_index -> trait_name
-        elo_idx = None
-        for i, h in enumerate(headers):
-            if i == name_idx:
-                continue
-            h_clean = h.strip().replace(' ', '_').lower()
-            if 'elo' in h_clean or ('score' in h_clean and 'elo' in h_clean):
-                elo_idx = i
-            elif 'abilities' in h_clean:
-                header_map[i] = "abilities"
-            elif 'humanlike' in h_clean or 'human' in h_clean:
-                header_map[i] = "humanlike"
-            elif 'safety' in h_clean:
-                header_map[i] = "safety"
-            elif 'assertive' in h_clean:
-                header_map[i] = "assertive"
-            elif 'social' in h_clean:
-                header_map[i] = "social_iq"
-            elif 'warm' in h_clean:
-                header_map[i] = "warm"
-            elif 'analytic' in h_clean:
-                header_map[i] = "analytic"
-            elif 'insight' in h_clean:
-                header_map[i] = "insight"
-            elif 'empathy' in h_clean:
-                header_map[i] = "empathy"
-            elif 'compliant' in h_clean:
-                header_map[i] = "compliant"
-            elif 'moralis' in h_clean:
-                header_map[i] = "moralising"
-            elif 'pragmatic' in h_clean:
-                header_map[i] = "pragmatic"
-
-        # If no header mapping found, try positional assignment
-        if not header_map and len(headers) > 3:
-            col_idx = 0
-            for i in range(len(headers)):
-                if i == name_idx:
-                    continue
-                if col_idx < len(trait_names):
-                    header_map[i] = trait_names[col_idx]
-                    col_idx += 1
-                elif elo_idx is None:
-                    elo_idx = i
-
-        # Parse data rows
-        for row in rows[1:]:
-            cells = row.find_all(['td', 'th'])
-            if len(cells) <= name_idx:
-                continue
-
-            name = cells[name_idx].get_text(strip=True)
-            if not name or len(name) < 2:
-                continue
-
-            # Get elo score
-            elo = None
-            if elo_idx is not None and elo_idx < len(cells):
-                try:
-                    elo = float(cells[elo_idx].get_text(strip=True))
-                except (ValueError, TypeError):
-                    pass
-
-            # Get trait scores
-            traits = {}
-            for col_i, trait_name in header_map.items():
-                if col_i < len(cells):
-                    text = cells[col_i].get_text(strip=True)
-                    try:
-                        traits[trait_name] = round(float(text), 2)
-                    except (ValueError, TypeError):
-                        traits[trait_name] = None
-
-            model_entry = {"name": name, "elo": elo, "traits": traits, "score": elo}
-            models.append(model_entry)
-
-        if models:
-            models.sort(key=lambda x: (x.get("elo") or 0), reverse=True)
-            return models
-
-    return models
-
-
-# =============================================================================
 # MAIN
 # =============================================================================
 def main():
@@ -1749,7 +1414,6 @@ def main():
         ("yupp", scrape_yupp),
         ("artificial_analysis", scrape_artificial_analysis),
         ("openrouter", scrape_openrouter),
-        ("eqbench", scrape_eqbench),
     ]
 
     for name, func in sources:
